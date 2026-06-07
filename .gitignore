@@ -5,4 +5,3 @@ dist-ssr
 *.local
 docs/.vitepress/dist
 docs/.vitepress/cache
-scratch/
