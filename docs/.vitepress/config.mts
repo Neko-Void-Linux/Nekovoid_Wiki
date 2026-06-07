@@ -6,9 +6,7 @@ export default defineConfig({
   description: "A open source eco-system",
   cleanUrls: true,
   lastUpdated: true,
-  sitemap: {
-    hostname: 'https://docs-nekovoid.vercel.app'
-  },
+
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['meta', { name: 'theme-color', content: '#6ba87a' }],
@@ -18,19 +16,15 @@ export default defineConfig({
     
     // Open Graph / Facebook
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:url', content: 'https://docs-nekovoid.vercel.app/' }],
     ['meta', { property: 'og:title', content: 'Neko Void' }],
     ['meta', { property: 'og:description', content: 'A open source eco-system providing tools and software like Neko Void.' }],
-    ['meta', { property: 'og:image', content: 'https://docs-nekovoid.vercel.app/banner.webp' }],
     ['meta', { property: 'og:locale', content: 'en_US' }],
     ['meta', { property: 'og:site_name', content: 'Neko Void' }],
 
     // Twitter
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:url', content: 'https://docs-nekovoid.vercel.app/' }],
     ['meta', { name: 'twitter:title', content: 'Neko Void' }],
     ['meta', { name: 'twitter:description', content: 'A open source eco-system providing tools and software like Neko Void.' }],
-    ['meta', { name: 'twitter:image', content: 'https://docs-nekovoid.vercel.app/banner.webp' }]
   ],
 
   locales: {
