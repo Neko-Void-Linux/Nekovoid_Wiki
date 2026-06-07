@@ -1,11 +1,11 @@
-# Trinity Projects Documentation
+# Neko Void Documentation
 
-Este es el repositorio oficial de la documentación de **Trinity Projects**, un ecosistema dedicado a mejorar la experiencia de Linux para gamers y creadores.
+Este es el repositorio oficial de la documentación de **Neko Void**, un ecosistema dedicado a mejorar la experiencia de Linux para gamers y creadores.
 
 ## Información General
 
   * **Framework:** Construido con [VitePress](https://www.google.com/search?q=https://vitepress.dev/).
-  * **Proyecto Principal:** [Trinity Launcher](https://www.google.com/search?q=https://github.com/Trinity-LA/Trinity-Launcher).
+  * **Proyecto Principal:** [Neko Void](https://www.google.com/search?q=https://github.com/Neko Void-LA/Neko Void-Launcher).
   * **Objetivo:** Ofrecer guías claras y accesibilidad técnica para todos los usuarios.
 
 ## Estructura de Carpetas

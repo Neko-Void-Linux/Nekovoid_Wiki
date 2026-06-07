@@ -1,6 +1,6 @@
 # Configuration
 
-Trinity Launcher provides various global configuration options to customize your experience.
+Neko Void provides various global configuration options to customize your experience.
 
 ## General Settings
 

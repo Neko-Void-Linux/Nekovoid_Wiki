@@ -1,20 +1,20 @@
 # License
 
-Trinity Projects is released under the **BSD 3-Clause License**.
+Neko Void is released under the **BSD 3-Clause License**.
 
 ## Why BSD-3-Clause?
 
 We chose the BSD 3-Clause license because we believe in:
 
 1.  **Freedom:** You are free to redistribute and use our code in source and binary forms, with or without modification.
-2.  **Protection:** The license includes a specific clause that prevents the names of the copyright holders (Trinity Projects) from being used to endorse or promote products derived from this software without specific prior written permission.
+2.  **Protection:** The license includes a specific clause that prevents the names of the copyright holders (Neko Void) from being used to endorse or promote products derived from this software without specific prior written permission.
 3.  **Simplicity:** It provides a clear legal framework without the complexity of viral licenses like GPL.
 
 ___
 
 ## The BSD 3-Clause License
 
-Copyright © 2025-present Trinity Projects. All rights reserved.
+Copyright © 2025-present Neko Void. All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 

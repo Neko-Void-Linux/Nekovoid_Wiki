@@ -4,12 +4,12 @@
  */
 
 :root {
-    /* Brand Colors - Violet/Purple */
-    --vp-c-brand-1: #9D74F4;
-    --vp-c-brand-2: #855AD5;
-    --vp-c-brand-3: #B794F4;
+    /* Brand Colors - Neko Green */
+    --vp-c-brand-1: #6ba87a;
+    --vp-c-brand-2: #487d55;
+    --vp-c-brand-3: #9bf424;
 
-    --vp-c-brand-soft: rgba(157, 116, 244, 0.14);
+    --vp-c-brand-soft: rgba(107, 168, 122, 0.14);
 }
 
 .dark {
@@ -29,20 +29,20 @@
 
     /* Home Hero Customization */
     --vp-home-hero-name-color: transparent;
-    --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #b794f4 10%, #9D74F4 50%, #805AD5 90%);
-    --vp-home-hero-image-background-image: linear-gradient(-45deg, #9d74f4 50%, #6b46c1 50%);
-    --vp-home-hero-image-filter: blur(44px);
+    --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #9bf424 10%, #6ba87a 50%, #324f38 90%);
+    --vp-home-hero-image-background-image: linear-gradient(-45deg, #6ba87a 50%, #324f38 50%);
+    --vp-home-hero-image-filter: blur(24px);
 }
 
 /* Custom Button Styling */
 .VPButton.brand {
-    background-image: linear-gradient(to right, #9D74F4, #855AD5);
+    background-image: linear-gradient(to right, #6ba87a, #487d55);
     border: none;
     transition: opacity 0.25s;
 }
 
 .VPButton.brand:hover {
-    background-image: linear-gradient(to right, #855AD5, #9D74F4);
+    background-image: linear-gradient(to right, #487d55, #6ba87a);
     opacity: 0.9;
 }
 
@@ -84,10 +84,10 @@
     }
 
     .dark {
-        --vp-home-hero-image-filter: blur(60px);
-        /* Softer blur */
+        --vp-home-hero-image-filter: blur(24px);
+        /* Same blur as desktop */
         /* Vertical Gradient */
-        --vp-home-hero-name-background: -webkit-linear-gradient(180deg, #b794f4 10%, #9D74F4 50%, #805AD5 90%);
+        --vp-home-hero-name-background: -webkit-linear-gradient(180deg, #9bf424 10%, #6ba87a 50%, #324f38 90%);
     }
 
     /* Increase padding for header clearance */
@@ -124,7 +124,7 @@
 /* Base profile card (Mobile First) */
 .VPTeamMembersItem {
     background: rgba(26, 29, 36, 0.4) !important; /* Lighter glass */
-    border: 1px solid rgba(157, 116, 244, 0.1) !important;
+    border: 1px solid rgba(107, 168, 122, 0.1) !important;
     border-radius: 16px !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
     position: relative;
@@ -133,16 +133,16 @@
 
 /* Subtle glow border effect for the card */
 .VPTeamMembersItem:hover {
-    border-color: rgba(157, 116, 244, 0.4) !important;
+    border-color: rgba(107, 168, 122, 0.4) !important;
     background: rgba(30, 33, 42, 0.8) !important;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2),
-                0 0 15px rgba(157, 116, 244, 0.1) !important;
+                0 0 15px rgba(107, 168, 122, 0.1) !important;
     transform: translateY(-2px) !important; /* Very subtle lift for mobile */
 }
 
 /* Profile Avatar */
 .VPTeamMembersItem .avatar {
-    border: 2px solid rgba(157, 116, 244, 0.2);
+    border: 2px solid rgba(107, 168, 122, 0.2);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease !important;
     background-color: var(--vp-c-bg-elv);
@@ -150,7 +150,7 @@
 
 .VPTeamMembersItem:hover .avatar {
     border-color: var(--vp-c-brand-1);
-    box-shadow: 0 0 15px rgba(157, 116, 244, 0.4);
+    box-shadow: 0 0 15px rgba(107, 168, 122, 0.4);
     transform: scale(1.05) !important; /* Gentle scale */
 }
 
@@ -179,8 +179,8 @@
 }
 
 .VPTeamMembersItem:hover .affiliation {
-    background: rgba(157, 116, 244, 0.15);
-    border-color: rgba(157, 116, 244, 0.3);
+    background: rgba(107, 168, 122, 0.15);
+    border-color: rgba(107, 168, 122, 0.3);
     color: var(--vp-c-brand-3) !important;
 }
 
@@ -218,6 +218,57 @@
     .VPTeamMembersItem:hover {
         transform: translateY(-5px) !important; /* Larger lift on desktop */
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3),
-                    0 0 20px rgba(157, 116, 244, 0.2) !important;
+                    0 0 20px rgba(107, 168, 122, 0.2) !important;
     }
+}
+
+/* Remove all rounded borders globally */
+*, *::before, *::after {
+    border-radius: 0 !important;
+}
+
+/* Custom styling for Home Hero tagline */
+.VPHero .text {
+    font-size: 2rem !important;
+}
+
+/* Exception: Keep the hero background blur rounded */
+.VPHero .image-bg {
+    border-radius: 50% !important;
+}
+
+@media (max-width: 639px) {
+    .VPHero .text {
+        font-size: 1.5rem !important;
+    }
+}
+
+/* Base transition for all Hero buttons */
+.VPHero .action .VPButton {
+    transition: all 0.3s ease !important;
+}
+
+/* 1. 'Get Started' Button & 3. 'Documentation' Button - Subtle neutral glow */
+.VPHero .action:nth-child(1) .VPButton,
+.VPHero .action:nth-child(3) .VPButton {
+    box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    background-color: rgba(255, 255, 255, 0.02) !important;
+    color: var(--vp-c-text-1) !important;
+}
+.VPHero .action:nth-child(1) .VPButton:hover,
+.VPHero .action:nth-child(3) .VPButton:hover {
+    box-shadow: 0 0 15px 3px rgba(255, 255, 255, 0.15) !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* 2. 'Download ISO' Button - Intense glowing blur */
+.VPHero .action:nth-child(2) .VPButton {
+    box-shadow: 0 0 25px 2px rgba(107, 168, 122, 0.5) !important;
+    border: 1px solid rgba(107, 168, 122, 0.8) !important;
+    background-color: rgba(107, 168, 122, 0.1) !important;
+}
+.VPHero .action:nth-child(2) .VPButton:hover {
+    box-shadow: 0 0 40px 8px rgba(107, 168, 122, 0.8) !important;
+    background-color: rgba(107, 168, 122, 0.2) !important;
 }

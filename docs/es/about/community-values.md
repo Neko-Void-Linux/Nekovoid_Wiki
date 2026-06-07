@@ -1,8 +1,8 @@
-# Código de Conducta de Trinity
+# Código de Conducta de Neko Void
 
 ## Nuestro Compromiso
 
-Como miembros y líderes de **Trinity**, nos comprometemos a hacer de la participación en nuestra comunidad una experiencia libre de acoso para todos, independientemente de la edad, apariencia, discapacidad, etnia, identidad de género, nivel de experiencia, nacionalidad, raza, religión u orientación sexual.
+Como miembros y líderes de **Neko Void**, nos comprometemos a hacer de la participación en nuestra comunidad una experiencia libre de acoso para todos, independientemente de la edad, apariencia, discapacidad, etnia, identidad de género, nivel de experiencia, nacionalidad, raza, religión u orientación sexual.
 
 Nos comprometemos a interactuar de maneras que contribuyan a una comunidad abierta, acogedora, diversa y saludable.
 
@@ -26,7 +26,7 @@ Ejemplos de comportamiento inaceptable incluyen:
 
 ## Responsabilidades
 
-Los líderes de Trinity son responsables de aclarar y hacer cumplir nuestros estándares de comportamiento. Tomarán acciones correctivas en respuesta a cualquier comportamiento que consideren inapropiado, amenazante o dañino.
+Los líderes de Neko Void son responsables de aclarar y hacer cumplir nuestros estándares de comportamiento. Tomarán acciones correctivas en respuesta a cualquier comportamiento que consideren inapropiado, amenazante o dañino.
 
 Nos reservamos el derecho de eliminar, editar o rechazar comentarios, código, ediciones y otras contribuciones que no estén alineadas con este Código de Conducta.
 

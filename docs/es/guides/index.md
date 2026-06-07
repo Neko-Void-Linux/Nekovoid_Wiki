@@ -1,31 +1,28 @@
-# Bienvenido a Trinity
+# Bienvenido a Neko Void
 
-Trinity es un ambicioso ecosistema de código abierto diseñado para traer la experiencia de **Minecraft Bedrock Edition** al escritorio de Linux. Cierra la brecha entre diferentes proyectos de código abierto para proporcionar una experiencia fluida, eficiente y nativa.
+Neko Void es un ambicioso ecosistema de código abierto diseñado para traer una experiencia de Void Linux ligera, eficiente y completamente configurada a tu escritorio. Cierra la brecha entre diferentes proyectos de código abierto para proporcionar un sistema operativo fluido y nativo.
 
 ## El Ecosistema
 
-Trinity se compone de varios proyectos clave, cada uno sirviendo un propósito específico en la arquitectura:
+Neko Void se compone de varios proyectos clave, cada uno sirviendo un propósito específico en la arquitectura:
 
-### 🚀 Trinity Launcher
-La aplicación orientada al usuario que gestiona tu Juego, Instancias y Cuentas.
-- **Experiencia Nativa:** Construido con Qt6 para sentirse como en casa en tu escritorio Linux.
-- **Sandboxed:** Distribuido vía Flatpak para seguridad y estabilidad.
+### 🚀 Neko Void OS
+El sistema operativo base que cuenta con el entorno de escritorio MATE y una selección curada de software.
+- **Experiencia Nativa:** Construido directamente sobre Void Linux y runit para máxima eficiencia.
 - **Código Abierto:** Completamente transparente e impulsado por la comunidad.
-
-
 
 ## ¿Por dónde empezar?
 
-Si eres nuevo en Trinity, recomendamos seguir estas guías en orden:
+Si eres nuevo en Neko Void, te recomendamos seguir estas guías en orden:
 
-1. **[Comenzando](./getting-started/)**: Aprende cómo instalar y configurar el lanzador por primera vez.
-2. **[Configuración](../docs/configuration/)**: Personaliza tu experiencia con ajustes globales.
-3. **[Solución de Problemas](./troubleshooting/common-issues)**: Resuelve problemas comunes si encuentras alguno.
+1. **[Comenzando](./getting-started/)**: Aprende cómo instalar y configurar el sistema por primera vez.
+2. **[Configuración](../docs/configuration/)**: Personaliza tu experiencia con configuraciones globales.
+3. **[Soporte](./troubleshooting/common-issues)**: Resuelve problemas comunes y aprende a reportar errores.
 
 ## Para Desarrolladores
 
-¿Estás interesado en contribuir? Revisa nuestra **[Zona de Desarrolladores](../dev/)** para aprender sobre la arquitectura, configurar tu entorno local y empezar a escribir código.
+¿Estás interesado en contribuir? Visita nuestra **[Zona de Desarrolladores](../dev/)** para aprender sobre la arquitectura, configurar tu entorno local y comenzar a compilar las ISOs.
 
 > [!TIP]
 > **¡Únete a la Comunidad!**
-> Si tienes preguntas o quieres charlar con otros usuarios, revisa los recursos al final de la página de [Comenzando](./getting-started/#join-the-community).
+> Si tienes preguntas o quieres chatear con otros usuarios, revisa los recursos al final de la página [Comenzando](./getting-started/#join-the-community).

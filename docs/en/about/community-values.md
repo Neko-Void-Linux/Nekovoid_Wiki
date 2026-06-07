@@ -1,8 +1,8 @@
-# Trinity Code of Conduct
+# Neko Void Code of Conduct
 
 ## Our Commitment
 
-As members and leaders of **Trinity**, we are committed to making participation in our community a harassment-free experience for everyone, regardless of age, appearance, disability, ethnicity, gender identity, level of experience, nationality, race, religion, or sexual orientation.
+As members and leaders of **Neko Void**, we are committed to making participation in our community a harassment-free experience for everyone, regardless of age, appearance, disability, ethnicity, gender identity, level of experience, nationality, race, religion, or sexual orientation.
 
 We pledge to interact in ways that contribute to an open, welcoming, diverse, and healthy community.
 
@@ -26,7 +26,7 @@ Examples of unacceptable behavior include:
 
 ## Responsibilities
 
-Trinity leaders are responsible for clarifying and enforcing our standards of behavior. They will take corrective action in response to any behavior they deem inappropriate, threatening, or harmful.
+Neko Void leaders are responsible for clarifying and enforcing our standards of behavior. They will take corrective action in response to any behavior they deem inappropriate, threatening, or harmful.
 
 We reserve the right to remove, edit, or reject comments, code, edits, and other contributions that are not aligned with this Code of Conduct.
 

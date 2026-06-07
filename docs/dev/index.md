@@ -1,35 +1,21 @@
 # Development: Overview
 
-Welcome to the development ecosystem of our Launchers. This space is designed to centralize the knowledge, tools, and standards needed to build the next generation of community tools.
+Welcome to the Neko Void OS development ecosystem. This space is designed to centralize the knowledge, tools, and standards needed to build the distribution.
 
 ## The Project
 
-Currently, our development is divided into two main pillars:
+Our development focuses on:
 
-* **Trinity Launcher:** Our base engine and instance management platform for Minecraft Bedrock.
-
-## Architecture and Philosophy
-
-We aim to create modular, fast, and secure software. Our architecture is based on the separation of concerns: the **Core** manages heavy processes, while the **UI** offers a fluid and modern user experience.
-
-### Tech Stack
-
-To maintain consistency across projects, we use:
-
-* **Core:** C++ (Qt6 Framework)
-* **Frontend:** Qt Widgets
-* **Communication:** REST APIs / C++ Signals & Slots
+* **Neko Void OS:** Our base operating system featuring the MATE desktop and Kasha Installer.
+* **ISO Builder:** The bash-based infrastructure used to compile the live distributions.
+* **Kore Package Manager:** A minimalist Rust-based TUI/CLI package manager designed specifically for AppImages and tarballs.
 
 ## Where to start?
 
-If you are new to the project, we recommend following this order:
-
-1. **Contribution Guide:** Read our rules in [Contributing > Guide](./contributing/trinity-launcher/index.md).
-2. **Code Style:** Review [Code Style](./contributing/trinity-launcher/code-style.md) to ensure your Pull Requests are approved quickly.
-3. **Explore Projects:** Go to the [Projects](./projects/index.md) section to understand the specific architecture of each launcher.
+If you are new to the project, we recommend exploring the [Projects](./projects/index.md) section to understand the specific build architecture and how to compile your own ISO.
 
 ## Communication and Support
 
-* **Issues:** To report errors, use the **Issues** tab within each repository.
+* **Issues:** To report errors, use the **Issues** tab within the Codeberg repositories.
 
 <CommunityCard />

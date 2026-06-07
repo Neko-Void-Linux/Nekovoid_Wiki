@@ -19,4 +19,4 @@ Al expandir el uso de aplicaciones en Linux, no solo ayudamos al usuario sino qu
 
 ## Nuestra Promesa
 
-Trabajamos para que, en el futuro cercano, la pregunta *"¿Esto funciona en mi sistema?"* deje de existir. Estamos dedicados a perfeccionar **Trinity** como un ejemplo de excelencia técnica, donde el poder de Linux se encuentra con la simplicidad que el usuario moderno demanda.
+Trabajamos para que, en el futuro cercano, la pregunta *"¿Esto funciona en mi sistema?"* deje de existir. Estamos dedicados a perfeccionar **Neko Void** como un ejemplo de excelencia técnica, donde el poder de Linux se encuentra con la simplicidad que el usuario moderno demanda.

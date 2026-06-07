@@ -1,26 +1,43 @@
-# Introducción
+# Acerca de Neko-Void
 
-Bienvenido a **Trinity Projects**, un ecosistema de código abierto dedicado a romper las barreras entre los sistemas operativos y los usuarios finales. Construimos herramientas que hacen realidad la accesibilidad en Linux tanto para jugadores como para creadores.
+Neko-Void es un respin no oficial de Void Linux. Actualmente cuenta con un entorno de escritorio MATE preconfigurado (nuestra edición principal, aunque se crearán otras ISOs con más escritorios) con software seleccionado para una experiencia completa. Incluye un potente asistente de post-instalación para adaptar el sistema a tus necesidades (juegos, diseño, producción musical, etc.), además de Octoxbps, Tinyfetch y btop preinstalados. Todo respaldado con soporte completo para Vulkan y Pipewire.
 
-## Quiénes Somos
+## Características Principales
 
-Trinity Projects es una iniciativa impulsada por la comunidad enfocada en crear software de alta calidad y fácil de usar para el ecosistema Linux. Creemos que la tecnología poderosa no tiene por qué ser complicada. Nuestro equipo está formado por desarrolladores apasionados, diseñadores y entusiastas del código abierto trabajando juntos para mejorar la experiencia del escritorio Linux.
+### [Instalador Kasha](https://codeberg.org/javiercplus/Kasha-Installer) & Post-Instalación
+Nuestro instalador personalizado simplifica el proceso de instalación de Void Linux (usuario, red, particiones). Una vez instalado, un instalador de aplicaciones de post-instalación integrado te permite configurar automáticamente el sistema con un solo clic para edición de video, producción musical, diseño, juegos, trabajo de oficina y más.
 
-## Qué Hacemos
+### Listo para el Rendimiento
+Optimizado para el rendimiento con soporte completo para Vulkan y controladores propietarios de Intel/AMD preconfigurados, asegurando que tu hardware funcione sin problemas desde el primer minuto.
 
-Desarrollamos lanzadores intuitivos y herramientas que simplifican tareas complejas.
+## Bajo el Capó
 
-### Proyectos Principales
+### Sistema Base & Init
+Neko-Void está profundamente arraigado en el minimalismo de **Void Linux**, utilizando su modelo *rolling-release* para actualizaciones continuas. Emplea el sistema de inicio `runit`, el cual garantiza tiempos de arranque increíblemente rápidos y un bajo consumo de recursos en comparación con systemd.
 
-*   **Trinity Launcher:** Un lanzador pulido y moderno diseñado para gestionar tus aplicaciones y juegos con facilidad. Se enfoca en una experiencia de usuario fluida, manejando dependencias y configuraciones automáticamente para que tú no tengas que hacerlo.
+### Escritorio y Servidor Gráfico
+La experiencia predeterminada está construida alrededor del entorno de escritorio **MATE**, combinando paradigmas clásicos con características modernas. Para el servidor de pantalla, los usuarios tienen la flexibilidad de elegir entre **X.Org** y **Xlibre** durante o después de la instalación.
 
-## ¿Por qué "Trinity"?
+### Gestión de Paquetes
+Más allá de la potencia de la línea de comandos de `xbps`, Neko-Void integra **Octoxbps** por defecto, proporcionando una interfaz gráfica intuitiva para buscar, instalar y gestionar software. También incluye [**Kore Package Manager**](https://github.com/ezequielgk/Kore-Package-Manager), un gestor híbrido minimalista (TUI/CLI) escrito en Rust, diseñado específicamente para manejar de manera aislada AppImages y Tarballs en todo el sistema.
 
-El nombre representa los tres pilares centrales de nuestra filosofía:
-1.  **Rendimiento:** Software que respeta tu hardware.
-2.  **Simplicidad:** Interfaces que cualquiera puede usar.
-3.  **Libertad:** Código abierto, transparente y centrado en el usuario.
+## Por qué fue creado
 
-## Únete a Nosotros
+El proyecto originalmente comenzó como un pasatiempo personal. Con el tiempo, evolucionó hacia un proyecto estructurado destinado a ofrecer una versión de Void Linux fácil de instalar y fácil de usar para el usuario final.
 
-¡Siempre estamos buscando colaboradores! Ya seas desarrollador, diseñador o escritor, hay un lugar para ti en nuestra comunidad. Revisa nuestros [Valores de la Comunidad](/es/about/community-values) para aprender más sobre cómo trabajamos juntos.
+## Público Objetivo
+
+Esta distribución está dirigida a usuarios que desean un sistema operativo ligero y robusto, fácilmente personalizable para su flujo de trabajo específico sin las complicaciones habituales de una configuración manual desde cero.
+
+## El Equipo
+
+* **Desarrollador:** Javierc
+* **Diseñador:** Hikawa
+* **Patrocinador:** S. A.
+* **Artistas:** Moony<3 & Era_dark_knight
+
+## Enlaces Oficiales
+
+* **Descargar ISO:** [SourceForge](https://sourceforge.net/projects/neko-void/)
+* **Código Fuente:** [Codeberg](https://codeberg.org/javiercplus/Neko-Void)
+* **DistroWatch:** [Página de Neko-Void](https://distrowatch.com/table.php?distribution=nekovoid)

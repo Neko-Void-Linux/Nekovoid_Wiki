@@ -2,27 +2,30 @@
 layout: home
 
 hero:
-  name: "Wiki de Trinity"
-  text: "La base de conocimiento oficial"
-  tagline: Documentación, Guías y Recursos de Desarrollo para Trinity Projects.
+  name: "NEKO_VOID"
+  text: "Into the Void"
+  tagline: Documentación, Guías y Recursos de Desarrollo para Neko Void.
   image:
-    src: /icon-512.png
-    alt: Logo de Trinity
+    src: /logo.png
+    alt: Logo Neko Void
   actions:
-    - theme: brand
+    - theme: alt
       text: Comenzar
       link: /es/guides/getting-started/
+    - theme: alt
+      text: Descargar ISO
+      link: /es/download/
     - theme: alt
       text: Documentación
       link: /es/docs/
 
 features:
   - title: Proyectos
-    details: Explora el Lanzador Trinity.
+    details: Explora el ecosistema de Neko Void.
     link: /es/dev/projects/
-  - title: Guías y Tutoriales
-    details: Guías paso a paso para comenzar y ayudarte a dominar el ecosistema.
-    link: /es/guides/
+  - title: DistroWatch
+    details: Sigue a Neko Void en DistroWatch para ver su popularidad e historial de lanzamientos.
+    link: https://distrowatch.com/table.php?distribution=nekovoid
   - title: Zona de Desarrolladores
     details: Pautas de contribución, arquitectura técnica e instrucciones de configuración.
     link: /es/dev/

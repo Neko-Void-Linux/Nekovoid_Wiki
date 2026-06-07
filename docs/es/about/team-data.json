@@ -1,13 +1,13 @@
 [
   {
-    "avatar": "https://github.com/Trinity-LA.png",
+    "avatar": "https://github.com/Neko Void-LA.png",
     "name": "Crow",
     "title": "Creador del Proyecto",
-    "desc": "Fundador y visionario detrás de Trinity Launcher. Lidera el desarrollo conceptual y define la dirección estratégica del proyecto.",
+    "desc": "Fundador y visionario detrás de Neko Void. Lidera el desarrollo conceptual y define la dirección estratégica del proyecto.",
     "links": [
       {
         "icon": "github",
-        "link": "https://github.com/Trinity-LA"
+        "link": "https://github.com/Neko Void-LA"
       }
     ]
   },
@@ -51,7 +51,7 @@
     "avatar": "https://github.com/ezequielgk.png",
     "name": "Ezequiel",
     "title": "Diseño Web",
-    "desc": "Diseñador y desarrollador frontend especializado en interfaces modernas. Responsable del diseño visual y la experiencia de usuario de Trinity Launcher.",
+    "desc": "Diseñador y desarrollador frontend especializado en interfaces modernas. Responsable del diseño visual y la experiencia de usuario de Neko Void.",
     "links": [
       {
         "icon": "github",
@@ -87,7 +87,7 @@
     "avatar": "https://github.com/BrokenByteOfCode.png",
     "name": "BrokenByteOfCode",
     "title": "Traductor",
-    "desc": "Proporcionó la traducción al ucraniano para Trinity Launcher, ayudando a expandir nuestro alcance a más usuarios.",
+    "desc": "Proporcionó la traducción al ucraniano para Neko Void, ayudando a expandir nuestro alcance a más usuarios.",
     "links": [
       {
         "icon": "github",
@@ -99,7 +99,7 @@
     "avatar": "https://github.com/bgusenda.png",
     "name": "bgusenda",
     "title": "Traductor",
-    "desc": "Proporcionó la traducción al portugués para Trinity Launcher, ayudando a expandir nuestro alcance a más usuarios.",
+    "desc": "Proporcionó la traducción al portugués para Neko Void, ayudando a expandir nuestro alcance a más usuarios.",
     "links": [
       {
         "icon": "github",

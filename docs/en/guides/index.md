@@ -1,30 +1,27 @@
-# Welcome to Trinity
+# Welcome to Neko Void
 
-Trinity is an ambitious open source ecosystem designed to bring the **Minecraft Bedrock Edition** experience to the Linux desktop. It bridges the gap between different open source projects to provide a seamless, performant, and native-feeling experience.
+Neko Void is an ambitious open source ecosystem designed to bring a lightweight, performant, and fully configured Void Linux experience to your desktop. It bridges the gap between different open source projects to provide a seamless, efficient, and native-feeling operating system.
 
 ## The Ecosystem
 
-Trinity is composed of several core projects, each serving a specific purpose in the architecture:
+Neko Void is composed of several core projects, each serving a specific purpose in the architecture:
 
-### 🚀 Trinity Launcher
-The user-facing application that manages your Game, Instances, and Accounts.
-- **Native Experience:** Built with Qt6 to feel at home on your Linux desktop.
-- **Sandboxed:** Distributed via Flatpak for security and stability.
+### 🚀 Neko Void OS
+The base operating system featuring the MATE desktop environment and a curated selection of software.
+- **Native Experience:** Built directly upon Void Linux and runit for maximum efficiency.
 - **Open Source:** Completely transparent and community-driven.
-
-
 
 ## Where to Start?
 
-If you are new to Trinity, we recommend following these guides in order:
+If you are new to Neko Void, we recommend following these guides in order:
 
-1. **[Getting Started](./getting-started/)**: Learn how to install and set up the launcher for the first time.
-2. **[Configuration](./configuration/)**: Customize your experience with global settings.
-3. **[Troubleshooting](./troubleshooting/common-issues)**: Solve common issues if you encounter any problems.
+1. **[Getting Started](./getting-started/)**: Learn how to install and set up the system for the first time.
+2. **[Configuration](../docs/configuration/)**: Customize your experience with global settings.
+3. **[Support](./troubleshooting/common-issues)**: Solve common issues and learn how to report bugs.
 
 ## For Developers
 
-Are you interested in contributing? Check out our **[Developer Zone](../dev/)** to learn about the architecture, setup your local environment, and start writing code.
+Are you interested in contributing? Check out our **[Developer Zone](../dev/)** to learn about the architecture, setup your local environment, and start compiling the ISOs.
 
 > [!TIP]
 > **Join the Community!**

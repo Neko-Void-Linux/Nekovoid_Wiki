@@ -9,7 +9,7 @@ import members from './team-data.json'
 
 <VPTeamPageTitle>
   <template #title>Our Team</template>
-  <template #lead>Meet the developers, designers, and contributors who dedicate their time to making Trinity Launcher possible.</template>
+  <template #lead>Meet the developers, designers, and contributors who dedicate their time to making Neko Void possible.</template>
 </VPTeamPageTitle>
 
 <VPTeamMembers size="small" :members="members" />
