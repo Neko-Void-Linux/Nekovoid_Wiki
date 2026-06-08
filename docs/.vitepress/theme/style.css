@@ -163,12 +163,12 @@ body::after {
 
 /* Universal Fluid Image Rule */
 .VPHero .image-src {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 350px;
+    width: auto !important;
+    height: auto !important;
+    max-width: 100% !important;
+    max-height: 350px !important;
     /* Cap max height generally */
-    object-fit: contain;
+    object-fit: contain !important;
 }
 
 /* 
@@ -181,13 +181,16 @@ body::after {
 /* Mobile (Phones) */
 @media (max-width: 639px) {
     .VPHero .image-src {
-        max-width: 180px;
+        max-width: 180px !important;
         /* Smaller logo on phones */
-        max-height: 180px;
-        margin-bottom: 2.5rem; /* Distancia prudente hacia abajo */
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
+        max-height: 180px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: block !important;
+    }
+    
+    .VPHero .image {
+        margin-bottom: 1rem !important; /* Distancia pequeña hacia abajo */
     }
 
     /* Vertical Gradient for name background */
