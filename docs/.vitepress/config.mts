@@ -129,7 +129,7 @@ export default defineConfig({
       lang: 'es',
       link: '/es/',
       themeConfig: {
-        logo: '/logo.png',
+        logo: '/logo-official.svg',
         outlineTitle: 'En esta página',
         docFooter: {
           prev: 'Página anterior',
@@ -243,7 +243,7 @@ export default defineConfig({
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: '/logo.png',
+    logo: '/logo-official.svg',
 
     socialLinks: [
       { icon: 'github', link: 'https://codeberg.org/javiercplus/Neko-Void' },
