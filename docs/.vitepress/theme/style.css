@@ -62,20 +62,22 @@
     --vp-home-hero-image-filter: blur(40px);
 }
 
-/* Apply Bebas Neue to hero text */
+/* Apply Bebas Neue to hero text (NEKO_VOID at 100px max) */
 .VPHero .name {
     font-family: 'Bebas Neue', sans-serif !important;
     font-weight: normal !important;
     letter-spacing: 0.02em !important;
+    font-size: clamp(56px, 8vw, 100px) !important;
+    line-height: 1.0 !important;
 }
 
-/* Make "Into the Void" (text) the same size as the main title (name) */
+/* Make "Into the Void" (text) smaller but prominent (40px max) */
 .VPHero .text {
-    font-size: var(--vp-home-hero-name-font-size) !important;
-    line-height: var(--vp-home-hero-name-line-height) !important;
     font-family: 'Bebas Neue', sans-serif !important;
     font-weight: normal !important;
     letter-spacing: 0.02em !important;
+    font-size: clamp(24px, 4vw, 40px) !important;
+    line-height: 1.0 !important;
 }
 
 /* Systemdfree Lighting & Atmospheric Effects */
@@ -327,48 +329,58 @@ body::after {
     border-radius: 0 !important;
 }
 
-/* Custom styling for Home Hero tagline */
-.VPHero .text {
-    font-size: 2rem !important;
-}
-
 /* Exception: Keep the hero background blur rounded */
 .VPHero .image-bg {
     border-radius: 50% !important;
 }
 
-@media (max-width: 639px) {
-    .VPHero .text {
-        font-size: 1.5rem !important;
-    }
-}
-
-/* Base transition for all Hero buttons */
+/* Base transition for all Hero buttons (systemdfree style) */
 .VPHero .action .VPButton {
-    transition: all 0.3s ease !important;
+    font-family: var(--vp-font-family-mono) !important;
+    font-size: 12px !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+    padding: 12px 28px !important;
+    transition: all 0.2s ease !important;
+    border-radius: 0 !important;
 }
 
-/* 1. 'Get Started' Button & 3. 'Documentation' Button - Subtle neutral glow */
+/* 1. 'Get Started' Button & 3. 'Documentation' Button - Ghost Style */
 .VPHero .action:nth-child(1) .VPButton,
 .VPHero .action:nth-child(3) .VPButton {
-    box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.05) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    background-color: rgba(255, 255, 255, 0.02) !important;
-    color: var(--vp-c-text-1) !important;
-}
-.VPHero .action:nth-child(1) .VPButton:hover,
-.VPHero .action:nth-child(3) .VPButton:hover {
-    box-shadow: 0 0 15px 3px rgba(255, 255, 255, 0.15) !important;
-    background-color: rgba(255, 255, 255, 0.05) !important;
+    background-color: transparent !important;
+    color: var(--vp-c-brand-1) !important;
+    border: 1px solid var(--vp-c-divider) !important;
 }
 
-/* 2. 'Download ISO' Button - Intense glowing blur */
-.VPHero .action:nth-child(2) .VPButton {
-    box-shadow: 0 0 25px 2px rgba(107, 168, 122, 0.5) !important;
-    border: 1px solid rgba(107, 168, 122, 0.8) !important;
-    background-color: rgba(107, 168, 122, 0.1) !important;
+.VPHero .action:nth-child(1) .VPButton:hover,
+.VPHero .action:nth-child(3) .VPButton:hover {
+    border-color: var(--vp-c-brand-1) !important;
+    background-color: var(--vp-c-brand-soft) !important;
+    color: var(--vp-c-brand-1) !important;
 }
+
+/* 2. 'Download ISO' Button - Primary Solid Style */
+.VPHero .action:nth-child(2) .VPButton {
+    background-color: var(--vp-c-brand-1) !important;
+    color: var(--vp-c-bg) !important;
+    border: 1px solid var(--vp-c-brand-1) !important;
+    font-weight: 600 !important;
+}
+
 .VPHero .action:nth-child(2) .VPButton:hover {
-    box-shadow: 0 0 40px 8px rgba(107, 168, 122, 0.8) !important;
-    background-color: rgba(107, 168, 122, 0.2) !important;
+    background-color: var(--vp-c-text-1) !important;
+    color: var(--vp-c-bg) !important;
+    border-color: var(--vp-c-text-1) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Feature Cards Hover Lift Effect (like Distro cards in systemdfree) */
+.VPFeatures .VPFeature {
+    transition: border-color 0.25s ease, transform 0.25s ease !important;
+}
+
+.VPFeatures .VPFeature:hover {
+    border-color: var(--vp-c-brand-2) !important;
+    transform: translateY(-3px) !important;
 }
