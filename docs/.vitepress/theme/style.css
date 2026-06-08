@@ -185,6 +185,9 @@ body::after {
         /* Smaller logo on phones */
         max-height: 180px;
         margin-bottom: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
     }
 
     /* Vertical Gradient for name background */
@@ -200,7 +203,7 @@ body::after {
 
     /* Increase padding for header clearance */
     .VPHero {
-        padding-top: calc(var(--vp-nav-height) + 40px) !important;
+        padding-top: calc(var(--vp-nav-height) + 10px) !important;
     }
 }
 
