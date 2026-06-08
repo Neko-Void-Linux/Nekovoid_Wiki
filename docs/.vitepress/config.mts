@@ -8,7 +8,7 @@ export default defineConfig({
   lastUpdated: true,
 
   head: [
-    ['link', { rel: 'icon', href: '/logo.png' }],
+    ['link', { rel: 'icon', href: '/logo-custom.svg' }],
     ['meta', { name: 'theme-color', content: '#6ba87a' }],
     ['meta', { name: 'author', content: 'Neko Void' }],
     ['meta', { name: 'keywords', content: 'Neko Void, Open Source, Development, Launcher, Minecraft, Community, Projects' }],
@@ -129,7 +129,7 @@ export default defineConfig({
       lang: 'es',
       link: '/es/',
       themeConfig: {
-        logo: '/logo.png',
+        logo: '/logo-custom.svg',
         outlineTitle: 'En esta página',
         docFooter: {
           prev: 'Página anterior',
@@ -243,7 +243,7 @@ export default defineConfig({
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: '/logo.png',
+    logo: '/logo-custom.svg',
 
     socialLinks: [
       { icon: 'github', link: 'https://codeberg.org/javiercplus/Neko-Void' },
