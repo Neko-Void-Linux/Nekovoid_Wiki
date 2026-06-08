@@ -334,6 +334,12 @@ body::after {
     border-radius: 50% !important;
 }
 
+/* Exception: Keep the theme toggle switch rounded */
+.VPSwitch,
+.VPSwitch * {
+    border-radius: 999px !important;
+}
+
 /* Base transition for all Hero buttons (systemdfree style) */
 .VPHero .action .VPButton {
     font-family: var(--vp-font-family-mono) !important;
