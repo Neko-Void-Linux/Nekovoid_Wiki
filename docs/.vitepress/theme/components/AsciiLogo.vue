@@ -53,7 +53,7 @@ const ascii = `
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(calc(-50% + 15px), calc(-50% + 10px));
   display: flex;
   justify-content: center;
   align-items: center;
