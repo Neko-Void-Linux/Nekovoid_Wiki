@@ -139,13 +139,13 @@ body::after {
 
 /* Custom Button Styling */
 .VPButton.brand {
-    background-image: linear-gradient(to right, #6ba87a, #487d55);
+    background-image: linear-gradient(to right, var(--vp-c-brand-1), var(--vp-c-brand-2)) !important;
     border: none;
     transition: opacity 0.25s;
 }
 
 .VPButton.brand:hover {
-    background-image: linear-gradient(to right, #487d55, #6ba87a);
+    background-image: linear-gradient(to right, var(--vp-c-brand-2), var(--vp-c-brand-1)) !important;
     opacity: 0.9;
 }
 
@@ -186,10 +186,13 @@ body::after {
         margin-bottom: 2rem;
     }
 
+    /* Vertical Gradient for name background */
+    --vp-home-hero-name-background: -webkit-linear-gradient(180deg, var(--vp-c-brand-3) 10%, var(--vp-c-brand-1) 50%, #283b45 90%);
+
     .dark {
         --vp-home-hero-image-filter: none;
         /* Vertical Gradient */
-        --vp-home-hero-name-background: -webkit-linear-gradient(180deg, #9bf424 10%, #6ba87a 50%, #324f38 90%);
+        --vp-home-hero-name-background: -webkit-linear-gradient(180deg, var(--vp-c-brand-3) 10%, var(--vp-c-brand-1) 50%, #728a96 90%);
     }
 
     /* Increase padding for header clearance */
@@ -225,8 +228,8 @@ body::after {
 
 /* Base profile card (Mobile First) */
 .VPTeamMembersItem {
-    background: rgba(26, 29, 36, 0.4) !important; /* Lighter glass */
-    border: 1px solid rgba(107, 168, 122, 0.1) !important;
+    background: var(--vp-c-bg-alt) !important;
+    border: 1px solid var(--vp-c-divider) !important;
     border-radius: 16px !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
     position: relative;
@@ -235,16 +238,16 @@ body::after {
 
 /* Subtle glow border effect for the card */
 .VPTeamMembersItem:hover {
-    border-color: rgba(107, 168, 122, 0.4) !important;
-    background: rgba(30, 33, 42, 0.8) !important;
+    border-color: var(--vp-c-brand-1) !important;
+    background: var(--vp-c-bg-soft) !important;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2),
-                0 0 15px rgba(107, 168, 122, 0.1) !important;
+                0 0 15px var(--vp-c-brand-soft) !important;
     transform: translateY(-2px) !important; /* Very subtle lift for mobile */
 }
 
 /* Profile Avatar */
 .VPTeamMembersItem .avatar {
-    border: 2px solid rgba(107, 168, 122, 0.2);
+    border: 2px solid var(--vp-c-divider);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease !important;
     background-color: var(--vp-c-bg-elv);
@@ -252,7 +255,7 @@ body::after {
 
 .VPTeamMembersItem:hover .avatar {
     border-color: var(--vp-c-brand-1);
-    box-shadow: 0 0 15px rgba(107, 168, 122, 0.4);
+    box-shadow: 0 0 15px var(--vp-c-brand-soft);
     transform: scale(1.05) !important; /* Gentle scale */
 }
 
@@ -269,8 +272,8 @@ body::after {
 
 /* Affiliation / Role Tag */
 .VPTeamMembersItem .affiliation {
-    background: rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--vp-c-divider);
     border-radius: 12px;
     padding: 2px 10px;
     color: var(--vp-c-text-2) !important;
@@ -281,8 +284,8 @@ body::after {
 }
 
 .VPTeamMembersItem:hover .affiliation {
-    background: rgba(107, 168, 122, 0.15);
-    border-color: rgba(107, 168, 122, 0.3);
+    background: var(--vp-c-brand-soft);
+    border-color: var(--vp-c-brand-1);
     color: var(--vp-c-brand-3) !important;
 }
 
@@ -320,7 +323,7 @@ body::after {
     .VPTeamMembersItem:hover {
         transform: translateY(-5px) !important; /* Larger lift on desktop */
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3),
-                    0 0 20px rgba(107, 168, 122, 0.2) !important;
+                    0 0 20px var(--vp-c-brand-soft) !important;
     }
 }
 

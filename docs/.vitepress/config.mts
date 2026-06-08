@@ -9,7 +9,7 @@ export default defineConfig({
 
   head: [
     ['link', { rel: 'icon', href: '/logo-custom.svg' }],
-    ['meta', { name: 'theme-color', content: '#6ba87a' }],
+    ['meta', { name: 'theme-color', content: '#8da383' }],
     ['meta', { name: 'author', content: 'Neko Void' }],
     ['meta', { name: 'keywords', content: 'Neko Void, Open Source, Development, Launcher, Minecraft, Community, Projects' }],
     ['meta', { name: 'description', content: 'A open source eco-system providing tools and software like Neko Void.' }],
