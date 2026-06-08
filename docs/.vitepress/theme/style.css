@@ -334,10 +334,13 @@ body::after {
     border-radius: 50% !important;
 }
 
-/* Exception: Keep the theme toggle switch rounded */
+/* Exception: Keep the theme toggle switch rounded and remove its border */
 .VPSwitch,
 .VPSwitch * {
     border-radius: 999px !important;
+}
+.VPSwitch {
+    border: none !important;
 }
 
 /* Base transition for all Hero buttons (systemdfree style) */
