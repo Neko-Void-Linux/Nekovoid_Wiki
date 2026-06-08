@@ -30,8 +30,8 @@
     /* Home Hero Customization */
     --vp-home-hero-name-color: transparent;
     --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #9bf424 10%, #6ba87a 50%, #324f38 90%);
-    --vp-home-hero-image-background-image: linear-gradient(-45deg, #6ba87a 50%, #324f38 50%);
-    --vp-home-hero-image-filter: blur(24px);
+    --vp-home-hero-image-background-image: linear-gradient(-45deg, rgba(197, 217, 199, 0.15) 50%, rgba(197, 217, 199, 0.15) 50%);
+    --vp-home-hero-image-filter: blur(40px);
 }
 
 /* Make "Into the Void" (text) the same size as the main title (name) */
@@ -91,8 +91,7 @@
     }
 
     .dark {
-        --vp-home-hero-image-filter: blur(24px);
-        /* Same blur as desktop */
+        --vp-home-hero-image-filter: none;
         /* Vertical Gradient */
         --vp-home-hero-name-background: -webkit-linear-gradient(180deg, #9bf424 10%, #6ba87a 50%, #324f38 90%);
     }
