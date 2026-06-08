@@ -8,7 +8,7 @@ export default defineConfig({
   lastUpdated: true,
 
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'icon', href: '/logo.png' }],
     ['meta', { name: 'theme-color', content: '#6ba87a' }],
     ['meta', { name: 'author', content: 'Neko Void' }],
     ['meta', { name: 'keywords', content: 'Neko Void, Open Source, Development, Launcher, Minecraft, Community, Projects' }],
