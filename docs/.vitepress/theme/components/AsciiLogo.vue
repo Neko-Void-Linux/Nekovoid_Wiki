@@ -89,6 +89,9 @@ const ascii = `
 }
 
 @media (max-width: 640px) {
+  .ascii-logo-container {
+    transform: translate(calc(-50% + 10px), calc(-50% + 7px));
+  }
   .ascii-art {
     font-size: 5.5px; /* Mobile size */
   }
