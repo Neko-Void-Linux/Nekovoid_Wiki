@@ -173,18 +173,19 @@ const editions: Edition[] = [
   border-radius: 0; /* Brutalist sharp edges */
 }
 
-/* Neko Void Green Glow for Download Buttons */
+/* Theme-adapted Glow for Download Buttons */
 .download-btn {
-  border-color: rgba(107, 168, 122, 0.8);
-  background-color: rgba(107, 168, 122, 0.1);
-  box-shadow: 0 0 10px rgba(107, 168, 122, 0.2);
-  color: var(--vp-c-brand-2);
+  border-color: var(--vp-c-brand-1);
+  background-color: var(--vp-c-brand-soft);
+  box-shadow: 0 0 10px var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
 }
 
 .download-btn:hover {
-  background-color: rgba(107, 168, 122, 0.2);
-  box-shadow: 0 0 25px 2px rgba(107, 168, 122, 0.6);
-  border-color: #9bf424;
+  background-color: var(--vp-c-brand-soft);
+  box-shadow: 0 0 20px var(--vp-c-brand-soft);
+  border-color: var(--vp-c-brand-2);
+  color: var(--vp-c-brand-2);
 }
 
 .disabled-btn {
