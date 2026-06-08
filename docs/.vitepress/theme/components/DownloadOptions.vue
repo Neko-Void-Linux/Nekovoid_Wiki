@@ -178,7 +178,7 @@ const editions: Edition[] = [
   border-color: rgba(107, 168, 122, 0.8);
   background-color: rgba(107, 168, 122, 0.1);
   box-shadow: 0 0 10px rgba(107, 168, 122, 0.2);
-  color: #fff;
+  color: var(--vp-c-brand-2);
 }
 
 .download-btn:hover {
@@ -188,8 +188,8 @@ const editions: Edition[] = [
 }
 
 .disabled-btn {
-  color: var(--vp-c-text-3);
-  background-color: rgba(0, 0, 0, 0.2);
+  color: var(--vp-c-text-2);
+  background-color: var(--vp-c-bg-soft);
   cursor: not-allowed;
   opacity: 0.6;
 }
