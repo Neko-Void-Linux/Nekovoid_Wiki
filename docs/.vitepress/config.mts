@@ -45,6 +45,7 @@ export default defineConfig({
             items: [
               { text: 'Overview', link: '/guides/' },
               { text: 'Getting Started', link: '/guides/getting-started/' },
+              { text: 'Download', link: '/download/' },
               {
                 text: 'How to report issues',
                 collapsed: true,
@@ -150,6 +151,7 @@ export default defineConfig({
             items: [
               { text: 'Resumen', link: '/es/guides/' },
               { text: 'Comenzando', link: '/es/guides/getting-started/' },
+              { text: 'Descargar', link: '/es/download/' },
               {
                 text: 'Cómo reportar problemas',
                 collapsed: true,
