@@ -60,6 +60,13 @@
 .VPHero .text {
     font-size: var(--vp-home-hero-name-font-size) !important;
     line-height: var(--vp-home-hero-name-line-height) !important;
+}
+
+/* Hide default image background so AsciiLogo can render its own */
+.VPHero .image-bg {
+    display: none !important;
+}
+.VPHero .text {
     font-weight: 700 !important;
 }
 
