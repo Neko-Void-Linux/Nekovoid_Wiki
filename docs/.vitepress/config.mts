@@ -12,6 +12,7 @@ export default defineConfig({
     ['meta', { name: 'theme-color', content: '#8da383' }],
     ['meta', { name: 'author', content: 'Neko Void' }],
     ['meta', { name: 'keywords', content: 'Neko Void, Open Source, Development, Launcher, Minecraft, Community, Projects' }],
+    ['meta', { name: 'darkreader-lock' }],
     ['meta', { name: 'description', content: 'A open source eco-system providing tools and software like Neko Void.' }],
     
     // Open Graph / Facebook

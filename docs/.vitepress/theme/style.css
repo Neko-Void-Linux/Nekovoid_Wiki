@@ -32,7 +32,7 @@
 
     /* Home Hero Customization */
     --vp-home-hero-name-color: transparent;
-    --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #85583b 10%, #4a5944 50%, #283b45 90%);
+    --vp-home-hero-name-background: linear-gradient(120deg, #85583b 10%, #4a5944 50%, #283b45 90%);
 }
 
 .dark {
@@ -57,7 +57,7 @@
     --vp-c-text-2: #9da49a;
 
     /* Home Hero Customization */
-    --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #cb9b7c 10%, #8da383 50%, #728a96 90%);
+    --vp-home-hero-name-background: linear-gradient(120deg, #cb9b7c 10%, #8da383 50%, #728a96 90%);
     --vp-home-hero-image-background-image: linear-gradient(-45deg, rgba(141, 163, 131, 0.15) 50%, rgba(141, 163, 131, 0.15) 50%);
     --vp-home-hero-image-filter: blur(40px);
 }
@@ -132,6 +132,7 @@ body::after {
 /* Hide default image background so AsciiLogo can render its own */
 .VPHero .image-bg {
     display: none !important;
+    border-radius: 50% !important; /* Exception: Keep the hero background blur rounded */
 }
 .VPHero .text {
     font-weight: 700 !important;
@@ -188,13 +189,13 @@ body::after {
 
     /* Vertical Gradient for name background */
     :root {
-        --vp-home-hero-name-background: -webkit-linear-gradient(180deg, var(--vp-c-brand-3) 10%, var(--vp-c-brand-1) 50%, #283b45 90%);
+        --vp-home-hero-name-background: linear-gradient(180deg, var(--vp-c-brand-3) 10%, var(--vp-c-brand-1) 50%, #283b45 90%);
     }
 
     .dark {
         --vp-home-hero-image-filter: none;
         /* Vertical Gradient */
-        --vp-home-hero-name-background: -webkit-linear-gradient(180deg, var(--vp-c-brand-3) 10%, var(--vp-c-brand-1) 50%, #728a96 90%);
+        --vp-home-hero-name-background: linear-gradient(180deg, var(--vp-c-brand-3) 10%, var(--vp-c-brand-1) 50%, #728a96 90%);
     }
 
     /* Increase padding for header clearance */
@@ -334,13 +335,7 @@ body::after {
     border-radius: 0 !important;
 }
 
-/* Exception: Keep the hero background blur rounded */
-.VPHero .image-bg {
-    border-radius: 50% !important;
-}
-
-
-
+/* -------------------------------------------------------------------------- */
 /* Base transition for all Hero buttons (systemdfree style) */
 .VPHero .action .VPButton {
     font-family: var(--vp-font-family-mono) !important;
