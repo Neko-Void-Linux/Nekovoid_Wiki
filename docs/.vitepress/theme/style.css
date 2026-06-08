@@ -34,6 +34,13 @@
     --vp-home-hero-image-filter: blur(24px);
 }
 
+/* Make "Into the Void" (text) the same size as the main title (name) */
+.VPHero .text {
+    font-size: var(--vp-home-hero-name-font-size) !important;
+    line-height: var(--vp-home-hero-name-line-height) !important;
+    font-weight: 700 !important;
+}
+
 /* Custom Button Styling */
 .VPButton.brand {
     background-image: linear-gradient(to right, #6ba87a, #487d55);
