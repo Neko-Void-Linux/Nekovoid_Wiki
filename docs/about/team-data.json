@@ -1,16 +1,4 @@
-[
-  {
-    "avatar": "https://github.com/Neko Void-LA.png",
-    "name": "Crow",
-    "title": "Project Creator",
-    "desc": "Founder and visionary behind Neko Void. Leads conceptual development and defines the strategic direction of the project.",
-    "links": [
-      {
-        "icon": "github",
-        "link": "https://github.com/Neko Void-LA"
-      }
-    ]
-  },
+
   {
     "avatar": "https://github.com/javiercplus.png",
     "name": "javiercplus",
@@ -23,6 +11,19 @@
       }
     ]
   },
+  [
+    {
+      "avatar": "https://github.com/Neko Void-LA.png",
+      "name": "Crow",
+      "title": "Project Creator",
+      "desc": "Director, Tester, and Web Designer",
+      "links": [
+        {
+          "icon": "github",
+          "link": "https://github.com/Neko Void-LA"
+        }
+      ]
+    },
   {
     "avatar": "https://github.com/0rt4.png",
     "name": "Orta",
