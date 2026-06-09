@@ -36,25 +36,25 @@ const editions: Edition[] = [
   {
     name: 'Neko Void MATE - Xorg',
     type: 'liveIso',
-    link: 'https://sourceforge.net/projects/neko-void/files/',
+    link: 'https://javiercplus.github.io/neko-download/mate/',
     status: 'available'
   },
   {
     name: 'Neko Void MATE - XLibre',
     type: 'liveIso',
-    link: 'https://sourceforge.net/projects/neko-void/files/',
+    link: 'https://javiercplus.github.io/neko-download/matelibre/',
     status: 'available'
   },
   {
     name: 'Neko Void XFCE',
     type: 'liveIso',
-    link: 'https://sourceforge.net/projects/neko-void/files/',
+    link: 'https://javiercplus.github.io/neko-download/xfce/',
     status: 'available'
   },
   {
     name: 'Neko Void KDE',
     type: 'liveIso',
-    link: 'https://sourceforge.net/projects/neko-void/files/',
+    link: 'https://javiercplus.github.io/neko-download/kde/',
     status: 'available'
   },
   {
@@ -70,7 +70,13 @@ const editions: Edition[] = [
   {
     name: 'Neko Void LXQT',
     type: 'liveIso',
-    link: 'https://sourceforge.net/projects/neko-void/files/',
+    link: 'https://javiercplus.github.io/neko-download/lxqt/',
+    status: 'available'
+  },
+  {
+    name: 'Neko Void JWM',
+    type: 'liveIso',
+    link: 'https://javiercplus.github.io/neko-download/jwm/',
     status: 'available'
   },
   {
