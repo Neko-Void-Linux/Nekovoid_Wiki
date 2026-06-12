@@ -209,7 +209,6 @@ export default defineConfig({
               { text: 'Resumen', link: '/es/docs/' },
               {
                 text: 'Conceptos',
-                collapsed: true,
                 items: [
                   { text: 'runit (Sistema Init)', link: '/es/docs/concepts/runit' },
                 ]
