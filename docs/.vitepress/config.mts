@@ -93,6 +93,15 @@ export default defineConfig({
                     ]
                   }
                 ]
+              },
+              {
+                text: 'Contributing',
+                collapsed: true,
+                items: [
+                  { text: 'Overview', link: '/dev/contributing/' },
+                  { text: 'How to contribute', link: '/dev/contributing/how-to-contribute' },
+                  { text: 'Style guide', link: '/dev/contributing/style-guide' }
+                ]
               }
             ]
           },
@@ -107,6 +116,7 @@ export default defineConfig({
                 items: [
                   { text: 'Overview', link: '/docs/concepts/' },
                   { text: 'runit (Init System)', link: '/docs/concepts/runit' },
+                  { text: 'musl', link: '/docs/concepts/musl' }
                 ]
               },
               { text: 'Configuration', link: '/docs/configuration/' }
@@ -199,6 +209,15 @@ export default defineConfig({
                     ]
                   }
                 ]
+              },
+              {
+                text: 'Colaborar',
+                collapsed: true,
+                items: [
+                  { text: 'Resumen', link: '/es/dev/contributing/' },
+                  { text: 'Cómo contribuir', link: '/es/dev/contributing/how-to-contribute' },
+                  { text: 'Guía de estilo', link: '/es/dev/contributing/style-guide' }
+                ]
               }
             ]
           },
@@ -212,6 +231,7 @@ export default defineConfig({
                 collapsed: true,
                 items: [
                   { text: 'runit (Sistema Init)', link: '/es/docs/concepts/runit' },
+                  { text: 'musl', link: '/es/docs/concepts/musl' }
                 ]
               },
               { text: 'Configuración', link: '/es/docs/configuration/' }
