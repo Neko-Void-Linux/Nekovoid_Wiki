@@ -21,7 +21,7 @@ A la hora de instalarse debería ser capaz de ejecutarse y desplegar Steam en pa
 A la hora de ejecutar lanza un error en la terminal y no se ejecuta.
 
 ## Entorno:
-* **Edición:** [ ] Xorg  [✅] XLibre
+* **Edición:** [ ] Xorg  [x] XLibre
 * **Hardware:**
   * **CPU:** Intel Core i7-9750H CPU @ 2.60GHz
   * **Kernel:** 6.19.11-zen1

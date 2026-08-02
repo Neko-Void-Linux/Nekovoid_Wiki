@@ -21,7 +21,7 @@ Upon installation, it should be able to execute and display Steam on the screen.
 When executing, it throws an error in the terminal and fails to launch.
 
 ## Environment:
-* **Edition:** [ ] Xorg  [✅] XLibre
+* **Edition:** [ ] Xorg  [x] XLibre
 * **Hardware:**
   * **CPU:** Intel Core i7-9750H CPU @ 2.60GHz
   * **Kernel:** 6.19.11-zen1
