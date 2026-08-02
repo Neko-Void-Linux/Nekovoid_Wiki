@@ -13,9 +13,9 @@ description: Cómo se escriben las páginas de la wiki de Neko-Void
 
 ## Principios
 
-1. **Una página, un tema.** Una página responde a una pregunta: "¿Cómo instalo los drivers NVIDIA?", "¿Qué es runit?". No mezcles temas. Si una página crece hasta contener dos, divídela.
-2. **Denso y directo.** Cada frase aporta información. Nada de "En este tutorial exploraremos...". Empieza con la respuesta.
-3. **Comandos primero, explicación la justa.** El lector vino a hacer algo. Muestra el comando y luego explica lo mínimo para entenderlo.
+1. **Una página, un tema.** Una página responde a una pregunta: "¿Cómo instalo los drivers NVIDIA?", "¿Qué es runit?". Si una página crece hasta contener dos, divídela.
+2. **Denso y directo.** Cada frase aporta información. Corta el "En este tutorial exploraremos...". Empieza con la respuesta.
+3. **Comandos primero, explicación la justa.** El lector vino a hacer algo. Muestra el comando y luego explica lo necesario para entenderlo.
 4. **Asume un lector competente, no experto.** Explica lo específico de Neko-Void. No re-expliques qué es Linux. Enlaza fuera para conceptos generales.
 5. **Sin relleno ni marketing.** Esto es documentación, no una landing. Nada de "increíble", "potente", "fácil".
 
@@ -223,4 +223,4 @@ No apiles cinco avisos seguidos. Si todo es importante, nada lo es.
 
 ---
 
-*La consistencia es lo que hace confiable a una wiki. Seguir esta guía es cómo llegamos ahí.*
+*Una wiki consistente es una wiki confiable. Esta guía es cómo la mantenemos consistente.*

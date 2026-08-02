@@ -7,9 +7,9 @@ description: Qué es musl, por qué Neko-Void la usa y en qué se diferencia de 
 
 ## Resumen
 
-musl es una librería estándar de C, la capa que todo programa en C usa para operaciones básicas: reservar memoria, acceder a archivos, manejar cadenas de texto y más. La mayoría de las distribuciones Linux usan **glibc**; musl es una alternativa más ligera centrada en la corrección, la simplicidad y el tamaño reducido.
+musl es una librería estándar de C. Todo programa en C depende de ella para reservar memoria, acceder a archivos, manejar cadenas de texto y otras operaciones básicas. La mayoría de las distribuciones Linux usan glibc; musl es una alternativa más ligera, construida en torno a la corrección, la simplicidad y el tamaño reducido.
 
-Neko-Void prefiere musl donde es viable. Es una de las decisiones técnicas que mantiene el sistema ligero, en línea con el principio del proyecto de libertad y minimalismo.
+Neko-Void usa musl donde es viable. Mantiene el sistema ligero y se mantiene fuera del camino.
 
 ## Por qué musl
 
@@ -21,11 +21,9 @@ Neko-Void prefiere musl donde es viable. Es una de las decisiones técnicas que 
 | Compatibilidad | La mayoría del software | Casi todo |
 | Enlazado estático | Limpio, soportado | Problemático |
 
-El trade-off principal de musl es la compatibilidad: algo de software cerrado y algunos programas antiguos esperan glibc y pueden necesitar workarounds. Para el resto — que es la mayor parte del ecosistema de software libre — musl funciona sin problema.
+El trade-off es la compatibilidad. Algo de software cerrado y algunos programas antiguos esperan glibc y necesitan workarounds. El resto del ecosistema de software libre corre en musl sin problema.
 
 ## Cómo saber qué librería usa un sistema
-
-Ejecuta:
 
 ```bash
 $ ldd /bin/ls | grep -E 'musl|glibc|libc\.so'
@@ -35,13 +33,13 @@ Un sistema musl muestra una ruta tipo `/lib/ld-musl-x86_64.so.1`. Un sistema gli
 
 ## Ejecutar software glibc en un sistema musl
 
-Cuando un programa requiere glibc, tienes opciones:
+Cuando un programa requiere glibc, hay tres caminos habituales:
 
-- **Flatpak.** El camino más limpio. Flatpak empaqueta su propio runtime, así que las aplicaciones glibc corren dentro de un Flatpak sin tocar el sistema base. Neko-Void incluye soporte de Flatpak por esto.
+- **Flatpak.** La opción más limpia. Flatpak empaqueta su propio runtime, así que las aplicaciones glibc corren sin tocar el sistema base. Neko-Void incluye soporte de Flatpak por esto.
 - **chroot o contenedor glibc.** Para casos más pesados, un chroot de Void glibc o un contenedor Distrobox ofrece un entorno glibc completo.
-- **Binarios estáticos.** Cuando el software ofrece un build estático, no lleva dependencias de librería y corre en cualquier sitio.
+- **Binarios estáticos.** Un build estático no lleva dependencias de librería y corre en cualquier sitio.
 
-Evita mezclar librerías glibc en un sistema base musl. Es frágil y no está soportado.
+No mezcles librerías glibc en un sistema base musl. Es frágil y no está soportado.
 
 ## Véase también
 

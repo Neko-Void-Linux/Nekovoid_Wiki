@@ -5,9 +5,9 @@ description: Overview of the tools and process to build the Neko-Void Live ISO
 
 # Neko-Void OS Builder
 
-The Neko-Void OS builder is the set of scripts that produce the Neko-Void Live ISO. The resulting image includes non-free support out of the box: Steam, gaming tools, and proprietary drivers.
+The Neko-Void OS builder is the set of scripts that build the Neko-Void Live ISO. The resulting image ships non-free support out of the box: Steam, gaming tools, and proprietary drivers.
 
-The build system is based on Void Linux's `live-maker`, extended with Neko-Void's package selection, kernels, and configuration.
+It builds on top of Void Linux's `live-maker`, extended with Neko-Void's package selection, kernels, and configuration.
 
 - **Base:** Void Linux `live-maker`
 - **Source:** [Codeberg](https://codeberg.org/javiercplus/Neko-Void)

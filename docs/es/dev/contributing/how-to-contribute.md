@@ -5,9 +5,9 @@ description: Flujo de trabajo para añadir, corregir y mantener páginas de la w
 
 # Cómo contribuir
 
-> Neko-Void es software libre, y su documentación también lo es. Cualquiera puede mejorarla: corregir un error, escribir una guía que falta, aclarar un paso confuso. No hace falta ser desarrollador para contribuir.
+> Neko-Void es software libre, y su documentación también. Cualquiera puede mejorarla: corregir un error, escribir una guía que falta, aclarar un paso confuso. No hace falta ser desarrollador.
 
-Esta página explica el flujo. Si quieres saber **cómo se escribe** (tono, estructura, formato), lee la [Guía de estilo](./style-guide).
+Esta página cubre el flujo. Para el tono, la estructura y el formato, lee la [Guía de estilo](./style-guide).
 
 ---
 
@@ -22,7 +22,7 @@ Esta página explica el flujo. Si quieres saber **cómo se escribe** (tono, estr
 | Traducción | Traducir una página del inglés al español (o al revés) | Media |
 | Entrada de troubleshooting | Añadir un síntoma → causa → solución a Problemas comunes | Baja |
 
-Toda contribución cuenta. Una errata corregida es un pull request válido.
+Una errata corregida es un pull request válido.
 
 ---
 
@@ -112,12 +112,7 @@ La wiki de Neko-Void es bilingüe. Cuando cambies una página, el mismo cambio d
 
 ## Estilo y tono
 
-Lee la [Guía de estilo](./style-guide) completa antes de escribir algo más que una errata. Versión corta:
-
-- Una página, un tema.
-- Denso y directo. Sin relleno.
-- Comandos primero, explicación la justa.
-- Sigue la plantilla de artículo.
+Lee la [Guía de estilo](./style-guide) completa antes de escribir algo más que una errata. Versión corta: una página, un tema; denso y directo; comandos primero; sigue la plantilla de artículo.
 
 ---
 
@@ -125,8 +120,8 @@ Lee la [Guía de estilo](./style-guide) completa antes de escribir algo más que
 
 - Abre un issue con la etiqueta `question` si te atascaste.
 - Pregunta en el canal `#wiki` del Discord.
-- Ninguna pregunta es demasiado básica. Todos empezamos en algún sitio.
+- Ninguna pregunta es demasiado básica.
 
 ---
 
-*Esta wiki mejora porque gente como tú contribuye a ella. Gracias.*
+*La wiki mejora de un pull request a la vez.*

@@ -1,8 +1,8 @@
 # How to contribute
 
-> Neko-Void is free software, and its documentation is free too. Anyone can improve it: fix a typo, write a missing guide, clarify a confusing step. You do not need to be a developer to contribute.
+> Neko-Void is free software, and so is its documentation. Anyone can improve it: fix a typo, write a missing guide, clarify a confusing step. No developer status required.
 
-This page explains the workflow. If you want to know **how to write** (tone, structure, formatting), read the [Style guide](./style-guide).
+This page covers the workflow. For tone, structure, and formatting, read the [Style guide](./style-guide).
 
 ---
 
@@ -17,7 +17,7 @@ This page explains the workflow. If you want to know **how to write** (tone, str
 | Translation | Translate an English page to Spanish (or vice versa) | Medium |
 | Troubleshooting entry | Add a symptom → cause → fix to Common Issues | Low |
 
-Every contribution counts. A corrected typo is a valid pull request.
+A corrected typo is a valid pull request.
 
 ---
 
@@ -107,12 +107,7 @@ Neko-Void's wiki is bilingual. When you change a page, the same change should re
 
 ## Style and tone
 
-Read the full [Style guide](./style-guide) before writing more than a typo fix. The short version:
-
-- One page, one topic.
-- Dense and direct. No filler.
-- Commands first, explanation just enough.
-- Follow the article template.
+Read the full [Style guide](./style-guide) before writing more than a typo fix. The short version: one page, one topic; dense and direct; commands first; follow the article template.
 
 ---
 
@@ -120,8 +115,8 @@ Read the full [Style guide](./style-guide) before writing more than a typo fix. 
 
 - Open an issue with the `question` label if you are stuck.
 - Ask in the Discord `#wiki` channel.
-- No question is too basic. We all started somewhere.
+- No question is too basic.
 
 ---
 
-*This wiki improves because people like you contribute to it. Thank you.*
+*The wiki improves one pull request at a time.*

@@ -8,9 +8,9 @@
 
 ## Principles
 
-1. **One page, one topic.** A page answers one question: "How do I install NVIDIA drivers?", "What is runit?". Do not mix topics. If a page grows into two topics, split it.
-2. **Dense and direct.** Every sentence carries information. No "In this tutorial, we will explore...". Start with the answer.
-3. **Commands first, explanation just enough.** The reader came to do something. Show the command, then explain the minimum needed to understand it.
+1. **One page, one topic.** A page answers one question: "How do I install NVIDIA drivers?", "What is runit?". If a page grows into two topics, split it.
+2. **Dense and direct.** Every sentence carries information. Cut "In this tutorial, we will explore...". Start with the answer.
+3. **Commands first, explanation just enough.** The reader came to do something. Show the command, then explain what is needed to understand it.
 4. **Assume a competent reader, not an expert.** Explain what is Neko-Void-specific. Do not re-explain what Linux is. Link out for general concepts.
 5. **No filler, no marketing.** This is documentation, not a landing page. No "amazing", "powerful", "easy".
 
@@ -218,4 +218,4 @@ Do not stack five admonitions in a row. If everything is important, nothing is.
 
 ---
 
-*Consistency is what makes a wiki trustworthy. Following this guide is how we get there.*
+*A consistent wiki is a trustworthy wiki. This guide is how we keep it consistent.*

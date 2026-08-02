@@ -5,9 +5,9 @@ description: Overview of kpm, a minimalist Rust package manager for AppImages an
 
 # Kore Package Manager
 
-Kore (`kpm`) is a minimalist package manager for Linux written in Rust. It handles applications distributed as tarballs (`.tar.gz`, `.tar.xz`, `.tar.bz2`) and AppImages (`.AppImage`), installing them in isolation and keeping the home directory clean.
+Kore (`kpm`) is a package manager for Linux written in Rust. It installs applications distributed as tarballs (`.tar.gz`, `.tar.xz`, `.tar.bz2`) and AppImages (`.AppImage`) into an isolated location, keeping the home directory clean.
 
-It is designed for Void Linux, Arch, and any system where pre-compiled software needs to be installed without touching the base system. It offers both an interactive terminal interface (TUI) and direct CLI commands.
+It runs on Void Linux, Arch, and any system where pre-compiled software needs to land without touching the base system. It provides an interactive terminal interface (TUI) and direct CLI commands.
 
 - **License:** BSD
 - **Language:** Rust

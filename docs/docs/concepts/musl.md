@@ -7,9 +7,9 @@ description: What musl is, why Neko-Void uses it, and how it differs from glibc
 
 ## Overview
 
-musl is a C standard library, the layer that every C program uses for basic operations: memory allocation, file access, string handling, and more. Most Linux distributions use **glibc**; musl is a lighter alternative focused on correctness, simplicity, and small size.
+musl is a C standard library. Every C program depends on it for memory allocation, file access, string handling, and other basic operations. Most Linux distributions use glibc; musl is a lighter alternative built around correctness, simplicity, and small size.
 
-Neko-Void prefers musl where it is viable. It is one of the technical choices that keeps the system lean, in line with the project's principle of freedom and minimalism.
+Neko-Void uses musl where it is viable. It keeps the system lean and stays out of the way.
 
 ## Why musl
 
@@ -21,11 +21,9 @@ Neko-Void prefers musl where it is viable. It is one of the technical choices th
 | Compatibility | Most software | Almost everything |
 | Static linking | Clean, supported | Problematic |
 
-musl's main trade-off is compatibility: some closed-source software and a few legacy programs expect glibc and may need workarounds. For the rest — which is most of the free software ecosystem — musl works without issue.
+The trade-off is compatibility. Some closed-source software and a few legacy programs expect glibc and need workarounds. The rest of the free software ecosystem runs on musl without issue.
 
 ## How to tell which library a system uses
-
-Run:
 
 ```bash
 $ ldd /bin/ls | grep -E 'musl|glibc|libc\.so'
@@ -35,13 +33,13 @@ A musl system shows a path like `/lib/ld-musl-x86_64.so.1`. A glibc system shows
 
 ## Running glibc software on a musl system
 
-When a program requires glibc, you have options:
+When a program requires glibc, there are three common paths:
 
-- **Flatpak.** The cleanest path. Flatpak bundles its own runtime, so glibc applications run inside a Flatpak without touching the base system. Neko-Void ships Flatpak support for this reason.
-- **glibc chroot or container.** For heavier cases, a Void glibc chroot or a Distrobox container provides a full glibc environment.
-- **Static binaries.** When the software offers a static build, it carries no library dependency and runs anywhere.
+- **Flatpak.** The cleanest option. Flatpak bundles its own runtime, so glibc applications run without touching the base system. Neko-Void ships Flatpak support for this reason.
+- **glibc chroot or container.** For heavier cases, a Void glibc chroot or a Distrobox container gives a full glibc environment.
+- **Static binaries.** A static build carries no library dependency and runs anywhere.
 
-Avoid mixing glibc libraries into a musl base system. It is fragile and unsupported.
+Do not mix glibc libraries into a musl base system. It is fragile and unsupported.
 
 ## See also
 
