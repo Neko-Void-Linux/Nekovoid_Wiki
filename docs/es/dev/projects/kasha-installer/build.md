@@ -1,53 +1,67 @@
-# Compilación y Ejecución
+---
+title: Compilar Kasha
+description: Cómo compilar y ejecutar el instalador Kasha
+---
 
-## Compilación y Dependencias
+# Compilar Kasha
 
-### Dependencias
+## Dependencias
 
-Asegúrate de tener instalado lo siguiente:
+Instala lo siguiente antes de compilar:
+
 - `gcc`
 - `make`
 - `pkg-config`
 - Cabeceras de desarrollo de `gtk+-3.0`
-- Si tu sistema requiere LUKS: `bash`, `grub`, `xxd`, y `sed`.
-- Si usas Devuan o Arch, utiliza la rama universal.
+- Para soporte LUKS: `bash`, `grub`, `xxd` y `sed`
 
-> **Cambiar el Logotipo:** Si deseas cambiar el logotipo en el instalador, primero convierte tu imagen con xxd:
-> ```bash
-> xxd -i logo.png > include/logo.h
-> ```
-> Y reemplaza `logo.h` en el proyecto.
+En Devuan o Arch, usa la rama universal del proyecto.
 
-### Instrucciones de Compilación
+## Compilación
 
-Para compilar el instalador para el entorno por defecto:
+Compila para el entorno por defecto:
 
 ```bash
-make
+$ make
 ```
 
-Para **otras distribuciones** (ARTIX/ARCH, DEVUAN/DEBIAN, ETC...):
+Para otras distribuciones (Artix, Arch, Devuan, Debian):
 
 ```bash
-make universal
+$ make universal
 ```
 
-Para limpiar los artefactos de compilación:
+Limpia los artefactos de compilación:
 
 ```bash
-make clean
+$ make clean
 ```
 
-## Ejecutar el Instalador
+## Cambiar el logotipo
 
-El instalador requiere privilegios de root para manipular discos, formatear particiones y montar sistemas de archivos.
+Para reemplazar el logotipo del instalador, convierte la imagen con `xxd` y déjala en el proyecto:
 
 ```bash
-sudo ./neko_installer
+$ xxd -i logo.png > include/logo.h
 ```
 
-Alternativamente, usa la regla de conveniencia:
+Luego reemplaza `logo.h` en el árbol de código.
+
+## Ejecutar
+
+El instalador necesita root para manipular discos, formatear particiones y montar sistemas de archivos:
 
 ```bash
-make run
+# ./neko_installer
 ```
+
+O usa la regla de conveniencia:
+
+```bash
+# make run
+```
+
+## Véase también
+
+- [Resumen de Kasha](./) — qué es Kasha y sus características.
+- [Arquitectura](./architecture) — cómo está estructurado Kasha.

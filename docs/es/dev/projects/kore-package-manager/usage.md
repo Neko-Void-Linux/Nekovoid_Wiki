@@ -1,79 +1,81 @@
-# Uso
+---
+title: Uso de Kore
+description: Cómo usar kpm, el Kore Package Manager, en modo interactivo y por CLI
+---
 
+# Uso de Kore
 
-### Modo Interactivo (TUI)
+## Modo interactivo (TUI)
 
-Solo necesitas llamar a la herramienta sin argumentos para abrir la interfaz:
-
-```bash
-kpm
-```
-
-  * Sigue las instrucciones en pantalla usando las teclas de flecha, `ENTER` (para confirmar) y `ESC` (para retroceder/salir). El flujo dinámico te permite seleccionar la app, extraerla y definir qué binario enlazar, todo de forma guiada.
-
------
-
-### Interfaz de Línea de Comandos (CLI)
-
-Para operaciones rápidas no interactivas, `tm` soporta los siguientes comandos definidos (`clap`):
-
-| Comando | Alias Corto | Descripción | Ejemplo de Uso |
-| :--- | :--- | :--- | :--- |
-| `list` | `-l`, `list-installed`| Lista las aplicaciones instaladas actualmente. | `kpm list` |
-| `remove` | `-r` | Desinstala una o varias apps instaladas. | `kpm remove discord waterfox` |
-| `install` | `-i` | Instala una o varias apps desde tarballs locales o **repositorios**. | `kpm install obsidian` |
-| `update` | `-u` | Actualiza apps instaladas desde los repositorios. | `kpm update` o `kpm update obsidian` |
-| `repo` | *(ninguno)* | Gestiona repositorios (oficiales, comunidad y personalizados). | `kpm repo list` |
-| `help` | `-h`, `--help` | Muestra todas las opciones de ayuda del programa. | `kpm --help` |
-| *(ninguno)* | `-V`, `--version` | Muestra la versión actual instalada. | `kpm -V` |
-| `--update-bin` | *(ninguno)* | Actualiza el binario de Kore Package Manager a su última versión. | `kpm --update-bin` |
-
-#### Instalación Directa (Múltiple y Repositorios)
-
-Puedes instalar varias aplicaciones directamente escribiendo su nombre (si existen en los repositorios) o la ruta de un archivo `.tar.gz` o `.AppImage` local:
+Llama a la herramienta sin argumentos para abrir la interfaz:
 
 ```bash
-kpm install obsidian waterfox discord
-# O usando el alias:
-kpm -i discord
+$ kpm
 ```
 
-Si deseas instalar un archivo local específico y personalizar sus metadatos (esto aplica solo a instalaciones individuales), puedes usar las siguientes banderas:
+Usa las flechas para navegar, `Enter` para confirmar y `Esc` para volver o salir. El flujo guiado permite seleccionar la app, extraerla y definir el binario a enlazar en un solo paso.
+
+## Interfaz de línea de comandos (CLI)
+
+Para operaciones rápidas no interactivas, `kpm` soporta los siguientes comandos:
+
+| Comando | Alias corto | Descripción |
+|---|---|---|
+| `list` | `-l`, `list-installed` | Lista las aplicaciones instaladas |
+| `install` | `-i` | Instala una o más apps desde tarballs locales o repositorios |
+| `remove` | `-r` | Desinstala una o más apps instaladas |
+| `update` | `-u` | Actualiza apps instaladas desde repositorios |
+| `repo` | — | Gestiona repositorios (oficial, comunitario, custom) |
+| `help` | `-h`, `--help` | Imprime la ayuda completa |
+| — | `-V`, `--version` | Muestra la versión instalada |
+| `--update-bin` | — | Actualiza el binario de `kpm` a la última versión |
+
+### Instalación directa
+
+Instala varias aplicaciones por nombre (si existen en un repositorio) o por ruta a un archivo local:
 
 ```bash
-kpm install "/path/to/app.AppImage" --app-name "NombreApp" --use-root "No" --category "Network"
-
-kpm install "/path/to/app.tar.gz" --app-name "NombreApp" --use-root "No" --category "Network"
+$ kpm install obsidian waterfox discord
 ```
 
-  * **--app-name (-a)**: Nombre que tendrá la aplicación en el sistema.
-  * **--use-root (-u)**: Define si el acceso directo `.desktop` requerirá `pkexec` (superusuario).
-  * **--category (-c)**: Categoría XDG para el menú de aplicaciones (`Utility`, `Network`, `Game`, etc).
-
-#### Desinstalación Inteligente
-
-Puedes borrar la carpeta, el binario y el archivo `.desktop` de una o más aplicaciones simultáneamente:
+Para un archivo local único con metadatos personalizados, usa estos flags:
 
 ```bash
-kpm remove nombre_app otra_app
-# Ej. usando el alias:
-kpm -r nombre_app
+$ kpm install "/ruta/a/app.AppImage" --app-name "MiApp" --use-root "No" --category "Network"
 ```
 
-#### Gestión de Repositorios (`tm repo`)
+| Flag | Descripción |
+|---|---|
+| `--app-name` (`-a`) | Nombre que la app muestra en el sistema |
+| `--use-root` (`-u`) | Si el atajo `.desktop` requiere `pkexec` |
+| `--category` (`-c`) | Categoría XDG para el menú (`Utility`, `Network`, `Game`, ...) |
 
-El gestor ahora soporta repositorios para descargar e instalar apps con un solo comando.
+### Desinstalación inteligente
 
-  * `kpm repo list`: Lista la cantidad de paquetes disponibles por tipo (oficial, comunidad, usuario).
-  * `kpm repo pkg-list`: Muestra la lista de todos los paquetes disponibles para instalar.
-  * `kpm repo pkg-search <busqueda>`: Busca un paquete en todos los repositorios por nombre.
-  * `kpm repo sync`: Sincroniza/actualiza la lista de repositorios oficiales y de la comunidad.
-  * `kpm repo add <nombre> <nombre_pkg> <url> <categoria> [--requires-root]`: Añade un repositorio de terceros.
-  * `kpm repo remove <nombre>`: Elimina un repositorio personalizado.
+Borra la carpeta, el binario y el archivo `.desktop` de una o más apps a la vez:
 
-#### Autocompletado (Bash, Zsh, Fish)
+```bash
+$ kpm remove discord waterfox
+```
 
-Al instalar `kpm` mediante `install.sh`, los scripts de autocompletado para Bash, Zsh y Fish se configuran automáticamente de forma local en tu sistema, permitiéndote presionar `TAB` para completar comandos y banderas sin esfuerzo.
+### Gestión de repositorios
 
------
+El subcomando `repo` gestiona de dónde `kpm` obtiene las apps:
 
+| Subcomando | Descripción |
+|---|---|
+| `kpm repo list` | Cantidad de paquetes disponibles por tipo (oficial, comunitario, usuario) |
+| `kpm repo pkg-list` | Lista todos los paquetes disponibles para instalar |
+| `kpm repo pkg-search <query>` | Busca un paquete por nombre en todos los repositorios |
+| `kpm repo sync` | Sincroniza las listas oficial y comunitaria |
+| `kpm repo add <nombre> <pkg> <url> <cat> [--requires-root]` | Añade un repositorio de terceros |
+| `kpm repo remove <nombre>` | Elimina un repositorio custom |
+
+## Autocompletado de shell
+
+Instalar `kpm` con `install.sh` configura el autocompletado para Bash, Zsh y Fish. Pulsa `Tab` para completar comandos y flags.
+
+## Véase también
+
+- [Resumen de Kore](./) — qué es Kore y cómo instalarlo.
+- [Arquitectura de Kore](./architecture) — cómo está estructurado Kore internamente.

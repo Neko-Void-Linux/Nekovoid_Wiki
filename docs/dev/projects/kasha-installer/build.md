@@ -1,53 +1,68 @@
-# Build & Run
+---
+title: Kasha Build
+description: How to compile and run the Kasha installer
+---
 
-## Compilation and Dependencies
+# Kasha Build
 
-### Dependencies
+## Dependencies
 
-Ensure you have the following installed:
+Install the following before building:
+
 - `gcc`
 - `make`
 - `pkg-config`
 - `gtk+-3.0` development headers
-- If your system requires LUKS: `bash`, `grub`, `xxd`, and `sed`.
-- If you use Devuan or Arch, use the universal branch.
+- For LUKS support: `bash`, `grub`, `xxd`, and `sed`
 
-> **Changing the Logo:** If you want to change the logo in the installer, first convert your image logo with xxd:
-> ```bash
-> xxd -i logo.png > include/logo.h
-> ```
-> And replace `logo.h` in the project.
+On Devuan or Arch, use the universal branch of the project.
 
-### Build Instructions
+## Build
 
-To compile the installer for the default environment:
+Compile for the default environment:
 
 ```bash
-make
+$ make
 ```
 
-For **other distributions** (ARTIX/ARCH, DEVUAN/DEBIAN, ETC...):
+For other distributions (Artix, Arch, Devuan, Debian):
 
 ```bash
-make universal
+$ make universal
 ```
 
-To clean the build artifacts:
+Clean the build artifacts:
 
 ```bash
-make clean
+$ make clean
 ```
 
-## Running the Installer
+## Changing the logo
 
-The installer requires root privileges to manipulate disks, format partitions, and mount filesystems.
+To replace the installer logo, convert the image with `xxd` and drop it in the project:
 
 ```bash
-sudo ./neko_installer
+$ xxd -i logo.png > include/logo.h
 ```
 
-Alternatively, use the convenience rule:
+Then replace `logo.h` in the source tree.
+
+## Run
+
+The installer needs root to manipulate disks, format partitions, and mount filesystems:
 
 ```bash
-make run
+# ./neko_installer
 ```
+
+Or use the convenience rule:
+
+```bash
+# make run
+```
+
+## See also
+
+- [Kasha Overview](./) — what Kasha is and its features.
+- [Architecture](./architecture) — how Kasha is structured.
+

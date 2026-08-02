@@ -1,43 +1,55 @@
-# Build Options
+---
+title: Build the Neko-Void ISO
+description: Commands and options to build the Neko-Void Live ISO
+---
 
-## Normal Build
+# Build the Neko-Void ISO
 
-To build the standard Neko-Void ISOs, use the following commands:
+## Prerequisites
 
-* **Build X.Org Edition:**
-  ```bash
-  cd live-maker && bash neko-builder.sh xorg
-  ```
+Before building, complete the [setup](./) on the overview page: clone the repository and initialize the submodules. The build runs from the `live-maker` directory.
 
-* **Build Xlibre Edition:**
-  ```bash
-  cd live-maker && bash neko-builder.sh xlibre
-  ```
+## Standard editions
 
-## Rolling Build (Latest Kernel)
-
-To build rolling editions with the latest kernel:
-
-* **Build Rolling X.Org Edition:**
-  ```bash
-  cd live-maker && bash neko-builder.sh rolling
-  ```
-
-* **Build Rolling Xlibre Edition:**
-  ```bash
-  cd live-maker && bash neko-builder.sh rollibre
-  ```
-
-## Advanced Usage
-
-The `neko-builder.sh` script supports various arguments for interactive or customized builds:
+Build the standard Neko-Void ISOs:
 
 ```bash
-# NekoVoid Live ISO Builder - Nonfree Edition
+$ cd live-maker
 
-./neko-builder.sh                 # Interactive mode
-./neko-builder.sh <desktop>       # Build a specific desktop
-./neko-builder.sh <desktop> -e "pkg..." # With extra packages
-./neko-builder.sh doble           # Build xlibre + xorg
-./neko-builder.sh doble-isor      # Build rollibre + rolling
+# X.Org edition
+$ bash neko-builder.sh xorg
+
+# Xlibre edition
+$ bash neko-builder.sh xlibre
 ```
+
+## Rolling editions (latest kernel)
+
+Build editions with the latest kernel:
+
+```bash
+$ cd live-maker
+
+# Rolling X.Org edition
+$ bash neko-builder.sh rolling
+
+# Rolling Xlibre edition
+$ bash neko-builder.sh rollibre
+```
+
+## Advanced usage
+
+The `neko-builder.sh` script accepts arguments for interactive or customized builds:
+
+```bash
+$ ./neko-builder.sh                     # Interactive mode
+$ ./neko-builder.sh <desktop>           # Build a specific desktop
+$ ./neko-builder.sh <desktop> -e "pkg"  # Add extra packages
+$ ./neko-builder.sh doble               # Build xlibre + xorg
+$ ./neko-builder.sh doble-isor          # Build rollibre + rolling
+```
+
+## See also
+
+- [Neko-Void OS Builder Overview](./) — setup and repository structure.
+

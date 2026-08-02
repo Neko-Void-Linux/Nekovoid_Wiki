@@ -1,43 +1,54 @@
-# Opciones de Compilación
+---
+title: Compilar la ISO de Neko-Void
+description: Comandos y opciones para construir la ISO Live de Neko-Void
+---
 
-## Compilación Normal
+# Compilar la ISO de Neko-Void
 
-Para compilar las ISO estándar de Neko-Void, usa los siguientes comandos:
+## Requisitos previos
 
-* **Compilar Edición X.Org:**
-  ```bash
-  cd live-maker && bash neko-builder.sh xorg
-  ```
+Antes de compilar, completa la [configuración inicial](./) de la página de resumen: clona el repositorio e inicializa los submódulos. La compilación se ejecuta desde el directorio `live-maker`.
 
-* **Compilar Edición Xlibre:**
-  ```bash
-  cd live-maker && bash neko-builder.sh xlibre
-  ```
+## Ediciones estándar
 
-## Compilación Rolling (Último Kernel)
-
-Para compilar las ediciones rolling con el kernel más reciente:
-
-* **Compilar Edición Rolling X.Org:**
-  ```bash
-  cd live-maker && bash neko-builder.sh rolling
-  ```
-
-* **Compilar Edición Rolling Xlibre:**
-  ```bash
-  cd live-maker && bash neko-builder.sh rollibre
-  ```
-
-## Uso Avanzado
-
-El script `neko-builder.sh` admite varios argumentos para compilaciones interactivas o personalizadas:
+Compila las ISO estándar de Neko-Void:
 
 ```bash
-# NekoVoid Live ISO Builder - Nonfree Edition
+$ cd live-maker
 
-./neko-builder.sh                 # Modo interactivo
-./neko-builder.sh <desktop>       # Compilar un escritorio específico
-./neko-builder.sh <desktop> -e "pkg..." # Con paquetes adicionales
-./neko-builder.sh doble           # Compilar xlibre + xorg
-./neko-builder.sh doble-isor      # Compilar rollibre + rolling
+# Edición X.Org
+$ bash neko-builder.sh xorg
+
+# Edición Xlibre
+$ bash neko-builder.sh xlibre
 ```
+
+## Ediciones rolling (último kernel)
+
+Compila las ediciones con el kernel más reciente:
+
+```bash
+$ cd live-maker
+
+# Edición Rolling X.Org
+$ bash neko-builder.sh rolling
+
+# Edición Rolling Xlibre
+$ bash neko-builder.sh rollibre
+```
+
+## Uso avanzado
+
+El script `neko-builder.sh` admite argumentos para compilaciones interactivas o personalizadas:
+
+```bash
+$ ./neko-builder.sh                     # Modo interactivo
+$ ./neko-builder.sh <desktop>           # Compilar un escritorio específico
+$ ./neko-builder.sh <desktop> -e "pkg"  # Añadir paquetes extra
+$ ./neko-builder.sh doble               # Compilar xlibre + xorg
+$ ./neko-builder.sh doble-isor          # Compilar rollibre + rolling
+```
+
+## Véase también
+
+- [Resumen de Neko-Void OS Builder](./) — configuración inicial y estructura del repositorio.

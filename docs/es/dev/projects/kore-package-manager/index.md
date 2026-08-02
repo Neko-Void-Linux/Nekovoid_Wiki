@@ -1,40 +1,48 @@
-# Kore Package Manager (kpm)
+---
+title: Kore Package Manager
+description: Resumen de kpm, un gestor de paquetes minimalista en Rust para AppImages y tarballs
+---
 
-![License](https://img.shields.io/badge/license-BSD-cyan)
-![Rust](https://img.shields.io/badge/language-Rust-orange)
-[![Changelog](https://img.shields.io/badge/Changelog-v2.1.0-blueviolet?logo=keepachangelog&logoColor=white)](https://github.com/ezequielgk/Kore-Package-Manager/blob/main/CHANGELOG_es.md)
-[![Contributing](https://img.shields.io/badge/Contribuye-aquí-green)](https://github.com/ezequielgk/Kore-Package-Manager/blob/main/CONTRIBUTING_es.md)
+# Kore Package Manager
 
+Kore (`kpm`) es un gestor de paquetes minimalista para Linux escrito en Rust. Maneja aplicaciones distribuidas como tarballs (`.tar.gz`, `.tar.xz`, `.tar.bz2`) y AppImages (`.AppImage`), instalándolas de forma aislada y manteniendo limpio el directorio home.
 
-Un gestor de programas minimalista y universal para Linux, rediseñado completamente en **Rust**. Está diseñado específicamente para manejar aplicaciones distribuidas en **tarballs** (.tar.gz, .tar.xz, .tar.bz2) y **AppImages** (.AppImage).
+Está diseñado para Void Linux, Arch y cualquier sistema donde el software pre-compilado deba instalarse sin tocar el sistema base. Ofrece tanto una interfaz de terminal interactiva (TUI) como comandos directos por CLI.
 
-Ideal para usuarios de **Void Linux**, **Arch** o cualquier sistema donde necesites instalar software pre-compilado de forma aislada y limpia, contando con una elegante interfaz de terminal interactiva (TUI) basada en `ratatui`.
+- **Licencia:** BSD
+- **Lenguaje:** Rust
+- **Código fuente:** [GitHub](https://github.com/ezequielgk/Kore-Package-Manager)
+- **Changelog:** [v2.1.6](https://github.com/ezequielgk/Kore-Package-Manager/blob/main/CHANGELOG.md)
 
-## Características Principales
+## Características
 
-  * **Navegación TUI**: Explora tus archivos y carpetas con una interfaz de terminal inmersiva y de alto rendimiento.
-  * **Interfaz Híbrida CLI**: Utiliza el menú interactivo o ejecuta comandos directos a través de la terminal.
-  * **Instalación Inteligente**: Extrae los archivos en `~/.local/share/binaries`, manteniendo limpio tu directorio HOME.
-  * **Gestión de Binarios**: Crea automáticamente enlaces simbólicos (symlinks) en `~/.local/bin`.
-  * **Integración con el Menú**: Genera automáticamente archivos de acceso directo `.desktop`.
-  * **Extracción sin Ruido**: Ejecuta subcomandos en segundo plano (`tar`), omitiendo salidas de terminal que puedan ensuciar la interfaz (`stdout`/`stderr`).
-  * **Desinstalación Atómica**: Elimina de forma limpia la aplicación, el enlace simbólico y el acceso directo.
+- **Interfaz híbrida.** TUI interactiva y comandos directos por CLI.
+- **Instalación aislada.** Extrae los archivos a `~/.local/share/binaries` y enlaza el binario en `~/.local/bin`.
+- **Integración con el menú.** Genera atajos `.desktop` automáticamente.
+- **Desinstalación atómica.** Borra la carpeta de la app, el enlace y el atajo en un solo paso.
+- **Sin dependencias en runtime.** Escrito en Rust; no necesita wrappers de `fzf` o `bash`.
 
-## Instalación Rápida
+## Instalación
 
-Puedes instalar la última versión pre-compilada directamente ejecutando:
+Instala la última versión pre-compilada:
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/ezequielgk/Tarball-Manager/main/install.sh | bash
+$ curl -sSL https://raw.githubusercontent.com/ezequielgk/Kore-Package-Manager/main/install.sh | bash
 ```
 
-> **Nota**: Este script descarga automáticamente la versión correcta desde *GitHub Releases*. Asegúrate de que la carpeta `~/.local/bin` esté en el `$PATH` de tu sistema.
+::: tip
+Asegúrate de que `~/.local/bin` esté en tu `$PATH` tras instalar.
+:::
 
+## Requisitos
 
-## Requisitos del Sistema
+La mayoría de dependencias vienen con cualquier sistema Linux por defecto:
 
-Al estar escrito en Rust, se ha eliminado la necesidad de dependencias externas de entorno (como `fzf` o `bash`). Los únicos requisitos en tu sistema (la gran mayoría vienen preinstalados por defecto en Linux) son:
+- `tar` — usado para la descompresión
+- `pkexec` (opcional) — solo para apps marcadas para pedir root
+- `desktop-file-utils` (`update-desktop-database`) — para refrescar el menú de aplicaciones
 
-  - `tar`: Utilizado en segundo plano para la descompresión.
-  - `pkexec` (Opcional): Requerido solo si marcas una aplicación para solicitar permisos de superusuario.
-  - `desktop-file-utils` (`update-desktop-database`): Utilizado para notificar al sistema cuando una aplicación es "desinstalada" y refrescar el menú de aplicaciones.
+## Véase también
+
+- [Uso](./usage) — comandos interactivos y por CLI.
+- [Arquitectura](./architecture) — cómo está estructurado Kore internamente.

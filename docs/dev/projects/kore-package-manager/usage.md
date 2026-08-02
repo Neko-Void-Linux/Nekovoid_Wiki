@@ -1,65 +1,82 @@
-# Usage
-
-
-### Interactive Mode (TUI)
-You just need to call the tool with no arguments to open the interface:
-```bash
-kpm
-```
-* Follow the on-screen instructions using your arrow keys, `ENTER` (to confirm), and `ESC` (to go back/exit). The dynamic flow allows you to select the app, extract it, and define the binary to link—all in a guided way.
-
+---
+title: Kore Usage
+description: How to use kpm, the Kore Package Manager, in interactive and CLI mode
 ---
 
-### Command Line Interface (CLI)
+# Kore Usage
 
-For fast, non-interactive operations, `kpm` supports the following defined commands (`clap`):
+## Interactive Mode (TUI)
 
-| Command | Short Alias | Description | Usage Example |
-| :--- | :--- | :--- | :--- |
-| `list` | `-l`, `list-installed`| Lists currently installed applications. | `kpm list` |
-| `remove` | `-r` | Uninstalls one or multiple installed apps. | `kpm remove discord waterfox` |
-| `install` | `-i` | Installs one or multiple apps from local tarballs or **repositories**. | `kpm install obsidian` |
-| `update` | `-u` | Updates installed apps from repositories. | `kpm update` or `kpm update obsidian` |
-| `repo` | *(none)* | Manages repositories (official, community, and custom). | `kpm repo list` |
-| `help` | `-h`, `--help` | Prints complete help options for the program. | `kpm --help` |
-| *(none)* | `-V`, `--version` | Displays the current installation version. | `kpm -V` |
-| `--update-bin` | *(none)* | Updates the Kore Package Manager binary to its latest version. | `kpm --update-bin` |
+Call the tool with no arguments to open the interface:
 
-#### Direct Installation (Multiple & Repositories)
-You can install multiple applications directly by typing their name (if they exist in the repositories) or the path of a local `.tar.gz` or `.AppImage` file:
 ```bash
-kpm install obsidian waterfox discord
-# Or using the alias:
-kpm -i discord
-```
-If you want to install a specific local archive and customize its metadata (this applies to single installations only), you can use the following flags:
-```bash
-kpm install "/path/to/app.AppImage" --app-name "NombreApp" --use-root "No" --category "Network"
-
-kpm install "/path/to/app.tar.gz" --app-name "NombreApp" --use-root "No" --category "Network"
-```
-* **--app-name (-a)**: Name the application will have in the system.
-* **--use-root (-u)**: Defines whether the `.desktop` shortcut will require `pkexec` (superuser).
-* **--category (-c)**: XDG Category for the applications menu (`Utility`, `Network`, `Game`, etc).
-
-#### Smart Uninstallation
-You can delete the folder, binary, and `.desktop` file of one or more applications simultaneously:
-```bash
-kpm remove app_name another_app
-# E.g. using the alias:
-kpm -r app_name
+$ kpm
 ```
 
-#### Repository Management (`kpm repo`)
-The manager now supports repositories to download and install apps with a single command.
-* `kpm repo list`: Lists the amount of available packages by type (official, community, user).
-* `kpm repo pkg-list`: Shows the list of all packages available to install.
-* `kpm repo pkg-search <query>`: Searches for a package in all repositories by name.
-* `kpm repo sync`: Synchronizes/updates the list of official and community repositories.
-* `kpm repo add <name> <pkg_name> <url> <category> [--requires-root]`: Adds a third-party repository.
-* `kpm repo remove <name>`: Removes a custom repository.
+Use the arrow keys to navigate, `Enter` to confirm, and `Esc` to go back or exit. The guided flow lets you select the app, extract it, and define the binary to link in one pass.
 
-#### Shell Completions (Bash, Zsh, Fish)
-When installing `kpm` via `install.sh`, autocomplete scripts for Bash, Zsh, and Fish are automatically configured locally on your system, allowing you to press `TAB` to effortlessly complete commands and flags.
+## Command Line Interface (CLI)
 
+For fast, non-interactive operations, `kpm` supports the following commands:
+
+| Command | Short alias | Description |
+|---|---|---|
+| `list` | `-l`, `list-installed` | List installed applications |
+| `install` | `-i` | Install one or more apps from local tarballs or repositories |
+| `remove` | `-r` | Uninstall one or more installed apps |
+| `update` | `-u` | Update installed apps from repositories |
+| `repo` | — | Manage repositories (official, community, custom) |
+| `help` | `-h`, `--help` | Print full help |
+| — | `-V`, `--version` | Show the installed version |
+| `--update-bin` | — | Update the `kpm` binary to the latest version |
+
+### Direct installation
+
+Install multiple applications by name (if they exist in a repository) or by path to a local archive:
+
+```bash
+$ kpm install obsidian waterfox discord
+```
+
+For a single local archive with custom metadata, use these flags:
+
+```bash
+$ kpm install "/path/to/app.AppImage" --app-name "MyApp" --use-root "No" --category "Network"
+```
+
+| Flag | Description |
+|---|---|
+| `--app-name` (`-a`) | Name the application shows in the system |
+| `--use-root` (`-u`) | Whether the `.desktop` shortcut requires `pkexec` |
+| `--category` (`-c`) | XDG category for the menu (`Utility`, `Network`, `Game`, ...) |
+
+### Smart uninstallation
+
+Remove the folder, binary, and `.desktop` file of one or more apps at once:
+
+```bash
+$ kpm remove discord waterfox
+```
+
+### Repository management
+
+The `repo` subcommand manages where `kpm` fetches apps from:
+
+| Subcommand | Description |
+|---|---|
+| `kpm repo list` | Count of available packages by type (official, community, user) |
+| `kpm repo pkg-list` | List all packages available to install |
+| `kpm repo pkg-search <query>` | Search a package by name across all repositories |
+| `kpm repo sync` | Sync the official and community package lists |
+| `kpm repo add <name> <pkg> <url> <category> [--requires-root]` | Add a third-party repository |
+| `kpm repo remove <name>` | Remove a custom repository |
+
+## Shell completions
+
+Installing `kpm` via `install.sh` configures autocomplete for Bash, Zsh, and Fish. Press `Tab` to complete commands and flags.
+
+## See also
+
+- [Kore Overview](./) — what Kore is and how to install it.
+- [Kore Architecture](./architecture) — how Kore is structured internally.
 

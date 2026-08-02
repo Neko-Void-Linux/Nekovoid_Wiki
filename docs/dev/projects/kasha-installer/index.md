@@ -1,14 +1,29 @@
+---
+title: Kasha Installer
+description: Overview of Kasha, the modular C and GTK installer used by Neko-Void
+---
+
 # Kasha Installer
 
-A modular Linux system installer built with C and GTK+ 3.0.
+Kasha is the system installer used by Neko-Void. It is written in C with a GTK+ 3.0 interface and handles disk partitioning, bootloader setup, encryption, and basic system configuration.
+
+- **Language:** C
+- **UI toolkit:** GTK+ 3.0
+- **Source:** [Codeberg](https://codeberg.org/javiercplus/Kasha-Installer)
 
 ## Features
 
-- **Automatic and Manual Partitioning:**
-    - *UEFI Mode:* GPT partition table, 512MB ESP (FAT32), and Ext4 root.
-    - *Legacy Mode:* MBR (MS-DOS) partition table, single Ext4 root with bootable flag.
-- **Installation Modes:** Clean install (erase disk), Install Alongside (dual-boot), or Manual.
+- **Partitioning modes:**
+    - UEFI: GPT table, 512MB ESP (FAT32), Ext4 root.
+    - Legacy: MBR (MS-DOS) table, single Ext4 root with bootable flag.
+- **Install modes:** clean install (erase disk), install alongside (dual-boot), or manual.
 - **Encryption:** LUKS support for partitions.
-- **Bootloader:** GRUB installation for both EFI and BIOS systems.
-- **System Configuration:** Locale, Hostname, Timezone, and User account management.
+- **Bootloader:** GRUB for both EFI and BIOS systems.
+- **System configuration:** locale, hostname, timezone, and user account.
+
+## See also
+
+- [Architecture](./architecture) — how Kasha is structured.
+- [Build](./build) — how to compile and run Kasha.
+
 

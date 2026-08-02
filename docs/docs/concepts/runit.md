@@ -1,3 +1,8 @@
+---
+title: runit
+description: The runit init system used by Neko-Void, how it works and how to manage services
+---
+
 # runit
 
 > [!NOTE]
