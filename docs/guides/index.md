@@ -6,7 +6,7 @@ Neko Void is an ambitious open source ecosystem designed to bring a lightweight,
 
 Neko Void is composed of several core projects, each serving a specific purpose in the architecture:
 
-### 🚀 Neko Void OS
+### Neko Void OS
 The base operating system featuring the MATE desktop environment and a curated selection of software.
 - **Native Experience:** Built directly upon Void Linux and runit for maximum efficiency.
 - **Open Source:** Completely transparent and community-driven.
