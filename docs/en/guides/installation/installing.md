@@ -1,64 +1,52 @@
----
-title: Installing Neko Void
-description: Step-by-step guide to installing Neko-Void OS onto your computer's disk
----
-
 # Installing Neko Void
 
-## Overview
+Once you have booted Neko Void from your USB drive, Neko Void will start a LIVE session. The default user is `anon` and the password is `voidlinux`
 
-Once booted into the Neko-Void Live session, you can perform a permanent installation to your hard drive or SSD using the built-in graphical installer.
+[Reference image of Neko Void in live mode here]
 
-## Installation Steps
 
-### 1. Launch the installer
 
-On the Live desktop, click on the Neko Void installer icon to open the setup wizard.
+# Installing Neko Void on our computer
 
-### 2. Select language
+To install Neko Void on our computer, simply press the installer icon that usually appears on the desktop.
 
-Choose your preferred language for the installation process and system locale.
+[Reference image of the installer here]
 
-### 3. Installation type and partitioning
+Select our language and continue with the installation.
 
-Choose the partition strategy that fits your setup:
 
-- **Clean Installation (Erase entire disk):** Recommended for dedicated systems. The installer will automatically format and partition the target drive.
-- **Manual Partitioning:** Allows configuring custom mount points, separate `/boot` or `/home` partitions, swap space, or dual-boot configurations.
+Here we will select our installation type. If you want to do a clean installation, simply select "Clean installation (erase entire disk)".
 
-::: danger
-The clean installation option will erase all data on the selected drive. Ensure you have backed up important files.
-:::
+[Reference image of installation type here]
 
-### 4. Bootloader setup
 
-Select the target disk where the GRUB bootloader should be installed.
+In Partitions we select our hard drive. We can also do manual partitioning for greater control.
 
-### 5. System settings
+[Reference image of partitioning here]
 
-Configure core system settings:
+In Boot we simply select our disk to install the bootloader; GRUB is used by default.
 
-- **Hostname:** The computer's network name.
-- **Timezone:** Your local geographic timezone.
-- **Keyboard layout:** Your keyboard language and variant.
+[Reference image of bootloader here]
 
-### 6. User accounts
+In System we configure our computer name, timezone and keyboard.
 
-- Set up your primary username and password.
-- Define a separate password for the `root` (administrator) account for enhanced security.
-- Optionally, enable **Auto-Login** if desired.
+[Reference image of system settings here]
 
-### 7. Privilege escalation
 
-Select the privilege escalation tool for administrative tasks. **`doas`** is recommended for its simplicity and lightweight footprint, or choose **`sudo`** if preferred.
+In Users we configure our user, password and the root password (it is recommended to use a different one from the user for greater security).
 
-### 8. Confirmation and install
+We can also enable automatic login (Auto-Login).
 
-1. Review the configuration summary and confirm to begin writing the installation to disk.
-2. Wait for the installer to finish copying files and applying configurations.
-3. Once completed, remove the USB drive and click **Restart Now**. Your computer will boot into your fresh Neko Void installation.
+[Reference image of user configuration here]
 
-## See Also
 
-- [How to Report Issues](../troubleshooting/common-issues)
-- [Booting into Live Mode](./booting)
+As the last step we choose our privilege escalator; doas is recommended.
+
+[Reference image of security settings here]
+
+With everything ready we can start our installation of Neko Void
+
+
+[Reference image of the installer showing installation finished here]
+
+When the installation is finished, remove our USB drive and press the Restart Now button. Your computer will reboot and start a clean installation of Neko Void.

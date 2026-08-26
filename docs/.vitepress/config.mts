@@ -179,10 +179,10 @@ export default defineConfig({
                 collapsed: true,
                 items: [
                   { text: 'Resumen', link: '/es/guides/installation/' },
-                  { text: 'Requisitos del sistema', link: '/es/guides/installation/requirements' },
-                  { text: 'Crear medio de instalación', link: '/es/guides/installation/installation-media' },
-                  { text: 'Arranque en modo Live', link: '/es/guides/installation/booting' },
-                  { text: 'Instalar Neko Void', link: '/es/guides/installation/installing' }
+                  { text: 'Requisitos Neko Void', link: '/es/guides/installation/requirements' },
+                  { text: 'Creando un medio de instalación', link: '/es/guides/installation/installation-media' },
+                  { text: 'Booteando Neko Void', link: '/es/guides/installation/booting' },
+                  { text: 'Instalando Neko Void', link: '/es/guides/installation/installing' }
                 ]
               },
               {

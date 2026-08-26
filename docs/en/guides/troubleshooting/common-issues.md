@@ -1,53 +1,47 @@
----
-title: How to Report Issues
-description: Official guide and report template for reporting bugs in Neko-Void
----
+# How to report issues
 
-# How to Report Issues
+Currently, **Neko-Void is in its testing phase**. If you find a bug, report it in our Discord community, in the **#support-nekovoid** channel. To help us investigate it, use the following template and provide as much information as possible.
 
-## Overview
+### Report Template
 
-Currently, **Neko-Void is in its testing phase**. If you encounter a bug or unexpected behavior, please report it in our Discord community under the **#support-nekovoid** channel. To help us diagnose and resolve issues efficiently, please fill out the following template with as much detail as possible.
+**Build version:** 
 
-## Report Template
+[ISO name here]
 
-```text
-**Build Version:**
-[ISO name or installed build version]
+**Issue description:**
 
-**Issue Description:**
-[Describe the issue or error in detail here]
 
-**Steps to Reproduce:**
+[Comment your detailed problem here]
+
+**Steps to reproduce the problem:**
+
 1. 
 2. 
 3. 
 
-**Expected Behavior:**
-[Describe what should happen under normal operation]
+**Expected behavior:**
 
-**Current Behavior:**
-[Describe what actually happens, including error messages or screenshots]
+Describe what should happen if everything worked correctly.
+
+
+**Current behavior:**
+
+Describe what actually happens, include screenshots or error messages if possible.
+
 
 **Environment:**
-- Edition / Distribution:
-- Display Server: [ ] Xorg [ ] XLibre [ ] Wayland
+
+- Edition or distribution:
+- Graphical session: [ ] Xorg [ ] XLibre [ ] Wayland
 - CPU:
 - GPU:
-- Graphics Driver:
+- Graphics driver:
 - Kernel:
 - Shell:
-- Desktop Environment / Window Manager:
+- Desktop environment or window manager:
 
 **Logs:**
-[Paste the complete terminal output or system log messages here]
-```
 
-::: tip
-Whenever possible, attach screenshots, full error messages, and any additional details that help reproduce the issue.
-:::
+Paste here the complete message that appears in the terminal when trying to open or run the application.
 
-## See Also
-
-- [Installation Guide](../installation/)
-- [Contributing](/dev/contributing/)
+> If possible, also include screenshots, complete error messages and any other details that can help reproduce the issue.
