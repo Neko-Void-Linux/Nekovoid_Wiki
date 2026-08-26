@@ -4,13 +4,11 @@ Actualmente, **Neko-Void se encuentra en fase de pruebas**. Si encuentras un err
 
 ## Plantilla de reporte
 
-```text
-**Versión de la build:** 
+**Versión de la build:**
 
 [Nombre de la ISO aquí]
 
 **Descripción del problema:**
-
 
 [Comenta tu problema detallado aquí]
 
@@ -24,11 +22,9 @@ Actualmente, **Neko-Void se encuentra en fase de pruebas**. Si encuentras un err
 
 Describe qué debería de ocurrir si todo funcionara correctamente.
 
-
 **Comportamiento actual:**
 
 Describe qué ocurre realmente, incluye capturas de pantalla o mensajes de error si es posible.
-
 
 **Entorno:**
 
@@ -44,6 +40,5 @@ Describe qué ocurre realmente, incluye capturas de pantalla o mensajes de error
 **Logs:**
 
 Pega aquí el mensaje completo que aparece en la terminal al intentar abrir o ejecutar la aplicación.
-```
 
 > Si es posible, incluye también capturas de pantalla, mensajes de error completos y cualquier otro detalle que pueda ayudar a reproducir el problema.

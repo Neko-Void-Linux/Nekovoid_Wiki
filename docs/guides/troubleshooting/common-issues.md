@@ -4,13 +4,11 @@ Currently, **Neko-Void is in its testing phase**. If you find a bug, report it i
 
 ## Report Template
 
-```text
-**Build version:** 
+**Build version:**
 
 [ISO name here]
 
 **Issue description:**
-
 
 [Comment your detailed problem here]
 
@@ -24,11 +22,9 @@ Currently, **Neko-Void is in its testing phase**. If you find a bug, report it i
 
 Describe what should happen if everything worked correctly.
 
-
 **Current behavior:**
 
 Describe what actually happens, include screenshots or error messages if possible.
-
 
 **Environment:**
 
@@ -44,6 +40,5 @@ Describe what actually happens, include screenshots or error messages if possibl
 **Logs:**
 
 Paste here the complete message that appears in the terminal when trying to open or run the application.
-```
 
 > If possible, also include screenshots, complete error messages and any other details that can help reproduce the issue.
