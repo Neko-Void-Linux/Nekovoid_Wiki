@@ -1,33 +1,53 @@
-# Cómo reportar problemas
-
-Actualmente Neko-Void está en fase de pruebas. Si quieres reportar errores, visita nuestra comunidad de Discord en el canal **#support** y asegúrate de seguir esta plantilla:
-
+---
+title: Cómo reportar problemas
+description: Instrucciones y plantilla oficial para reportar errores en Neko-Void
 ---
 
-## Versión de la build: Pre-Alpha 1.0.2
+# Cómo reportar problemas
 
-## Descripción del problema:
-Steam no se instala.
+## Resumen
 
-## Pasos para reproducir:
-1. Instalar.
-2. Ejecutar.
-3. El error se despliega.
+Actualmente, **Neko-Void se encuentra en fase de pruebas**. Si encuentras un error o comportamiento inesperado, repórtalo en nuestra comunidad de Discord en el canal **#support-nekovoid**. Para ayudarnos a investigarlo y solucionarlo rápidamente, utiliza la siguiente plantilla y proporciona toda la información posible.
 
-## Comportamiento Esperado:
-A la hora de instalarse debería ser capaz de ejecutarse y desplegar Steam en pantalla.
+## Plantilla de reporte
 
-## Comportamiento Actual:
-A la hora de ejecutar lanza un error en la terminal y no se ejecuta.
+```text
+**Versión de la build:**
+[Nombre de la ISO o versión instalada]
 
-## Entorno:
-* **Edición:** [ ] Xorg  [x] XLibre
-* **Hardware:**
-  * **CPU:** Intel Core i7-9750H CPU @ 2.60GHz
-  * **Kernel:** 6.19.11-zen1
-  * **GPU:** NVIDIA GeForce GTX 1650 Mobile
-  * **Shell:** fish
-  * **DE:** mango
+**Descripción del problema:**
+[Comenta tu problema detallado aquí]
 
-## Logs:
-*(Pega aquí lo que dice la terminal al abrir o fallar la aplicación)*
+**Pasos para reproducir el problema:**
+1. 
+2. 
+3. 
+
+**Comportamiento esperado:**
+[Describe qué debería de ocurrir si todo funcionara correctamente]
+
+**Comportamiento actual:**
+[Describe qué ocurre realmente, incluye capturas de pantalla o mensajes de error si es posible]
+
+**Entorno:**
+- Edición o distribución:
+- Sesión gráfica: [ ] Xorg [ ] XLibre [ ] Wayland
+- CPU:
+- GPU:
+- Controlador gráfico:
+- Kernel:
+- Shell:
+- Entorno de escritorio o gestor de ventanas:
+
+**Logs:**
+[Pega aquí el mensaje completo que aparece en la terminal al intentar abrir o ejecutar la aplicación]
+```
+
+::: tip
+Si es posible, incluye también capturas de pantalla, mensajes de error completos y cualquier otro detalle que pueda ayudar a reproducir el problema.
+:::
+
+## Véase también
+
+- [Guía de instalación](../installation/)
+- [Colaborar](/es/dev/contributing/)

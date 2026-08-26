@@ -15,9 +15,10 @@ El sistema operativo base que cuenta con el entorno de escritorio MATE y una sel
 
 Si eres nuevo en Neko Void, te recomendamos seguir estas guías en orden:
 
-1. **[Comenzando](./getting-started/)**: Aprende cómo instalar y configurar el sistema por primera vez.
-2. **[Configuración](../docs/configuration/)**: Personaliza tu experiencia con configuraciones globales.
-3. **[Soporte](./troubleshooting/common-issues)**: Resuelve problemas comunes y aprende a reportar errores.
+1. **[Comenzando](./getting-started/)**: Aprende sobre el ecosistema y la comunidad.
+2. **[Instalación](./installation/)**: Conoce los requisitos de hardware, crea tu medio de instalación e instala Neko Void.
+3. **[Configuración](../docs/configuration/)**: Personaliza tu experiencia con configuraciones globales.
+4. **[Soporte](./troubleshooting/common-issues)**: Resuelve problemas comunes y aprende a reportar errores.
 
 ## Para Desarrolladores
 

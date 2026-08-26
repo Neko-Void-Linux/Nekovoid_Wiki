@@ -15,9 +15,10 @@ The base operating system featuring the MATE desktop environment and a curated s
 
 If you are new to Neko Void, we recommend following these guides in order:
 
-1. **[Getting Started](./getting-started/)**: Learn how to install and set up the system for the first time.
-2. **[Configuration](../docs/configuration/)**: Customize your experience with global settings.
-3. **[Support](./troubleshooting/common-issues)**: Solve common issues and learn how to report bugs.
+1. **[Getting Started](./getting-started/)**: Learn about the ecosystem and community.
+2. **[Installation](./installation/)**: Check hardware requirements, create your installation media, and install Neko Void.
+3. **[Configuration](../docs/configuration/)**: Customize your experience with global settings.
+4. **[Support](./troubleshooting/common-issues)**: Solve common issues and learn how to report bugs.
 
 ## For Developers
 

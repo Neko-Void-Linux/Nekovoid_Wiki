@@ -1,33 +1,53 @@
-# How to report issues
-
-Currently, Neko-Void is in its testing phase. If you want to report bugs, please visit our Discord community in the **#support** channel and make sure to follow this template:
-
+---
+title: How to Report Issues
+description: Official guide and report template for reporting bugs in Neko-Void
 ---
 
-## Build Version: Pre-Alpha 1.0.2
+# How to Report Issues
 
-## Issue Description:
-Steam fails to install.
+## Overview
 
-## Steps to Reproduce:
-1. Install.
-2. Execute.
-3. The error is displayed.
+Currently, **Neko-Void is in its testing phase**. If you encounter a bug or unexpected behavior, please report it in our Discord community under the **#support-nekovoid** channel. To help us diagnose and resolve issues efficiently, please fill out the following template with as much detail as possible.
 
-## Expected Behavior:
-Upon installation, it should be able to execute and display Steam on the screen.
+## Report Template
 
-## Current Behavior:
-When executing, it throws an error in the terminal and fails to launch.
+```text
+**Build Version:**
+[ISO name or installed build version]
 
-## Environment:
-* **Edition:** [ ] Xorg  [x] XLibre
-* **Hardware:**
-  * **CPU:** Intel Core i7-9750H CPU @ 2.60GHz
-  * **Kernel:** 6.19.11-zen1
-  * **GPU:** NVIDIA GeForce GTX 1650 Mobile
-  * **Shell:** fish
-  * **DE:** mango
+**Issue Description:**
+[Describe the issue or error in detail here]
 
-## Logs:
-*(Paste here what the terminal outputs when opening or crashing)*
+**Steps to Reproduce:**
+1. 
+2. 
+3. 
+
+**Expected Behavior:**
+[Describe what should happen under normal operation]
+
+**Current Behavior:**
+[Describe what actually happens, including error messages or screenshots]
+
+**Environment:**
+- Edition / Distribution:
+- Display Server: [ ] Xorg [ ] XLibre [ ] Wayland
+- CPU:
+- GPU:
+- Graphics Driver:
+- Kernel:
+- Shell:
+- Desktop Environment / Window Manager:
+
+**Logs:**
+[Paste the complete terminal output or system log messages here]
+```
+
+::: tip
+Whenever possible, attach screenshots, full error messages, and any additional details that help reproduce the issue.
+:::
+
+## See Also
+
+- [Installation Guide](../installation/)
+- [Contributing](/dev/contributing/)
