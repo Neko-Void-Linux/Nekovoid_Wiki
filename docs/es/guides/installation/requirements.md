@@ -1,6 +1,6 @@
 # Requisitos Neko Void
 
-| Categoría| Requisitos mínimos | Requisitos recomendados |
+| Categoría | Requisitos mínimos | Requisitos recomendados |
 |---|---|---|
 | **Entorno XFCE, MATE e IceWM** | 2 GB de RAM | 4 GB de RAM |
 | **Otros entornos de escritorio** | 4 GB de RAM | 4 GB de RAM o más |

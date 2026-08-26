@@ -1,52 +1,57 @@
 # Instalando Neko Void
 
-Cuando hayas booteado Neko Void desde tu memoria USB, Neko Void iniciará una sesión LIVE, El usuario por defecto es `anon` y la contraseña `voidlinux`
+Cuando hayas booteado Neko Void desde tu memoria USB, Neko Void iniciará una sesión `LIVE`. El usuario por defecto es `anon` y la contraseña `voidlinux`.
 
-[Imagen referencial de Neko Void en modo live aquí]
+> *[Imagen referencial de Neko Void en modo live aquí]*
 
-
-
-# Instalando Neko Void en nuestra computadora
+## Instalando Neko Void en nuestra computadora
 
 Para instalar Neko Void en nuestro equipo simplemente presionamos el icono del instalador que suele salir en el escritorio.
 
-[Imagen referencial del instalador aquí]
+> *[Imagen referencial del instalador aquí]*
 
 Seleccionamos nuestro idioma y continuamos con la instalación.
 
+### Tipo de instalación
 
-Aquí seleccionaremos nuestro tipo de instalación, Si deseas hacer una instalación limpia entonces simplemente seleccionamos "Instalación limpia (borrar todo el disco)".
+Aquí seleccionaremos nuestro tipo de instalación. Si deseas hacer una instalación limpia, simplemente seleccionamos **"Instalación limpia (borrar todo el disco)"**.
 
-[imagen referencial del tipo de instalacion aqui]
+> *[Imagen referencial del tipo de instalación aquí]*
 
+### Particiones
 
-En Particiones seleccionamos nuestro disco duro, Tambien podemos hacer un particionado manual para mayor control.
+En **Particiones** seleccionamos nuestro disco duro. También podemos hacer un particionado manual para mayor control.
 
-[Imagen referencial del particionado aquí]
+> *[Imagen referencial del particionado aquí]*
 
-En Arranque simplemente seleccionamos nuestro disco para poder instalar el bootloader, por defecto se usa GRUB.
+### Arranque
 
-[Imagen referencial del arranca aquí]
+En **Arranque** simplemente seleccionamos nuestro disco para poder instalar el *bootloader*, por defecto se usa `GRUB`.
 
-En Sistema configuramos nuestro nombre del equipo, nuestra zona horaria y el teclado.
+> *[Imagen referencial del arranque aquí]*
 
-[Imagen referencial del sistema aquí]
+### Sistema
 
+En **Sistema** configuramos nuestro nombre del equipo, nuestra zona horaria y el teclado.
 
-En Usuarios configuramos nuestro usuario, contraseña y la contraseña para root (se recomienda usar una distinta a la del usuario para mayor seguridad).
+> *[Imagen referencial del sistema aquí]*
 
-Tambien podemos activar el inicio de sesión automatico (Auto-Login).
+### Usuarios
 
-[Imagen referencial de la configuracion de usuarios aquí]
+En **Usuarios** configuramos nuestro usuario, contraseña y la contraseña para `root` (se recomienda usar una distinta a la del usuario para mayor seguridad).
 
+También podemos activar el inicio de sesión automático (**Auto-Login**).
 
-Como ultimo paso elegimos nuestro escalador de privilegios, doas es el recomendado.
+> *[Imagen referencial de la configuración de usuarios aquí]*
 
-[Imagen referencial de seguridad aquí]
+### Escalador de privilegios
 
-Ya con todo listo podriamos iniciar nuestra instalación de Neko Void
+Como último paso elegimos nuestro escalador de privilegios, `doas` es el recomendado.
 
+> *[Imagen referencial de seguridad aquí]*
 
-[Imagen referencial del instalador avisando que la instalación a finalizado aquí]
+Ya con todo listo podríamos iniciar nuestra instalación de Neko Void.
 
-Cuando la instalación haya finalizado entonces removemos nuestra memoria USB y presiomanos el botón reiniciar ahora. Tu computadora se reiniciará y arrancará una instalación limpia de Neko Void.
+> *[Imagen referencial del instalador avisando que la instalación ha finalizado aquí]*
+
+Cuando la instalación haya finalizado entonces removemos nuestra memoria USB y presionamos el botón **Reiniciar ahora**. Tu computadora se reiniciará y arrancará una instalación limpia de Neko Void.

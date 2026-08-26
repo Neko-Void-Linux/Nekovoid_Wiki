@@ -1,52 +1,57 @@
 # Installing Neko Void
 
-Once you have booted Neko Void from your USB drive, Neko Void will start a LIVE session. The default user is `anon` and the password is `voidlinux`
+Once you have booted Neko Void from your USB drive, Neko Void will start a `LIVE` session. The default user is `anon` and the password is `voidlinux`.
 
-[Reference image of Neko Void in live mode here]
+> *[Reference image of Neko Void in live mode here]*
 
-
-
-# Installing Neko Void on our computer
+## Installing Neko Void on our computer
 
 To install Neko Void on our computer, simply press the installer icon that usually appears on the desktop.
 
-[Reference image of the installer here]
+> *[Reference image of the installer here]*
 
 Select our language and continue with the installation.
 
+### Installation Type
 
-Here we will select our installation type. If you want to do a clean installation, simply select "Clean installation (erase entire disk)".
+Here we will select our installation type. If you want to do a clean installation, simply select **"Clean installation (erase entire disk)"**.
 
-[Reference image of installation type here]
+> *[Reference image of installation type here]*
 
+### Partitions
 
-In Partitions we select our hard drive. We can also do manual partitioning for greater control.
+In **Partitions** we select our hard drive. We can also do manual partitioning for greater control.
 
-[Reference image of partitioning here]
+> *[Reference image of partitioning here]*
 
-In Boot we simply select our disk to install the bootloader; GRUB is used by default.
+### Boot
 
-[Reference image of bootloader here]
+In **Boot** we simply select our disk to install the *bootloader*; `GRUB` is used by default.
 
-In System we configure our computer name, timezone and keyboard.
+> *[Reference image of bootloader here]*
 
-[Reference image of system settings here]
+### System
 
+In **System** we configure our computer name, timezone and keyboard.
 
-In Users we configure our user, password and the root password (it is recommended to use a different one from the user for greater security).
+> *[Reference image of system settings here]*
 
-We can also enable automatic login (Auto-Login).
+### Users
 
-[Reference image of user configuration here]
+In **Users** we configure our user, password and the root password (it is recommended to use a different one from the user for greater security).
 
+We can also enable automatic login (**Auto-Login**).
 
-As the last step we choose our privilege escalator; doas is recommended.
+> *[Reference image of user configuration here]*
 
-[Reference image of security settings here]
+### Privilege Escalator
 
-With everything ready we can start our installation of Neko Void
+As the last step we choose our privilege escalator; `doas` is recommended.
 
+> *[Reference image of security settings here]*
 
-[Reference image of the installer showing installation finished here]
+With everything ready we can start our installation of Neko Void.
 
-When the installation is finished, remove our USB drive and press the Restart Now button. Your computer will reboot and start a clean installation of Neko Void.
+> *[Reference image of the installer showing installation finished here]*
+
+When the installation is finished, remove our USB drive and press the **Restart Now** button. Your computer will reboot and start a clean installation of Neko Void.

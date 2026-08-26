@@ -4,12 +4,10 @@ The easiest way to install Neko Void is by creating an installation medium with 
 
 In this case we can use Ventoy as the recommended option for installation.
 
+## On Windows, MacOS or Linux
 
-# On Windows, MacOS or Linux
+1. Download [Ventoy](https://www.ventoy.net/en/download.html), extract it and open it.
 
-Download [Ventoy](https://www.ventoy.net/en/download.html), extract it and open it.
+> *[Reference image of Ventoy2disk here]*
 
-[Reference image of Ventoy2disk here]
-
-
-Select your USB drive and press the Install button. Once done, simply drag the Neko Void ISO image into your USB drive.
+2. Select your USB drive and press the **Install** button. Once done, simply drag the Neko Void ISO image into your USB drive.

@@ -2,8 +2,9 @@
 
 Currently, **Neko-Void is in its testing phase**. If you find a bug, report it in our Discord community, in the **#support-nekovoid** channel. To help us investigate it, use the following template and provide as much information as possible.
 
-### Report Template
+## Report Template
 
+```text
 **Build version:** 
 
 [ISO name here]
@@ -43,5 +44,6 @@ Describe what actually happens, include screenshots or error messages if possibl
 **Logs:**
 
 Paste here the complete message that appears in the terminal when trying to open or run the application.
+```
 
 > If possible, also include screenshots, complete error messages and any other details that can help reproduce the issue.

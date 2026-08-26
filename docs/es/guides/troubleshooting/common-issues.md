@@ -2,8 +2,9 @@
 
 Actualmente, **Neko-Void se encuentra en fase de pruebas**. Si encuentras un error, repórtalo en nuestra comunidad de Discord, en el canal **#support-nekovoid**. Para ayudarnos a investigarlo, utiliza la siguiente plantilla y proporciona toda la información posible.
 
-### Plantilla de reporte
+## Plantilla de reporte
 
+```text
 **Versión de la build:** 
 
 [Nombre de la ISO aquí]
@@ -43,5 +44,6 @@ Describe qué ocurre realmente, incluye capturas de pantalla o mensajes de error
 **Logs:**
 
 Pega aquí el mensaje completo que aparece en la terminal al intentar abrir o ejecutar la aplicación.
+```
 
 > Si es posible, incluye también capturas de pantalla, mensajes de error completos y cualquier otro detalle que pueda ayudar a reproducir el problema.
