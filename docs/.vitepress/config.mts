@@ -1,5 +1,71 @@
 import { defineConfig } from 'vitepress'
 
+function normalizeSearchTerm(term: string) {
+  return term
+    .toLocaleLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+}
+
+function searchTagsForPath(id: string) {
+  const path = normalizeSearchTerm(id)
+  const tags = new Set(['nekovoid', 'neko-void', 'linux', 'wiki'])
+
+  const add = (...values: string[]) => values.forEach((value) => tags.add(value))
+
+  if (path.includes('/guides/')) add('guias', 'tutorial', 'usuario', 'configuracion')
+  if (path.includes('/installation/')) add('instalacion', 'iso', 'live', 'usb', 'arranque', 'hardware')
+  if (path.includes('/troubleshooting/')) add('problemas', 'errores', 'solucion', 'diagnostico')
+  if (path.includes('/dev/')) add('desarrollo', 'codigo', 'compilar', 'repositorio')
+  if (path.includes('/projects/')) add('proyectos', 'software', 'herramientas')
+  if (path.includes('nekovoid-os-builder')) add('iso', 'builder', 'live', 'bash', 'construccion')
+  if (path.includes('kasha-installer')) add('kasha', 'instalador', 'gtk', 'particionado', 'grub', 'luks')
+  if (path.includes('kore-package-manager')) add('kore', 'kpm', 'paquetes', 'rust', 'appimage', 'tarball')
+  if (path.includes('/concepts/runit')) add('runit', 'init', 'pid1', 'servicios', 'daemon', 'sv', 'runsv')
+  if (path.includes('/concepts/musl')) add('musl', 'libc', 'glibc', 'compatibilidad')
+  if (path.includes('/concepts/')) add('conceptos', 'arquitectura', 'sistema')
+  if (path.includes('/configuration/')) add('configuracion', 'ajustes', 'opciones')
+  if (path.includes('/download/')) add('descargar', 'iso', 'imagen', 'instalacion')
+  if (path.includes('/contributing/')) add('colaborar', 'contribuir', 'documentacion', 'desarrollo')
+
+  return [...tags].join(' ')
+}
+
+function createLocalSearch(language: 'en' | 'es') {
+  const spanish = language === 'es'
+
+  return {
+    provider: 'local' as const,
+    options: {
+      detailedView: true,
+      translations: {
+        button: {
+          buttonText: spanish ? 'Buscar' : 'Search',
+          buttonAriaLabel: spanish ? 'Buscar en la wiki' : 'Search the wiki'
+        },
+        modal: {
+          displayDetails: spanish ? 'Mostrar detalles' : 'Display details',
+          resetButtonTitle: spanish ? 'Limpiar búsqueda' : 'Reset search',
+          backButtonTitle: spanish ? 'Cerrar búsqueda' : 'Close search',
+          noResultsText: spanish ? 'Sin resultados para' : 'No results for'
+        }
+      },
+      _render: (src: string, env: { relativePath?: string }, md: { render: (source: string, environment: unknown) => string }) => {
+        const html = md.render(src, env)
+        const tags = searchTagsForPath(env.relativePath ?? '')
+        return html.replace('</h1>', `</h1><p>${tags}</p>`)
+      },
+      miniSearch: {
+        searchOptions: {
+          prefix: true,
+          fuzzy: 0.2,
+          boost: { title: 6, titles: 3, text: 1 }
+        }
+      }
+    }
+  }
+}
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "NEKO_VOID",
@@ -33,6 +99,9 @@ export default defineConfig({
       label: 'English',
       lang: 'en',
       themeConfig: {
+        search: createLocalSearch('en'),
+        outline: [2, 4],
+        outlineTitle: 'Contents',
         nav: [
           { text: 'Home', link: '/' },
           { text: 'Guides', link: '/guides/' },
@@ -76,33 +145,10 @@ export default defineConfig({
                 text: 'Projects',
                 collapsed: true,
                 items: [
-                  { text: 'Overview', link: '/dev/projects/' },
-                  {
-                    text: 'Neko Void OS',
-                    collapsed: true,
-                    items: [
-                      { text: 'Overview', link: '/dev/projects/nekovoid-os-builder/' },
-                      { text: 'Build ISO', link: '/dev/projects/nekovoid-os-builder/build' }
-                    ]
-                  },
-                  {
-                    text: 'Kasha Installer',
-                    collapsed: true,
-                    items: [
-                      { text: 'Overview', link: '/dev/projects/kasha-installer/' },
-                      { text: 'Architecture', link: '/dev/projects/kasha-installer/architecture' },
-                      { text: 'Build', link: '/dev/projects/kasha-installer/build' }
-                    ]
-                  },
-                  {
-                    text: 'Kore Package Manager',
-                    collapsed: true,
-                    items: [
-                      { text: 'Overview', link: '/dev/projects/kore-package-manager/' },
-                      { text: 'Usage', link: '/dev/projects/kore-package-manager/usage' },
-                      { text: 'Architecture', link: '/dev/projects/kore-package-manager/architecture' }
-                    ]
-                  }
+                  { text: 'Project overview', link: '/dev/projects/' },
+                  { text: 'Neko Void OS', link: '/dev/projects/nekovoid-os-builder/' },
+                  { text: 'Kasha Installer', link: '/dev/projects/kasha-installer/' },
+                  { text: 'Kore Package Manager', link: '/dev/projects/kore-package-manager/' }
                 ]
               },
               {
@@ -152,7 +198,9 @@ export default defineConfig({
       lang: 'es',
       link: '/es/',
       themeConfig: {
-        outlineTitle: 'En esta página',
+        search: createLocalSearch('es'),
+        outline: [2, 4],
+        outlineTitle: 'Contenido',
         docFooter: {
           prev: 'Página anterior',
           next: 'Página siguiente'
@@ -203,33 +251,10 @@ export default defineConfig({
                 text: 'Proyectos',
                 collapsed: true,
                 items: [
-                  { text: 'Resumen', link: '/es/dev/projects/' },
-                  {
-                    text: 'Neko Void OS',
-                    collapsed: true,
-                    items: [
-                      { text: 'Resumen', link: '/es/dev/projects/nekovoid-os-builder/' },
-                      { text: 'Compilación ISO', link: '/es/dev/projects/nekovoid-os-builder/build' }
-                    ]
-                  },
-                  {
-                    text: 'Instalador Kasha',
-                    collapsed: true,
-                    items: [
-                      { text: 'Resumen', link: '/es/dev/projects/kasha-installer/' },
-                      { text: 'Arquitectura', link: '/es/dev/projects/kasha-installer/architecture' },
-                      { text: 'Compilación', link: '/es/dev/projects/kasha-installer/build' }
-                    ]
-                  },
-                  {
-                    text: 'Kore Package Manager',
-                    collapsed: true,
-                    items: [
-                      { text: 'Resumen', link: '/es/dev/projects/kore-package-manager/' },
-                      { text: 'Uso', link: '/es/dev/projects/kore-package-manager/usage' },
-                      { text: 'Arquitectura', link: '/es/dev/projects/kore-package-manager/architecture' }
-                    ]
-                  }
+                  { text: 'Resumen de proyectos', link: '/es/dev/projects/' },
+                  { text: 'Neko Void OS', link: '/es/dev/projects/nekovoid-os-builder/' },
+                  { text: 'Instalador Kasha', link: '/es/dev/projects/kasha-installer/' },
+                  { text: 'Kore Package Manager', link: '/es/dev/projects/kore-package-manager/' }
                 ]
               },
               {
@@ -286,6 +311,8 @@ export default defineConfig({
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+
+    search: createLocalSearch('en'),
 
     socialLinks: [
       { icon: 'github', link: 'https://codeberg.org/javiercplus/Neko-Void' },

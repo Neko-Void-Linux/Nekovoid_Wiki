@@ -25,8 +25,49 @@ $ git submodule update --init --recursive
 
 The submodules include the Neko Wizard and the Kasha installer module, which are integrated into the ISO.
 
-## See also
+## Build ISO
 
-- [Build ISO](./build) — the build commands and available editions.
+### Prerequisites
 
+Complete the setup above before building. The build runs from the `live-maker` directory.
+
+### Standard editions
+
+Build the standard Neko-Void ISOs:
+
+```bash
+$ cd live-maker
+
+# X.Org edition
+$ bash neko-builder.sh xorg
+
+# Xlibre edition
+$ bash neko-builder.sh xlibre
+```
+
+### Rolling editions
+
+Build editions with the latest kernel:
+
+```bash
+$ cd live-maker
+
+# Rolling X.Org edition
+$ bash neko-builder.sh rolling
+
+# Rolling Xlibre edition
+$ bash neko-builder.sh rollibre
+```
+
+### Advanced usage
+
+The `neko-builder.sh` script accepts arguments for interactive or customized builds:
+
+```bash
+$ ./neko-builder.sh                     # Interactive mode
+$ ./neko-builder.sh <desktop>           # Build a specific desktop
+$ ./neko-builder.sh <desktop> -e "pkg"  # Add extra packages
+$ ./neko-builder.sh doble               # Build xlibre + xorg
+$ ./neko-builder.sh doble-isor          # Build rollibre + rolling
+```
 

@@ -49,7 +49,3 @@ $ ./neko-builder.sh doble               # Build xlibre + xorg
 $ ./neko-builder.sh doble-isor          # Build rollibre + rolling
 ```
 
-## See also
-
-- [Neko-Void OS Builder Overview](./) — setup and repository structure.
-

@@ -60,8 +60,3 @@ O usa la regla de conveniencia:
 ```bash
 # make run
 ```
-
-## Véase también
-
-- [Resumen de Kasha](./) — qué es Kasha y sus características.
-- [Arquitectura](./architecture) — cómo está estructurado Kasha.

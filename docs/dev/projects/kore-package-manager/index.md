@@ -42,8 +42,82 @@ Most dependencies ship with any Linux system by default:
 - `pkexec` (optional) — only for apps marked to prompt for root
 - `desktop-file-utils` (`update-desktop-database`) — to refresh the applications menu
 
-## See also
+## Usage
 
-- [Usage](./usage) — interactive and CLI commands.
-- [Architecture](./architecture) — how Kore is structured internally.
+### Interactive mode (TUI)
 
+Call the tool with no arguments to open the interface:
+
+```bash
+$ kpm
+```
+
+Use the arrow keys to navigate, `Enter` to confirm, and `Esc` to go back or exit. The guided flow lets you select the app, extract it, and define the binary to link in one pass.
+
+### Command line interface (CLI)
+
+For fast, non-interactive operations, `kpm` supports the following commands:
+
+| Command | Short alias | Description |
+|---|---|---|
+| `list` | `-l`, `list-installed` | List installed applications |
+| `install` | `-i` | Install one or more apps from local tarballs or repositories |
+| `remove` | `-r` | Uninstall one or more installed apps |
+| `update` | `-u` | Update installed apps from repositories |
+| `repo` | — | Manage repositories (official, community, custom) |
+| `help` | `-h`, `--help` | Print full help |
+| — | `-V`, `--version` | Show the installed version |
+| `--update-bin` | — | Update the `kpm` binary to the latest version |
+
+#### Direct installation
+
+Install multiple applications by name or by path to a local archive:
+
+```bash
+$ kpm install obsidian waterfox discord
+```
+
+For a single local archive with custom metadata, use these flags:
+
+```bash
+$ kpm install "/path/to/app.AppImage" --app-name "MyApp" --use-root "No" --category "Network"
+```
+
+| Flag | Description |
+|---|---|
+| `--app-name` (`-a`) | Name the app shows in the system |
+| `--use-root` (`-u`) | Whether the `.desktop` shortcut requires `pkexec` |
+| `--category` (`-c`) | XDG category for the menu (`Utility`, `Network`, `Game`, ...) |
+
+#### Smart uninstallation
+
+Remove the folder, binary, and `.desktop` file of one or more apps at once:
+
+```bash
+$ kpm remove discord waterfox
+```
+
+#### Repository management
+
+The `repo` subcommand manages where `kpm` fetches apps:
+
+| Subcommand | Description |
+|---|---|
+| `kpm repo list` | Count available packages by type (official, community, user) |
+| `kpm repo pkg-list` | List all packages available to install |
+| `kpm repo pkg-search <query>` | Search for a package across all repositories |
+| `kpm repo sync` | Sync the official and community package lists |
+| `kpm repo add <name> <pkg> <url> <category> [--requires-root]` | Add a third-party repository |
+| `kpm repo remove <name>` | Remove a custom repository |
+
+### Shell completions
+
+Installing `kpm` with `install.sh` configures autocomplete for Bash, Zsh, and Fish. Press `Tab` to complete commands and flags.
+
+## Architecture
+
+By default, the tool isolates installed files into the proper user structure:
+
+- **Extracted files:** `~/.local/share/binaries/[app-name]`
+- **Global binaries (symlinks):** `~/.local/bin/[app-name]`
+- **Shortcuts (XDG Desktop):** `~/.local/share/applications/[app-name].desktop`
