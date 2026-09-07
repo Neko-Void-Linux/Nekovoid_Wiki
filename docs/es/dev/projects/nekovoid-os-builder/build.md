@@ -48,7 +48,3 @@ $ ./neko-builder.sh <desktop> -e "pkg"  # Añadir paquetes extra
 $ ./neko-builder.sh doble               # Compilar xlibre + xorg
 $ ./neko-builder.sh doble-isor          # Compilar rollibre + rolling
 ```
-
-## Véase también
-
-- [Resumen de Neko-Void OS Builder](./) — configuración inicial y estructura del repositorio.

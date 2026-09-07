@@ -40,8 +40,3 @@ Cuando un programa requiere glibc, hay tres caminos habituales:
 - **Binarios estáticos.** Un build estático no lleva dependencias de librería y corre en cualquier sitio.
 
 No mezcles librerías glibc en un sistema base musl. Es frágil y no está soportado.
-
-## Véase también
-
-- [runit](./runit) — el sistema de init que usa Neko-Void, parte de la misma filosofía ligera.
-- Documentación de Void Linux sobre [musl](https://docs.voidlinux.org/config/musl.html).

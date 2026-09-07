@@ -74,8 +74,3 @@ El subcomando `repo` gestiona de dónde `kpm` obtiene las apps:
 ## Autocompletado de shell
 
 Instalar `kpm` con `install.sh` configura el autocompletado para Bash, Zsh y Fish. Pulsa `Tab` para completar comandos y flags.
-
-## Véase también
-
-- [Resumen de Kore](./) — qué es Kore y cómo instalarlo.
-- [Arquitectura de Kore](./architecture) — cómo está estructurado Kore internamente.

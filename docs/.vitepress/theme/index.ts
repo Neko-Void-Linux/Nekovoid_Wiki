@@ -4,6 +4,7 @@ import CommunityCard from './components/CommunityCard.vue'
 import FlatpakButton from './components/FlatpakButton.vue'
 import MinecraftButton from './components/MinecraftButton.vue'
 import DownloadOptions from './components/DownloadOptions.vue'
+import TextSizeControl from './components/TextSizeControl.vue'
 import './style.css'
 
 export default {
@@ -14,5 +15,6 @@ export default {
         app.component('FlatpakButton', FlatpakButton)
         app.component('MinecraftButton', MinecraftButton)
         app.component('DownloadOptions', DownloadOptions)
+        app.component('TextSizeControl', TextSizeControl)
     }
 }

@@ -155,6 +155,367 @@ body::after {
     border-bottom-color: var(--vp-c-divider);
 }
 
+/* The article contents block is the only secondary index on the page. */
+.VPSidebar {
+    display: none !important;
+}
+
+.VPContent.has-sidebar {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+.VPNavBar.has-sidebar .title {
+    width: auto !important;
+}
+
+.VPNavBar.has-sidebar .content {
+    padding-left: 0 !important;
+}
+
+.VPLocalNav.has-sidebar .container > button.menu {
+    display: none !important;
+}
+
+/* Extend the navbar divider across the full header after removing the sidebar. */
+.VPNavBar.has-sidebar .divider {
+    padding-left: 0 !important;
+}
+
+.VPNavBarTitle.has-sidebar .title {
+    border-bottom-color: transparent !important;
+}
+
+/* Let each article finish with its own content instead of the default pager. */
+.VPDocFooter,
+.VPDocFooter .prev-next {
+    display: none !important;
+}
+
+.related-links {
+    margin: 3rem 0 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--vp-c-divider);
+}
+
+.related-links h2 {
+    margin: 0 0 1rem;
+    font-size: 1.5rem;
+    line-height: 1.3;
+}
+
+.related-links ul {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.related-links li {
+    margin: 0.45rem 0;
+}
+
+.related-links li a span {
+    color: var(--vp-c-text-2);
+}
+
+/* Suggested topics inside the local search dialog. */
+.VPLocalSearchBox .search-bar {
+    order: 0;
+}
+
+.VPLocalSearchBox .search-topic-tags {
+    order: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    padding: 0 4px;
+}
+
+.VPLocalSearchBox .results {
+    order: 2;
+}
+
+.VPLocalSearchBox .search-keyboard-shortcuts {
+    order: 3;
+}
+
+.search-topic-label {
+    margin-right: 2px;
+    color: var(--vp-c-text-2);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.search-topic-tag {
+    padding: 5px 10px;
+    border: 1px solid var(--vp-c-divider);
+    border-radius: 2px;
+    color: var(--vp-c-text-2);
+    background: var(--vp-c-bg-soft);
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.8rem;
+    line-height: 1.2;
+}
+
+.search-topic-tag:hover,
+.search-topic-tag:focus-visible {
+    border-color: var(--vp-c-brand-1);
+    color: var(--vp-c-brand-1);
+    outline: none;
+}
+
+/* Keep the brand at the start and place search after the navigation controls. */
+@media (min-width: 960px) {
+    .VPNavBar.has-sidebar > .wrapper > .container > .title {
+        position: static !important;
+        width: auto !important;
+        padding: 0 32px !important;
+    }
+
+    .VPNavBar.has-sidebar > .wrapper > .container > .content {
+        padding-left: 0 !important;
+        padding-right: 32px !important;
+    }
+
+    .VPNavBar.has-sidebar .content-body {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .VPNavBar.has-sidebar .VPNavBarSearch {
+        order: 0;
+        flex: 0 0 auto;
+        padding: 0 !important;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .VPNavBar.has-sidebar .VPNavBarMenu {
+        margin-left: auto;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/* Reading controls                                                            */
+/* -------------------------------------------------------------------------- */
+
+.text-size-control {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+}
+
+.text-size-trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    min-height: 32px;
+    padding: 0 8px;
+    border: 1px solid transparent;
+    color: var(--vp-c-text-2);
+    background: transparent;
+    cursor: pointer;
+    font: inherit;
+}
+
+.text-size-trigger:hover,
+.text-size-trigger:focus-visible {
+    color: var(--vp-c-brand-1);
+    border-color: var(--vp-c-brand-1);
+    outline: 2px solid var(--vp-c-brand-1);
+    outline-offset: 2px;
+}
+
+.text-size-icon {
+    font-family: Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.text-size-menu {
+    position: absolute;
+    z-index: 30;
+    top: calc(100% + 12px);
+    right: 0;
+    width: 170px;
+    padding: 12px;
+    border: 1px solid var(--vp-c-divider);
+    background: var(--vp-c-bg-elv);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+}
+
+.text-size-menu fieldset {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.text-size-menu legend {
+    margin-bottom: 8px;
+    color: var(--vp-c-text-1);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.text-size-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 32px;
+    color: var(--vp-c-text-2);
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.text-size-option input {
+    accent-color: var(--vp-c-brand-1);
+}
+
+.text-size-option input[type='radio'] {
+    border-radius: 50% !important;
+}
+
+html[data-text-size='small'] .vp-doc {
+    font-size: 0.9rem;
+}
+
+html[data-text-size='large'] .vp-doc {
+    font-size: 1.12rem;
+}
+
+html[data-text-size='large'] .vp-doc h1 {
+    font-size: 2.4rem;
+}
+
+html[data-text-size='large'] .vp-doc h2 {
+    font-size: 1.8rem;
+}
+
+/* Keep the current section unmistakable after following a permalink. */
+.vp-doc h2:target,
+.vp-doc h3:target,
+.vp-doc h2:has(.header-anchor:focus-visible),
+.vp-doc h3:has(.header-anchor:focus-visible) {
+    font-weight: 700;
+    color: var(--vp-c-text-1);
+}
+
+.vp-doc .header-anchor:focus-visible {
+    outline: 2px solid var(--vp-c-brand-1);
+    outline-offset: 4px;
+    color: var(--vp-c-brand-1);
+}
+
+.VPDocAsideOutline .outline-link:focus-visible,
+.VPDocAsideOutline .outline-link.active {
+    font-weight: 700;
+    color: var(--vp-c-brand-1);
+}
+
+/* ArchWiki-inspired contents block: hierarchical, numbered, and easy to scan. */
+.VPDocAsideOutline .content {
+    position: sticky;
+    top: calc(var(--vp-nav-height) + 24px);
+    max-height: calc(100vh - var(--vp-nav-height) - 48px);
+    overflow-y: auto;
+    padding: 14px 16px 16px;
+    border: 1px solid var(--vp-c-divider);
+    background: linear-gradient(145deg, var(--vp-c-bg-soft), var(--vp-c-bg-alt));
+}
+
+.VPDocAsideOutline .outline-marker {
+    display: none;
+}
+
+.VPDocAsideOutline .outline-title {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--vp-c-divider);
+    color: var(--vp-c-text-1);
+    font-family: var(--vp-font-family-mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.VPDocAsideOutline .VPDocOutlineItem.root {
+    counter-reset: contents-section;
+    padding-left: 0;
+}
+
+.VPDocAsideOutline .VPDocOutlineItem.root > li {
+    counter-increment: contents-section;
+}
+
+.VPDocAsideOutline .VPDocOutlineItem.root > li > .outline-link::before {
+    content: counter(contents-section) ' ';
+    display: inline-block;
+    min-width: 1.6em;
+    color: var(--vp-c-brand-1);
+    font-family: var(--vp-font-family-mono);
+    font-size: 0.75rem;
+}
+
+.VPDocAsideOutline .VPDocOutlineItem.nested {
+    counter-reset: contents-subsection;
+    padding-left: 18px;
+}
+
+.VPDocAsideOutline .VPDocOutlineItem.nested > li {
+    counter-increment: contents-subsection;
+}
+
+.VPDocAsideOutline .VPDocOutlineItem.nested > li > .outline-link::before {
+    content: counter(contents-section) '.' counter(contents-subsection) ' ';
+    display: inline-block;
+    min-width: 2.3em;
+    color: var(--vp-c-text-2);
+    font-family: var(--vp-font-family-mono);
+    font-size: 0.7rem;
+}
+
+.VPDocAsideOutline .outline-link {
+    display: block;
+    padding: 4px 0;
+    color: var(--vp-c-text-2);
+    line-height: 1.4;
+}
+
+/* Put the page index beside the article, where it remains visible while reading. */
+@media (min-width: 1280px) {
+    .VPDoc.has-aside .container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .VPDoc.has-aside .container > .aside {
+        order: 1;
+        padding-right: 32px;
+        padding-left: 0;
+    }
+
+    .VPDoc.has-aside .container > .content {
+        order: 2;
+    }
+}
+
+@media (max-width: 959px) {
+    .text-size-control {
+        margin-right: 8px;
+    }
+
+    .text-size-menu {
+        right: -8px;
+    }
+}
+
 /* -------------------------------------------------------------------------- */
 
 /* -------------------------------------------------------------------------- */

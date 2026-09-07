@@ -61,8 +61,3 @@ Or use the convenience rule:
 # make run
 ```
 
-## See also
-
-- [Kasha Overview](./) — what Kasha is and its features.
-- [Architecture](./architecture) — how Kasha is structured.
-

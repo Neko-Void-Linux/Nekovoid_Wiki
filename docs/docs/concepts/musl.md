@@ -40,8 +40,3 @@ When a program requires glibc, there are three common paths:
 - **Static binaries.** A static build carries no library dependency and runs anywhere.
 
 Do not mix glibc libraries into a musl base system. It is fragile and unsupported.
-
-## See also
-
-- [runit](./runit) — the init system Neko-Void uses, part of the same lean philosophy.
-- Void Linux documentation on [musl](https://docs.voidlinux.org/config/musl.html).
