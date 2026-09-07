@@ -4,7 +4,7 @@ Este es el repositorio oficial de la documentación de **Neko Void**, un ecosist
 ## Información General
 
   * **Framework:** Construido con [VitePress](https://www.google.com/search?q=https://vitepress.dev/).
-  * **Proyecto Principal:** [Neko Void](https://www.google.com/search?q=https://github.com/Neko Void-LA/Neko Void-Launcher).
+  * **Proyecto Principal:** [Neko Void](https://github.com/orgs/Neko-Void-Linux).
   * **Objetivo:** Ofrecer guías claras y accesibilidad técnica para todos los usuarios.
 
 ## Estructura de Carpetas
