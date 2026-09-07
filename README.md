@@ -15,6 +15,7 @@ Este es el repositorio oficial de la documentación de **Neko Void**, un ecosist
   * `guides/`: Tutoriales de uso.
   * `launchers/`: Detalles de nuestros lanzadores.
   * `es/`: Traducciones completas al español.
+  * `docs/public/`: Archivos publicos de seo etc...
 
 ## Contribución
 
