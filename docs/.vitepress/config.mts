@@ -68,7 +68,7 @@ function createLocalSearch(language: 'en' | 'es') {
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Neko Void - Wiki ⦮ ⦯꠹",
+  title: "Neko Void - Wiki (•˕ •マ.ᐟ",
   description: "A open source eco-system",
   cleanUrls: true,
   lastUpdated: true,
