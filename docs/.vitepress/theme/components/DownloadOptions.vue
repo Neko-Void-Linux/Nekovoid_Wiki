@@ -34,7 +34,7 @@ const translations = {
   }
 };
 
-const t = computed(() => translations[props.lang || 'es']); // Default a 'es' ya que las descripciones están en español
+const t = computed(() => translations[props.lang || 'es']);
 
 const editions: Edition[] = [
   {
@@ -44,7 +44,7 @@ const editions: Edition[] = [
     link: 'https://archive.org/download/Neko-Void/nekovoid-mate-20260905.iso',
     status: 'available',
     recommended: true,
-    description: 'La edición principal y la opción recomendada para comenzar.'
+    description: 'Main edition, recommended to start.'
   },
   {
     name: 'Neko Void MATE — XLibre',
@@ -52,13 +52,13 @@ const editions: Edition[] = [
     checksum: '8a2806829de403cddcc5e177ea62a5a51bd9c6aae3c9b34c70d18511e5182ffd',
     link: 'https://archive.org/download/Neko-Void/nekovoid-matelibre-20260905.iso',
     status: 'available',
-    description: 'MATE con XLibre para quienes prefieren esta alternativa de servidor gráfico.'
+    description: 'MATE with XLibre, an alternative display server.'
   },
   {
     name: 'Neko Void NVIDIA',
     type: 'liveIso',
     status: 'development',
-    description: 'Edición con soporte beta para controladores propietarios NVIDIA.'
+    description: 'Beta support for NVIDIA proprietary drivers.'
   },
   {
     name: 'Neko Void XFCE',
@@ -66,7 +66,7 @@ const editions: Edition[] = [
     checksum: 'c0b084ec6658839507b03a738af00d20b6c607641fc9ceaff727acc21cba5fa3',
     link: 'https://archive.org/download/Neko-Void/nekovoid-xfce-20260905.iso',
     status: 'available',
-    description: 'Un escritorio ligero y familiar para equilibrar consumo y comodidad.'
+    description: 'Lightweight and familiar desktop, balance performance and comfort.'
   },
   {
     name: 'Neko Void KDE',
@@ -74,7 +74,7 @@ const editions: Edition[] = [
     checksum: '7c2d15dafd2d9f232af6d4b3ee2166204991a612d8aacfdcfe4bc7bdb1f8899d',
     link: 'https://archive.org/download/Neko-Void/nekovoid-kde-20260905.iso',
     status: 'available',
-    description: 'Un entorno completo y personalizable para el escritorio diario.'
+    description: 'Full-featured and customizable daily desktop.'
   },
   {
     name: 'Neko Void I3',
@@ -82,13 +82,13 @@ const editions: Edition[] = [
     checksum: '04f19f44da243d2ac17a6d9f857ae90e92f9fe94c680f8132aa9178d53215ec2',
     link: 'https://archive.org/download/Neko-Void/nekovoid-i3-20260830.iso',
     status: 'available',
-    description: 'Una edición orientada a flujos de trabajo con tiling.'
+    description: 'Tiling window manager for efficient workflows.'
   },
   {
     name: 'Neko Void Openbox',
     type: 'liveIso',
     status: 'development',
-    description: 'Una edición ligera en desarrollo para equipos modestos.'
+    description: 'Lightweight edition in development for modest hardware.'
   },
   {
     name: 'Neko Void LXQt',
@@ -96,7 +96,7 @@ const editions: Edition[] = [
     checksum: '5f8ca9478134a961521a0b1b88d55773a10468022b5cce9bf3f00c94f718ad9a',
     link: 'https://archive.org/download/Neko-Void/nekovoid-lxqt-20260905.iso',
     status: 'available',
-    description: 'Una opción ligera para equipos con recursos limitados.'
+    description: 'Lightweight option for low-resource machines.'
   },
   {
     name: 'Neko Void Labwc',
@@ -104,7 +104,7 @@ const editions: Edition[] = [
     checksum: '063133486497715241e11aab30556149ad5a6695ea14acad02d20f59f3911fae',
     link: 'https://archive.org/download/Neko-Void/nekovoid-labwc-20260905.iso',
     status: 'available',
-    description: 'Un compositor Wayland ligero para quienes quieren experimentar.'
+    description: 'Lightweight Wayland compositor for experimenting.'
   },
   {
     name: 'Neko Void Niri',
@@ -112,7 +112,7 @@ const editions: Edition[] = [
     checksum: 'a96955d36790b9d5e4ca4f008ede37b7b25bd5e582ec80ea1ac70181afbe885f',
     link: 'https://archive.org/download/Neko-Void/nekovoid-niri-20260905.iso',
     status: 'available',
-    description: 'Un flujo Wayland moderno para usuarios avanzados.'
+    description: 'Modern Wayland setup for advanced users.'
   },
   {
     name: 'Neko Void IceWM & JWM',
@@ -120,7 +120,7 @@ const editions: Edition[] = [
     checksum: '3c1fda45e5eb968e76852254d07fae050f9861daa6f728339e4c60f1b69a1287',
     link: 'https://huggingface.co/arepaconcafe/neko-base/resolve/main/nekovoid-lts-icejwm-20260822.iso',
     status: 'available',
-    description: 'Una edición de bajo consumo para hardware antiguo o limitado.'
+    description: 'Low-resource edition for old or limited hardware.'
   }
 ];
 </script>
@@ -184,7 +184,7 @@ const editions: Edition[] = [
   background-color: var(--vp-c-bg-elv);
   border: 1px solid var(--vp-c-divider);
   padding: 16px 24px;
-  border-radius: 0; /* Brutalist sharp edges */
+  border-radius: 0;
   transition: all 0.3s ease;
 }
 
@@ -250,7 +250,7 @@ const editions: Edition[] = [
   color: var(--vp-c-brand-1);
   background: var(--vp-c-brand-soft);
   padding: 2px 8px;
-  border-radius: 0; /* Mantiene el estilo brutalista */
+  border-radius: 0;
   border: 1px solid var(--vp-c-brand-1);
 }
 
@@ -283,10 +283,9 @@ const editions: Edition[] = [
   border: 1px solid var(--vp-c-divider);
   cursor: pointer;
   transition: all 0.3s ease;
-  border-radius: 0; /* Brutalist sharp edges */
+  border-radius: 0;
 }
 
-/* Theme-adapted Glow for Download Buttons */
 .download-btn {
   border-color: var(--vp-c-brand-1);
   background-color: var(--vp-c-brand-soft);
@@ -313,7 +312,6 @@ const editions: Edition[] = [
   height: 16px;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .download-row {
     flex-direction: column;
