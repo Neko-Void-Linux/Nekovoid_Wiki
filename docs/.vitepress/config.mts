@@ -99,6 +99,7 @@ export default defineConfig({
       label: 'English',
       lang: 'en',
       themeConfig: {
+        logo: { src: 'https://huggingface.co/arepaconcafe/neko-base/resolve/main/logo.png', alt: 'Neko Void' },
         search: createLocalSearch('en'),
         outline: [2, 4],
         outlineTitle: 'Contents',
@@ -198,6 +199,7 @@ export default defineConfig({
       lang: 'es',
       link: '/es/',
       themeConfig: {
+        logo: { src: 'https://huggingface.co/arepaconcafe/neko-base/resolve/main/logo.png', alt: 'Neko Void' },
         search: createLocalSearch('es'),
         outline: [2, 4],
         outlineTitle: 'Contenido',
@@ -311,6 +313,8 @@ export default defineConfig({
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+
+    logo: { src: 'https://huggingface.co/arepaconcafe/neko-base/resolve/main/logo.png', alt: 'Neko Void' },
 
     search: createLocalSearch('en'),
 

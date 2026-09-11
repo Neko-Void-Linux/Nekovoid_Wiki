@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  name: "NEKO_VOID"
-  text: "Into the Void"
+  name: "NEKO VOID"
+  text: ">_ INTO THE VOID_"
   tagline: Documentation, Guides, and Developer Resources for Neko Void.
   image:
     src: /logo.png
@@ -31,4 +31,3 @@ features:
     details: Contributing guidelines, technical architecture, and setup instructions.
     link: /dev/
 ---
-
