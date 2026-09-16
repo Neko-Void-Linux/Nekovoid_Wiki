@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "NEKO VOID"
-  text: ">_ INTO THE VOID_"
+  text: ">_Wiki docs"
   tagline: Documentation, Guides, and Developer Resources for Neko Void.
   image:
     src: /logo.png

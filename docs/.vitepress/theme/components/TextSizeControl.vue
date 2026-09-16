@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { useRoute } from 'vitepress'
 
 type TextSize = 'small' | 'standard' | 'large'
 
 const textSize = ref<TextSize>('standard')
 const isOpen = ref(false)
+const control = ref<HTMLElement | null>(null)
 const route = useRoute()
 const isSpanish = computed(() => route.path.startsWith('/es/'))
 
@@ -21,42 +22,55 @@ function applyTextSize(size: TextSize) {
   window.localStorage.setItem('nekovoid-text-size', size)
 }
 
-function handleDocumentClick(event: MouseEvent) {
-  const target = event.target as Node
-  if (!(target instanceof Node) || !(event.currentTarget instanceof Document)) return
+function openMenu() {
+  isOpen.value = true
+}
 
-  const control = document.querySelector('.text-size-control')
-  if (control && !control.contains(target)) isOpen.value = false
+function closeMenu() {
+  isOpen.value = false
+}
+
+function handleFocusOut(event: FocusEvent) {
+  const nextTarget = event.relatedTarget
+  if (!(nextTarget instanceof Node) || !control.value?.contains(nextTarget)) closeMenu()
 }
 
 onMounted(() => {
   const saved = window.localStorage.getItem('nekovoid-text-size') as TextSize | null
   const initial = saved && options.some((option) => option.value === saved) ? saved : 'standard'
   applyTextSize(initial)
-  document.addEventListener('click', handleDocumentClick)
-})
-
-onBeforeUnmount(() => {
-  document.removeEventListener('click', handleDocumentClick)
 })
 </script>
 
 <template>
-  <div class="text-size-control">
+  <div
+    ref="control"
+    class="text-size-control"
+    @mouseenter="openMenu"
+    @mouseleave="closeMenu"
+    @focusin="openMenu"
+    @focusout="handleFocusOut"
+  >
     <button
       class="text-size-trigger"
       type="button"
       :aria-expanded="isOpen"
       :aria-label="isSpanish ? 'Cambiar tamaño del texto' : 'Change text size'"
       :title="isSpanish ? 'Cambiar tamaño del texto' : 'Change text size'"
-      @click.stop="isOpen = !isOpen"
-      @keydown.escape="isOpen = false"
+      @click="openMenu"
+      @keydown.escape="closeMenu"
     >
       <span aria-hidden="true" class="text-size-icon">A</span>
       <span class="visually-hidden">{{ isSpanish ? 'Texto' : 'Text' }}</span>
     </button>
 
-    <div v-if="isOpen" class="text-size-menu" role="dialog" :aria-label="isSpanish ? 'Tamaño del texto' : 'Text size'">
+    <div
+      v-show="isOpen"
+      class="text-size-menu"
+      role="group"
+      :aria-hidden="!isOpen"
+      :aria-label="isSpanish ? 'Tamaño del texto' : 'Text size'"
+    >
       <fieldset>
         <legend>{{ isSpanish ? 'Texto' : 'Text' }}</legend>
         <label v-for="option in options" :key="option.value" class="text-size-option">
