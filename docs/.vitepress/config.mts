@@ -72,6 +72,7 @@ export default defineConfig({
   description: "A open source eco-system",
   cleanUrls: true,
   lastUpdated: true,
+  appearance: 'force-auto',
 
   head: [
     ['link', { rel: 'icon', href: '/logo-custom.svg' }],
@@ -99,6 +100,7 @@ export default defineConfig({
       label: 'English',
       lang: 'en',
       themeConfig: {
+        logo: { src: '/logo.png', alt: 'Neko Void' },
         search: createLocalSearch('en'),
         outline: [2, 4],
         outlineTitle: 'Contents',
@@ -198,6 +200,7 @@ export default defineConfig({
       lang: 'es',
       link: '/es/',
       themeConfig: {
+        logo: { src: '/logo.png', alt: 'Neko Void' },
         search: createLocalSearch('es'),
         outline: [2, 4],
         outlineTitle: 'Contenido',
@@ -297,8 +300,8 @@ export default defineConfig({
           }
         ],
         footer: {
-          message: 'Lanzado bajo la Licencia BSD-3-Clause.',
-          copyright: 'Copyright © 2025-present Neko Void'
+          message: 'Código abierto · Licencia documentada en los repositorios.',
+          copyright: ''
         },
         socialLinks: [
           { icon: 'github', link: 'https://codeberg.org/javiercplus/Neko-Void' },
@@ -312,6 +315,8 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
 
+    logo: { src: '/logo.png', alt: 'Neko Void' },
+
     search: createLocalSearch('en'),
 
     socialLinks: [
@@ -321,8 +326,8 @@ export default defineConfig({
     ],
 
     footer: {
-      message: 'Released under the BSD-3-Clause License.',
-      copyright: 'Copyright © 2025-present Neko Void'
+      message: 'Open source · License documented in the repositories.',
+      copyright: ''
     }
   }
 })

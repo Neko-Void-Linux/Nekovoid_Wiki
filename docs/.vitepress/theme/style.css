@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Bebas+Neue&family=IBM+Plex+Sans:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@400;500;600;700&family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,600;1,300;1,400&family=IBM+Plex+Sans:wght@300;400;500&display=swap');
 
 /**
  * Custom CSS for Trinity Projects
@@ -6,6 +6,7 @@
  */
 
 :root {
+    --vp-nav-height: 80px;
     /* Fonts */
     --vp-font-family-base: 'IBM Plex Sans', sans-serif;
     --vp-font-family-mono: 'IBM Plex Mono', monospace;
@@ -214,7 +215,7 @@ body::after {
 }
 
 .related-links li a span {
-    color: var(--vp-c-text-2);
+    color: #7f9193;
 }
 
 /* Suggested topics inside the local search dialog. */
@@ -277,7 +278,7 @@ body::after {
 
     .VPNavBar.has-sidebar > .wrapper > .container > .content {
         padding-left: 0 !important;
-        padding-right: 32px !important;
+        padding-right: 0 !important;
     }
 
     .VPNavBar.has-sidebar .content-body {
@@ -306,7 +307,199 @@ body::after {
     position: relative;
     display: flex;
     align-items: center;
-    margin-left: 8px;
+    order: 1;
+}
+
+.VPNavBar .content-body > .translations {
+    display: none !important;
+}
+
+.language-control {
+    position: relative;
+    z-index: 30;
+    order: 3;
+    margin-left: 12px;
+}
+
+.language-trigger {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-width: 86px;
+    height: 34px;
+    padding: 8px 14px;
+    border: 1px solid #7f9193;
+    background: rgba(255, 255, 255, 0.04);
+    color: #7f9193;
+    cursor: pointer;
+    font-family: var(--vp-font-family-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.language-trigger:hover,
+.language-trigger:focus-visible {
+    border-color: #8da383;
+    background: rgba(255, 255, 255, 0.07);
+    color: var(--vp-c-text-1);
+    outline: none;
+}
+
+.language-globe {
+    flex: 0 0 16px;
+    width: 16px;
+    height: 16px;
+    opacity: 0.7;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.language-control:hover .language-globe,
+.language-control:focus-within .language-globe {
+    opacity: 1;
+}
+
+.language-current {
+    font-weight: 500;
+}
+
+.language-chevron {
+    flex: 0 0 12px;
+    width: 12px;
+    height: 12px;
+    opacity: 0.5;
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.language-control.open .language-chevron {
+    opacity: 0.8;
+    transform: rotate(180deg);
+}
+
+.language-control.open .language-trigger {
+    border-color: #8da383;
+    background: rgba(141, 163, 131, 0.08);
+    color: #8da383;
+}
+
+.language-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    min-width: 200px;
+    padding: 6px;
+    border: 1px solid #7f9193;
+    background: rgba(39, 46, 42, 0.95);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-6px) scale(0.97);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    visibility: hidden;
+}
+
+.language-control.open .language-menu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+    visibility: visible;
+}
+
+.language-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 14px;
+    border: 0;
+    background: transparent;
+    color: #7f9193;
+    cursor: pointer;
+    font-family: var(--vp-font-family-base);
+    font-size: 0.88rem;
+    text-align: left;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.language-option:hover,
+.language-option:focus-visible {
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--vp-c-text-1);
+    outline: none;
+}
+
+.language-option.active {
+    background: rgba(141, 163, 131, 0.08);
+    color: #8da383;
+}
+
+.language-name {
+    flex: 1;
+    font-weight: 500;
+}
+
+.language-code {
+    font-family: var(--vp-font-family-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    opacity: 0.5;
+    text-transform: uppercase;
+}
+
+.language-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    opacity: 0;
+    color: var(--vp-c-brand-1);
+    font-size: 0.85rem;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.language-option.active .language-check {
+    opacity: 1;
+}
+
+/* Match the main site's final dropdown treatment. */
+.language-menu {
+    border: 1px solid #8da383 !important;
+    background: var(--vp-c-bg) !important;
+    backdrop-filter: none;
+    box-shadow: 4px 4px rgba(122, 153, 141, 0.2);
+    padding: 0 !important;
+}
+
+.language-option {
+    border-bottom: none !important;
+    padding: 12px 16px !important;
+    transition: none !important;
+}
+
+.language-option:last-child {
+    border-bottom: none !important;
+}
+
+.language-option:hover,
+.language-option:focus-visible {
+    background: #7a998d !important;
+    color: var(--vp-c-bg) !important;
+}
+
+.language-option:hover .language-name,
+.language-option:hover .language-code {
+    color: var(--vp-c-bg) !important;
+}
+
+.language-option:hover .language-check {
+    color: var(--vp-c-bg) !important;
+}
+
+/* VitePress 1.x exposes the extension slot after social links. Reorder the
+   flex items so the reading control sits after appearance and before GitHub. */
+.VPNavBar .content-body > .social-links {
+    order: 2;
 }
 
 .text-size-trigger {
@@ -316,19 +509,23 @@ body::after {
     min-width: 32px;
     min-height: 32px;
     padding: 0 8px;
-    border: 1px solid transparent;
-    color: var(--vp-c-text-2);
-    background: transparent;
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+    border: 1px solid #7f9193;
+    color: #7f9193;
+    background: rgba(255, 255, 255, 0.04);
     cursor: pointer;
-    font: inherit;
+    font-family: 'Fira Code', monospace;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .text-size-trigger:hover,
 .text-size-trigger:focus-visible {
-    color: var(--vp-c-brand-1);
     border-color: var(--vp-c-brand-1);
-    outline: 2px solid var(--vp-c-brand-1);
-    outline-offset: 2px;
+    background: rgba(255, 255, 255, 0.07);
+    color: var(--vp-c-text-1);
+    outline: none;
 }
 
 .text-size-icon {
@@ -340,13 +537,26 @@ body::after {
 .text-size-menu {
     position: absolute;
     z-index: 30;
-    top: calc(100% + 12px);
+    top: calc(100% + 4px);
     right: 0;
     width: 170px;
     padding: 12px;
     border: 1px solid var(--vp-c-divider);
     background: var(--vp-c-bg-elv);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-4px);
+    transition: opacity 120ms ease, transform 120ms ease;
+    visibility: hidden;
+}
+
+.text-size-control:hover .text-size-menu,
+.text-size-control:focus-within .text-size-menu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+    visibility: visible;
 }
 
 .text-size-menu fieldset {
@@ -381,20 +591,29 @@ body::after {
     border-radius: 50% !important;
 }
 
-html[data-text-size='small'] .vp-doc {
-    font-size: 0.9rem;
+/* Scale article copy and headings together; the navigation stays unchanged. */
+.VPDoc .vp-doc {
+    --content-text-scale: 1;
+    font-size: calc(1rem * var(--content-text-scale));
 }
 
-html[data-text-size='large'] .vp-doc {
-    font-size: 1.12rem;
+.VPDoc .vp-doc :where(h1, h2, h3, h4, h5, h6) {
+    font-size: calc(var(--heading-size) * var(--content-text-scale));
 }
 
-html[data-text-size='large'] .vp-doc h1 {
-    font-size: 2.4rem;
+.VPDoc .vp-doc h1 { --heading-size: 2rem; }
+.VPDoc .vp-doc h2 { --heading-size: 1.5rem; }
+.VPDoc .vp-doc h3 { --heading-size: 1.35rem; }
+.VPDoc .vp-doc h4 { --heading-size: 1.25rem; }
+.VPDoc .vp-doc h5 { --heading-size: 1.125rem; }
+.VPDoc .vp-doc h6 { --heading-size: 1rem; }
+
+html[data-text-size='small'] .VPDoc .vp-doc {
+    --content-text-scale: 0.9;
 }
 
-html[data-text-size='large'] .vp-doc h2 {
-    font-size: 1.8rem;
+html[data-text-size='large'] .VPDoc .vp-doc {
+    --content-text-scale: 1.12;
 }
 
 /* Keep the current section unmistakable after following a permalink. */
@@ -569,6 +788,81 @@ html[data-text-size='large'] .vp-doc h2 {
     .VPHero {
         padding-top: calc(var(--vp-nav-height) + 30px) !important;
     }
+}
+
+/* Keep the article navbar to one divider, like the home navbar. */
+.VPNavBar.has-sidebar .wrapper {
+    border-bottom: 0 !important;
+    background: transparent !important;
+}
+
+/* Desktop navbar layout: search follows the brand on the left, while the
+   reading and social controls stay grouped on the right. */
+@media (min-width: 1051px) {
+    .VPNavBar .content-body {
+        justify-content: flex-start !important;
+    }
+
+    .VPNavBar .VPNavBarSearch {
+        display: flex !important;
+        flex: 0 0 auto !important;
+        order: 0 !important;
+        width: 180px;
+        margin: 0 0 0 32px !important;
+        padding: 0 !important;
+    }
+
+    .VPNavBar .content-body > .social-links {
+        margin-left: auto !important;
+    }
+
+    .VPNavBar .content-body:has(> .text-size-control) > .text-size-control {
+        margin-left: auto !important;
+    }
+
+    .VPNavBar .content-body:has(> .text-size-control) > .social-links {
+        margin-left: 8px !important;
+    }
+}
+
+/* At compact desktop widths, retain a usable search icon without colliding
+   with the centered section links. */
+@media (min-width: 1051px) and (max-width: 1400px) {
+    .VPNavBar .VPNavBarSearch {
+        width: 48px;
+        margin-left: 16px !important;
+    }
+
+    .VPNavBar .VPNavBarSearch .DocSearch-Button {
+        width: 48px !important;
+        justify-content: center;
+    }
+
+    .VPNavBar .VPNavBarSearch .DocSearch-Button-Placeholder,
+    .VPNavBar .VPNavBarSearch .DocSearch-Button-Keys {
+        display: none;
+    }
+}
+
+/* Give the reading menu the same outlined panel treatment as the language menu. */
+.text-size-menu {
+    top: calc(100% + 8px);
+    width: 170px;
+    padding: 0;
+    border: 1px solid #8da383;
+    background: var(--vp-c-bg) !important;
+    box-shadow: 4px 4px rgba(122, 153, 141, 0.2);
+    transform: translateY(-6px) scale(0.97);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.text-size-control:hover .text-size-menu,
+.text-size-control:focus-within .text-size-menu {
+    transform: translateY(0) scale(1);
+}
+
+.text-size-menu fieldset {
+    padding: 12px 16px;
 }
 
 /* Tablet (Portrait/Small Landscape) */
@@ -752,4 +1046,721 @@ html[data-text-size='large'] .vp-doc h2 {
 .VPFeatures .VPFeature:hover {
     border-color: var(--vp-c-brand-2) !important;
     transform: translateY(-3px) !important;
+}
+
+:root {
+    --vp-nav-height: 80px;
+    --wiki-border-color: #7f9193;
+    --vp-c-bg: #f7f8f5;
+    --vp-c-bg-alt: #eef1ec;
+    --vp-c-bg-elv: #ffffff;
+    --vp-c-bg-soft: #e8ede8;
+    --vp-c-divider: var(--wiki-border-color);
+    --vp-c-gutter: var(--wiki-border-color);
+    --vp-c-text-1: #28332c;
+    --vp-c-text-2: #536259;
+    --vp-c-text-3: #718077;
+    --vp-c-brand-1: #608068;
+    --vp-c-brand-2: #7a998d;
+    --vp-c-brand-3: #cb9b7c;
+    --vp-c-brand-soft: rgba(96, 128, 104, 0.14);
+}
+
+.dark {
+    --vp-nav-height: 80px;
+    --wiki-border-color: #7f9193;
+    --vp-c-bg: #1e2320;
+    --vp-c-bg-alt: #1b2420;
+    --vp-c-bg-elv: #1d2823;
+    --vp-c-bg-soft: #202a25;
+    --vp-c-divider: var(--wiki-border-color);
+    --vp-c-gutter: var(--wiki-border-color);
+    --vp-c-text-1: #d9d9cc;
+    --vp-c-text-2: #9da99f;
+    --vp-c-text-3: #77857b;
+    --vp-c-brand-1: #9bad8e;
+    --vp-c-brand-2: #819d8c;
+    --vp-c-brand-3: #d39d7e;
+    --vp-c-brand-soft: rgba(155, 173, 142, 0.14);
+}
+
+html,
+body {
+    background: var(--vp-c-bg);
+}
+
+body {
+    background-color: var(--vp-c-bg);
+    background-image: radial-gradient(rgba(122, 153, 141, 0.15) 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+
+.VPNavBar,
+.VPNavBar.has-sidebar .wrapper {
+    background: var(--vp-c-bg) !important;
+    border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.VPNavBar .title {
+    font-family: var(--vp-font-family-mono);
+    color: var(--vp-c-text-2);
+    letter-spacing: 0.04em;
+}
+
+.VPNavBar .logo {
+    width: 42px;
+    height: 38px;
+    margin-right: 12px;
+    opacity: 0.8;
+    object-fit: contain;
+}
+
+.VPNavBarMenuLink,
+.VPNavBarMenuGroup .button {
+    font-family: var(--vp-font-family-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    color: var(--vp-c-text-2) !important;
+}
+
+.VPNavBarMenuLink.active,
+.VPNavBarMenuGroup .button:hover {
+    color: var(--vp-c-brand-1) !important;
+}
+
+.VPNavBarMenuLink:hover {
+    color: var(--vp-c-text-1) !important;
+}
+
+.VPNavBarMenuLink {
+    position: relative;
+    height: auto !important;
+    padding: 12px 20px 6px !important;
+    font-size: 0.85rem !important;
+    line-height: 1 !important;
+    letter-spacing: 0.02em !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.VPNavBarMenuLink > .text,
+.VPNavBarMenuLink > span {
+    height: auto !important;
+    line-height: 1 !important;
+}
+
+.VPNavBarMenu {
+    height: var(--vp-nav-height) !important;
+    align-items: center !important;
+}
+
+.VPNavBarMenuLink::after {
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    left: 20px;
+    height: 2px;
+    background: var(--vp-c-brand-1);
+    content: '';
+    transform: scaleX(0);
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.VPNavBarMenuLink.active::after {
+    transform: scaleX(1);
+}
+
+.VPNavBarMenuLink:focus,
+.VPNavBarMenuLink:focus-visible {
+    outline: none !important;
+}
+
+.VPNavBarTitle .title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height: var(--vp-nav-height);
+}
+
+.VPNavBarTitle .title > span {
+    color: #d3cdc3;
+    font-family: var(--vp-font-family-mono);
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.VPNavBar .logo {
+    flex: 0 0 42px;
+    margin: 0;
+    height: auto;
+    filter: drop-shadow(0 0 2px rgba(141, 163, 131, 0.35));
+}
+
+/* Match the landing page's outlined icon buttons and language selector. */
+.VPNavBar .VPNavBarAppearance .VPSwitch,
+.VPNavBar .VPNavBarSocialLinks .VPSocialLink {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+    border: 1px solid #7f9193;
+    background: rgba(255, 255, 255, 0.04);
+    color: #7f9193;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.VPNavBar .VPNavBarAppearance .VPSwitch:hover,
+.VPNavBar .VPNavBarSocialLinks .VPSocialLink:hover,
+.VPNavBar .VPNavBarAppearance .VPSwitch:focus-visible,
+.VPNavBar .VPNavBarSocialLinks .VPSocialLink:focus-visible {
+    border-color: var(--vp-c-brand-1);
+    background: rgba(255, 255, 255, 0.07);
+    color: var(--vp-c-text-1);
+}
+
+.VPNavBar .VPNavBarSocialLinks .VPSocialLink > span,
+.VPNavBar .VPNavBarSocialLinks .VPSocialLink > svg {
+    width: 18px;
+    height: 18px;
+    opacity: 0.8;
+}
+
+.VPNavBar .VPNavBarTranslations .button {
+    width: auto;
+    height: 34px !important;
+    min-height: 34px;
+    min-width: 86px;
+    justify-content: center;
+    padding: 8px 14px;
+    border: 1px solid #7f9193;
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--vp-c-text-2);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.VPNavBar .VPNavBarSocialLinks {
+    gap: 8px;
+    margin-left: 8px;
+    margin-right: 0;
+}
+
+.VPNavBar .VPNavBarTranslations {
+    height: 36px;
+}
+
+.VPNavBar .VPNavBarAppearance {
+    height: 36px;
+}
+
+.VPNavBar .VPNavBarTranslations .button .text {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--vp-font-family-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+}
+
+.VPNavBar .VPNavBarTranslations .button:hover,
+.VPNavBar .VPNavBarTranslations .button:focus-visible {
+    border-color: var(--vp-c-brand-1);
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--vp-c-text-1);
+}
+
+.VPNavBar {
+    border-bottom: 1px solid #7f9193 !important;
+}
+
+/* Keep article and landing-page separators on the same line treatment as the nav. */
+.vp-doc hr,
+.related-links,
+.VPDocAsideOutline .content,
+.VPDocAsideOutline .outline-title,
+.VPFeatures .VPFeature {
+    border-color: var(--wiki-border-color) !important;
+}
+
+.VPFeatures .VPFeature {
+    border-style: solid !important;
+}
+
+/* nk-web keeps its desktop controls visible down to the 1050px breakpoint. */
+@media (min-width: 1051px) {
+    .VPNavBar .content-body {
+        justify-content: flex-end !important;
+    }
+
+    .VPNavBar .VPNavBarTranslations,
+    .VPNavBar .VPNavBarAppearance,
+    .VPNavBar .VPNavBarSocialLinks {
+        display: flex !important;
+    }
+
+    .VPNavBar .VPNavBarExtra {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1050px) {
+    .VPNavBar .language-control,
+    .VPNavBar .text-size-control {
+        display: none;
+    }
+}
+
+@media (max-width: 1280px) and (min-width: 1051px) {
+    .VPNavBar .VPNavBarSearch {
+        display: none;
+    }
+}
+
+@media (max-width: 1050px) and (min-width: 769px) {
+    :root {
+        --vp-nav-height: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --vp-nav-height: 60px;
+    }
+}
+
+.VPNavBar.home .VPNavBarTitle .title {
+    align-items: center;
+}
+
+.VPNavBar.home .VPNavBarTitle .title > span {
+    color: #d3cdc3;
+    font-family: var(--vp-font-family-mono);
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.VPNavBar.home .VPNavBarTitle .logo {
+    height: auto;
+    filter: drop-shadow(0 0 2px rgba(141, 163, 131, 0.35));
+}
+
+.VPFooter .copyright {
+    display: none;
+}
+
+.VPFooter {
+    background-color: transparent !important;
+}
+
+@keyframes wiki-section-enter {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.Layout.wiki-route-pending .VPContent > .VPHome,
+.Layout.wiki-route-pending .VPContent > .VPDoc,
+.Layout.wiki-route-pending .VPContent > .VPPage {
+    opacity: 0;
+    transform: translateY(8px);
+}
+
+.Layout.wiki-route-enter .VPContent > .VPHome,
+.Layout.wiki-route-enter .VPContent > .VPDoc,
+.Layout.wiki-route-enter .VPContent > .VPPage {
+    animation: 0.4s ease-out forwards wiki-section-enter;
+}
+
+.text-size-trigger:hover {
+    color: var(--vp-c-brand-1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .VPNavBarMenuLink,
+    .VPNavBarMenuLink::after,
+    .VPNavBar .VPNavBarAppearance .VPSwitch,
+    .VPNavBar .VPNavBarSocialLinks .VPSocialLink,
+    .VPNavBar .VPNavBarTranslations .button,
+    .text-size-trigger,
+    .text-size-menu,
+    .Layout.wiki-route-enter .VPContent > .VPHome,
+    .Layout.wiki-route-enter .VPContent > .VPDoc,
+    .Layout.wiki-route-enter .VPContent > .VPPage {
+        transition: none;
+        animation: none;
+    }
+
+    .Layout.wiki-route-pending .VPContent > .VPHome,
+    .Layout.wiki-route-pending .VPContent > .VPDoc,
+    .Layout.wiki-route-pending .VPContent > .VPPage {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (min-width: 1051px) {
+    /* nk-web uses the full viewport for its header, not VitePress's centered shell. */
+    .VPNavBar .content-body {
+        position: static !important;
+    }
+
+    .VPNavBar .content {
+        position: static !important;
+    }
+
+    .VPNavBarMenu {
+        position: absolute !important;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%) !important;
+    }
+
+    .VPNavBar > .wrapper {
+        max-width: none !important;
+        padding: 0 40px !important;
+    }
+
+    .VPNavBar > .wrapper > .container {
+        width: 100% !important;
+        max-width: none !important;
+        padding: 0 !important;
+    }
+
+    .VPNavBar > .wrapper > .container > .title {
+        position: static !important;
+        width: auto !important;
+        padding: 0 !important;
+    }
+
+    .VPNavBar > .wrapper > .container > .content {
+        padding: 0 !important;
+    }
+
+    .VPNavBar.has-sidebar > .wrapper > .container > .title {
+        padding: 0 !important;
+    }
+}
+
+.VPHero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 7rem 48px 4rem !important;
+}
+
+.VPHero .container {
+    max-width: 100% !important;
+}
+
+.VPHero .main {
+    position: relative;
+    z-index: 1;
+}
+
+.VPHero .name {
+    background: none !important;
+    background-clip: border-box !important;
+    -webkit-background-clip: border-box !important;
+    color: #608068 !important;
+    -webkit-text-fill-color: #608068 !important;
+    font-size: clamp(4rem, 7vw, 6.6rem) !important;
+    letter-spacing: 0.035em !important;
+}
+
+.VPHero .text {
+    font-family: 'Fira Code', monospace !important;
+    font-weight: 700 !important;
+    line-height: 1.1 !important;
+    color: var(--vp-c-text-1) !important;
+    font-size: clamp(2.25rem, 4.4vw, 3.5rem) !important;
+    letter-spacing: 0.025em !important;
+}
+
+.VPHero .tagline {
+    max-width: 34rem;
+    color: var(--vp-c-text-2);
+    font-family: var(--vp-font-family-base);
+    font-size: 1.15rem;
+    line-height: 1.55;
+}
+
+.VPHero .actions {
+    gap: 12px;
+}
+
+.VPHero .action .VPButton {
+    min-width: 150px;
+    padding: 14px 24px !important;
+    border: 1px solid var(--vp-c-divider) !important;
+    background: transparent !important;
+    color: var(--vp-c-brand-1) !important;
+    font-size: 0.72rem !important;
+    letter-spacing: 0.12em !important;
+}
+
+.VPHero .action .VPButton:hover {
+    border-color: var(--vp-c-brand-1) !important;
+    background: var(--vp-c-brand-soft) !important;
+    color: var(--vp-c-text-1) !important;
+    transform: translateY(-1px);
+}
+
+.VPHero .action:nth-child(2) .VPButton {
+    background: var(--vp-c-brand-1) !important;
+    color: #172019 !important;
+}
+
+.VPHero .action:nth-child(2) .VPButton:hover {
+    background: var(--vp-c-text-1) !important;
+    color: #172019 !important;
+}
+
+.VPHero .image {
+    z-index: 1;
+}
+
+.ascii-art {
+    color: #8da383 !important;
+    text-shadow: 0 0 16px rgba(155, 173, 142, 0.22) !important;
+}
+
+.VPFeatures {
+    position: relative;
+    z-index: 1;
+    padding: 0 48px 5rem !important;
+}
+
+.VPFeatures .items {
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 16px !important;
+}
+
+@media (min-width: 960px) {
+    .VPFeatures .items {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    }
+
+    .VPFeatures .items > .item {
+        flex: 0 1 calc((100% - 32px) / 3) !important;
+        max-width: calc((100% - 32px) / 3) !important;
+    }
+}
+
+.VPFeatures .VPFeature {
+    min-height: 132px;
+    flex: 1 1 0 !important;
+    border: 1px solid var(--vp-c-brand-1) !important;
+    background: transparent !important;
+    padding: 26px 24px !important;
+    color: #7f9193 !important;
+}
+
+.VPFeatures .VPFeature .title {
+    color: #7f9193 !important;
+    font-family: var(--vp-font-family-mono);
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+    text-transform: none;
+}
+
+.VPFeatures .VPFeature .details {
+    color: #7f9193 !important;
+    line-height: 1.55;
+}
+
+/* The feature cards use the same outlined-link treatment as nk-web's
+   SourceForge / Codeberg / DistroWatch links, without changing their size. */
+.VPFeatures .VPFeature {
+    transition: all 0.2s ease !important;
+}
+
+.VPFeatures .VPFeature:hover {
+    border-color: var(--vp-c-brand-1) !important;
+    background: var(--vp-c-brand-soft) !important;
+    color: var(--vp-c-text-1) !important;
+    filter: none !important;
+    transform: none !important;
+}
+
+.VPFeatures .VPFeature:hover .title,
+.VPFeatures .VPFeature:hover .details {
+    color: var(--vp-c-text-1) !important;
+}
+
+@media (max-width: 959px) {
+    .VPHero {
+        min-height: auto;
+        padding: 5rem 24px 4rem !important;
+    }
+
+    .VPFeatures {
+        padding: 0 24px 4rem !important;
+    }
+}
+
+@media (max-width: 639px) {
+    .VPHero {
+        padding: 4rem 20px 3rem !important;
+    }
+
+    .VPHero .name {
+        font-size: clamp(3rem, 15vw, 5rem) !important;
+    }
+
+    .VPHero .text {
+        font-size: clamp(2.2rem, 11vw, 4rem) !important;
+    }
+
+    .VPHero .tagline {
+        font-size: 1rem;
+    }
+
+    .VPHero .actions {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .VPHero .action .VPButton {
+        width: 100%;
+    }
+
+    .VPFeatures {
+        padding: 0 20px 3rem !important;
+    }
+}
+
+/* Match nk-web's compact hero actions and highlighted primary button. */
+.VPHero .actions {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 7px !important;
+    width: 100%;
+    max-width: 510px;
+    margin: 0 !important;
+}
+
+.VPHero .action {
+    flex: 1 1 0;
+    padding: 0 !important;
+}
+
+.VPHero .action .VPButton {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 0 !important;
+    max-width: none;
+    min-height: 32px;
+    padding: 4px 10px !important;
+    border-width: 1px !important;
+    font-family: var(--vp-font-family-mono) !important;
+    font-size: 0.65rem !important;
+    font-weight: 600 !important;
+    line-height: 1.2 !important;
+    letter-spacing: 0.07em !important;
+    text-decoration: none !important;
+    transition: none !important;
+}
+
+.VPHero .action:nth-child(1) .VPButton,
+.VPHero .action:nth-child(3) .VPButton {
+    background: var(--vp-c-bg) !important;
+    border-color: #8da383 !important;
+    color: #7a998d !important;
+}
+
+.VPHero .action:nth-child(2) .VPButton {
+    background: #8da383 !important;
+    border-color: #8da383 !important;
+    color: #1e2320 !important;
+}
+
+.VPHero .action:nth-child(1) .VPButton:hover,
+.VPHero .action:nth-child(3) .VPButton:hover,
+.VPHero .action:nth-child(2) .VPButton:hover {
+    background: #7a998d !important;
+    border-color: #8da383 !important;
+    color: #1e2320 !important;
+    transform: none !important;
+}
+
+/* Keep the wiki's original larger action sizing while retaining the updated
+   main-site color treatment above. */
+.VPHero .actions {
+    gap: 12px !important;
+    max-width: none;
+    margin: -6px !important;
+}
+
+.VPHero .action {
+    flex: 0 0 auto;
+    padding: 6px !important;
+}
+
+.VPHero .action .VPButton {
+    display: inline-block !important;
+    width: auto;
+    min-width: 150px !important;
+    min-height: 0;
+    padding: 14px 24px !important;
+    font-size: 0.72rem !important;
+    line-height: 38px !important;
+    letter-spacing: 0.12em !important;
+}
+
+@media (max-width: 639px) {
+    .VPHero .action .VPButton {
+        width: 100%;
+    }
+}
+
+/* Only the highlighted download action receives the animated hover treatment. */
+.VPHero .action:nth-child(1) .VPButton:hover,
+.VPHero .action:nth-child(3) .VPButton:hover {
+    background: var(--vp-c-brand-soft) !important;
+    border-color: var(--vp-c-brand-1) !important;
+    color: var(--vp-c-text-1) !important;
+    transition: all 0.2s ease !important;
+    transform: none !important;
+}
+
+.VPHero .action:nth-child(1) .VPButton,
+.VPHero .action:nth-child(3) .VPButton {
+    transition: all 0.2s ease !important;
+}
+
+.VPHero .action:nth-child(2) .VPButton {
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease !important;
+}
+
+.VPHero .action:nth-child(2) .VPButton::before {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    content: '';
+    pointer-events: none;
+    transition: left 0.5s ease;
+}
+
+.VPHero .action:nth-child(2) .VPButton:hover::before {
+    left: 100%;
+}
+
+.VPHero .action:nth-child(2) .VPButton > * {
+    position: relative;
+    z-index: 1;
 }
