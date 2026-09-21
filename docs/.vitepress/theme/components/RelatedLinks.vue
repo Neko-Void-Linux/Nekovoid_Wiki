@@ -4,8 +4,9 @@ import { useRoute, withBase } from 'vitepress'
 
 type RelatedLink = {
   path: string
-  en: { title: string; description: string }
-  es: { title: string; description: string }
+  external?: boolean
+  en: { title: string; description?: string }
+  es: { title: string; description?: string }
 }
 
 const route = useRoute()
@@ -115,15 +116,19 @@ const links = computed(() => {
 
   const group = groups.find(({ match }) => match.test(route.path))
   const fallback: RelatedLink[] = [
-    { path: '/guides/', en: { title: 'Guides', description: 'follow the practical setup instructions.' }, es: { title: 'Guías', description: 'seguir las instrucciones prácticas de configuración.' } },
-    { path: '/dev/projects/', en: { title: 'Projects', description: 'explore the development work.' }, es: { title: 'Proyectos', description: 'explorar el trabajo de desarrollo.' } },
+    { path: 'https://docs.voidlinux.org', external: true, en: { title: 'Void Linux Docs' }, es: { title: 'Documentación de Void Linux' } },
+    { path: 'https://www.neko-void-linux.online', external: true, en: { title: 'Neko Void' }, es: { title: 'Neko Void' } },
     { path: '/docs/', en: { title: 'Documentation', description: 'read the technical reference.' }, es: { title: 'Documentación', description: 'leer la referencia técnica.' } }
   ]
 
   return (group?.links ?? fallback)
-    .filter((link) => `${basePath.value}${link.path}`.replace(/\/$/, '') !== currentPath.value)
+    .filter((link) => link.external || `${basePath.value}${link.path}`.replace(/\/$/, '') !== currentPath.value)
     .slice(0, 4)
-    .map((link) => ({ path: `${basePath.value}${link.path}`, ...(isSpanish.value ? link.es : link.en) }))
+    .map((link) => ({
+      path: link.external ? link.path : `${basePath.value}${link.path}`,
+      external: link.external,
+      ...(isSpanish.value ? link.es : link.en)
+    }))
 })
 
 const refreshManualSection = async () => {
@@ -144,8 +149,12 @@ watch(() => route.path, refreshManualSection)
     <h2 id="related-links-title">{{ isSpanish ? 'Véase también' : 'See also' }}</h2>
     <ul>
       <li v-for="link in links" :key="link.path">
-        <a :href="withBase(link.path)">
-          {{ link.title }}<span> — {{ link.description }}</span>
+        <a
+          :href="link.external ? link.path : withBase(link.path)"
+          :target="link.external ? '_blank' : undefined"
+          :rel="link.external ? 'noopener noreferrer' : undefined"
+        >
+          {{ link.title }}<span v-if="link.description"> — {{ link.description }}</span>
         </a>
       </li>
     </ul>
