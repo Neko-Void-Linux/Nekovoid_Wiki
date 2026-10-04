@@ -9,7 +9,7 @@ Explora la wiki de Neko Void por tema. Comienza con las guías prácticas, consu
 
 <div class="wiki-directory" aria-label="Directorio de documentación">
   <section class="wiki-directory-section" aria-labelledby="Primeros_pasos">
-    <h2 id="Primeros_pasos">Primeros pasos</h2>
+    <h2 id="Primeros_pasos"><span class="wiki-directory-label">Primeros pasos</span><span class="wiki-directory-kaomoji" data-kaomoji="٩(ˊᗜˋ*)و" aria-hidden="true"></span></h2>
     <div class="wiki-directory-grid">
       <a class="wiki-directory-entry" href="/es/guides/"><strong>Guías</strong><span>Instrucciones prácticas para usar y configurar Neko Void.</span></a>
       <a class="wiki-directory-entry" href="/es/guides/getting-started/"><strong>Comenzando</strong><span>Aprende lo básico antes de instalar y configurar el sistema.</span></a>
@@ -19,12 +19,12 @@ Explora la wiki de Neko Void por tema. Comienza con las guías prácticas, consu
       <a class="wiki-directory-entry" href="/es/guides/installation/booting"><strong>Arrancar el modo live</strong><span>Inicia el entorno live y prepara la instalación.</span></a>
       <a class="wiki-directory-entry" href="/es/guides/installation/installing"><strong>Instalar Neko Void</strong><span>Instala el sistema y completa la configuración inicial.</span></a>
       <a class="wiki-directory-entry" href="/es/guides/troubleshooting/common-issues"><strong>Problemas comunes</strong><span>Encuentra soluciones para problemas frecuentes de instalación.</span></a>
-      <a class="wiki-directory-entry" href="/es/download/"><strong>Descargas</strong><span>Encuentra las imágenes y opciones de descarga disponibles.</span></a>
+      <a class="wiki-directory-entry" href="https://www.neko-void-linux.online/#descargas" target="_blank" rel="noopener noreferrer"><strong>Descargas</strong><span>Encuentra las imágenes y opciones de descarga disponibles.</span></a>
     </div>
   </section>
 
   <section class="wiki-directory-section" aria-labelledby="Documentación_del_sistema">
-    <h2 id="Documentación_del_sistema">Documentación del sistema</h2>
+    <h2 id="Documentación_del_sistema"><span class="wiki-directory-label">Documentación del sistema</span><span class="wiki-directory-kaomoji" data-kaomoji="(˵◝ ⩊  ◜˵マ" aria-hidden="true"></span></h2>
     <div class="wiki-directory-grid">
       <a class="wiki-directory-entry" href="/es/docs/concepts/"><strong>Conceptos</strong><span>Ideas esenciales sobre la arquitectura y el funcionamiento de Neko Void.</span><small class="wiki-directory-status">En desarrollo</small></a>
       <a class="wiki-directory-entry" href="/es/docs/concepts/runit"><strong>runit</strong><span>Conoce la supervisión de servicios y el sistema init de Neko Void.</span></a>
@@ -34,7 +34,7 @@ Explora la wiki de Neko Void por tema. Comienza con las guías prácticas, consu
   </section>
 
   <section class="wiki-directory-section" aria-labelledby="Proyectos_y_desarrollo">
-    <h2 id="Proyectos_y_desarrollo">Proyectos y desarrollo</h2>
+    <h2 id="Proyectos_y_desarrollo"><span class="wiki-directory-label">Proyectos y desarrollo</span><span class="wiki-directory-kaomoji" data-kaomoji="ദ്ദി˶ｰ̀֊ｰ́ )" aria-hidden="true"></span></h2>
     <div class="wiki-directory-grid">
       <a class="wiki-directory-entry" href="/es/dev/projects/kasha-installer/"><strong>Instalador Kasha</strong><span>Conoce el instalador y su flujo de configuración.</span></a>
       <a class="wiki-directory-entry" href="/es/dev/projects/kasha-installer/architecture"><strong>Kasha: arquitectura</strong><span>Comprende la estructura interna del instalador.</span></a>
@@ -43,7 +43,7 @@ Explora la wiki de Neko Void por tema. Comienza con las guías prácticas, consu
   </section>
 
   <section class="wiki-directory-section" aria-labelledby="Sobre_Neko_Void">
-    <h2 id="Sobre_Neko_Void">Sobre Neko Void</h2>
+    <h2 id="Sobre_Neko_Void"><span class="wiki-directory-label">Sobre Neko Void</span><span class="wiki-directory-kaomoji" data-kaomoji="&gt;ᴗ&lt;" aria-hidden="true"></span></h2>
     <div class="wiki-directory-grid">
       <a class="wiki-directory-entry" href="/es/about/"><strong>Acerca de</strong><span>Conoce el ecosistema Neko Void y sus objetivos.</span></a>
       <a class="wiki-directory-entry" href="/es/about/mission"><strong>Misión</strong><span>Lee los principios que guían el proyecto.</span></a>

@@ -1,6 +1,7 @@
 import DefaultTheme from 'vitepress/theme'
 import Layout from './Layout.vue'
 import CommunityCard from './components/CommunityCard.vue'
+import ContentsToggle from './components/ContentsToggle.vue'
 import FlatpakButton from './components/FlatpakButton.vue'
 import MinecraftButton from './components/MinecraftButton.vue'
 import DownloadOptions from './components/DownloadOptions.vue'
@@ -12,6 +13,7 @@ export default {
     Layout: Layout,
     enhanceApp({ app }: { app: any }) {
         app.component('CommunityCard', CommunityCard)
+        app.component('ContentsToggle', ContentsToggle)
         app.component('FlatpakButton', FlatpakButton)
         app.component('MinecraftButton', MinecraftButton)
         app.component('DownloadOptions', DownloadOptions)

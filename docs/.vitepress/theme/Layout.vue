@@ -1,15 +1,18 @@
 <script setup lang="ts">
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import DefaultTheme from 'vitepress/theme'
-import { useRoute } from 'vitepress'
+import { useData, useRoute } from 'vitepress'
 import AsciiLogo from './components/AsciiLogo.vue'
+import ContentsToggle from './components/ContentsToggle.vue'
 import LanguageControl from './components/LanguageControl.vue'
 import RelatedLinks from './components/RelatedLinks.vue'
 import SearchTopics from './components/SearchTopics.vue'
 import TextSizeControl from './components/TextSizeControl.vue'
+import WikiNotFound from './components/WikiNotFound.vue'
 
 const { Layout } = DefaultTheme
 const route = useRoute()
+const { page } = useData()
 const isRoutePending = ref(false)
 const isRouteEntering = ref(false)
 let enterFrame = 0
@@ -46,8 +49,16 @@ onBeforeUnmount(() => {
 })
 
 const isArticlePage = computed(() => {
+  if (page.value.isNotFound) return false
+
   const path = route.path.replace(/\/+$/, '')
-  return path !== '' && path !== '/es'
+  const sectionLandingPages = new Set([
+    '/dev/projects',
+    '/en/dev/projects',
+    '/es/dev/projects'
+  ])
+
+  return path !== '' && path !== '/es' && !sectionLandingPages.has(path)
 })
 </script>
 
@@ -55,7 +66,8 @@ const isArticlePage = computed(() => {
   <Layout
     :class="{
       'wiki-route-pending': isRoutePending,
-      'wiki-route-enter': isRouteEntering
+      'wiki-route-enter': isRouteEntering,
+      'wiki-no-article': !isArticlePage
     }"
   >
     <template #layout-top>
@@ -64,9 +76,15 @@ const isArticlePage = computed(() => {
     <template #home-hero-image>
       <AsciiLogo />
     </template>
+    <template #not-found>
+      <WikiNotFound />
+    </template>
     <template #nav-bar-content-after>
       <LanguageControl />
       <TextSizeControl v-if="isArticlePage" />
+    </template>
+    <template #aside-outline-before>
+      <ContentsToggle v-if="isArticlePage" />
     </template>
     <template #doc-after>
       <RelatedLinks />

@@ -8,6 +8,6 @@ En este caso podremos usar Ventoy como opción recomendada para la instalación.
 
 1. Descarga [Ventoy](https://www.ventoy.net/en/download.html), descomprímelo y ábrelo.
 
-> *[Imagen referencial de Ventoy2disk aquí]*
-
 2. Selecciona tu memoria USB y presiona el botón **Install**. Cuando ya lo hayas hecho simplemente arrastra la imagen ISO de Neko Void a tu memoria.
+
+![Imagen referencial de Ventoy2Disk](/guides/installation/ventoy-ex-sp.png)
