@@ -29,7 +29,7 @@ const groups: Array<{ match: RegExp; links: RelatedLink[] }> = [
     links: [
       { path: '/guides/', en: { title: 'Guides overview', description: 'find the right path for your task.' }, es: { title: 'Resumen de guías', description: 'encontrar el recorrido adecuado para tu tarea.' } },
       { path: '/guides/installation/requirements', en: { title: 'System requirements', description: 'check the hardware before installing.' }, es: { title: 'Requisitos del sistema', description: 'comprobar el hardware antes de instalar.' } },
-      { path: 'https://www.neko-void-linux.online/#descargas', external: true, en: { title: 'Download', description: 'get the latest installation image.' }, es: { title: 'Descargar', description: 'obtener la imagen de instalación.' } }
+      { path: 'https://www.neko-void-linux.online/#downloads', external: true, en: { title: 'Download', description: 'get the latest installation image.' }, es: { title: 'Descargar', description: 'obtener la imagen de instalación.' } }
     ]
   },
   {

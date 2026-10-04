@@ -15,7 +15,7 @@ hero:
       link: /guides/getting-started/
     - theme: alt
       text: Download ISO
-      link: https://www.neko-void-linux.online/#descargas
+      link: https://www.neko-void-linux.online/#downloads
     - theme: alt
       text: Documentation
       link: /docs/

@@ -19,7 +19,7 @@ Explora la wiki de Neko Void por tema. Comienza con las guías prácticas, consu
       <a class="wiki-directory-entry" href="/es/guides/installation/booting"><strong>Arrancar el modo live</strong><span>Inicia el entorno live y prepara la instalación.</span></a>
       <a class="wiki-directory-entry" href="/es/guides/installation/installing"><strong>Instalar Neko Void</strong><span>Instala el sistema y completa la configuración inicial.</span></a>
       <a class="wiki-directory-entry" href="/es/guides/troubleshooting/common-issues"><strong>Problemas comunes</strong><span>Encuentra soluciones para problemas frecuentes de instalación.</span></a>
-      <a class="wiki-directory-entry" href="https://www.neko-void-linux.online/#descargas" target="_blank" rel="noopener noreferrer"><strong>Descargas</strong><span>Encuentra las imágenes y opciones de descarga disponibles.</span></a>
+      <a class="wiki-directory-entry" href="https://www.neko-void-linux.online/#downloads" target="_blank" rel="noopener noreferrer"><strong>Descargas</strong><span>Encuentra las imágenes y opciones de descarga disponibles.</span></a>
     </div>
   </section>
 

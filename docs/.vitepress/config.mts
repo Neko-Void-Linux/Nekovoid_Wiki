@@ -32,8 +32,8 @@ function searchTagsForPath(id: string) {
 }
 
 const websiteDownloads = {
-  en: 'https://www.neko-void-linux.online/#descargas',
-  es: 'https://www.neko-void-linux.online/#descargas'
+  en: 'https://www.neko-void-linux.online/#downloads',
+  es: 'https://www.neko-void-linux.online/#downloads'
 }
 
 function createLocalSearch(language: 'en' | 'es') {
