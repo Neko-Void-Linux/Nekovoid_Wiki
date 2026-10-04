@@ -8,6 +8,7 @@ import LanguageControl from './components/LanguageControl.vue'
 import RelatedLinks from './components/RelatedLinks.vue'
 import SearchTopics from './components/SearchTopics.vue'
 import TextSizeControl from './components/TextSizeControl.vue'
+import ThemeControl from './components/ThemeControl.vue'
 import WikiNotFound from './components/WikiNotFound.vue'
 
 const { Layout } = DefaultTheme
@@ -80,6 +81,7 @@ const isArticlePage = computed(() => {
       <WikiNotFound />
     </template>
     <template #nav-bar-content-after>
+      <ThemeControl />
       <LanguageControl />
       <TextSizeControl v-if="isArticlePage" />
     </template>

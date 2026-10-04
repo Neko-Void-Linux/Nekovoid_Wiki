@@ -77,9 +77,16 @@ export default defineConfig({
   description: "A open source eco-system",
   cleanUrls: true,
   lastUpdated: true,
-  appearance: 'force-auto',
+  appearance: false,
 
   head: [
+    ['script', { id: 'check-wiki-theme' }, `;(() => {
+      const preference = localStorage.getItem('vitepress-theme-appearance') || 'auto'
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+      const isDark = preference === 'dark' || (preference === 'auto' && prefersDark)
+      document.documentElement.dataset.theme = preference
+      document.documentElement.classList.toggle('dark', isDark)
+    })()`],
     ['link', { rel: 'icon', href: '/logo-custom.svg' }],
     ['meta', { name: 'theme-color', content: '#8da383' }],
     ['meta', { name: 'author', content: 'Neko Void' }],

@@ -372,8 +372,8 @@ body::after {
 .language-control {
     position: relative;
     z-index: 30;
-    order: 3;
-    margin-left: 12px;
+    order: 4;
+    margin-left: 8px;
 }
 
 .language-trigger {
@@ -555,6 +555,138 @@ body::after {
    flex items so the reading control sits after appearance and before GitHub. */
 .VPNavBar .content-body > .social-links {
     order: 2;
+}
+
+.theme-control {
+    position: relative;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    order: 3;
+    margin-left: 8px;
+}
+
+.theme-trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 1px solid #7f9193;
+    background: rgba(255, 255, 255, 0.04);
+    color: #7f9193;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.theme-trigger:hover,
+.theme-trigger:focus-visible {
+    border-color: var(--vp-c-brand-1);
+    background: rgba(255, 255, 255, 0.07);
+    color: var(--vp-c-text-1);
+    outline: none;
+}
+
+.theme-control.open .theme-trigger {
+    border-color: #8da383;
+    background: rgba(141, 163, 131, 0.08);
+    color: #8da383;
+}
+
+.theme-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.theme-menu {
+    position: absolute;
+    z-index: 30;
+    top: calc(100% + 8px);
+    right: 0;
+    width: 190px;
+    padding: 0;
+    border: 1px solid #8da383;
+    background: var(--vp-c-bg);
+    box-shadow: 4px 4px rgba(122, 153, 141, 0.2);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-6px) scale(0.97);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    visibility: hidden;
+}
+
+.theme-control.open .theme-menu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+    visibility: visible;
+}
+
+.theme-group-label {
+    display: block;
+    padding: 11px 16px 6px;
+    color: var(--vp-c-text-3);
+    font-family: var(--vp-font-family-mono);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.theme-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    min-height: 40px;
+    padding: 10px 16px;
+    border: 0;
+    background: transparent;
+    color: #7f9193;
+    cursor: pointer;
+    font-family: var(--vp-font-family-base);
+    font-size: 0.88rem;
+    text-align: left;
+    transition: none;
+}
+
+.theme-option.active {
+    background: rgba(141, 163, 131, 0.08);
+    color: #8da383;
+}
+
+.theme-option:hover,
+.theme-option:focus-visible {
+    background: #7a998d;
+    color: var(--vp-c-bg);
+    outline: none;
+}
+
+.theme-option-name {
+    flex: 1;
+    font-weight: 500;
+}
+
+.theme-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    opacity: 0;
+    color: var(--vp-c-brand-1);
+    font-size: 0.85rem;
+}
+
+.theme-option.active .theme-check {
+    opacity: 1;
+}
+
+.theme-option:hover .theme-check,
+.theme-option:focus-visible .theme-check {
+    color: var(--vp-c-bg);
 }
 
 .text-size-trigger {
@@ -1322,20 +1454,25 @@ html[data-text-size='large'] .VPDoc .vp-doc {
 
 :root {
     --vp-nav-height: 80px;
-    --wiki-border-color: #7f9193;
-    --vp-c-bg: #f7f8f5;
-    --vp-c-bg-alt: #eef1ec;
-    --vp-c-bg-elv: #ffffff;
-    --vp-c-bg-soft: #e8ede8;
+    /* Matecito light palette */
+    --wiki-border-color: #7d857f;
+    --vp-c-bg: #e3dccf;
+    --vp-c-bg-alt: #d1c9bb;
+    --vp-c-bg-elv: #e3dccf;
+    --vp-c-bg-soft: #d1c9bb;
     --vp-c-divider: var(--wiki-border-color);
     --vp-c-gutter: var(--wiki-border-color);
-    --vp-c-text-1: #28332c;
-    --vp-c-text-2: #536259;
-    --vp-c-text-3: #718077;
-    --vp-c-brand-1: #608068;
-    --vp-c-brand-2: #7a998d;
-    --vp-c-brand-3: #cb9b7c;
-    --vp-c-brand-soft: rgba(96, 128, 104, 0.14);
+    --vp-c-text-1: #1f2421;
+    --vp-c-text-2: #545c56;
+    --vp-c-text-3: #7d857f;
+    --vp-c-brand-1: #4a5944;
+    --vp-c-brand-2: #5c7055;
+    --vp-c-brand-3: #85583b;
+    --vp-c-brand-soft: rgba(74, 89, 68, 0.14);
+    --wiki-c-secondary: #85583b;
+    --wiki-c-tertiary: #3b4d52;
+    --wiki-c-error: #8a4444;
+    --wiki-c-shadow: #bfae9b;
 }
 
 .dark {
@@ -1499,6 +1636,26 @@ body {
     opacity: 0.8;
 }
 
+/* Use the same two-wave Fluxer mark as the main Neko Void website. */
+.VPNavBar .VPNavBarSocialLinks .VPSocialLink[href*="fluxer.gg"] {
+    padding: 0;
+}
+
+.VPNavBar .VPNavBarSocialLinks .VPSocialLink[href*="fluxer.gg"] > svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: currentColor;
+    -webkit-mask: url('/fluxer-icon.svg') center / contain no-repeat;
+    mask: url('/fluxer-icon.svg') center / contain no-repeat;
+    opacity: 0.8;
+    transform: translateY(1px);
+}
+
+.VPNavBar .VPNavBarSocialLinks .VPSocialLink[href*="fluxer.gg"] > svg path {
+    display: none;
+}
+
 .VPNavBar .VPNavBarTranslations .button {
     width: auto;
     height: 34px !important;
@@ -1578,6 +1735,7 @@ body {
 
 @media (max-width: 1050px) {
     .VPNavBar .language-control,
+    .VPNavBar .theme-control,
     .VPNavBar .text-size-control {
         display: none;
     }
@@ -1671,8 +1829,10 @@ body {
     .VPNavBar .VPNavBarTranslations .button,
     .text-size-trigger,
     .text-size-menu,
-        .Layout.wiki-route-enter .VPContent > .VPHome,
-        .Layout.wiki-route-enter .VPContent > .VPPage {
+    .theme-trigger,
+    .theme-menu,
+    .Layout.wiki-route-enter .VPContent > .VPHome,
+    .Layout.wiki-route-enter .VPContent > .VPPage {
         transition: none;
         animation: none;
     }
@@ -2172,4 +2332,195 @@ body {
     .wiki-directory-section h2 {
         font-size: 1.25rem;
     }
+}
+
+/* -------------------------------------------------------------------------- */
+/* Light theme contrast                                                       */
+/* -------------------------------------------------------------------------- */
+
+html:not(.dark) {
+    --wiki-light-nav-color: var(--vp-c-brand-1);
+}
+
+html:not(.dark) .VPNavBar {
+    border-bottom-color: var(--wiki-border-color) !important;
+}
+
+html:not(.dark) .VPNavBarTitle .title > span,
+html:not(.dark) .VPNavBar.home .VPNavBarTitle .title > span {
+    color: var(--wiki-light-nav-color);
+}
+
+html:not(.dark) .VPNavBarMenuLink,
+html:not(.dark) .VPNavBarMenuLink.active,
+html:not(.dark) .VPNavBarMenuLink:hover {
+    color: var(--wiki-light-nav-color) !important;
+}
+
+html:not(.dark) .VPNavBarMenuLink::after {
+    background: var(--wiki-light-nav-color);
+}
+
+html:not(.dark) .VPNavBarSearch .DocSearch-Button {
+    background: transparent;
+    color: var(--wiki-light-nav-color);
+}
+
+html:not(.dark) .VPNavBarSearch .DocSearch-Button:hover,
+html:not(.dark) .VPNavBarSearch .DocSearch-Button:focus-visible {
+    background: var(--vp-c-brand-soft);
+    color: var(--vp-c-brand-1);
+}
+
+html:not(.dark) .VPNavBarSearch .DocSearch-Search-Icon {
+    background-color: var(--wiki-light-nav-color) !important;
+    opacity: 1;
+}
+
+html:not(.dark) .VPNavBar .logo,
+html:not(.dark) .VPNavBar.home .VPNavBarTitle .logo {
+    opacity: 1;
+    filter: brightness(0.25) saturate(0.75) drop-shadow(0 0 1px rgba(74, 89, 68, 0.2));
+}
+
+html:not(.dark) .VPHero .text {
+    color: var(--vp-c-brand-1) !important;
+}
+
+html:not(.dark) .VPHero .name {
+    color: var(--vp-c-brand-2) !important;
+    -webkit-text-fill-color: var(--vp-c-brand-2) !important;
+}
+
+html:not(.dark) .VPNavBar .VPNavBarSocialLinks .VPSocialLink,
+html:not(.dark) .text-size-trigger,
+html:not(.dark) .theme-trigger,
+html:not(.dark) .language-trigger {
+    border-color: var(--wiki-border-color);
+    background: rgba(74, 89, 68, 0.05);
+    color: var(--vp-c-brand-1);
+}
+
+html:not(.dark) .VPNavBarSearch .DocSearch-Button:hover,
+html:not(.dark) .VPNavBarSearch .DocSearch-Button:focus-visible,
+html:not(.dark) .VPNavBar .VPNavBarSocialLinks .VPSocialLink:hover,
+html:not(.dark) .VPNavBar .VPNavBarSocialLinks .VPSocialLink:focus-visible,
+html:not(.dark) .text-size-trigger:hover,
+html:not(.dark) .text-size-trigger:focus-visible,
+html:not(.dark) .theme-trigger:hover,
+html:not(.dark) .theme-trigger:focus-visible,
+html:not(.dark) .language-trigger:hover,
+html:not(.dark) .language-trigger:focus-visible {
+    border-color: var(--vp-c-brand-1) !important;
+    background: var(--vp-c-brand-soft) !important;
+    color: var(--vp-c-text-1) !important;
+    outline: none;
+}
+
+html:not(.dark) .VPNavBar .VPNavBarSocialLinks .VPSocialLink > span,
+html:not(.dark) .VPNavBar .VPNavBarSocialLinks .VPSocialLink > svg,
+html:not(.dark) .language-globe {
+    opacity: 1;
+}
+
+html:not(.dark) .text-size-control.open .text-size-trigger,
+html:not(.dark) .theme-control.open .theme-trigger,
+html:not(.dark) .language-control.open .language-trigger {
+    border-color: var(--vp-c-brand-1);
+    background: var(--vp-c-brand-soft);
+    color: var(--vp-c-brand-1);
+}
+
+html:not(.dark) .text-size-menu,
+html:not(.dark) .theme-menu,
+html:not(.dark) .language-menu {
+    border-color: var(--vp-c-brand-1) !important;
+    box-shadow: 4px 4px rgba(191, 174, 155, 0.38);
+}
+
+html:not(.dark) .text-size-option,
+html:not(.dark) .theme-option,
+html:not(.dark) .language-option {
+    color: var(--vp-c-text-2);
+}
+
+html:not(.dark) .text-size-option.active,
+html:not(.dark) .theme-option.active,
+html:not(.dark) .language-option.active {
+    background: var(--vp-c-brand-soft);
+    color: var(--vp-c-brand-1);
+}
+
+html:not(.dark) .text-size-option:hover,
+html:not(.dark) .text-size-option:focus-visible,
+html:not(.dark) .theme-option:hover,
+html:not(.dark) .theme-option:focus-visible,
+html:not(.dark) .language-option:hover,
+html:not(.dark) .language-option:focus-visible {
+    background: var(--vp-c-brand-1) !important;
+    color: var(--vp-c-bg) !important;
+}
+
+html:not(.dark) .language-option:hover .language-name,
+html:not(.dark) .language-option:hover .language-code,
+html:not(.dark) .language-option:focus-visible .language-name,
+html:not(.dark) .language-option:focus-visible .language-code,
+html:not(.dark) .text-size-option:hover .text-size-check,
+html:not(.dark) .text-size-option:focus-visible .text-size-check,
+html:not(.dark) .theme-option:hover .theme-check,
+html:not(.dark) .theme-option:focus-visible .theme-check,
+html:not(.dark) .language-option:hover .language-check,
+html:not(.dark) .language-option:focus-visible .language-check {
+    color: var(--vp-c-bg) !important;
+}
+
+html:not(.dark) .text-size-check,
+html:not(.dark) .theme-check,
+html:not(.dark) .language-check {
+    color: var(--vp-c-brand-1);
+}
+
+html:not(.dark) .VPHero .action:nth-child(1) .VPButton,
+html:not(.dark) .VPHero .action:nth-child(3) .VPButton {
+    border-color: var(--vp-c-brand-1) !important;
+    background: var(--vp-c-bg) !important;
+    color: var(--vp-c-brand-1) !important;
+}
+
+html:not(.dark) .VPHero .action:nth-child(2) .VPButton {
+    border-color: var(--vp-c-brand-1) !important;
+    background: var(--vp-c-brand-1) !important;
+    color: var(--vp-c-bg) !important;
+}
+
+html:not(.dark) .VPHero .action:nth-child(1) .VPButton:hover,
+html:not(.dark) .VPHero .action:nth-child(3) .VPButton:hover {
+    border-color: var(--vp-c-brand-1) !important;
+    background: var(--vp-c-brand-soft) !important;
+    color: var(--vp-c-text-1) !important;
+}
+
+html:not(.dark) .VPHero .action:nth-child(2) .VPButton:hover {
+    border-color: var(--vp-c-text-1) !important;
+    background: var(--vp-c-text-1) !important;
+    color: var(--vp-c-bg) !important;
+}
+
+html:not(.dark) .ascii-art {
+    color: var(--vp-c-brand-2) !important;
+    text-shadow: 0 0 12px rgba(74, 89, 68, 0.12) !important;
+}
+
+html:not(.dark) .VPFeatures .VPFeature {
+    border-color: var(--vp-c-brand-1) !important;
+    color: var(--vp-c-text-2) !important;
+}
+
+html:not(.dark) .VPFeatures .VPFeature .title {
+    color: var(--vp-c-brand-1) !important;
+}
+
+html:not(.dark) .VPFeatures .VPFeature .details,
+html:not(.dark) .related-links li a span {
+    color: var(--vp-c-text-2) !important;
 }
