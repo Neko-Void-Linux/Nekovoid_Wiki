@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@400;500;600;700&family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,600;1,300;1,400&family=IBM+Plex+Sans:wght@300;400;500&display=swap');
 
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/Roboto-Regular.ttf') format('truetype');
+}
+
 /**
  * Custom CSS for Trinity Projects
  * Based on the "Deep Blue / Violet" aesthetic
@@ -197,12 +205,30 @@ body::after {
     margin: 3rem 0 0;
     padding-top: 1.5rem;
     border-top: 1px solid var(--vp-c-divider);
+    font-size: calc(1rem * var(--content-text-scale, 1));
 }
 
 .related-links h2 {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
     margin: 0 0 1rem;
-    font-size: 1.5rem;
+    color: var(--vp-c-text-1);
+    font-family: var(--vp-font-family-base);
+    font-size: calc(1.45rem * var(--content-text-scale, 1)) !important;
+    font-weight: 500;
+    letter-spacing: 0.01em;
     line-height: 1.3;
+}
+
+.related-links-kaomoji {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: normal;
+    white-space: nowrap;
 }
 
 .related-links ul {
@@ -212,6 +238,35 @@ body::after {
 
 .related-links li {
     margin: 0.45rem 0;
+}
+
+.related-links li a {
+    color: var(--vp-c-brand-1);
+    font-family: var(--vp-font-family-base);
+    font-size: calc(1rem * var(--content-text-scale, 1));
+    font-weight: 500;
+    text-decoration: none;
+    text-underline-offset: 2px;
+    transition: none;
+}
+
+.related-links li a.related-links-external {
+    color: var(--vp-c-brand-2);
+    font-family: var(--vp-font-family-mono);
+    font-size: calc(0.92rem * var(--content-text-scale, 1));
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.related-links li a:hover,
+.related-links li a:focus-visible {
+    color: var(--vp-c-brand-2);
+    text-decoration: underline;
+}
+
+.related-links li a.related-links-external:hover,
+.related-links li a.related-links-external:focus-visible {
+    color: var(--vp-c-text-1);
 }
 
 .related-links li a span {
@@ -317,8 +372,8 @@ body::after {
 .language-control {
     position: relative;
     z-index: 30;
-    order: 3;
-    margin-left: 12px;
+    order: 4;
+    margin-left: 8px;
 }
 
 .language-trigger {
@@ -502,21 +557,150 @@ body::after {
     order: 2;
 }
 
+.theme-control {
+    position: relative;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    order: 3;
+    margin-left: 8px;
+}
+
+.theme-trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 1px solid #7f9193;
+    background: rgba(255, 255, 255, 0.04);
+    color: #7f9193;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.theme-trigger:hover,
+.theme-trigger:focus-visible {
+    border-color: var(--vp-c-brand-1);
+    background: rgba(255, 255, 255, 0.07);
+    color: var(--vp-c-text-1);
+    outline: none;
+}
+
+.theme-control.open .theme-trigger {
+    border-color: #8da383;
+    background: rgba(141, 163, 131, 0.08);
+    color: #8da383;
+}
+
+.theme-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.theme-menu {
+    position: absolute;
+    z-index: 30;
+    top: calc(100% + 8px);
+    right: 0;
+    width: 190px;
+    padding: 0;
+    border: 1px solid #8da383;
+    background: var(--vp-c-bg);
+    box-shadow: 4px 4px rgba(122, 153, 141, 0.2);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-6px) scale(0.97);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    visibility: hidden;
+}
+
+.theme-control.open .theme-menu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+    visibility: visible;
+}
+
+.theme-group-label {
+    display: block;
+    padding: 11px 16px 6px;
+    color: var(--vp-c-text-3);
+    font-family: var(--vp-font-family-mono);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.theme-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    min-height: 40px;
+    padding: 10px 16px;
+    border: 0;
+    background: transparent;
+    color: #7f9193;
+    cursor: pointer;
+    font-family: var(--vp-font-family-base);
+    font-size: 0.88rem;
+    text-align: left;
+    transition: none;
+}
+
+.theme-option.active {
+    background: rgba(141, 163, 131, 0.08);
+    color: #8da383;
+}
+
+.theme-option:hover,
+.theme-option:focus-visible {
+    background: #7a998d;
+    color: var(--vp-c-bg);
+    outline: none;
+}
+
+.theme-option-name {
+    flex: 1;
+    font-weight: 500;
+}
+
+.theme-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    opacity: 0;
+    color: var(--vp-c-brand-1);
+    font-size: 0.85rem;
+}
+
+.theme-option.active .theme-check {
+    opacity: 1;
+}
+
+.theme-option:hover .theme-check,
+.theme-option:focus-visible .theme-check {
+    color: var(--vp-c-bg);
+}
+
 .text-size-trigger {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 32px;
-    min-height: 32px;
-    padding: 0 8px;
     width: 36px;
     height: 36px;
-    padding: 8px;
+    padding: 0;
     border: 1px solid #7f9193;
     color: #7f9193;
     background: rgba(255, 255, 255, 0.04);
     cursor: pointer;
-    font-family: 'Fira Code', monospace;
+    font-family: var(--vp-font-family-mono);
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -528,73 +712,134 @@ body::after {
     outline: none;
 }
 
+.text-size-control.open .text-size-trigger {
+    border-color: #8da383;
+    background: rgba(141, 163, 131, 0.08);
+    color: #8da383;
+}
+
 .text-size-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1em;
     font-family: Georgia, serif;
     font-size: 1.1rem;
     font-weight: 700;
+    line-height: 1;
+    transform: translateY(1px);
 }
 
 .text-size-menu {
     position: absolute;
     z-index: 30;
-    top: calc(100% + 4px);
+    top: calc(100% + 8px);
     right: 0;
-    width: 170px;
-    padding: 12px;
-    border: 1px solid var(--vp-c-divider);
-    background: var(--vp-c-bg-elv);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+    width: 220px;
+    padding: 0;
+    border: 1px solid #8da383;
+    background: var(--vp-c-bg);
+    box-shadow: 4px 4px rgba(122, 153, 141, 0.2);
     opacity: 0;
     pointer-events: none;
-    transform: translateY(-4px);
-    transition: opacity 120ms ease, transform 120ms ease;
+    transform: translateY(-6px) scale(0.97);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     visibility: hidden;
 }
 
-.text-size-control:hover .text-size-menu,
-.text-size-control:focus-within .text-size-menu {
+.text-size-control.open .text-size-menu {
     opacity: 1;
     pointer-events: auto;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
     visibility: visible;
 }
 
-.text-size-menu fieldset {
-    min-width: 0;
-    margin: 0;
-    padding: 0;
-    border: 0;
+.text-size-group + .text-size-group {
+    border-top: 1px solid rgba(127, 145, 147, 0.32);
 }
 
-.text-size-menu legend {
-    margin-bottom: 8px;
-    color: var(--vp-c-text-1);
-    font-size: 0.85rem;
+.text-size-group-label {
+    display: block;
+    padding: 11px 16px 6px;
+    color: var(--vp-c-text-3);
+    font-family: var(--vp-font-family-mono);
+    font-size: 0.68rem;
     font-weight: 600;
+    letter-spacing: 0.1em;
+    line-height: 1.2;
+    text-transform: uppercase;
 }
 
 .text-size-option {
     display: flex;
     align-items: center;
-    gap: 8px;
-    min-height: 32px;
-    color: var(--vp-c-text-2);
+    gap: 10px;
+    width: 100%;
+    min-height: 40px;
+    padding: 10px 16px;
+    border: 0;
+    background: transparent;
+    color: #7f9193;
     cursor: pointer;
-    font-size: 0.9rem;
+    font-family: var(--vp-font-family-base);
+    font-size: 0.88rem;
+    text-align: left;
+    transition: none;
 }
 
-.text-size-option input {
-    accent-color: var(--vp-c-brand-1);
+.text-size-option.active {
+    background: rgba(141, 163, 131, 0.08);
+    color: #8da383;
 }
 
-.text-size-option input[type='radio'] {
-    border-radius: 50% !important;
+.text-size-option:hover,
+.text-size-option:focus-visible {
+    background: #7a998d;
+    color: var(--vp-c-bg);
+    outline: none;
 }
 
-/* Scale article copy and headings together; the navigation stays unchanged. */
+.text-size-option:hover .text-size-check,
+.text-size-option:focus-visible .text-size-check {
+    color: var(--vp-c-bg);
+}
+
+.text-size-option-name {
+    flex: 1;
+    font-weight: 500;
+}
+
+.text-size-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    opacity: 0;
+    color: var(--vp-c-brand-1);
+    font-size: 0.85rem;
+}
+
+.text-size-option.active .text-size-check {
+    opacity: 1;
+}
+
+/* Scale article content only; the navigation and page outline stay unchanged. */
 .VPDoc .vp-doc {
     --content-text-scale: 1;
+}
+
+.VPDoc .vp-doc {
     font-size: calc(1rem * var(--content-text-scale));
+    --vp-code-font-size: calc(0.875rem * var(--content-text-scale));
+}
+
+.VPDoc .vp-doc :where(p, li, summary, blockquote, dt, dd) {
+    font-size: calc(1rem * var(--content-text-scale));
+}
+
+.VPDoc .vp-doc :where(th, td) {
+    font-size: calc(0.875rem * var(--content-text-scale));
 }
 
 .VPDoc .vp-doc :where(h1, h2, h3, h4, h5, h6) {
@@ -609,11 +854,39 @@ body::after {
 .VPDoc .vp-doc h6 { --heading-size: 1rem; }
 
 html[data-text-size='small'] .VPDoc .vp-doc {
-    --content-text-scale: 0.9;
+    --content-text-scale: 0.875;
 }
 
 html[data-text-size='large'] .VPDoc .vp-doc {
-    --content-text-scale: 1.12;
+    --content-text-scale: 1.25;
+}
+
+/* Match Vector's 960px reading column while keeping the page outline in place. */
+@media (min-width: 960px) {
+    html:not([data-content-width='wide']) .VPDoc .container {
+        max-width: 1280px !important;
+    }
+
+    html:not([data-content-width='wide']) .VPDoc .content {
+        max-width: 1024px !important;
+    }
+
+    html:not([data-content-width='wide']) .VPDoc .content-container {
+        width: 100%;
+        max-width: 960px !important;
+    }
+
+    html[data-content-width='wide'] .VPDoc .container,
+    html[data-content-width='wide'] .VPDoc .content,
+    html[data-content-width='wide'] .VPDoc .content-container {
+        width: 100%;
+        max-width: none !important;
+    }
+}
+
+/* Heading targets remain functional through the outline without showing a # glyph. */
+.vp-doc .header-anchor::before {
+    content: none !important;
 }
 
 /* Keep the current section unmistakable after following a permalink. */
@@ -646,6 +919,137 @@ html[data-text-size='large'] .VPDoc .vp-doc {
     padding: 14px 16px 16px;
     border: 1px solid var(--vp-c-divider);
     background: linear-gradient(145deg, var(--vp-c-bg-soft), var(--vp-c-bg-alt));
+    opacity: 1;
+    transition:
+        opacity 0.18s ease,
+        visibility 0s linear 0s;
+}
+
+.VPDocAsideOutline.is-hidden {
+    pointer-events: none;
+}
+
+.VPDocAsideOutline.is-hidden .content {
+    opacity: 0;
+    visibility: hidden;
+    transition-delay: 0s, 0.22s;
+}
+
+/* VitePress can retain the previous outline briefly during section navigation. */
+.Layout.wiki-no-article .VPDocAsideOutline {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.VPDocAside {
+    position: relative;
+}
+
+.contents-toggle {
+    display: inline-flex;
+    align-self: flex-start;
+    align-items: center;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: var(--vp-c-text-2);
+    background: transparent;
+    cursor: pointer;
+    font-family: var(--vp-font-family-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+}
+
+.contents-toggle:hover,
+.contents-toggle:focus-visible {
+    color: var(--vp-c-brand-1);
+    outline: none;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.contents-toggle-inline {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    z-index: 2;
+    padding: 2px 0;
+}
+
+.contents-toggle-inline:disabled {
+    pointer-events: none;
+}
+
+.contents-toggle-reopen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    gap: 7px;
+    padding: 2px 0;
+}
+
+.contents-toggle-reopen-enter-active,
+.contents-toggle-reopen-leave-active {
+    transition:
+        opacity 0.22s cubic-bezier(0.22, 0.61, 0.36, 1),
+        transform 0.22s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.contents-toggle-reopen-enter-from,
+.contents-toggle-reopen-leave-to {
+    opacity: 0;
+    transform: translateY(-4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .VPDocAsideOutline .content,
+    .contents-toggle-reopen-enter-active,
+    .contents-toggle-reopen-leave-active {
+        animation: none;
+        transition: none;
+    }
+}
+
+.contents-toggle-icon {
+    position: relative;
+    display: inline-block;
+    width: 15px;
+    height: 12px;
+    border: 1px solid currentColor;
+    opacity: 0.9;
+    transition: transform 0.2s ease;
+}
+
+.contents-toggle-icon::before,
+.contents-toggle-icon::after {
+    position: absolute;
+    left: 3px;
+    width: 7px;
+    height: 1px;
+    background: currentColor;
+    content: '';
+}
+
+.contents-toggle-icon::before {
+    top: 3px;
+    box-shadow: 0 3px currentColor;
+}
+
+.contents-toggle-icon::after {
+    top: 9px;
+}
+
+.contents-toggle-reopen .contents-toggle-icon {
+    transform: rotate(180deg);
+}
+
+@media (max-width: 1279px) {
+    .contents-toggle {
+        display: none;
+    }
 }
 
 .VPDocAsideOutline .outline-marker {
@@ -1050,20 +1454,25 @@ html[data-text-size='large'] .VPDoc .vp-doc {
 
 :root {
     --vp-nav-height: 80px;
-    --wiki-border-color: #7f9193;
-    --vp-c-bg: #f7f8f5;
-    --vp-c-bg-alt: #eef1ec;
-    --vp-c-bg-elv: #ffffff;
-    --vp-c-bg-soft: #e8ede8;
+    /* Matecito light palette */
+    --wiki-border-color: #7d857f;
+    --vp-c-bg: #e3dccf;
+    --vp-c-bg-alt: #d1c9bb;
+    --vp-c-bg-elv: #e3dccf;
+    --vp-c-bg-soft: #d1c9bb;
     --vp-c-divider: var(--wiki-border-color);
     --vp-c-gutter: var(--wiki-border-color);
-    --vp-c-text-1: #28332c;
-    --vp-c-text-2: #536259;
-    --vp-c-text-3: #718077;
-    --vp-c-brand-1: #608068;
-    --vp-c-brand-2: #7a998d;
-    --vp-c-brand-3: #cb9b7c;
-    --vp-c-brand-soft: rgba(96, 128, 104, 0.14);
+    --vp-c-text-1: #1f2421;
+    --vp-c-text-2: #545c56;
+    --vp-c-text-3: #7d857f;
+    --vp-c-brand-1: #4a5944;
+    --vp-c-brand-2: #5c7055;
+    --vp-c-brand-3: #85583b;
+    --vp-c-brand-soft: rgba(74, 89, 68, 0.14);
+    --wiki-c-secondary: #85583b;
+    --wiki-c-tertiary: #3b4d52;
+    --wiki-c-error: #8a4444;
+    --wiki-c-shadow: #bfae9b;
 }
 
 .dark {
@@ -1177,7 +1586,7 @@ body {
 .VPNavBarTitle .title {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
     height: var(--vp-nav-height);
 }
 
@@ -1225,6 +1634,26 @@ body {
     width: 18px;
     height: 18px;
     opacity: 0.8;
+}
+
+/* Use the same two-wave Fluxer mark as the main Neko Void website. */
+.VPNavBar .VPNavBarSocialLinks .VPSocialLink[href*="fluxer.gg"] {
+    padding: 0;
+}
+
+.VPNavBar .VPNavBarSocialLinks .VPSocialLink[href*="fluxer.gg"] > svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: currentColor;
+    -webkit-mask: url('/fluxer-icon.svg') center / contain no-repeat;
+    mask: url('/fluxer-icon.svg') center / contain no-repeat;
+    opacity: 0.8;
+    transform: translateY(1px);
+}
+
+.VPNavBar .VPNavBarSocialLinks .VPSocialLink[href*="fluxer.gg"] > svg path {
+    display: none;
 }
 
 .VPNavBar .VPNavBarTranslations .button {
@@ -1306,6 +1735,7 @@ body {
 
 @media (max-width: 1050px) {
     .VPNavBar .language-control,
+    .VPNavBar .theme-control,
     .VPNavBar .text-size-control {
         display: none;
     }
@@ -1367,15 +1797,23 @@ body {
 }
 
 .Layout.wiki-route-pending .VPContent > .VPHome,
-.Layout.wiki-route-pending .VPContent > .VPDoc,
 .Layout.wiki-route-pending .VPContent > .VPPage {
     opacity: 0;
     transform: translateY(8px);
 }
 
 .Layout.wiki-route-enter .VPContent > .VPHome,
-.Layout.wiki-route-enter .VPContent > .VPDoc,
 .Layout.wiki-route-enter .VPContent > .VPPage {
+    animation: 0.4s ease-out forwards wiki-section-enter;
+}
+
+/* Keep the contents panel anchored while only the article column transitions. */
+.Layout.wiki-route-pending .VPContent > .VPDoc > .container > .content {
+    opacity: 0;
+    transform: translateY(8px);
+}
+
+.Layout.wiki-route-enter .VPContent > .VPDoc > .container > .content {
     animation: 0.4s ease-out forwards wiki-section-enter;
 }
 
@@ -1391,16 +1829,21 @@ body {
     .VPNavBar .VPNavBarTranslations .button,
     .text-size-trigger,
     .text-size-menu,
+    .theme-trigger,
+    .theme-menu,
     .Layout.wiki-route-enter .VPContent > .VPHome,
-    .Layout.wiki-route-enter .VPContent > .VPDoc,
     .Layout.wiki-route-enter .VPContent > .VPPage {
         transition: none;
         animation: none;
     }
 
     .Layout.wiki-route-pending .VPContent > .VPHome,
-    .Layout.wiki-route-pending .VPContent > .VPDoc,
     .Layout.wiki-route-pending .VPContent > .VPPage {
+        opacity: 1;
+        transform: none;
+    }
+
+    .Layout.wiki-route-pending .VPContent > .VPDoc > .container > .content {
         opacity: 1;
         transform: none;
     }
@@ -1763,4 +2206,321 @@ body {
 .VPHero .action:nth-child(2) .VPButton > * {
     position: relative;
     z-index: 1;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Documentation directory                                                    */
+/* -------------------------------------------------------------------------- */
+
+.wiki-directory {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 4rem;
+    counter-reset: wiki-directory-section;
+}
+
+.wiki-directory-section {
+    margin: 2.75rem 0 0;
+    counter-increment: wiki-directory-section;
+}
+
+.wiki-directory-section:first-child {
+    margin-top: 2rem;
+}
+
+.wiki-directory-section h2 {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin: 0 0 0.25rem;
+    padding: 0 0 0.7rem;
+    border-top: 0;
+    border-bottom: 1px solid var(--wiki-border-color);
+    color: var(--vp-c-text-1);
+    font-family: var(--vp-font-family-base);
+    font-size: 1.45rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+
+.wiki-directory-kaomoji {
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    white-space: nowrap;
+}
+
+.wiki-directory-kaomoji::before {
+    content: attr(data-kaomoji);
+}
+
+.wiki-directory-section h2::before {
+    content: counter(wiki-directory-section);
+    color: var(--vp-c-brand-1);
+    font-family: var(--vp-font-family-mono);
+    font-size: calc(0.9rem * var(--content-text-scale, 1));
+    letter-spacing: 0.06em;
+}
+
+.wiki-directory-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4px 22px;
+    padding-top: 0.45rem;
+}
+
+.wiki-directory-entry {
+    display: flex;
+    min-height: 74px;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.7rem 0.85rem;
+    border: 1px solid transparent;
+    color: var(--vp-c-text-2) !important;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+}
+
+.wiki-directory-entry strong {
+    color: var(--vp-c-brand-2);
+    font-family: var(--vp-font-family-mono);
+    font-size: calc(0.92rem * var(--content-text-scale, 1));
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.wiki-directory-entry span:not(.wiki-directory-status) {
+    margin-top: 0.35rem;
+    color: var(--vp-c-text-2);
+    font-family: var(--vp-font-family-base);
+    font-size: calc(0.9rem * var(--content-text-scale, 1));
+    line-height: 1.45;
+}
+
+.wiki-directory-entry:hover,
+.wiki-directory-entry:focus-visible {
+    border-color: var(--vp-c-brand-1);
+    background: var(--vp-c-brand-soft);
+    outline: none;
+}
+
+.wiki-directory-entry:hover strong,
+.wiki-directory-entry:focus-visible strong,
+.wiki-directory-entry:hover span:not(.wiki-directory-status),
+.wiki-directory-entry:focus-visible span:not(.wiki-directory-status) {
+    color: var(--vp-c-text-1);
+}
+
+.wiki-directory-status {
+    align-self: flex-start;
+    margin-top: 0.4rem;
+    color: var(--vp-c-brand-1);
+    font-family: var(--vp-font-family-mono);
+    font-size: calc(0.68rem * var(--content-text-scale, 1));
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 720px) {
+    .wiki-directory-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .wiki-directory-section h2 {
+        font-size: 1.25rem;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/* Light theme contrast                                                       */
+/* -------------------------------------------------------------------------- */
+
+html:not(.dark) {
+    --wiki-light-nav-color: var(--vp-c-brand-1);
+}
+
+html:not(.dark) .VPNavBar {
+    border-bottom-color: var(--wiki-border-color) !important;
+}
+
+html:not(.dark) .VPNavBarTitle .title > span,
+html:not(.dark) .VPNavBar.home .VPNavBarTitle .title > span {
+    color: var(--wiki-light-nav-color);
+}
+
+html:not(.dark) .VPNavBarMenuLink,
+html:not(.dark) .VPNavBarMenuLink.active,
+html:not(.dark) .VPNavBarMenuLink:hover {
+    color: var(--wiki-light-nav-color) !important;
+}
+
+html:not(.dark) .VPNavBarMenuLink::after {
+    background: var(--wiki-light-nav-color);
+}
+
+html:not(.dark) .VPNavBarSearch .DocSearch-Button {
+    background: transparent;
+    color: var(--wiki-light-nav-color);
+}
+
+html:not(.dark) .VPNavBarSearch .DocSearch-Button:hover,
+html:not(.dark) .VPNavBarSearch .DocSearch-Button:focus-visible {
+    background: var(--vp-c-brand-soft);
+    color: var(--vp-c-brand-1);
+}
+
+html:not(.dark) .VPNavBarSearch .DocSearch-Search-Icon {
+    background-color: var(--wiki-light-nav-color) !important;
+    opacity: 1;
+}
+
+html:not(.dark) .VPNavBar .logo,
+html:not(.dark) .VPNavBar.home .VPNavBarTitle .logo {
+    opacity: 1;
+    filter: brightness(0.25) saturate(0.75) drop-shadow(0 0 1px rgba(74, 89, 68, 0.2));
+}
+
+html:not(.dark) .VPHero .text {
+    color: var(--vp-c-brand-1) !important;
+}
+
+html:not(.dark) .VPHero .name {
+    color: var(--vp-c-brand-2) !important;
+    -webkit-text-fill-color: var(--vp-c-brand-2) !important;
+}
+
+html:not(.dark) .VPNavBar .VPNavBarSocialLinks .VPSocialLink,
+html:not(.dark) .text-size-trigger,
+html:not(.dark) .theme-trigger,
+html:not(.dark) .language-trigger {
+    border-color: var(--wiki-border-color);
+    background: rgba(74, 89, 68, 0.05);
+    color: var(--vp-c-brand-1);
+}
+
+html:not(.dark) .VPNavBarSearch .DocSearch-Button:hover,
+html:not(.dark) .VPNavBarSearch .DocSearch-Button:focus-visible,
+html:not(.dark) .VPNavBar .VPNavBarSocialLinks .VPSocialLink:hover,
+html:not(.dark) .VPNavBar .VPNavBarSocialLinks .VPSocialLink:focus-visible,
+html:not(.dark) .text-size-trigger:hover,
+html:not(.dark) .text-size-trigger:focus-visible,
+html:not(.dark) .theme-trigger:hover,
+html:not(.dark) .theme-trigger:focus-visible,
+html:not(.dark) .language-trigger:hover,
+html:not(.dark) .language-trigger:focus-visible {
+    border-color: var(--vp-c-brand-1) !important;
+    background: var(--vp-c-brand-soft) !important;
+    color: var(--vp-c-text-1) !important;
+    outline: none;
+}
+
+html:not(.dark) .VPNavBar .VPNavBarSocialLinks .VPSocialLink > span,
+html:not(.dark) .VPNavBar .VPNavBarSocialLinks .VPSocialLink > svg,
+html:not(.dark) .language-globe {
+    opacity: 1;
+}
+
+html:not(.dark) .text-size-control.open .text-size-trigger,
+html:not(.dark) .theme-control.open .theme-trigger,
+html:not(.dark) .language-control.open .language-trigger {
+    border-color: var(--vp-c-brand-1);
+    background: var(--vp-c-brand-soft);
+    color: var(--vp-c-brand-1);
+}
+
+html:not(.dark) .text-size-menu,
+html:not(.dark) .theme-menu,
+html:not(.dark) .language-menu {
+    border-color: var(--vp-c-brand-1) !important;
+    box-shadow: 4px 4px rgba(191, 174, 155, 0.38);
+}
+
+html:not(.dark) .text-size-option,
+html:not(.dark) .theme-option,
+html:not(.dark) .language-option {
+    color: var(--vp-c-text-2);
+}
+
+html:not(.dark) .text-size-option.active,
+html:not(.dark) .theme-option.active,
+html:not(.dark) .language-option.active {
+    background: var(--vp-c-brand-soft);
+    color: var(--vp-c-brand-1);
+}
+
+html:not(.dark) .text-size-option:hover,
+html:not(.dark) .text-size-option:focus-visible,
+html:not(.dark) .theme-option:hover,
+html:not(.dark) .theme-option:focus-visible,
+html:not(.dark) .language-option:hover,
+html:not(.dark) .language-option:focus-visible {
+    background: var(--vp-c-brand-1) !important;
+    color: var(--vp-c-bg) !important;
+}
+
+html:not(.dark) .language-option:hover .language-name,
+html:not(.dark) .language-option:hover .language-code,
+html:not(.dark) .language-option:focus-visible .language-name,
+html:not(.dark) .language-option:focus-visible .language-code,
+html:not(.dark) .text-size-option:hover .text-size-check,
+html:not(.dark) .text-size-option:focus-visible .text-size-check,
+html:not(.dark) .theme-option:hover .theme-check,
+html:not(.dark) .theme-option:focus-visible .theme-check,
+html:not(.dark) .language-option:hover .language-check,
+html:not(.dark) .language-option:focus-visible .language-check {
+    color: var(--vp-c-bg) !important;
+}
+
+html:not(.dark) .text-size-check,
+html:not(.dark) .theme-check,
+html:not(.dark) .language-check {
+    color: var(--vp-c-brand-1);
+}
+
+html:not(.dark) .VPHero .action:nth-child(1) .VPButton,
+html:not(.dark) .VPHero .action:nth-child(3) .VPButton {
+    border-color: var(--vp-c-brand-1) !important;
+    background: var(--vp-c-bg) !important;
+    color: var(--vp-c-brand-1) !important;
+}
+
+html:not(.dark) .VPHero .action:nth-child(2) .VPButton {
+    border-color: var(--vp-c-brand-1) !important;
+    background: var(--vp-c-brand-1) !important;
+    color: var(--vp-c-bg) !important;
+}
+
+html:not(.dark) .VPHero .action:nth-child(1) .VPButton:hover,
+html:not(.dark) .VPHero .action:nth-child(3) .VPButton:hover {
+    border-color: var(--vp-c-brand-1) !important;
+    background: var(--vp-c-brand-soft) !important;
+    color: var(--vp-c-text-1) !important;
+}
+
+html:not(.dark) .VPHero .action:nth-child(2) .VPButton:hover {
+    border-color: var(--vp-c-text-1) !important;
+    background: var(--vp-c-text-1) !important;
+    color: var(--vp-c-bg) !important;
+}
+
+html:not(.dark) .ascii-art {
+    color: var(--vp-c-brand-2) !important;
+    text-shadow: 0 0 12px rgba(74, 89, 68, 0.12) !important;
+}
+
+html:not(.dark) .VPFeatures .VPFeature {
+    border-color: var(--vp-c-brand-1) !important;
+    color: var(--vp-c-text-2) !important;
+}
+
+html:not(.dark) .VPFeatures .VPFeature .title {
+    color: var(--vp-c-brand-1) !important;
+}
+
+html:not(.dark) .VPFeatures .VPFeature .details,
+html:not(.dark) .related-links li a span {
+    color: var(--vp-c-text-2) !important;
 }

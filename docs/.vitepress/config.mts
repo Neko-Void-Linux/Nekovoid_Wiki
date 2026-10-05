@@ -31,6 +31,11 @@ function searchTagsForPath(id: string) {
   return [...tags].join(' ')
 }
 
+const websiteDownloads = {
+  en: 'https://www.neko-void-linux.online/#downloads',
+  es: 'https://www.neko-void-linux.online/#downloads'
+}
+
 function createLocalSearch(language: 'en' | 'es') {
   const spanish = language === 'es'
 
@@ -68,13 +73,20 @@ function createLocalSearch(language: 'en' | 'es') {
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Neko Void - Wiki (•˕ •マ.ᐟ",
+  title: "Neko Void - Wiki ₍^. .^₎⟆",
   description: "A open source eco-system",
   cleanUrls: true,
   lastUpdated: true,
-  appearance: 'force-auto',
+  appearance: false,
 
   head: [
+    ['script', { id: 'check-wiki-theme' }, `;(() => {
+      const preference = localStorage.getItem('vitepress-theme-appearance') || 'auto'
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+      const isDark = preference === 'dark' || (preference === 'auto' && prefersDark)
+      document.documentElement.dataset.theme = preference
+      document.documentElement.classList.toggle('dark', isDark)
+    })()`],
     ['link', { rel: 'icon', href: '/logo-custom.svg' }],
     ['meta', { name: 'theme-color', content: '#8da383' }],
     ['meta', { name: 'author', content: 'Neko Void' }],
@@ -108,7 +120,7 @@ export default defineConfig({
           { text: 'Home', link: '/' },
           { text: 'Guides', link: '/guides/' },
           { text: 'Projects', link: '/dev/projects/' },
-          { text: 'Download', link: '/download/' }
+          { text: 'Download', link: websiteDownloads.en }
         ],
         sidebar: [
           {
@@ -117,7 +129,7 @@ export default defineConfig({
             items: [
               { text: 'Overview', link: '/guides/' },
               { text: 'Getting Started', link: '/guides/getting-started/' },
-              { text: 'Download', link: '/download/' },
+              { text: 'Download', link: websiteDownloads.en },
               {
                 text: 'Installation',
                 collapsed: true,
@@ -215,7 +227,7 @@ export default defineConfig({
           { text: 'Inicio', link: '/es/' },
           { text: 'Guías', link: '/es/guides/' },
           { text: 'Proyectos', link: '/es/dev/projects/' },
-          { text: 'Descargar', link: '/es/download/' }
+          { text: 'Descargar', link: websiteDownloads.es }
         ],
         sidebar: [
           {
@@ -224,7 +236,7 @@ export default defineConfig({
             items: [
               { text: 'Resumen', link: '/es/guides/' },
               { text: 'Comenzando', link: '/es/guides/getting-started/' },
-              { text: 'Descargar', link: '/es/download/' },
+              { text: 'Descargar', link: websiteDownloads.es },
               {
                 text: 'Instalación',
                 collapsed: true,
