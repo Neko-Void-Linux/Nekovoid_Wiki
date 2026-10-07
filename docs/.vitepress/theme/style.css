@@ -837,6 +837,28 @@ body::after {
 .VPDoc .vp-doc h5 { --heading-size: 1.125rem; }
 .VPDoc .vp-doc h6 { --heading-size: 1rem; }
 
+.theme-aware-image {
+    margin: 1rem 0;
+}
+
+.theme-aware-image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.theme-aware-image .theme-image-dark {
+    display: none;
+}
+
+html.dark .theme-aware-image .theme-image-light {
+    display: none;
+}
+
+html.dark .theme-aware-image .theme-image-dark {
+    display: block;
+}
+
 html[data-text-size='small'] .VPDoc .vp-doc {
     --content-text-scale: 0.875;
 }
