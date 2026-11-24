@@ -41,3 +41,13 @@ This distribution is aimed at users who want a lightweight and robust operating 
 * **Download ISO:** [SourceForge](https://sourceforge.net/projects/neko-void/)
 * **Source Code:** [Codeberg](https://codeberg.org/javiercplus/Neko-Void)
 * **DistroWatch:** [Neko-Void Page](https://distrowatch.com/table.php?distribution=nekovoid)
+
+<section class="related-links">
+
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+
+- [Mission](/en/about/mission)
+- [Community values](/en/about/community-values)
+- [Team](/about/team)
+
+</section>

@@ -102,3 +102,13 @@ The `sv` program accepts a `-v` option ('verbose') that makes it wait for the ac
 For the `sv -v up` command, and, if the supervised process is wanted up after the action (i.e. no `sv once` command was used before), the `sv -v term` and `sv -v kill` commands, the action is considered complete if `runsv` considers the supervised process to be in 'run' state (i.e. `sv status` would print 'run:'). However, when the supervised process is executing a server program for example, it might not be ready to provide its service immediately after startup. Programs might do initialization work that could take some noticeable time before they are actually ready to serve, but it is impossible for the supervisor to know exactly how much. If there is some program-specific way to infer that it is ready, runit is able to take advantage of it by including an executable file named `check` in the service directory. When using one of the aforementioned subcommands, after `sv` determines that the supervised process is in 'run' state (via the `supervise/status` file), it executes the `check` file if present, and waits for it to exit. This file is assumed to contain code that polls for readiness, and must exit with a 0 code if it considers the supervised process to be ready, and with a nonzero code otherwise. Just like `run` or `finish`, the `check` file can have any format the kernel knows how to execute, and is normally a shell script. If `check` determines that the process is ready, `sv` will print an 'ok' status line and exit, otherwise it reexecutes `check` after waiting 420 milliseconds. In other words, during the wait period `sv` will periodically poll for readiness using `check`; if its exit code is never 0, on expiry of the wait period `sv` will print a 'timeout' status line and exit.
 In addition, the `sv check` command can be used to poll for readiness (periodically during a wait period) by executing the `check` file, without changing the supervised process' state. The `sv status` command does not use the `check` file. For the full description of the `sv` program please consult the respective man page.
 
+<section class="related-links">
+
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+
+- [Documentation overview](/docs/)
+- [musl](/docs/concepts/musl)
+- [Profiles](/docs/concepts/profiles)
+
+</section>
+

@@ -51,3 +51,13 @@ Alternatively, use the convenience rule:
 ```bash
 make run
 ```
+
+<section class="related-links">
+
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+
+- [Projects](/en/dev/projects/)
+- [Kasha overview](/en/dev/projects/kasha-installer/)
+- [Architecture](/en/dev/projects/kasha-installer/architecture)
+
+</section>

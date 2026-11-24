@@ -30,3 +30,12 @@ Cualquiera. No hace falta ser desarrollador de Neko-Void ni experto en Linux. La
 - Mejorar el flujo de Getting Started para usuarios nuevos.
 
 Abre un issue si quieres coger una de estas y necesitas un punto de partida.
+
+<section class="related-links">
+
+## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+
+- [Cómo colaborar](/es/dev/contributing/how-to-contribute)
+- [Guía de estilo](/es/dev/contributing/style-guide)
+
+</section>

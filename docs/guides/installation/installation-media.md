@@ -14,3 +14,14 @@ In this case we can use Ventoy as the recommended option for installation.
   <img class="theme-image-light" src="/guides/installation/ventoy-ex.png" alt="Ventoy2Disk reference" />
   <img class="theme-image-dark" src="/guides/installation/ventoy-ex-dark.png" alt="Ventoy2Disk reference" />
 </div>
+
+<section class="related-links">
+
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+
+- [Installation overview](/guides/installation/)
+- [System requirements](/guides/installation/requirements)
+- [Booting Neko Void](/guides/installation/booting)
+- [Installing Neko Void](/guides/installation/installing)
+
+</section>

@@ -70,3 +70,12 @@ $ ./neko-builder.sh <desktop> -e "pkg"  # Añadir paquetes extra
 $ ./neko-builder.sh doble               # Compilar xlibre + xorg
 $ ./neko-builder.sh doble-isor          # Compilar rollibre + rolling
 ```
+
+<section class="related-links">
+
+## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+
+- [Proyectos](/es/dev/projects/)
+- [Colaborar](/es/dev/contributing/)
+
+</section>

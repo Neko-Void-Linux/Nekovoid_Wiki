@@ -125,3 +125,12 @@ Lee la [Guía de estilo](./style-guide) completa antes de escribir algo más que
 ---
 
 *La wiki mejora de un pull request a la vez.*
+
+<section class="related-links">
+
+## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+
+- [Resumen para colaboradores](/es/dev/contributing/)
+- [Guía de estilo](/es/dev/contributing/style-guide)
+
+</section>

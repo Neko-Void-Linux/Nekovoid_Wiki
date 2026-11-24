@@ -147,6 +147,52 @@ body::after {
     font-weight: 700 !important;
 }
 
+/* Match Wiki Write's muted article list numbering. */
+.VPDoc .vp-doc ol > li::marker {
+    color: var(--vp-c-brand-1);
+    font-family: var(--vp-font-family-base);
+    font-weight: 400;
+}
+
+/* Match Wiki Write's article task markers at every reading size. */
+.vp-doc li.task-list-item {
+    position: relative;
+    list-style: none;
+}
+
+.vp-doc .article-task-checkbox {
+    appearance: none;
+    position: absolute;
+    inset-inline-start: -1.4em;
+    top: 0.45em;
+    width: 0.8125em;
+    height: 0.8125em;
+    margin: 0;
+    border: 1px solid color-mix(in srgb, var(--vp-c-text-2) 49%, var(--vp-c-bg));
+    /* Override the theme's global square-corner reset for article checkboxes. */
+    border-radius: 2px !important;
+    background: color-mix(in srgb, var(--vp-c-text-2) 22%, var(--vp-c-bg));
+    font: inherit;
+    opacity: 1;
+}
+
+.vp-doc .article-task-checkbox:checked {
+    border-color: var(--vp-c-text-2);
+    background: var(--vp-c-text-2);
+}
+
+.vp-doc .article-task-checkbox:checked::after {
+    content: '';
+    position: absolute;
+    inset-inline-start: 22%;
+    top: 12%;
+    width: 30%;
+    height: 55%;
+    border: solid var(--vp-c-bg);
+    border-width: 0 1.5px 1.5px 0;
+    transform: rotate(45deg);
+}
+
 /* Custom Button Styling */
 .VPButton.brand {
     background-image: linear-gradient(to right, var(--vp-c-brand-1), var(--vp-c-brand-2)) !important;
@@ -201,6 +247,21 @@ body::after {
     display: none !important;
 }
 
+/* Preserve Markdown dividers without doubling them with theme borders. */
+.VPDoc .vp-doc hr + h2 {
+    border-top: 0;
+    margin-top: 24px;
+    padding-top: 0;
+}
+
+.VPDoc .vp-doc hr + h2 .header-anchor {
+    top: 0;
+}
+
+.VPDoc .vp-doc hr + .related-links {
+    border-top: 0;
+}
+
 .related-links {
     margin: 3rem 0 0;
     padding-top: 1.5rem;
@@ -209,6 +270,8 @@ body::after {
 }
 
 .related-links h2 {
+    border-top: 0;
+    padding-top: 0;
     display: flex;
     align-items: baseline;
     gap: 16px;
@@ -232,6 +295,7 @@ body::after {
 }
 
 .related-links ul {
+    list-style: none;
     margin: 0;
     padding-inline-start: 0;
 }

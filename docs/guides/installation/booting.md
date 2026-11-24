@@ -9,3 +9,14 @@
 </div>
 
 From the menu we select the first option and press `ENTER`, and with that we boot Neko Void in `LIVE` mode.
+
+<section class="related-links">
+
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+
+- [Installation overview](/guides/installation/)
+- [System requirements](/guides/installation/requirements)
+- [Creating installation media](/guides/installation/installation-media)
+- [Installing Neko Void](/guides/installation/installing)
+
+</section>

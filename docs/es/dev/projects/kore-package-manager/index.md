@@ -121,3 +121,13 @@ Por defecto, la herramienta aísla los archivos instalados en la estructura adec
 - **Archivos extraídos:** `~/.local/share/binaries/[nombre-app]`
 - **Binarios globales (symlinks):** `~/.local/bin/[nombre-app]`
 - **Accesos directos (XDG Desktop):** `~/.local/share/applications/[nombre-app].desktop`
+
+<section class="related-links">
+
+## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+
+- [Proyectos](/es/dev/projects/)
+- [Arquitectura](/es/dev/projects/kore-package-manager/architecture)
+- [Usar Kore](/es/dev/projects/kore-package-manager/usage)
+
+</section>

@@ -38,3 +38,13 @@ Since it is written in Rust, the need for external environment dependencies (lik
 - `tar`: Used in the background for decompression.
 - `pkexec` (Optional): Required only if you mark an application to prompt for superuser permissions.
 - `desktop-file-utils` (`update-desktop-database`): Used to notify the system when an application is "uninstalled" and to refresh the applications menu.
+
+<section class="related-links">
+
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+
+- [Projects](/en/dev/projects/)
+- [Architecture](/en/dev/projects/kore-package-manager/architecture)
+- [Using Kore](/en/dev/projects/kore-package-manager/usage)
+
+</section>

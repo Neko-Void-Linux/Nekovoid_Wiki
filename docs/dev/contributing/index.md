@@ -25,3 +25,12 @@ Anyone. You do not need to be a Neko-Void developer or a Linux expert. The most 
 - Improving the Getting Started flow for new users.
 
 Open an issue if you want to pick up one of these and need a starting point.
+
+<section class="related-links">
+
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+
+- [How to contribute](/dev/contributing/how-to-contribute)
+- [Style guide](/dev/contributing/style-guide)
+
+</section>

@@ -55,3 +55,14 @@ Ya con todo listo podríamos iniciar nuestra instalación de Neko Void.
 > *[Imagen referencial del instalador avisando que la instalación ha finalizado aquí]*
 
 Cuando la instalación haya finalizado entonces removemos nuestra memoria USB y presionamos el botón **Reiniciar ahora**. Tu computadora se reiniciará y arrancará una instalación limpia de Neko Void.
+
+<section class="related-links">
+
+## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+
+- [Resumen de instalación](/es/guides/installation/)
+- [Requisitos del sistema](/es/guides/installation/requirements)
+- [Crear un medio de instalación](/es/guides/installation/installation-media)
+- [Arrancar Neko Void](/es/guides/installation/booting)
+
+</section>

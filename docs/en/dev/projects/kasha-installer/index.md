@@ -12,3 +12,13 @@ A modular Linux system installer built with C and GTK+ 3.0.
 - **Bootloader:** GRUB installation for both EFI and BIOS systems.
 - **System Configuration:** Locale, Hostname, Timezone, and User account management.
 
+<section class="related-links">
+
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+
+- [Projects](/en/dev/projects/)
+- [Architecture](/en/dev/projects/kasha-installer/architecture)
+- [Build Kasha](/en/dev/projects/kasha-installer/build)
+
+</section>
+

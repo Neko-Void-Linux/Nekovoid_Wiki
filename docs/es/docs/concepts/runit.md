@@ -102,3 +102,13 @@ El programa `sv` acepta una opción `-v` ('verbose' o detallado) que hace que es
 Para `sv -v up` (y `term` o `kill` si se espera que esté encendido), la acción termina cuando `runsv` considera que el proceso está en 'run'. Sin embargo, en servicios de servidor, el proceso puede no estar listo inmediatamente, pues hace tareas de inicialización. Runit permite usar un ejecutable `check` en el directorio de servicio para verificar si está listo. Al ejecutar los subcomandos anteriores, una vez en estado 'run', `sv` ejecuta `check` (si existe). Si este devuelve 0, considera que está listo e imprime 'ok'. Si no, reintenta cada 420 milisegundos hasta agotar el tiempo, donde imprimiría 'timeout'.
 Además, el comando `sv check` puede usarse para verificar manualmente ejecutando el archivo `check` periódicamente durante el período de espera, sin alterar el estado. El comando `sv status` no usa el archivo `check`. Consulta el manual de `sv` para más información.
 
+<section class="related-links">
+
+## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+
+- [Resumen de documentación](/es/docs/)
+- [musl](/es/docs/concepts/musl)
+- [Perfiles](/es/docs/concepts/profiles)
+
+</section>
+

@@ -46,3 +46,14 @@ Compare the output with the table above. If `lspci` is unavailable, skip that li
 With 2 GB of RAM, prefer XFCE, MATE, or IceWM. With 4 GB or more, you can consider other environments while remembering that open applications also use memory.
 
 The recommended graphics memory helps provide a smoother experience, especially with compositors, high-resolution displays, or visual applications.
+
+<section class="related-links">
+
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+
+- [Installation overview](/guides/installation/)
+- [Creating installation media](/guides/installation/installation-media)
+- [Booting Neko Void](/guides/installation/booting)
+- [Installing Neko Void](/guides/installation/installing)
+
+</section>

@@ -17,3 +17,13 @@ Neko Void cierra la brecha entre el poder de Void Linux y la necesidad de un ent
 Conéctate con otros usuarios y desarrolladores para discutir sobre el proyecto, hacer preguntas o simplemente pasar el rato.
 
 <CommunityCard />
+
+<section class="related-links">
+
+## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+
+- [Resumen de guías](/es/guides/)
+- [Requisitos del sistema](/es/guides/installation/requirements)
+- [Descargar](https://www.neko-void-linux.online/#downloads)
+
+</section>

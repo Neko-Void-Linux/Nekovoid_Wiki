@@ -71,3 +71,12 @@ $ ./neko-builder.sh doble               # Build xlibre + xorg
 $ ./neko-builder.sh doble-isor          # Build rollibre + rolling
 ```
 
+<section class="related-links">
+
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+
+- [Projects](/dev/projects/)
+- [Contributing](/dev/contributing/)
+
+</section>
+

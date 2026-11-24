@@ -55,3 +55,14 @@ With everything ready we can start our installation of Neko Void.
 > *[Reference image of the installer showing installation finished here]*
 
 When the installation is finished, remove our USB drive and press the **Restart Now** button. Your computer will reboot and start a clean installation of Neko Void.
+
+<section class="related-links">
+
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+
+- [Installation overview](/en/guides/installation/)
+- [System requirements](/en/guides/installation/requirements)
+- [Creating installation media](/en/guides/installation/installation-media)
+- [Booting Neko Void](/en/guides/installation/booting)
+
+</section>

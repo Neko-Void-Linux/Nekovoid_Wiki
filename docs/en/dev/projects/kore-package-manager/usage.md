@@ -62,4 +62,14 @@ The manager now supports repositories to download and install apps with a single
 #### Shell Completions (Bash, Zsh, Fish)
 When installing `kpm` via `install.sh`, autocomplete scripts for Bash, Zsh, and Fish are automatically configured locally on your system, allowing you to press `TAB` to effortlessly complete commands and flags.
 
+<section class="related-links">
+
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+
+- [Projects](/en/dev/projects/)
+- [Kore overview](/en/dev/projects/kore-package-manager/)
+- [Architecture](/en/dev/projects/kore-package-manager/architecture)
+
+</section>
+
 

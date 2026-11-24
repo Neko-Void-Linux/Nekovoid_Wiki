@@ -13,3 +13,13 @@ import members from './team-data.json'
 </VPTeamPageTitle>
 
 <VPTeamMembers size="small" :members="members" />
+
+<section class="related-links">
+
+## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+
+- [Sobre Neko Void](/es/about/)
+- [Misión](/es/about/mission)
+- [Valores de la comunidad](/es/about/community-values)
+
+</section>

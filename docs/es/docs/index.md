@@ -50,3 +50,12 @@ Explora la wiki de Neko Void por tema. Comienza con las guías prácticas, consu
     </div>
   </section>
 </div>
+
+<section class="related-links">
+
+## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+
+- [Documentación de Void Linux](https://docs.voidlinux.org)
+- [Neko Void](https://www.neko-void-linux.online)
+
+</section>

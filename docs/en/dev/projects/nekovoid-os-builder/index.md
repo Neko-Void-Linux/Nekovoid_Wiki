@@ -12,3 +12,12 @@ cd Neko-Void
 git submodule update --init --recursive
 ```
 
+<section class="related-links">
+
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+
+- [Projects](/en/dev/projects/)
+- [Contributing](/dev/contributing/)
+
+</section>
+

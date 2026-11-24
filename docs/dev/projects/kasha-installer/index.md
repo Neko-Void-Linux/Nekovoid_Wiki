@@ -95,3 +95,13 @@ Or use the convenience rule:
 # make run
 ```
 
+<section class="related-links">
+
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+
+- [Projects](/dev/projects/)
+- [Architecture](/dev/projects/kasha-installer/architecture)
+- [Build Kasha](/dev/projects/kasha-installer/build)
+
+</section>
+

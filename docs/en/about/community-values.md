@@ -40,3 +40,13 @@ Instances of abusive or unacceptable behavior may be reported to the project mai
 2. **Warning:** A formal warning for a serious or repeated incident, including consequences if the behavior continues.
 3. **Temporary Suspension:** A temporary ban from interacting with the community for a specified period of time.
 4. **Permanent Ban:** A permanent ban from any sort of public interaction within the community.
+
+<section class="related-links">
+
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+
+- [About Neko Void](/en/about/)
+- [Mission](/en/about/mission)
+- [Team](/about/team)
+
+</section>

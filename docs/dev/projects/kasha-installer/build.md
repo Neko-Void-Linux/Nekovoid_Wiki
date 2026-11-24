@@ -61,3 +61,13 @@ Or use the convenience rule:
 # make run
 ```
 
+<section class="related-links">
+
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+
+- [Projects](/dev/projects/)
+- [Kasha overview](/dev/projects/kasha-installer/)
+- [Architecture](/dev/projects/kasha-installer/architecture)
+
+</section>
+

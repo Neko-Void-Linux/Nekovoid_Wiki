@@ -41,3 +41,13 @@ The `neko-builder.sh` script supports various arguments for interactive or custo
 ./neko-builder.sh doble           # Build xlibre + xorg
 ./neko-builder.sh doble-isor      # Build rollibre + rolling
 ```
+
+<section class="related-links">
+
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+
+- [Projects](/en/dev/projects/)
+- [Neko Void OS Builder overview](/en/dev/projects/nekovoid-os-builder/)
+- [Contributing](/dev/contributing/)
+
+</section>

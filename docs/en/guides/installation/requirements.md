@@ -7,3 +7,14 @@
 | **Minimum Processor** | Intel Celeron or Pentium, 1 core, 1.10 GHz, 64-bit architecture | Second generation Intel Celeron or Pentium, 2 cores, 64-bit |
 | **Storage** | 64 GB | 64 GB or more |
 | **Graphics Memory** | Integrated or dedicated GPU with 16 MB | iGPU or dedicated GPU with 512 MB or more |
+
+<section class="related-links">
+
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+
+- [Installation overview](/en/guides/installation/)
+- [Creating installation media](/en/guides/installation/installation-media)
+- [Booting Neko Void](/en/guides/installation/booting)
+- [Installing Neko Void](/en/guides/installation/installing)
+
+</section>

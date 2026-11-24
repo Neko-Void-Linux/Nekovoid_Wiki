@@ -120,3 +120,12 @@ Read the full [Style guide](./style-guide) before writing more than a typo fix. 
 ---
 
 *The wiki improves one pull request at a time.*
+
+<section class="related-links">
+
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+
+- [Contributing overview](/dev/contributing/)
+- [Style guide](/dev/contributing/style-guide)
+
+</section>
