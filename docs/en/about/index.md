@@ -39,5 +39,5 @@ This distribution is aimed at users who want a lightweight and robust operating 
 ## Official Links
 
 * **Download ISO:** [SourceForge](https://sourceforge.net/projects/neko-void/)
-* **Source Code:** [Codeberg](https://codeberg.org/javiercplus/Neko-Void)
+* **Source Code:** [GitHub](https://github.com/orgs/Neko-Void-Linux/repositories)
 * **DistroWatch:** [Neko-Void Page](https://distrowatch.com/table.php?distribution=nekovoid)
