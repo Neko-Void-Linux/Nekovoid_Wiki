@@ -843,6 +843,7 @@ body::after {
 
 .theme-aware-image img {
     display: block;
+    width: 45%;
     max-width: 100%;
     height: auto;
 }
@@ -857,6 +858,14 @@ html.dark .theme-aware-image .theme-image-light {
 
 html.dark .theme-aware-image .theme-image-dark {
     display: block;
+}
+
+html[data-text-size='small'] .theme-aware-image img {
+    width: 35%;
+}
+
+html[data-text-size='large'] .theme-aware-image img {
+    width: 85%;
 }
 
 html[data-text-size='small'] .VPDoc .vp-doc {
