@@ -233,11 +233,12 @@ body::after {
 
 .related-links ul {
     margin: 0;
-    padding-left: 1.25rem;
+    padding-inline-start: 0;
 }
 
 .related-links li {
     margin: 0.45rem 0;
+    padding-inline-start: 1.25rem;
 }
 
 .related-links li a {
@@ -250,27 +251,10 @@ body::after {
     transition: none;
 }
 
-.related-links li a.related-links-external {
-    color: var(--vp-c-brand-2);
-    font-family: var(--vp-font-family-mono);
-    font-size: calc(0.92rem * var(--content-text-scale, 1));
-    font-weight: 600;
-    letter-spacing: 0.02em;
-}
-
 .related-links li a:hover,
 .related-links li a:focus-visible {
     color: var(--vp-c-brand-2);
     text-decoration: underline;
-}
-
-.related-links li a.related-links-external:hover,
-.related-links li a.related-links-external:focus-visible {
-    color: var(--vp-c-text-1);
-}
-
-.related-links li a span {
-    color: #7f9193;
 }
 
 /* Suggested topics inside the local search dialog. */
@@ -852,6 +836,37 @@ body::after {
 .VPDoc .vp-doc h4 { --heading-size: 1.25rem; }
 .VPDoc .vp-doc h5 { --heading-size: 1.125rem; }
 .VPDoc .vp-doc h6 { --heading-size: 1rem; }
+
+.theme-aware-image {
+    margin: 1rem 0;
+}
+
+.theme-aware-image img {
+    display: block;
+    width: 45%;
+    max-width: 100%;
+    height: auto;
+}
+
+.theme-aware-image .theme-image-dark {
+    display: none;
+}
+
+html.dark .theme-aware-image .theme-image-light {
+    display: none;
+}
+
+html.dark .theme-aware-image .theme-image-dark {
+    display: block;
+}
+
+html[data-text-size='small'] .theme-aware-image img {
+    width: 35%;
+}
+
+html[data-text-size='large'] .theme-aware-image img {
+    width: 85%;
+}
 
 html[data-text-size='small'] .VPDoc .vp-doc {
     --content-text-scale: 0.875;
@@ -1498,6 +1513,12 @@ body {
     background: var(--vp-c-bg);
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--vp-nav-height);
+    scrollbar-gutter: stable;
+}
+
 body {
     background-color: var(--vp-c-bg);
     background-image: radial-gradient(rgba(122, 153, 141, 0.15) 1px, transparent 1px);
@@ -1822,6 +1843,10 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
     .VPNavBarMenuLink,
     .VPNavBarMenuLink::after,
     .VPNavBar .VPNavBarAppearance .VPSwitch,

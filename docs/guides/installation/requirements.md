@@ -46,12 +46,3 @@ Compare the output with the table above. If `lspci` is unavailable, skip that li
 With 2 GB of RAM, prefer XFCE, MATE, or IceWM. With 4 GB or more, you can consider other environments while remembering that open applications also use memory.
 
 The recommended graphics memory helps provide a smoother experience, especially with compositors, high-resolution displays, or visual applications.
-
-## Checklist
-
-Before booting from the installation media, confirm that:
-
-1. The ISO finished downloading.
-2. The installation media was created on the correct USB device.
-3. Files on the target disk are backed up.
-4. The computer boots from USB and you can identify the disk where Neko Void will be installed.

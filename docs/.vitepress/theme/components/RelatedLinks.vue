@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, nextTick, onMounted, ref, watch } from 'vue'
+import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useRoute, withBase } from 'vitepress'
 
 type RelatedLink = {
@@ -12,6 +12,7 @@ type RelatedLink = {
 const route = useRoute()
 const mounted = ref(false)
 const hasManualSection = ref(false)
+let outlineObserver: MutationObserver | undefined
 
 const groups: Array<{ match: RegExp; links: RelatedLink[] }> = [
   {
@@ -84,6 +85,13 @@ const groups: Array<{ match: RegExp; links: RelatedLink[] }> = [
     ]
   },
   {
+    match: /\/docs\/?$/,
+    links: [
+      { path: 'https://docs.voidlinux.org', external: true, en: { title: 'Void Linux Docs' }, es: { title: 'Documentación de Void Linux' } },
+      { path: 'https://www.neko-void-linux.online', external: true, en: { title: 'Neko Void' }, es: { title: 'Neko Void' } }
+    ]
+  },
+  {
     match: /\/docs\/configuration\//,
     links: [
       { path: '/docs/', en: { title: 'Documentation overview', description: 'browse the reference documentation.' }, es: { title: 'Resumen de documentación', description: 'consultar la documentación de referencia.' } },
@@ -115,13 +123,9 @@ const links = computed(() => {
   if (currentPath.value === '/' || currentPath.value === '/es') return []
 
   const group = groups.find(({ match }) => match.test(route.path))
-  const fallback: RelatedLink[] = [
-    { path: 'https://docs.voidlinux.org', external: true, en: { title: 'Void Linux Docs' }, es: { title: 'Documentación de Void Linux' } },
-    { path: 'https://www.neko-void-linux.online', external: true, en: { title: 'Neko Void' }, es: { title: 'Neko Void' } },
-    { path: '/docs/', en: { title: 'Documentation', description: 'read the technical reference.' }, es: { title: 'Documentación', description: 'leer la referencia técnica.' } }
-  ]
+  if (!group) return []
 
-  return (group?.links ?? fallback)
+  return group.links
     .filter((link) => link.external || `${basePath.value}${link.path}`.replace(/\/$/, '') !== currentPath.value)
     .slice(0, 4)
     .map((link) => ({
@@ -138,10 +142,78 @@ const refreshManualSection = async () => {
       (heading.textContent ?? '').replace(/[\u200B-\u200D\uFEFF]/g, '').trim()
     ))
   mounted.value = true
+  await nextTick()
+  syncOutlineLink()
 }
 
-onMounted(refreshManualSection)
+function syncOutlineLink() {
+  const relatedSection = document.querySelector('.related-links')
+  const outlineRoot = document.querySelector('.VPDocAsideOutline .VPDocOutlineItem.root')
+  const customItems = [...document.querySelectorAll('.related-outline-item')]
+
+  if (!relatedSection || hasManualSection.value) {
+    customItems.forEach((item) => item.remove())
+    outlineRoot?.querySelectorAll('a[href="#related-links-title"]')
+      .forEach((link) => link.closest('li')?.remove())
+    return
+  }
+
+  if (!outlineRoot) {
+    customItems.forEach((item) => item.remove())
+    return
+  }
+
+  const label = isSpanish.value ? 'Véase también' : 'See also'
+  const nativeLinks = [...outlineRoot.querySelectorAll(
+    'a[href="#related-links-title"]:not(.related-outline-link)'
+  )]
+  const localCustomItems = customItems.filter((item) => outlineRoot.contains(item))
+
+  if (nativeLinks.length) {
+    nativeLinks.slice(1).forEach((link) => link.closest('li')?.remove())
+    customItems.forEach((item) => item.remove())
+  } else {
+    let outlineItem = localCustomItems[0]
+
+    localCustomItems.slice(1).forEach((item) => item.remove())
+
+    if (!outlineItem) {
+      outlineItem = document.createElement('li')
+      outlineItem.className = 'related-outline-item'
+
+      const fallbackLink = document.createElement('a')
+      fallbackLink.className = 'outline-link related-outline-link'
+      fallbackLink.href = '#related-links-title'
+      outlineItem.append(fallbackLink)
+      outlineRoot.append(outlineItem)
+    }
+  }
+
+  const outlineLink = nativeLinks[0]
+    ?? outlineRoot.querySelector('.related-outline-item a')
+  if (outlineLink) {
+    if (outlineLink.textContent !== label) outlineLink.textContent = label
+    if (outlineLink.title !== label) outlineLink.title = label
+  }
+}
+
+onMounted(async () => {
+  await refreshManualSection()
+  const outline = document.querySelector('.VPDocAsideOutline')
+  if (outline) {
+    outlineObserver = new MutationObserver(syncOutlineLink)
+    outlineObserver.observe(outline, { childList: true, subtree: true })
+  }
+  syncOutlineLink()
+})
+
 watch(() => route.path, refreshManualSection)
+
+onBeforeUnmount(() => {
+  outlineObserver?.disconnect()
+  outlineObserver = undefined
+  document.querySelectorAll('.related-outline-item').forEach((item) => item.remove())
+})
 </script>
 
 <template>
@@ -158,7 +230,7 @@ watch(() => route.path, refreshManualSection)
           :target="link.external ? '_blank' : undefined"
           :rel="link.external ? 'noopener noreferrer' : undefined"
         >
-          {{ link.title }}<span v-if="link.description"> — {{ link.description }}</span>
+          {{ link.title }}
         </a>
       </li>
     </ul>
