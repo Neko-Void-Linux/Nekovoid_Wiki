@@ -12,7 +12,6 @@ type RelatedLink = {
 const route = useRoute()
 const mounted = ref(false)
 const hasManualSection = ref(false)
-let outlineObserver: MutationObserver | undefined
 
 const groups: Array<{ match: RegExp; links: RelatedLink[] }> = [
   {
@@ -135,6 +134,14 @@ const links = computed(() => {
     }))
 })
 
+function updateContainerClass() {
+  const isVisible = mounted.value && !hasManualSection.value && links.value.length > 0
+  const container = document.querySelector('.VPDoc .content-container')
+  const docContainer = document.querySelector('.VPDoc .container')
+  container?.classList.toggle('has-related-links', isVisible)
+  docContainer?.classList.toggle('has-related-links', isVisible)
+}
+
 const refreshManualSection = async () => {
   await nextTick()
   hasManualSection.value = [...document.querySelectorAll('.vp-doc h2')]
@@ -143,81 +150,27 @@ const refreshManualSection = async () => {
     ))
   mounted.value = true
   await nextTick()
-  syncOutlineLink()
-}
-
-function syncOutlineLink() {
-  const relatedSection = document.querySelector('.related-links')
-  const outlineRoot = document.querySelector('.VPDocAsideOutline .VPDocOutlineItem.root')
-  const customItems = [...document.querySelectorAll('.related-outline-item')]
-
-  if (!relatedSection || hasManualSection.value) {
-    customItems.forEach((item) => item.remove())
-    outlineRoot?.querySelectorAll('a[href="#related-links-title"]')
-      .forEach((link) => link.closest('li')?.remove())
-    return
-  }
-
-  if (!outlineRoot) {
-    customItems.forEach((item) => item.remove())
-    return
-  }
-
-  const label = isSpanish.value ? 'Véase también' : 'See also'
-  const nativeLinks = [...outlineRoot.querySelectorAll(
-    'a[href="#related-links-title"]:not(.related-outline-link)'
-  )]
-  const localCustomItems = customItems.filter((item) => outlineRoot.contains(item))
-
-  if (nativeLinks.length) {
-    nativeLinks.slice(1).forEach((link) => link.closest('li')?.remove())
-    customItems.forEach((item) => item.remove())
-  } else {
-    let outlineItem = localCustomItems[0]
-
-    localCustomItems.slice(1).forEach((item) => item.remove())
-
-    if (!outlineItem) {
-      outlineItem = document.createElement('li')
-      outlineItem.className = 'related-outline-item'
-
-      const fallbackLink = document.createElement('a')
-      fallbackLink.className = 'outline-link related-outline-link'
-      fallbackLink.href = '#related-links-title'
-      outlineItem.append(fallbackLink)
-      outlineRoot.append(outlineItem)
-    }
-  }
-
-  const outlineLink = nativeLinks[0]
-    ?? outlineRoot.querySelector('.related-outline-item a')
-  if (outlineLink) {
-    if (outlineLink.textContent !== label) outlineLink.textContent = label
-    if (outlineLink.title !== label) outlineLink.title = label
-  }
+  updateContainerClass()
 }
 
 onMounted(async () => {
+  document.querySelectorAll('.related-outline-item').forEach((item) => item.remove())
   await refreshManualSection()
-  const outline = document.querySelector('.VPDocAsideOutline')
-  if (outline) {
-    outlineObserver = new MutationObserver(syncOutlineLink)
-    outlineObserver.observe(outline, { childList: true, subtree: true })
-  }
-  syncOutlineLink()
 })
 
 watch(() => route.path, refreshManualSection)
 
 onBeforeUnmount(() => {
-  outlineObserver?.disconnect()
-  outlineObserver = undefined
   document.querySelectorAll('.related-outline-item').forEach((item) => item.remove())
+  const container = document.querySelector('.VPDoc .content-container')
+  const docContainer = document.querySelector('.VPDoc .container')
+  container?.classList.remove('has-related-links')
+  docContainer?.classList.remove('has-related-links')
 })
 </script>
 
 <template>
-  <section v-if="mounted && !hasManualSection && links.length" class="related-links" aria-labelledby="related-links-title">
+  <aside v-if="mounted && !hasManualSection && links.length" class="related-links" aria-labelledby="related-links-title">
     <h2 id="related-links-title">
       <span class="related-links-label">{{ isSpanish ? 'Véase también' : 'See also' }}</span>
       <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
@@ -234,5 +187,5 @@ onBeforeUnmount(() => {
         </a>
       </li>
     </ul>
-  </section>
+  </aside>
 </template>
