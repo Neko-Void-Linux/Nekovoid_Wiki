@@ -1,21 +1,9 @@
 [
   {
-    "avatar": "https://github.com/Neko Void-LA.png",
-    "name": "Crow",
-    "title": "Creador del Proyecto",
-    "desc": "Fundador y visionario detrás de Neko Void. Lidera el desarrollo conceptual y define la dirección estratégica del proyecto.",
-    "links": [
-      {
-        "icon": "github",
-        "link": "https://github.com/Neko Void-LA"
-      }
-    ]
-  },
-  {
     "avatar": "https://github.com/javiercplus.png",
     "name": "javiercplus",
-    "title": "Co-creador y Desarrollador",
-    "desc": "Co-creador que participa activamente en el desarrollo del launcher mientras supervisa el proyecto. Garantiza la calidad y la coordinación del equipo.",
+    "title": "Creador y Desarrollador Core",
+    "desc": "Creador y desarrollador principal de la distribución Neko Void y del instalador Kasha.",
     "links": [
       {
         "icon": "github",
@@ -24,46 +12,34 @@
     ]
   },
   {
-    "avatar": "https://github.com/0rt4.png",
-    "name": "Orta",
-    "title": "Supervisor del Proyecto",
-    "desc": "Co-supervisor del proyecto con experiencia en arquitectura de software y liderazgo técnico. Supervisa la implementación de funcionalidades clave.",
+    "avatar": "https://github.com/Derszi65g.png",
+    "name": "Becker",
+    "title": "Diseñador de I3dots",
+    "desc": "Diseñador y responsable de la personalización de las dotfiles de i3 (I3dots) para Neko Void.",
     "links": [
       {
         "icon": "github",
-        "link": "https://github.com/0rt4"
+        "link": "https://github.com/Derszi65g"
       }
     ]
   },
   {
-    "avatar": "https://github.com/MrTanuk.png",
-    "name": "MrTanuk",
-    "title": "Desarrollador Core",
-    "desc": "Contribuyó al desarrollo principal junto a JavierC y desempeñó un papel fundamental en la resolución de problemas técnicos.",
+    "avatar": "https://github.com/ANOMALI0x00.png",
+    "name": "ANOMALI.0x00",
+    "title": "Desarrollador de Kernel Manager",
+    "desc": "Desarrollador responsable de la creación y mantenimiento del Neko Kernel Manager.",
     "links": [
       {
         "icon": "github",
-        "link": "https://github.com/MrTanuk"
-      }
-    ]
-  },
-  {
-    "avatar": "https://github.com/ezequielgk.png",
-    "name": "Ezequiel",
-    "title": "Diseño Web",
-    "desc": "Diseñador y desarrollador frontend especializado en interfaces modernas. Responsable del diseño visual y la experiencia de usuario de Neko Void.",
-    "links": [
-      {
-        "icon": "github",
-        "link": "https://github.com/ezequielgk"
+        "link": "https://github.com/ANOMALI0x00"
       }
     ]
   },
   {
     "avatar": "https://github.com/KevinRunforrestt.png",
     "name": "KevinRunforrestt",
-    "title": "Documentación y Soporte",
-    "desc": "Gestionó la traducción de los archivos de documentación en markdown y brindó asistencia al equipo de desarrollo.",
+    "title": "Documentación y Tester",
+    "desc": "Encargado de la redacción de la documentación oficial y de realizar pruebas (testing).",
     "links": [
       {
         "icon": "github",
@@ -72,62 +48,98 @@
     ]
   },
   {
-    "avatar": "https://github.com/HylianSoul.png",
-    "name": "HylianSoul",
-    "title": "Traductor",
-    "desc": "Contribuyó a la traducción al catalán del launcher y brindó una valiosa ayuda a la comunidad.",
+    "avatar": "https://github.com/SrAltamar.png",
+    "name": "SrAltamar",
+    "title": "BUG FINDER & Tester",
+    "desc": "Encargado de realizar pruebas (testing).",
     "links": [
       {
         "icon": "github",
-        "link": "https://github.com/HylianSoul"
+        "link": "https://github.com/SrAltamar"
       }
     ]
   },
   {
-    "avatar": "https://github.com/BrokenByteOfCode.png",
-    "name": "BrokenByteOfCode",
-    "title": "Traductor",
-    "desc": "Proporcionó la traducción al ucraniano para Neko Void, ayudando a expandir nuestro alcance a más usuarios.",
+    "avatar": "https://github.com/Mashalack.png",
+    "name": "Mashalack",
+    "title": "Mantenedor y Supervisor de la versión Musl",
+    "desc": "Mantenedor y supervisor de la versión musl de Neko Void.",
     "links": [
       {
         "icon": "github",
-        "link": "https://github.com/BrokenByteOfCode"
+        "link": "https://github.com/Mashalack"
       }
     ]
   },
   {
-    "avatar": "https://github.com/bgusenda.png",
-    "name": "bgusenda",
-    "title": "Traductor",
-    "desc": "Proporcionó la traducción al portugués para Neko Void, ayudando a expandir nuestro alcance a más usuarios.",
+    "avatar": "https://github.com/rockman6554.png",
+    "name": "rockman6554",
+    "title": "Colaborador",
+    "desc": "Escritor de la wiki",
     "links": [
       {
         "icon": "github",
-        "link": "https://github.com/bgusenda"
+        "link": "https://github.com/rockman6554"
       }
     ]
   },
   {
-    "avatar": "https://github.com/p3p3p3k4z.png",
-    "name": "p3p3p3k4z",
-    "title": "Contribuidor de Scripts de Compilación",
-    "desc": "Mejoró los scripts de compilación y construcción del proyecto.",
+    "avatar": "https://github.com/CrowRei34.png",
+    "name": "Crow",
+    "title": "Tester y Diseñador Web",
+    "desc": "Encargado del diseño de la página web y de realizar pruebas (testing) de la distribución.",
     "links": [
       {
         "icon": "github",
-        "link": "https://github.com/p3p3p3k4z"
+        "link": "https://github.com/CrowRei34"
       }
     ]
   },
   {
-    "avatar": "https://github.com/IoselDev.png",
-    "name": "IoselDev",
-    "title": "Mantenedor de Paquetes",
-    "desc": "Contribuyó exclusivamente mediante la creación del PKGBUILD para el paquete de AUR.",
+    "avatar": "https://github.com/JMX369.png",
+    "name": "JMX",
+    "title": "Tester",
+    "desc": "Encargado de realizar pruebas (testing).",
     "links": [
       {
         "icon": "github",
-        "link": "https://github.com/IoselDev"
+        "link": "https://github.com/JMX369"
+      }
+    ]
+  },
+  {
+    "avatar": "https://github.com/Nubyunix.png",
+    "name": "Nubyunix",
+    "title": "Tester de la edición NVIDIA",
+    "desc": "Pruebas de soporte NVIDIA e instalación de controladores con Neko Wizard.",
+    "links": [
+      {
+        "icon": "github",
+        "link": "https://github.com/Nubyunix"
+      }
+    ]
+  },
+  {
+    "avatar": "https://github.com/SrDicov.png",
+    "name": "Dicov",
+    "title": "La CABRA",
+    "desc": "Recolector de prestigio profesional.",
+    "links": [
+      {
+        "icon": "github",
+        "link": "https://github.com/SrDicov"
+      }
+    ]
+  },
+  {
+    "avatar": "https://github.com/LostXXI.png",
+    "name": "Lost",
+    "title": "Product Manager & Developer",
+    "desc": "Encargado de la gestión de recursos, personal, documantación y Desarollo de Neko-Void.",
+    "links": [
+      {
+        "icon": "github",
+        "link": "https://github.com/LostXXI"
       }
     ]
   }

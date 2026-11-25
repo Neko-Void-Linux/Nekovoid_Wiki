@@ -8,8 +8,9 @@ This section is currently under development. Please check back later!
 
 ## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
 
-- [Documentation overview](/en/docs/)
-- [Global settings](/en/docs/configuration/global-settings)
-- [Advanced options](/en/docs/configuration/advanced-options)
+- [Guides & Documentation](/en/guides/)
+- [Japanese Input (fcitx5)](/docs/configuration/japanese-input)
+- [Xorg (X11)](/docs/concepts/xorg)
+- [Wayland](/docs/concepts/wayland)
 
 </section>

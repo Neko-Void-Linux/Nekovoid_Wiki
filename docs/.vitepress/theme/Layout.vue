@@ -4,6 +4,7 @@ import DefaultTheme from 'vitepress/theme'
 import { useData, useRoute } from 'vitepress'
 import AsciiLogo from './components/AsciiLogo.vue'
 import ContentsToggle from './components/ContentsToggle.vue'
+import ImageModal from './components/ImageModal.vue'
 import LanguageControl from './components/LanguageControl.vue'
 import SearchTopics from './components/SearchTopics.vue'
 import TextSizeControl from './components/TextSizeControl.vue'
@@ -86,6 +87,9 @@ const isArticlePage = computed(() => {
     </template>
     <template #aside-outline-before>
       <ContentsToggle v-if="isArticlePage" />
+    </template>
+    <template #layout-bottom>
+      <ImageModal />
     </template>
   </Layout>
 </template>

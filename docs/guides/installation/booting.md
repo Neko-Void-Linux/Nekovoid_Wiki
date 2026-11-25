@@ -1,22 +1,20 @@
+---
+title: Booting Neko Void
+description: Booting Neko Void into live mode
+---
+
+<script setup>
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  window.location.replace('/guides/installation/#booting-into-live-mode')
+})
+</script>
+
 # Booting Neko Void
 
-1. Insert the USB drive into your computer.
-2. Restart your computer.
-3. Press the corresponding *boot menu* key of your BIOS and select your USB drive.
+::: info Note
+This page has been consolidated into the unified [Installation Guide: Booting into Live Mode](/guides/installation/#booting-into-live-mode). Redirecting automatically...
+:::
 
-<div class="theme-aware-image">
-  <img src="/guides/installation/boot-menu.png" alt="Reference image of the Neko Void boot menu" />
-</div>
-
-From the menu we select the first option and press `ENTER`, and with that we boot Neko Void in `LIVE` mode.
-
-<section class="related-links">
-
-## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
-
-- [Installation overview](/guides/installation/)
-- [System requirements](/guides/installation/requirements)
-- [Creating installation media](/guides/installation/installation-media)
-- [Installing Neko Void](/guides/installation/installing)
-
-</section>
+<meta http-equiv="refresh" content="0; url=/guides/installation/#booting-into-live-mode">

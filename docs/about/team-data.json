@@ -2,8 +2,8 @@
   {
     "avatar": "https://github.com/javiercplus.png",
     "name": "javiercplus",
-    "title": "Co-Creator & Developer",
-    "desc": "Co-creator who actively participates in the launcher's development while supervising the project. Ensures quality and team coordination.",
+    "title": "Creator & Core Developer",
+    "desc": "Creator and lead developer of the Neko Void distribution and Kasha installer.",
     "links": [
       {
         "icon": "github",
@@ -12,58 +12,34 @@
     ]
   },
   {
-      "avatar": "https://github.com/Neko Void-LA.png",
-      "name": "Crow",
-      "title": "Director",
-      "desc": "Tester, and Web Designer",
-      "links": [
-        {
-          "icon": "github",
-          "link": "https://github.com/Neko Void-LA"
-        }
-      ]
-    },
-  {
-    "avatar": "https://github.com/0rt4.png",
-    "name": "Orta",
-    "title": "Project Supervisor",
-    "desc": "Project co-supervisor with experience in software architecture and technical leadership. Oversees the implementation of key functionalities.",
+    "avatar": "https://github.com/Derszi65g.png",
+    "name": "Becker",
+    "title": "I3dots Designer",
+    "desc": "Designer and responsible for customizing the i3 dotfiles (I3dots) for Neko Void.",
     "links": [
       {
         "icon": "github",
-        "link": "https://github.com/0rt4"
+        "link": "https://github.com/Derszi65g"
       }
     ]
   },
   {
-    "avatar": "https://github.com/MrTanuk.png",
-    "name": "MrTanuk",
-    "title": "Core Developer",
-    "desc": "Contributed to core development alongside JavierC and played a key role in resolving technical issues.",
+    "avatar": "https://github.com/ANOMALI0x00.png",
+    "name": "ANOMALI.0x00",
+    "title": "Kernel Manager Developer",
+    "desc": "Developer responsible for the creation and maintenance of Neko Kernel Manager.",
     "links": [
       {
         "icon": "github",
-        "link": "https://github.com/MrTanuk"
-      }
-    ]
-  },
-  {
-    "avatar": "https://github.com/ezequielgk.png",
-    "name": "Ezequiel",
-    "title": "Web Design",
-    "desc": "Frontend designer and developer specialized in modern interfaces. Responsible for the visual design and user experience of Neko Void.",
-    "links": [
-      {
-        "icon": "github",
-        "link": "https://github.com/ezequielgk"
+        "link": "https://github.com/ANOMALI0x00"
       }
     ]
   },
   {
     "avatar": "https://github.com/KevinRunforrestt.png",
     "name": "KevinRunforrestt",
-    "title": "Documentation & Support",
-    "desc": "Managed the translation of markdown documentation files and provided assistance to the development team.",
+    "title": "Documentation & Tester",
+    "desc": "In charge of writing official documentation and performing tests.",
     "links": [
       {
         "icon": "github",
@@ -72,62 +48,98 @@
     ]
   },
   {
-    "avatar": "https://github.com/HylianSoul.png",
-    "name": "HylianSoul",
-    "title": "Translator",
-    "desc": "Contributed to the Catalan translation of the launcher and provided valuable assistance to the community.",
+    "avatar": "https://github.com/SrAltamar.png",
+    "name": "SrAltamar",
+    "title": "Beta Tester",
+    "desc": "In charge of performing tests.",
     "links": [
       {
         "icon": "github",
-        "link": "https://github.com/HylianSoul"
+        "link": "https://github.com/SrAltamar"
       }
     ]
   },
   {
-    "avatar": "https://github.com/BrokenByteOfCode.png",
-    "name": "BrokenByteOfCode",
-    "title": "Translator",
-    "desc": "Provided the Ukrainian translation for Neko Void, helping to expand our reach to more users.",
+    "avatar": "https://github.com/Mashalack.png",
+    "name": "Mashalack",
+    "title": "Musl Edition Maintainer & Supervisor",
+    "desc": "Maintainer and supervisor of the musl version of Neko Void.",
     "links": [
       {
         "icon": "github",
-        "link": "https://github.com/BrokenByteOfCode"
+        "link": "https://github.com/Mashalack"
       }
     ]
   },
   {
-    "avatar": "https://github.com/bgusenda.png",
-    "name": "bgusenda",
-    "title": "Translator",
-    "desc": "Provided the Portuguese translation for Neko Void, helping to expand our reach to more users.",
+    "avatar": "https://github.com/rockman6554.png",
+    "name": "rockman6554",
+    "title": "Colaborator",
+    "desc": "Writer of the wiki",
     "links": [
       {
         "icon": "github",
-        "link": "https://github.com/bgusenda"
+        "link": "https://github.com/rockman6554"
       }
     ]
   },
   {
-    "avatar": "https://github.com/p3p3p3k4z.png",
-    "name": "p3p3p3k4z",
-    "title": "Build Script Contributor",
-    "desc": "Improved the compilation and build script for the project.",
+    "avatar": "https://github.com/CrowRei34.png",
+    "name": "Crow",
+    "title": "Tester & Web Designer",
+    "desc": "In charge of web design and distribution testing.",
     "links": [
       {
         "icon": "github",
-        "link": "https://github.com/p3p3p3k4z"
+        "link": "https://github.com/CrowRei34"
       }
     ]
   },
   {
-    "avatar": "https://github.com/IoselDev.png",
-    "name": "IoselDev",
-    "title": "Package Maintainer",
-    "desc": "Contributed exclusively by creating the PKGBUILD for the AUR package.",
+    "avatar": "https://github.com/JMX369.png",
+    "name": "JMX",
+    "title": "Beta Tester",
+    "desc": "In charge of performing tests.",
     "links": [
       {
         "icon": "github",
-        "link": "https://github.com/IoselDev"
+        "link": "https://github.com/JMX369"
+      }
+    ]
+  },
+  {
+    "avatar": "https://github.com/Nubyunix.png",
+    "name": "Nubyunix",
+    "title": "NVIDIA Tester",
+    "desc": "Tests NVIDIA support and driver installation through Neko Wizard.",
+    "links": [
+      {
+        "icon": "github",
+        "link": "https://github.com/Nubyunix"
+      }
+    ]
+  },
+  {
+    "avatar": "https://github.com/SrDicov.png",
+    "name": "Dicov",
+    "title": "The GOAT",
+    "desc": "Professional prestige collector.",
+    "links": [
+      {
+        "icon": "github",
+        "link": "https://github.com/SrDicov"
+      }
+    ]
+  },
+  {
+    "avatar": "https://github.com/LostXXI.png",
+    "name": "Lost",
+    "title": "Product Manager & Developer",
+    "desc": "In charge of managing resources, staff, Developmen and documentation for Neko-Void.",
+    "links": [
+      {
+        "icon": "github",
+        "link": "https://github.com/LostXXI"
       }
     ]
   }

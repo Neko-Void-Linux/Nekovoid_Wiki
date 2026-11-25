@@ -12,9 +12,9 @@ From the menu we select the first option and press `ENTER`, and with that we boo
 
 ## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
 
-- [Installation overview](/en/guides/installation/)
-- [System requirements](/en/guides/installation/requirements)
-- [Creating installation media](/en/guides/installation/installation-media)
-- [Installing Neko Void](/en/guides/installation/installing)
+- [Guides & Documentation](/en/guides/)
+- [runit (Init System)](/docs/concepts/runit)
+- [Wayland](/docs/concepts/wayland)
+- [Common Issues](/en/guides/troubleshooting/common-issues)
 
 </section>

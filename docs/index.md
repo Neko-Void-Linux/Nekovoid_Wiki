@@ -12,13 +12,13 @@ hero:
   actions:
     - theme: alt
       text: Get Started
-      link: /guides/getting-started/
+      link: /guides/
     - theme: alt
       text: Download ISO
       link: https://www.neko-void-linux.online/#downloads
     - theme: alt
-      text: Documentation
-      link: /docs/
+      text: Projects
+      link: /dev/projects/
 
 features:
   - title: Projects

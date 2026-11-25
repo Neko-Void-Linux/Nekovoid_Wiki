@@ -48,7 +48,7 @@ Pega aquí el mensaje completo que aparece en la terminal al intentar abrir o ej
 ## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
 
 - [Resumen de guías](/es/guides/)
-- [Requisitos del sistema](/es/guides/installation/requirements)
+- [Guía de instalación](/es/guides/installation/)
 - [Colaborar](/es/dev/contributing/)
 
 </section>

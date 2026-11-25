@@ -1,13 +1,15 @@
 ---
 title: Valores de la Comunidad
-description: Los valores y el código de conducta de la comunidad Neko-Void
+description: Valores de la comunidad Neko Void
 ---
 
 # Valores de la Comunidad
 
-::: info Coming Soon
-Esta página se está reescribiendo. Vuelve más tarde.
-:::
+## Honestidad
+Cero humo ni promesas falsas de marketing. Decimos las cosas como son
+
+## Comunidad DE CARNE Y HUESO
+Hacer lo correcto significa compartir el conocimiento en lugar de guardarlo para si mismo. Ayudamos a que cualquiera para pueda entrar al mundo Linux sin ningun impedimento (=^･ω･^=)
 
 <section class="related-links">
 

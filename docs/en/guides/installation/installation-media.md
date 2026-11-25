@@ -16,9 +16,9 @@ In this case we can use Ventoy as the recommended option for installation.
 
 ## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
 
-- [Installation overview](/en/guides/installation/)
-- [System requirements](/en/guides/installation/requirements)
-- [Booting Neko Void](/en/guides/installation/booting)
-- [Installing Neko Void](/en/guides/installation/installing)
+- [Guides & Documentation](/en/guides/)
+- [runit (Init System)](/docs/concepts/runit)
+- [Wayland](/docs/concepts/wayland)
+- [Common Issues](/en/guides/troubleshooting/common-issues)
 
 </section>

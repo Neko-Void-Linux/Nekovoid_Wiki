@@ -60,9 +60,9 @@ When the installation is finished, remove our USB drive and press the **Restart 
 
 ## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
 
-- [Installation overview](/en/guides/installation/)
-- [System requirements](/en/guides/installation/requirements)
-- [Creating installation media](/en/guides/installation/installation-media)
-- [Booting Neko Void](/en/guides/installation/booting)
+- [Guides & Documentation](/en/guides/)
+- [runit (Init System)](/docs/concepts/runit)
+- [Wayland](/docs/concepts/wayland)
+- [Common Issues](/en/guides/troubleshooting/common-issues)
 
 </section>

@@ -1,13 +1,13 @@
 ---
 title: Mission
-description: The mission and principles of Neko-Void
+description: Mission of Neko Void Linux
 ---
 
 # Mission
 
-::: info Coming Soon
-This page is being rewritten. Please check back later.
-:::
+Our mission is to democratize digital sovereignty and free software (TO DO WHATEVER WE WANT, WHEREVER WE WANT ¯\_(ツ)_/¯ ), BREAKING THE CHAINS of planned obsolescence and CORPORATE standards. From Latin America to the ENTIRE world, we build a lightweight, blazing-fast, systemd-free ecosystem where you have absolute control over your battle station without needing to be a geek or a "gordo compu" 0_0. Our creed is to be self-sustaining and build upon a system that belongs completely to you, easing the path into the true power of Linux. (=^･ω･^=)
+
+Sincerely: Team Rocket & Neko Void
 
 <section class="related-links">
 

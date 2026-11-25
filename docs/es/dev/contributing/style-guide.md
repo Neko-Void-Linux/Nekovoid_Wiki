@@ -87,7 +87,7 @@ Enlaces a páginas relacionadas en la wiki.
 - Usa `bash` para comandos de shell, el lenguaje real para código (`kotlin`, `sh`, `python`...).
 
 ```bash
-kpm install nvidia
+vouru install firefox
 ```
 
 ```kotlin
@@ -103,7 +103,7 @@ val x = 1
 - Para un comando como usuario normal, prefija con `$`:
 
 ```bash
-$ kpm list
+$ kyo search neovim
 ```
 
 - La salida de un comando va en su propio bloque, sin etiqueta de lenguaje o `text`:
@@ -116,7 +116,7 @@ Driver: nvidia 550.40
 ### Código en línea
 
 Usa backticks para:
-- Comandos y binarios: `kpm`, `xbps-install`, `neko-builder.sh`
+- Comandos y binarios: `vouru`, `kyo`, `xbps-install`, `neko-builder.sh`
 - Rutas de archivos: `/etc/sv/`, `/var/service/`
 - Claves y flags de configuración: `--use-root`, `SVDIR`
 - Elementos de UI cuando haga falta: pulsa `Enter`
@@ -145,8 +145,8 @@ Usa tablas para datos de referencia (listas de comandos, tablas de flags, compar
 ```markdown
 | Comando | Descripción |
 |---|---|
-| `kpm list` | Lista las apps instaladas |
-| `kpm install <pkg>` | Instala una app |
+| `kyo list` | Lista las apps instaladas |
+| `kyo install <pkg>` | Instala una app |
 ```
 
 ### Avisos (VitePress)

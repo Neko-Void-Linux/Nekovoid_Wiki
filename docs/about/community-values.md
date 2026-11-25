@@ -1,13 +1,15 @@
 ---
 title: Community Values
-description: The values and code of conduct of the Neko-Void community
+description: Community values of Neko Void
 ---
 
 # Community Values
 
-::: info Coming Soon
-This page is being rewritten. Please check back later.
-:::
+## Honesty
+Zero hype and no false marketing promises. We say things as they are.
+
+## Flesh-and-blood Community
+Doing the right thing means sharing knowledge instead of hoarding it. We help anyone enter the Linux world without any barriers (=^･ω･^=)
 
 <section class="related-links">
 

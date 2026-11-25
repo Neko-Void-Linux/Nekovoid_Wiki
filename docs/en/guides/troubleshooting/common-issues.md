@@ -48,7 +48,7 @@ Paste here the complete message that appears in the terminal when trying to open
 ## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
 
 - [Guides overview](/en/guides/)
-- [System requirements](/en/guides/installation/requirements)
+- [Installation Guide](/en/guides/installation/)
 - [Contributing](/dev/contributing/)
 
 </section>
