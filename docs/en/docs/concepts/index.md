@@ -4,7 +4,7 @@
 This section is currently under development. Please check back later!
 :::
 
-<section class="related-links">
+<RelatedLinks>
 
 ## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
 
@@ -13,4 +13,4 @@ This section is currently under development. Please check back later!
 - [musl](/docs/concepts/musl)
 - [Profiles](/en/docs/concepts/profiles)
 
-</section>
+</RelatedLinks>

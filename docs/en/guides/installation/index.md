@@ -5,7 +5,7 @@
 - [Booting Neko Void](./booting)
 - [Installing Neko Void](./installing)
 
-<section class="related-links">
+<RelatedLinks>
 
 ## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
 
@@ -14,4 +14,4 @@
 - [Wayland](/docs/concepts/wayland)
 - [Common Issues](/en/guides/troubleshooting/common-issues)
 
-</section>
+</RelatedLinks>

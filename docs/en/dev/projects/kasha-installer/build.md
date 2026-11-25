@@ -52,7 +52,7 @@ Alternatively, use the convenience rule:
 make run
 ```
 
-<section class="related-links">
+<RelatedLinks>
 
 ## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
 
@@ -60,4 +60,4 @@ make run
 - [Kasha overview](/en/dev/projects/kasha-installer/)
 - [Architecture](/en/dev/projects/kasha-installer/architecture)
 
-</section>
+</RelatedLinks>

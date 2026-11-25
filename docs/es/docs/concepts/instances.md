@@ -1,6 +1,6 @@
 # Instancias
 
-<section class="related-links">
+<RelatedLinks>
 
 ## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#vease-tambien}
 
@@ -9,4 +9,4 @@
 - [musl](/es/docs/concepts/musl)
 - [Perfiles](/es/docs/concepts/profiles)
 
-</section>
+</RelatedLinks>

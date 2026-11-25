@@ -95,7 +95,7 @@ Or use the convenience rule:
 # make run
 ```
 
-<section class="related-links">
+<RelatedLinks>
 
 ## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
 
@@ -103,5 +103,5 @@ Or use the convenience rule:
 - [Architecture](/dev/projects/kasha-installer/architecture)
 - [Build Kasha](/dev/projects/kasha-installer/build)
 
-</section>
+</RelatedLinks>
 

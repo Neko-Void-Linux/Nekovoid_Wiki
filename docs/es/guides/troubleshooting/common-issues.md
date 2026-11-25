@@ -43,7 +43,7 @@ Pega aquí el mensaje completo que aparece en la terminal al intentar abrir o ej
 
 > Si es posible, incluye también capturas de pantalla, mensajes de error completos y cualquier otro detalle que pueda ayudar a reproducir el problema.
 
-<section class="related-links">
+<RelatedLinks>
 
 ## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#vease-tambien}
 
@@ -51,4 +51,4 @@ Pega aquí el mensaje completo que aparece en la terminal al intentar abrir o ej
 - [Guía de instalación](/es/guides/installation/)
 - [Colaborar](/es/dev/contributing/)
 
-</section>
+</RelatedLinks>

@@ -61,7 +61,7 @@ O usa la regla de conveniencia:
 # make run
 ```
 
-<section class="related-links">
+<RelatedLinks>
 
 ## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#vease-tambien}
 
@@ -69,4 +69,4 @@ O usa la regla de conveniencia:
 - [Resumen de Kasha](/es/dev/projects/kasha-installer/)
 - [Arquitectura](/es/dev/projects/kasha-installer/architecture)
 
-</section>
+</RelatedLinks>

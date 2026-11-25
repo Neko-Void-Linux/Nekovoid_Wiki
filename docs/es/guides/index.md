@@ -76,3 +76,13 @@ Si eres nuevo en Neko Void, te recomendamos seguir este recorrido inicial:
 Conéctate con otros usuarios y desarrolladores para discutir sobre el proyecto, hacer preguntas o colaborar.
 
 <CommunityCard />
+
+<RelatedLinks>
+
+## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#vease-tambien}
+
+- [Resumen de instalación](/es/guides/installation/)
+- [runit (Sistema Init)](/es/docs/concepts/runit)
+- [Descargar](https://www.neko-void-linux.online/#downloads)
+
+</RelatedLinks>

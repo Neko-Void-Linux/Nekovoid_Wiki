@@ -220,11 +220,11 @@ Do not stack five admonitions in a row. If everything is important, nothing is.
 
 *A consistent wiki is a trustworthy wiki. This guide is how we keep it consistent.*
 
-<section class="related-links">
+<RelatedLinks>
 
 ## See also
 
 - [Contributing overview](/dev/contributing/)
 - [How to contribute](/dev/contributing/how-to-contribute)
 
-</section>
+</RelatedLinks>

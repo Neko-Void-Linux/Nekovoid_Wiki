@@ -41,7 +41,7 @@ When a program requires glibc, there are three common paths:
 
 Do not mix glibc libraries into a musl base system. It is fragile and unsupported.
 
-<section class="related-links">
+<RelatedLinks>
 
 ## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
 
@@ -49,4 +49,4 @@ Do not mix glibc libraries into a musl base system. It is fragile and unsupporte
 - [runit](/docs/concepts/runit)
 - [Profiles](/docs/concepts/profiles)
 
-</section>
+</RelatedLinks>

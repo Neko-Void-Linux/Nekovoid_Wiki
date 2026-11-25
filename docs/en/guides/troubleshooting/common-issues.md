@@ -43,7 +43,7 @@ Paste here the complete message that appears in the terminal when trying to open
 
 > If possible, also include screenshots, complete error messages and any other details that can help reproduce the issue.
 
-<section class="related-links">
+<RelatedLinks>
 
 ## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
 
@@ -51,4 +51,4 @@ Paste here the complete message that appears in the terminal when trying to open
 - [Installation Guide](/en/guides/installation/)
 - [Contributing](/dev/contributing/)
 
-</section>
+</RelatedLinks>

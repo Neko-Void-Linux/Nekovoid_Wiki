@@ -1,6 +1,6 @@
 # Perfiles
 
-<section class="related-links">
+<RelatedLinks>
 
 ## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#vease-tambien}
 
@@ -8,4 +8,4 @@
 - [runit](/es/docs/concepts/runit)
 - [musl](/es/docs/concepts/musl)
 
-</section>
+</RelatedLinks>

@@ -14,7 +14,7 @@
     - `ui_partition.c`: Partition selection and manual partitioning dialogs.
     - `ui_callbacks.c`: Event handlers for navigation and user input.
 
-<section class="related-links">
+<RelatedLinks>
 
 ## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
 
@@ -22,5 +22,5 @@
 - [Kasha overview](/en/dev/projects/kasha-installer/)
 - [Build Kasha](/en/dev/projects/kasha-installer/build)
 
-</section>
+</RelatedLinks>
 

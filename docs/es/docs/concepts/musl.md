@@ -41,7 +41,7 @@ Cuando un programa requiere glibc, hay tres caminos habituales:
 
 No mezcles librerías glibc en un sistema base musl. Es frágil y no está soportado.
 
-<section class="related-links">
+<RelatedLinks>
 
 ## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#vease-tambien}
 
@@ -49,4 +49,4 @@ No mezcles librerías glibc en un sistema base musl. Es frágil y no está sopor
 - [runit](/es/docs/concepts/runit)
 - [Perfiles](/es/docs/concepts/profiles)
 
-</section>
+</RelatedLinks>

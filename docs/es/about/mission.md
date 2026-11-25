@@ -9,7 +9,7 @@ Nuestra misión es democratizar la soberanía digital y el software libre (HACER
 
 atte : El equipo rocket & Neko Void
 
-<section class="related-links">
+<RelatedLinks>
 
 ## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#vease-tambien}
 
@@ -17,4 +17,4 @@ atte : El equipo rocket & Neko Void
 - [Valores de la comunidad](/es/about/community-values)
 - [Equipo](/es/about/team)
 
-</section>
+</RelatedLinks>

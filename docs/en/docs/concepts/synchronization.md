@@ -1,6 +1,6 @@
 # Synchronization
 
-<section class="related-links">
+<RelatedLinks>
 
 ## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
 
@@ -9,4 +9,4 @@
 - [musl](/docs/concepts/musl)
 - [Profiles](/en/docs/concepts/profiles)
 
-</section>
+</RelatedLinks>

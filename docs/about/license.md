@@ -67,7 +67,7 @@ The official character artwork and design assets for **Kyouko** hold formal auth
 - **Platform**: Safe Creative
 - **Registration Date**: August 7, 2026 (7 de agosto de 2026)
 
-<section class="related-links">
+<RelatedLinks>
 
 ## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
 
@@ -76,4 +76,4 @@ The official character artwork and design assets for **Kyouko** hold formal auth
 - [Community values](/about/community-values)
 - [Team](/about/team)
 
-</section>
+</RelatedLinks>

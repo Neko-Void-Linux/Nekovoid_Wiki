@@ -8,7 +8,7 @@
 | **Storage** | 64 GB | 64 GB or more |
 | **Graphics Memory** | Integrated or dedicated GPU with 16 MB | iGPU or dedicated GPU with 512 MB or more |
 
-<section class="related-links">
+<RelatedLinks>
 
 ## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
 
@@ -17,4 +17,4 @@
 - [Wayland](/docs/concepts/wayland)
 - [Common Issues](/en/guides/troubleshooting/common-issues)
 
-</section>
+</RelatedLinks>

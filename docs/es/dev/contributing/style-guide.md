@@ -225,11 +225,11 @@ No apiles cinco avisos seguidos. Si todo es importante, nada lo es.
 
 *Una wiki consistente es una wiki confiable. Esta guía es cómo la mantenemos consistente.*
 
-<section class="related-links">
+<RelatedLinks>
 
 ## Véase también
 
 - [Resumen para colaboradores](/es/dev/contributing/)
 - [Cómo colaborar](/es/dev/contributing/how-to-contribute)
 
-</section>
+</RelatedLinks>

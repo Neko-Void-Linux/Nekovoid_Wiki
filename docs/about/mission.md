@@ -9,7 +9,7 @@ Our mission is to democratize digital sovereignty and free software (TO DO WHATE
 
 Sincerely: Team Rocket & Neko Void
 
-<section class="related-links">
+<RelatedLinks>
 
 ## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
 
@@ -17,4 +17,4 @@ Sincerely: Team Rocket & Neko Void
 - [Community values](/about/community-values)
 - [Team](/about/team)
 
-</section>
+</RelatedLinks>

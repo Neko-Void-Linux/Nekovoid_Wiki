@@ -63,11 +63,11 @@ You can find more information about the Neko ecosystem at these locations:
 * **Custom Kernels (Actions):** [kernel-neko-void](https://github.com/Neko-Void-Linux/kernel-neko-void/actions)
 * **Website Source Code:** [nk-web](https://github.com/Neko-Void-Linux/nk-web)
 
-<section class="related-links">
+<RelatedLinks>
 
 ## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
 
 - [Projects](/dev/projects/)
 - [Contributing](/dev/contributing/)
 
-</section>
+</RelatedLinks>

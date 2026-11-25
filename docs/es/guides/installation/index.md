@@ -209,7 +209,7 @@ Cuando el instalador indique que la instalación ha concluido con éxito:
 - **Gestión de paquetes**: Aprende sobre la gestión de paquetes nativa de Void Linux con `xbps`, wrappers como [Kyoz](/es/dev/projects/kyoz/), helpers de repositorios de usuario como [Vouru](/es/dev/projects/vouru/) y frontends gráficos como [Iruka XBPS](/es/dev/projects/iruka-xbps/).
 - **Solución de problemas**: Si encuentras algún inconveniente con Wi-Fi, audio o gráficos, revisa la guía de [Problemas comunes](/es/guides/troubleshooting/common-issues).
 
-<section class="related-links">
+<RelatedLinks>
 
 ## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#vease-tambien}
 
@@ -218,4 +218,4 @@ Cuando el instalador indique que la instalación ha concluido con éxito:
 - [Wayland](/es/docs/concepts/wayland)
 - [Problemas comunes](/es/guides/troubleshooting/common-issues)
 
-</section>
+</RelatedLinks>

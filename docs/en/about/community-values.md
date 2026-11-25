@@ -11,7 +11,7 @@ Zero hype and no false marketing promises. We say things as they are.
 ## Flesh-and-blood Community
 Doing the right thing means sharing knowledge instead of hoarding it. We help anyone enter the Linux world without any barriers (=^･ω･^=)
 
-<section class="related-links">
+<RelatedLinks>
 
 ## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
 
@@ -19,4 +19,4 @@ Doing the right thing means sharing knowledge instead of hoarding it. We help an
 - [Mission](/en/about/mission)
 - [Team](/about/team)
 
-</section>
+</RelatedLinks>

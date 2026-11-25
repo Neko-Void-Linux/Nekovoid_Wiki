@@ -19,7 +19,7 @@ Within this organization, we manage the development environment and foster open-
 
 You can find more information, documentation, and access our downloads by visiting our official website at https://www.neko-void-linux.online or by exploring the pinned repositories on this page. (=^ ◡ ^=)
 
-<section class="related-links">
+<RelatedLinks>
 
 ## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
 
@@ -27,4 +27,4 @@ You can find more information, documentation, and access our downloads by visiti
 - [Community values](/about/community-values)
 - [Team](/about/team)
 
-</section>
+</RelatedLinks>

@@ -14,7 +14,7 @@ import members from './team-data.json'
 
 <VPTeamMembers size="small" :members="members" />
 
-<section class="related-links">
+<RelatedLinks>
 
 ## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
 
@@ -22,4 +22,4 @@ import members from './team-data.json'
 - [Mission](/about/mission)
 - [Community values](/about/community-values)
 
-</section>
+</RelatedLinks>

@@ -67,7 +67,7 @@ El arte oficial y los recursos de la mascota **Kyouko** cuentan con registro for
 - **Plataforma**: Safe Creative
 - **Fecha de registro**: 7 de agosto de 2026
 
-<section class="related-links">
+<RelatedLinks>
 
 ## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#vease-tambien}
 
@@ -76,4 +76,4 @@ El arte oficial y los recursos de la mascota **Kyouko** cuentan con registro for
 - [Valores de la comunidad](/es/about/community-values)
 - [Equipo](/es/about/team)
 
-</section>
+</RelatedLinks>

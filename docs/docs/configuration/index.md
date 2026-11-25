@@ -16,7 +16,7 @@ Customize and tune your Neko Void Linux system to fit your workflow. This sectio
 - **[runit (Init System)](/docs/concepts/runit)**: Managing system daemons and background services.
 - **[Display Servers: Wayland & Xorg](/docs/concepts/wayland)**: Graphical environment protocols, display servers, and drivers.
 
-<section class="related-links">
+<RelatedLinks>
 
 ## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
 
@@ -25,4 +25,4 @@ Customize and tune your Neko Void Linux system to fit your workflow. This sectio
 - [Xorg (X11)](/docs/concepts/xorg)
 - [Wayland](/docs/concepts/wayland)
 
-</section>
+</RelatedLinks>

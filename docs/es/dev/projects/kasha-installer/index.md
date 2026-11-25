@@ -95,7 +95,7 @@ O usa la regla de conveniencia:
 # make run
 ```
 
-<section class="related-links">
+<RelatedLinks>
 
 ## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#vease-tambien}
 
@@ -103,4 +103,4 @@ O usa la regla de conveniencia:
 - [Arquitectura](/es/dev/projects/kasha-installer/architecture)
 - [Compilar Kasha](/es/dev/projects/kasha-installer/build)
 
-</section>
+</RelatedLinks>

@@ -56,7 +56,7 @@ With everything ready we can start our installation of Neko Void.
 
 When the installation is finished, remove our USB drive and press the **Restart Now** button. Your computer will reboot and start a clean installation of Neko Void.
 
-<section class="related-links">
+<RelatedLinks>
 
 ## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
 
@@ -65,4 +65,4 @@ When the installation is finished, remove our USB drive and press the **Restart 
 - [Wayland](/docs/concepts/wayland)
 - [Common Issues](/en/guides/troubleshooting/common-issues)
 
-</section>
+</RelatedLinks>
