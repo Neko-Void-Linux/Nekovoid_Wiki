@@ -18,3 +18,13 @@ Dentro de esta organización, gestionamos el entorno de desarrollo y fomentamos 
 ## Enlaces Oficiales (ﾉ^ヮ^)ﾉ*:･ﾟ✧
 
 Puedes encontrar más información, documentación y acceder a nuestras descargas visitando nuestro sitio web oficial en https://www.neko-void-linux.online o explorando los repositorios anclados en nuestra página. (=^ ◡ ^=)
+
+<RelatedLinks>
+
+## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#vease-tambien}
+
+- [Misión](/es/about/mission)
+- [Valores de la comunidad](/es/about/community-values)
+- [Equipo](/es/about/team)
+
+</RelatedLinks>

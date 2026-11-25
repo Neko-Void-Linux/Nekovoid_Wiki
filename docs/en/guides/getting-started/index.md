@@ -17,3 +17,13 @@ Neko Void bridges the gap between the power of Void Linux and the need for an ac
 Connect with other users and developers to discuss the project, ask questions, or just hang out.
 
 <CommunityCard />
+
+<RelatedLinks>
+
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
+
+- [Guides overview](/en/guides/)
+- [System requirements](/en/guides/installation/requirements)
+- [Download](https://www.neko-void-linux.online/#downloads)
+
+</RelatedLinks>

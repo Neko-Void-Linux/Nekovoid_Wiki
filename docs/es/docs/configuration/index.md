@@ -15,3 +15,14 @@ Personaliza y ajusta tu sistema Neko Void Linux para adaptarlo a tu flujo de tra
 
 - **[runit (Sistema Init)](/es/docs/concepts/runit)**: Gestión y supervisión de servicios del sistema.
 - **[Servidores gráficos: Wayland y Xorg](/es/docs/concepts/wayland)**: Protocolos de pantalla, controladores y compositores.
+
+<RelatedLinks>
+
+## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#vease-tambien}
+
+- [Guías y Documentación](/es/guides/)
+- [Entrada en japonés (fcitx5)](/es/docs/configuration/japanese-input)
+- [Xorg (X11)](/es/docs/concepts/xorg)
+- [Wayland](/es/docs/concepts/wayland)
+
+</RelatedLinks>

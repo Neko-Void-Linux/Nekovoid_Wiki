@@ -94,3 +94,13 @@ Or use the convenience rule:
 ```bash
 # make run
 ```
+
+<RelatedLinks>
+
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
+
+- [Projects](/en/dev/projects/)
+- [Architecture](/en/dev/projects/kasha-installer/architecture)
+- [Build Kasha](/en/dev/projects/kasha-installer/build)
+
+</RelatedLinks>

@@ -66,3 +66,14 @@ El arte oficial y los recursos de la mascota **Kyouko** cuentan con registro for
 - **Licencia**: Creative Commons Attribution 4.0 International (CC BY 4.0)
 - **Plataforma**: Safe Creative
 - **Fecha de registro**: 7 de agosto de 2026
+
+<RelatedLinks>
+
+## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#vease-tambien}
+
+- [Sobre Neko Void](/es/about/)
+- [Misión](/es/about/mission)
+- [Valores de la comunidad](/es/about/community-values)
+- [Equipo](/es/about/team)
+
+</RelatedLinks>

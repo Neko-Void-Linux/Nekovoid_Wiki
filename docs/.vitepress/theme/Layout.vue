@@ -6,7 +6,6 @@ import AsciiLogo from './components/AsciiLogo.vue'
 import ContentsToggle from './components/ContentsToggle.vue'
 import ImageModal from './components/ImageModal.vue'
 import LanguageControl from './components/LanguageControl.vue'
-import RelatedLinks from './components/RelatedLinks.vue'
 import SearchTopics from './components/SearchTopics.vue'
 import TextSizeControl from './components/TextSizeControl.vue'
 import ThemeControl from './components/ThemeControl.vue'
@@ -88,9 +87,6 @@ const isArticlePage = computed(() => {
     </template>
     <template #aside-outline-before>
       <ContentsToggle v-if="isArticlePage" />
-    </template>
-    <template #doc-after>
-      <RelatedLinks />
     </template>
     <template #layout-bottom>
       <ImageModal />

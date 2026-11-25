@@ -11,3 +11,14 @@ In this case we can use Ventoy as the recommended option for installation.
 2. Select your USB drive and press the **Install** button. Once done, simply drag the Neko Void ISO image into your USB drive.
 
 ![Ventoy2Disk reference](/guides/installation/ventoy-ex.png)
+
+<RelatedLinks>
+
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
+
+- [Guides & Documentation](/en/guides/)
+- [runit (Init System)](/docs/concepts/runit)
+- [Wayland](/docs/concepts/wayland)
+- [Common Issues](/en/guides/troubleshooting/common-issues)
+
+</RelatedLinks>

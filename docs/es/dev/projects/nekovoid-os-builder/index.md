@@ -62,3 +62,12 @@ Puedes encontrar más información sobre el ecosistema Neko en los siguientes en
 * **Repo Builder:** [repo-neko](https://github.com/Neko-Void-Linux/repo-neko)
 * **Kernels personalizados (Actions):** [kernel-neko-void](https://github.com/Neko-Void-Linux/kernel-neko-void/actions)
 * **Código fuente de la web:** [nk-web](https://github.com/Neko-Void-Linux/nk-web)
+
+<RelatedLinks>
+
+## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#vease-tambien}
+
+- [Proyectos](/es/dev/projects/)
+- [Colaborar](/es/dev/contributing/)
+
+</RelatedLinks>

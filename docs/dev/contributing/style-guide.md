@@ -62,7 +62,7 @@ How the reader confirms it worked. Usually a command and its expected output.
 ## Troubleshooting
 Common problems on this topic, as **bold symptom** → cause → fix.
 
-## See also
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
 Links to related pages in the wiki.
 ```
 
@@ -219,3 +219,12 @@ Do not stack five admonitions in a row. If everything is important, nothing is.
 ---
 
 *A consistent wiki is a trustworthy wiki. This guide is how we keep it consistent.*
+
+<RelatedLinks>
+
+## See also
+
+- [Contributing overview](/dev/contributing/)
+- [How to contribute](/dev/contributing/how-to-contribute)
+
+</RelatedLinks>

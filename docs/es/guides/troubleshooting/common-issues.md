@@ -42,3 +42,13 @@ Describe qué ocurre realmente, incluye capturas de pantalla o mensajes de error
 Pega aquí el mensaje completo que aparece en la terminal al intentar abrir o ejecutar la aplicación.
 
 > Si es posible, incluye también capturas de pantalla, mensajes de error completos y cualquier otro detalle que pueda ayudar a reproducir el problema.
+
+<RelatedLinks>
+
+## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#vease-tambien}
+
+- [Resumen de guías](/es/guides/)
+- [Guía de instalación](/es/guides/installation/)
+- [Colaborar](/es/dev/contributing/)
+
+</RelatedLinks>

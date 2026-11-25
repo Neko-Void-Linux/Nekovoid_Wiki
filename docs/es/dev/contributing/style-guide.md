@@ -67,7 +67,7 @@ Cómo confirma el lector que funcionó. Normalmente un comando y su salida esper
 ## Solución de problemas
 Problemas habituales de este tema, como **síntoma en negrita** → causa → solución.
 
-## Véase también
+## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#vease-tambien}
 Enlaces a páginas relacionadas en la wiki.
 ```
 
@@ -224,3 +224,12 @@ No apiles cinco avisos seguidos. Si todo es importante, nada lo es.
 ---
 
 *Una wiki consistente es una wiki confiable. Esta guía es cómo la mantenemos consistente.*
+
+<RelatedLinks>
+
+## Véase también
+
+- [Resumen para colaboradores](/es/dev/contributing/)
+- [Cómo colaborar](/es/dev/contributing/how-to-contribute)
+
+</RelatedLinks>

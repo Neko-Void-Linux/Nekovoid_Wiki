@@ -66,3 +66,14 @@ The official character artwork and design assets for **Kyouko** hold formal auth
 - **License**: Creative Commons Attribution 4.0 International (CC BY 4.0)
 - **Platform**: Safe Creative
 - **Registration Date**: August 7, 2026 (7 de agosto de 2026)
+
+<RelatedLinks>
+
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
+
+- [About Neko Void](/about/)
+- [Mission](/about/mission)
+- [Community values](/about/community-values)
+- [Team](/about/team)
+
+</RelatedLinks>

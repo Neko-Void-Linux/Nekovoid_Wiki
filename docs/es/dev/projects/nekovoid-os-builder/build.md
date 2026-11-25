@@ -44,3 +44,13 @@ El script `neko-builder.sh` admite múltiples argumentos:
 * `./neko-builder.sh <desktop> -e "pkg..."` — Compila con paquetes extra especificados.
 * `./neko-builder.sh doble` — Compila tanto la ISO Xlibre como la ISO Xorg.
 * `./neko-builder.sh doble-isor` — Compila tanto la ISO Rollibre como la Rolling.
+
+<RelatedLinks>
+
+## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#vease-tambien}
+
+- [Proyectos](/es/dev/projects/)
+- [Resumen de Neko Void OS Builder](/es/dev/projects/nekovoid-os-builder/)
+- [Colaborar](/es/dev/contributing/)
+
+</RelatedLinks>

@@ -211,3 +211,14 @@ Congratulations! Your Neko Void system is now installed and ready to use. Explor
 - **System Configuration**: Review [System Configuration](/docs/configuration/) for personalized tweaks and global settings.
 - **Package Management**: Learn about native Void Linux package management with `xbps`, wrappers like [Kyoz](/dev/projects/kyoz/), user repository helpers like [Vouru](/dev/projects/vouru/), and graphical frontends like [Iruka XBPS](/dev/projects/iruka-xbps/).
 - **Troubleshooting**: If you experience any post-installation issues (e.g. Wi-Fi or graphics), refer to the [Common Issues](/guides/troubleshooting/common-issues) guide.
+
+<RelatedLinks>
+
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
+
+- [Guides & Documentation](/guides/)
+- [runit (Init System)](/docs/concepts/runit)
+- [Wayland](/docs/concepts/wayland)
+- [Common Issues](/guides/troubleshooting/common-issues)
+
+</RelatedLinks>

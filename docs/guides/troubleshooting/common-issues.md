@@ -42,3 +42,13 @@ Describe what actually happens, include screenshots or error messages if possibl
 Paste here the complete message that appears in the terminal when trying to open or run the application.
 
 > If possible, also include screenshots, complete error messages and any other details that can help reproduce the issue.
+
+<RelatedLinks>
+
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
+
+- [Guides overview](/guides/)
+- [Installation Guide](/guides/installation/)
+- [Contributing](/dev/contributing/)
+
+</RelatedLinks>

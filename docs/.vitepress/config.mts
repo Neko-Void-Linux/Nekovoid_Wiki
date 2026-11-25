@@ -79,6 +79,31 @@ function createLocalSearch(language: 'en' | 'es') {
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  markdown: {
+    config(md) {
+      md.core.ruler.after('inline', 'article-task-lists', (state) => {
+        const tokens = state.tokens
+        for (let i = 2; i < tokens.length; i++) {
+          const inline = tokens[i]
+          if (inline.type !== 'inline' || tokens[i - 1].type !== 'paragraph_open'
+            || tokens[i - 2].type !== 'list_item_open') continue
+
+          const first = inline.children?.[0]
+          const marker = first?.type === 'text' && first.content.match(/^\[([ xX])\]\s+/)
+          if (!first || !marker) continue
+
+          const checked = marker[1].toLowerCase() === 'x'
+          first.content = first.content.slice(marker[0].length)
+          inline.content = inline.content.slice(marker[0].length)
+          tokens[i - 2].attrJoin('class', 'task-list-item')
+          const checkbox = new state.Token('html_inline', '', 0)
+          const label = md.utils.escapeHtml(inline.content)
+          checkbox.content = `<input class="article-task-checkbox" type="checkbox" disabled${checked ? ' checked' : ''} aria-label="${label}">`
+          inline.children!.unshift(checkbox)
+        }
+      })
+    }
+  },
   title: "Neko Void - Wiki ₍^. .^₎⟆",
   description: "A open source eco-system",
   cleanUrls: true,

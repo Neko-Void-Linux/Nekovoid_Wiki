@@ -40,3 +40,13 @@ Cuando un programa requiere glibc, hay tres caminos habituales:
 - **Binarios estáticos.** Un build estático no lleva dependencias de librería y corre en cualquier sitio.
 
 No mezcles librerías glibc en un sistema base musl. Es frágil y no está soportado.
+
+<RelatedLinks>
+
+## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#vease-tambien}
+
+- [Resumen de documentación](/es/docs/)
+- [runit](/es/docs/concepts/runit)
+- [Perfiles](/es/docs/concepts/profiles)
+
+</RelatedLinks>
