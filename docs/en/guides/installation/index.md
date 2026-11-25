@@ -7,7 +7,7 @@
 
 <section class="related-links">
 
-## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
 
 - [Guides & Documentation](/en/guides/)
 - [runit (Init System)](/docs/concepts/runit)

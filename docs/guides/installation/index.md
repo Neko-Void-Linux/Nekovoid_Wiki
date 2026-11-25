@@ -214,7 +214,7 @@ Congratulations! Your Neko Void system is now installed and ready to use. Explor
 
 <section class="related-links">
 
-## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
 
 - [Guides & Documentation](/guides/)
 - [runit (Init System)](/docs/concepts/runit)

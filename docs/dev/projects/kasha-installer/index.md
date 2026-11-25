@@ -97,7 +97,7 @@ Or use the convenience rule:
 
 <section class="related-links">
 
-## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
 
 - [Projects](/dev/projects/)
 - [Architecture](/dev/projects/kasha-installer/architecture)

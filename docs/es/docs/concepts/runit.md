@@ -104,7 +104,7 @@ Además, el comando `sv check` puede usarse para verificar manualmente ejecutand
 
 <section class="related-links">
 
-## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#vease-tambien}
 
 - [Resumen de documentación](/es/docs/)
 - [musl](/es/docs/concepts/musl)

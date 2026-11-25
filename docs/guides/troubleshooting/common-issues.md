@@ -45,7 +45,7 @@ Paste here the complete message that appears in the terminal when trying to open
 
 <section class="related-links">
 
-## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
 
 - [Guides overview](/guides/)
 - [Installation Guide](/guides/installation/)

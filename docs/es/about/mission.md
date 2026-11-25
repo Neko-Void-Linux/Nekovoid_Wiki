@@ -11,7 +11,7 @@ atte : El equipo rocket & Neko Void
 
 <section class="related-links">
 
-## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#vease-tambien}
 
 - [Sobre Neko Void](/es/about/)
 - [Valores de la comunidad](/es/about/community-values)

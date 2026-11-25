@@ -18,7 +18,7 @@ Customize and tune your Neko Void Linux system to fit your workflow. This sectio
 
 <section class="related-links">
 
-## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
 
 - [Guides & Documentation](/guides/)
 - [Japanese Input (fcitx5)](/docs/configuration/japanese-input)

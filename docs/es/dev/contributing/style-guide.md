@@ -67,7 +67,7 @@ Cómo confirma el lector que funcionó. Normalmente un comando y su salida esper
 ## Solución de problemas
 Problemas habituales de este tema, como **síntoma en negrita** → causa → solución.
 
-## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#vease-tambien}
 Enlaces a páginas relacionadas en la wiki.
 ```
 

@@ -13,7 +13,7 @@ Doing the right thing means sharing knowledge instead of hoarding it. We help an
 
 <section class="related-links">
 
-## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
 
 - [About Neko Void](/en/about/)
 - [Mission](/en/about/mission)

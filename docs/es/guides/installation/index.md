@@ -211,7 +211,7 @@ Cuando el instalador indique que la instalación ha concluido con éxito:
 
 <section class="related-links">
 
-## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#vease-tambien}
 
 - [Guías y Documentación](/es/guides/)
 - [runit (Sistema Init)](/es/docs/concepts/runit)

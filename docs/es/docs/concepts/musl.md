@@ -43,7 +43,7 @@ No mezcles librerías glibc en un sistema base musl. Es frágil y no está sopor
 
 <section class="related-links">
 
-## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#vease-tambien}
 
 - [Resumen de documentación](/es/docs/)
 - [runit](/es/docs/concepts/runit)

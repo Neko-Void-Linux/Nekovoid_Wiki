@@ -21,7 +21,7 @@ Puedes encontrar más información, documentación y acceder a nuestras descarga
 
 <section class="related-links">
 
-## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#vease-tambien}
 
 - [Misión](/es/about/mission)
 - [Valores de la comunidad](/es/about/community-values)

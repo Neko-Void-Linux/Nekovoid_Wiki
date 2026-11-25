@@ -69,7 +69,7 @@ El arte oficial y los recursos de la mascota **Kyouko** cuentan con registro for
 
 <section class="related-links">
 
-## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#vease-tambien}
 
 - [Sobre Neko Void](/es/about/)
 - [Misión](/es/about/mission)

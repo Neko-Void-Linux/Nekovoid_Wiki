@@ -20,7 +20,7 @@ Connect with other users and developers to discuss the project, ask questions, o
 
 <section class="related-links">
 
-## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
 
 - [Guides overview](/en/guides/)
 - [System requirements](/en/guides/installation/requirements)

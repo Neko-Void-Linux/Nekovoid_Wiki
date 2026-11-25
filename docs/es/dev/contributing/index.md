@@ -33,7 +33,7 @@ Abre un issue si quieres coger una de estas y necesitas un punto de partida.
 
 <section class="related-links">
 
-## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#vease-tambien}
 
 - [Cómo colaborar](/es/dev/contributing/how-to-contribute)
 - [Guía de estilo](/es/dev/contributing/style-guide)

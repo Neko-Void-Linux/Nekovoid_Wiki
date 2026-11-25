@@ -65,7 +65,7 @@ You can find more information about the Neko ecosystem at these locations:
 
 <section class="related-links">
 
-## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
 
 - [Projects](/en/dev/projects/)
 - [Contributing](/dev/contributing/)

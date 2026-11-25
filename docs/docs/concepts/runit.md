@@ -104,7 +104,7 @@ In addition, the `sv check` command can be used to poll for readiness (periodica
 
 <section class="related-links">
 
-## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
 
 - [Documentation overview](/docs/)
 - [musl](/docs/concepts/musl)

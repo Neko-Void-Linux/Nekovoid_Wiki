@@ -69,7 +69,7 @@ The official character artwork and design assets for **Kyouko** hold formal auth
 
 <section class="related-links">
 
-## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
 
 - [About Neko Void](/en/about/)
 - [Mission](/en/about/mission)

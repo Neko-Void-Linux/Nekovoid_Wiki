@@ -47,7 +47,7 @@ The `neko-builder.sh` script supports multiple options:
 
 <section class="related-links">
 
-## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
 
 - [Projects](/en/dev/projects/)
 - [Neko Void OS Builder overview](/en/dev/projects/nekovoid-os-builder/)

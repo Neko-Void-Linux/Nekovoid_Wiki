@@ -6,7 +6,7 @@ This section is currently under development. Please check back later!
 
 <section class="related-links">
 
-## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
 
 - [Guides & Documentation](/en/guides/)
 - [Japanese Input (fcitx5)](/docs/configuration/japanese-input)

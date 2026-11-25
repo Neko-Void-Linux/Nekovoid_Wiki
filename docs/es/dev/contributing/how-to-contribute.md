@@ -128,7 +128,7 @@ Lee la [Guía de estilo](./style-guide) completa antes de escribir algo más que
 
 <section class="related-links">
 
-## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+## Véase también <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#vease-tambien}
 
 - [Resumen para colaboradores](/es/dev/contributing/)
 - [Guía de estilo](/es/dev/contributing/style-guide)

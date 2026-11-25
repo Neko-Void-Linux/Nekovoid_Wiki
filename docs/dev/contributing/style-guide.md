@@ -62,7 +62,7 @@ How the reader confirms it worked. Usually a command and its expected output.
 ## Troubleshooting
 Common problems on this topic, as **bold symptom** → cause → fix.
 
-## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span>
+## See also <span class="related-links-kaomoji" aria-hidden="true">(˵ •̀ ᴗ - ˵ )</span> {#see-also}
 Links to related pages in the wiki.
 ```
 
