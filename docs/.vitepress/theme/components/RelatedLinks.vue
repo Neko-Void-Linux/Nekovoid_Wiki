@@ -17,18 +17,18 @@ const groups: Array<{ match: RegExp; links: RelatedLink[] }> = [
   {
     match: /\/guides\/installation\//,
     links: [
-      { path: '/guides/installation/', en: { title: 'Installation overview', description: 'the complete installation path.' }, es: { title: 'Resumen de instalación', description: 'el recorrido completo de instalación.' } },
-      { path: '/guides/installation/requirements', en: { title: 'System requirements', description: 'hardware and desktop recommendations.' }, es: { title: 'Requisitos del sistema', description: 'recomendaciones de hardware y escritorio.' } },
-      { path: '/guides/installation/installation-media', en: { title: 'Creating installation media', description: 'prepare a bootable USB drive.' }, es: { title: 'Crear un medio de instalación', description: 'preparar un USB arrancable.' } },
-      { path: '/guides/installation/booting', en: { title: 'Booting Neko Void', description: 'start live mode and test the hardware.' }, es: { title: 'Arrancar Neko Void', description: 'iniciar el modo live y probar el hardware.' } },
-      { path: '/guides/installation/installing', en: { title: 'Installing Neko Void', description: 'complete the installation on disk.' }, es: { title: 'Instalar Neko Void', description: 'completar la instalación en el disco.' } }
+      { path: '/guides/', en: { title: 'Guides & Documentation', description: 'browse all documentation and guides.' }, es: { title: 'Guías y Documentación', description: 'explora toda la documentación y guías.' } },
+      { path: '/docs/concepts/runit', en: { title: 'runit (Init System)', description: 'service supervision and process management.' }, es: { title: 'runit (Sistema Init)', description: 'supervisión de servicios y gestión de procesos.' } },
+      { path: '/docs/concepts/wayland', en: { title: 'Wayland', description: 'modern display protocol and compositors.' }, es: { title: 'Wayland', description: 'protocolo gráfico moderno y compositores.' } },
+      { path: '/guides/troubleshooting/common-issues', en: { title: 'Common Issues', description: 'find solutions for frequent setup problems.' }, es: { title: 'Problemas comunes', description: 'soluciones para problemas frecuentes de instalación.' } },
+      { path: 'https://www.neko-void-linux.online/#downloads', external: true, en: { title: 'Download', description: 'get the latest installation image.' }, es: { title: 'Descargar', description: 'obtener la imagen de instalación.' } }
     ]
   },
   {
-    match: /\/guides\/getting-started\//,
+    match: /\/guides\/$/,
     links: [
-      { path: '/guides/', en: { title: 'Guides overview', description: 'find the right path for your task.' }, es: { title: 'Resumen de guías', description: 'encontrar el recorrido adecuado para tu tarea.' } },
-      { path: '/guides/installation/requirements', en: { title: 'System requirements', description: 'check the hardware before installing.' }, es: { title: 'Requisitos del sistema', description: 'comprobar el hardware antes de instalar.' } },
+      { path: '/guides/installation/', en: { title: 'Installation overview', description: 'the complete installation path.' }, es: { title: 'Resumen de instalación', description: 'el recorrido completo de instalación.' } },
+      { path: '/docs/concepts/runit', en: { title: 'runit (Init System)', description: 'service supervision and process management.' }, es: { title: 'runit (Sistema Init)', description: 'supervisión de servicios y gestión de procesos.' } },
       { path: 'https://www.neko-void-linux.online/#downloads', external: true, en: { title: 'Download', description: 'get the latest installation image.' }, es: { title: 'Descargar', description: 'obtener la imagen de instalación.' } }
     ]
   },
@@ -36,7 +36,7 @@ const groups: Array<{ match: RegExp; links: RelatedLink[] }> = [
     match: /\/guides\/troubleshooting\//,
     links: [
       { path: '/guides/', en: { title: 'Guides overview', description: 'browse the installation and setup guides.' }, es: { title: 'Resumen de guías', description: 'consultar las guías de instalación y configuración.' } },
-      { path: '/guides/installation/requirements', en: { title: 'System requirements', description: 'verify supported hardware and desktops.' }, es: { title: 'Requisitos del sistema', description: 'verificar el hardware y los escritorios compatibles.' } },
+      { path: '/guides/installation/', en: { title: 'Installation Guide', description: 'system requirements and installation steps.' }, es: { title: 'Guía de instalación', description: 'requisitos del sistema y pasos de instalación.' } },
       { path: '/dev/contributing/', en: { title: 'Contributing', description: 'help improve the documentation.' }, es: { title: 'Colaborar', description: 'ayudar a mejorar la documentación.' } }
     ]
   },
@@ -72,6 +72,15 @@ const groups: Array<{ match: RegExp; links: RelatedLink[] }> = [
       { path: '/dev/contributing/', en: { title: 'Contributing overview', description: 'start contributing to Neko Void.' }, es: { title: 'Resumen para colaboradores', description: 'empezar a colaborar con Neko Void.' } },
       { path: '/dev/contributing/how-to-contribute', en: { title: 'How to contribute', description: 'choose a task and submit changes.' }, es: { title: 'Cómo colaborar', description: 'elegir una tarea y enviar cambios.' } },
       { path: '/dev/contributing/style-guide', en: { title: 'Style guide', description: 'keep pages consistent and readable.' }, es: { title: 'Guía de estilo', description: 'mantener las páginas consistentes y legibles.' } }
+    ]
+  },
+  {
+    match: /\/docs\/configuration\//,
+    links: [
+      { path: '/guides/', en: { title: 'Guides & Documentation', description: 'browse all documentation and guides.' }, es: { title: 'Guías y Documentación', description: 'explora toda la documentación y guías.' } },
+      { path: '/docs/configuration/japanese-input', en: { title: 'Japanese Input (fcitx5)', description: 'setup fcitx5 and Mozc for Japanese typing.' }, es: { title: 'Entrada en japonés (fcitx5)', description: 'configurar fcitx5 y Mozc para escribir en japonés.' } },
+      { path: '/docs/concepts/xorg', en: { title: 'Xorg (X11)', description: 'X11 configuration and environment files.' }, es: { title: 'Xorg (X11)', description: 'configuración de X11 y variables de entorno.' } },
+      { path: '/docs/concepts/wayland', en: { title: 'Wayland', description: 'modern display protocol setup.' }, es: { title: 'Wayland', description: 'configuración del protocolo moderno Wayland.' } }
     ]
   },
   {

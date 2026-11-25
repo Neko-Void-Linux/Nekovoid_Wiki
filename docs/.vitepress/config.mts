@@ -23,8 +23,11 @@ function searchTagsForPath(id: string) {
   if (path.includes('kore-package-manager')) add('kore', 'kpm', 'paquetes', 'rust', 'appimage', 'tarball')
   if (path.includes('/concepts/runit')) add('runit', 'init', 'pid1', 'servicios', 'daemon', 'sv', 'runsv')
   if (path.includes('/concepts/musl')) add('musl', 'libc', 'glibc', 'compatibilidad')
+  if (path.includes('/concepts/xorg')) add('xorg', 'x11', 'servidor', 'grafico', 'display', 'xinit', 'libinput', 'server')
+  if (path.includes('/concepts/wayland')) add('wayland', 'compositor', 'protocolo', 'xwayland', 'wlroots', 'niri', 'sway', 'labwc')
   if (path.includes('/concepts/')) add('conceptos', 'arquitectura', 'sistema')
   if (path.includes('/configuration/')) add('configuracion', 'ajustes', 'opciones')
+  if (path.includes('japanese-input') || path.includes('japanese')) add('japones', 'japanese', 'fcitx5', 'mozc', 'teclado', 'keyboard', 'ime', 'input', 'xprofile')
   if (path.includes('/download/')) add('descargar', 'iso', 'imagen', 'instalacion')
   if (path.includes('/contributing/')) add('colaborar', 'contribuir', 'documentacion', 'desarrollo')
 
@@ -124,28 +127,37 @@ export default defineConfig({
         ],
         sidebar: [
           {
-            text: 'Getting Started',
+            text: 'Guides & Documentation',
             collapsed: false,
             items: [
               { text: 'Overview', link: '/guides/' },
-              { text: 'Getting Started', link: '/guides/getting-started/' },
               { text: 'Download', link: websiteDownloads.en },
+              { text: 'Installation Guide', link: '/guides/installation/' },
               {
-                text: 'Installation',
+                text: 'System Concepts',
                 collapsed: true,
                 items: [
-                  { text: 'Overview', link: '/guides/installation/' },
-                  { text: 'System Requirements', link: '/guides/installation/requirements' },
-                  { text: 'Installation Media', link: '/guides/installation/installation-media' },
-                  { text: 'Booting Live Mode', link: '/guides/installation/booting' },
-                  { text: 'Installing Neko Void', link: '/guides/installation/installing' }
+                  { text: 'runit (Init System)', link: '/docs/concepts/runit' },
+                  { text: 'musl', link: '/docs/concepts/musl' },
+                  { text: 'Xorg (X11)', link: '/docs/concepts/xorg' },
+                  { text: 'Wayland', link: '/docs/concepts/wayland' }
                 ]
               },
               {
-                text: 'How to report issues',
+                text: 'Configuration',
                 collapsed: true,
                 items: [
-                  { text: 'Common Issues', link: '/guides/troubleshooting/common-issues' },
+                  { text: 'Overview', link: '/docs/configuration/' },
+                  { text: 'Japanese Input (fcitx5)', link: '/docs/configuration/japanese-input' },
+                  { text: 'Global Settings', link: '/docs/configuration/global-settings' },
+                  { text: 'Advanced Options', link: '/docs/configuration/advanced-options' }
+                ]
+              },
+              {
+                text: 'Troubleshooting',
+                collapsed: true,
+                items: [
+                  { text: 'Common Issues', link: '/guides/troubleshooting/common-issues' }
                 ]
               }
             ]
@@ -174,23 +186,6 @@ export default defineConfig({
                   { text: 'Style guide', link: '/dev/contributing/style-guide' }
                 ]
               }
-            ]
-          },
-          {
-            text: 'Documentation',
-            collapsed: false,
-            items: [
-              { text: 'Overview', link: '/docs/' },
-              {
-                text: 'Concepts',
-                collapsed: true,
-                items: [
-                  { text: 'Overview', link: '/docs/concepts/' },
-                  { text: 'runit (Init System)', link: '/docs/concepts/runit' },
-                  { text: 'musl', link: '/docs/concepts/musl' }
-                ]
-              },
-              { text: 'Configuration', link: '/docs/configuration/' }
             ]
           },
           {
@@ -231,28 +226,37 @@ export default defineConfig({
         ],
         sidebar: [
           {
-            text: 'Comenzando',
+            text: 'Guías y Documentación',
             collapsed: false,
             items: [
               { text: 'Resumen', link: '/es/guides/' },
-              { text: 'Comenzando', link: '/es/guides/getting-started/' },
               { text: 'Descargar', link: websiteDownloads.es },
+              { text: 'Guía de instalación', link: '/es/guides/installation/' },
               {
-                text: 'Instalación',
+                text: 'Conceptos del Sistema',
                 collapsed: true,
                 items: [
-                  { text: 'Resumen', link: '/es/guides/installation/' },
-                  { text: 'Requisitos Neko Void', link: '/es/guides/installation/requirements' },
-                  { text: 'Creando un medio de instalación', link: '/es/guides/installation/installation-media' },
-                  { text: 'Booteando Neko Void', link: '/es/guides/installation/booting' },
-                  { text: 'Instalando Neko Void', link: '/es/guides/installation/installing' }
+                  { text: 'runit (Sistema Init)', link: '/es/docs/concepts/runit' },
+                  { text: 'musl', link: '/es/docs/concepts/musl' },
+                  { text: 'Xorg (X11)', link: '/es/docs/concepts/xorg' },
+                  { text: 'Wayland', link: '/es/docs/concepts/wayland' }
                 ]
               },
               {
-                text: 'Cómo reportar problemas',
+                text: 'Configuración',
                 collapsed: true,
                 items: [
-                  { text: 'Problemas Comunes', link: '/es/guides/troubleshooting/common-issues' },
+                  { text: 'Resumen', link: '/es/docs/configuration/' },
+                  { text: 'Entrada en japonés (fcitx5)', link: '/es/docs/configuration/japanese-input' },
+                  { text: 'Configuración global', link: '/es/docs/configuration/global-settings' },
+                  { text: 'Opciones avanzadas', link: '/es/docs/configuration/advanced-options' }
+                ]
+              },
+              {
+                text: 'Solución de problemas',
+                collapsed: true,
+                items: [
+                  { text: 'Problemas Comunes', link: '/es/guides/troubleshooting/common-issues' }
                 ]
               }
             ]
@@ -281,22 +285,6 @@ export default defineConfig({
                   { text: 'Guía de estilo', link: '/es/dev/contributing/style-guide' }
                 ]
               }
-            ]
-          },
-          {
-            text: 'Documentación',
-            collapsed: false,
-            items: [
-              { text: 'Resumen', link: '/es/docs/' },
-              {
-                text: 'Conceptos',
-                collapsed: true,
-                items: [
-                  { text: 'runit (Sistema Init)', link: '/es/docs/concepts/runit' },
-                  { text: 'musl', link: '/es/docs/concepts/musl' }
-                ]
-              },
-              { text: 'Configuración', link: '/es/docs/configuration/' }
             ]
           },
           {

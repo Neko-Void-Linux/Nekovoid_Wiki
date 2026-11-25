@@ -5,6 +5,7 @@ import ContentsToggle from './components/ContentsToggle.vue'
 import FlatpakButton from './components/FlatpakButton.vue'
 import MinecraftButton from './components/MinecraftButton.vue'
 import DownloadOptions from './components/DownloadOptions.vue'
+import ImageModal from './components/ImageModal.vue'
 import TextSizeControl from './components/TextSizeControl.vue'
 import './style.css'
 
@@ -17,6 +18,7 @@ export default {
         app.component('FlatpakButton', FlatpakButton)
         app.component('MinecraftButton', MinecraftButton)
         app.component('DownloadOptions', DownloadOptions)
+        app.component('ImageModal', ImageModal)
         app.component('TextSizeControl', TextSizeControl)
     }
 }
