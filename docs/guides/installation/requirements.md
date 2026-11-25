@@ -1,48 +1,20 @@
 ---
-title: Neko Void Requirements
-description: Check whether your hardware is ready to install and run Neko Void
+title: System Requirements
+description: Hardware requirements for Neko Void Linux
 ---
 
-# Neko Void Requirements
+<script setup>
+import { onMounted } from 'vue'
 
-This page summarizes the required hardware and provides a quick check before creating installation media.
+onMounted(() => {
+  window.location.replace('/guides/installation/#system-requirements')
+})
+</script>
 
-| Category | Minimum Requirements | Recommended Requirements |
-|---|---|---|
-| **XFCE, MATE and IceWM Environment** | 2 GB RAM | 4 GB RAM |
-| **Other Desktop Environments** | 4 GB RAM | 4 GB RAM or more |
-| **Minimum Processor** | Intel Celeron or Pentium, 1 core, 1.10 GHz, 64-bit architecture | Second generation Intel Celeron or Pentium, 2 cores, 64-bit |
-| **Storage** | 64 GB | 64 GB or more |
-| **Graphics Memory** | Integrated or dedicated GPU with 16 MB | iGPU or dedicated GPU with 512 MB or more |
+# System Requirements
 
-## Before installing
-
-Confirm these points before starting the installation:
-
-- The processor uses a 64-bit architecture.
-- The target disk has at least 64 GB available for the system.
-- Important files on the target disk are backed up.
-- You have chosen a desktop environment that matches the available memory.
-
-::: warning
-Installation can modify disk partitions. Review the selected disk and back up your data before continuing.
+::: info Note
+This page has been consolidated into the unified [Installation Guide: System Requirements](/guides/installation/#system-requirements). Redirecting automatically...
 :::
 
-## Check the hardware
-
-You can inspect the main hardware details from a Linux session with these commands:
-
-```bash
-$ free -h                 # Available RAM
-$ lscpu                   # Architecture and processor
-$ lsblk -d -o NAME,SIZE,MODEL  # Disks and capacity
-$ lspci | grep -E 'VGA|3D|Display'  # Detected GPU
-```
-
-Compare the output with the table above. If `lspci` is unavailable, skip that line and check graphics memory in the system settings.
-
-## Choose the right desktop environment
-
-With 2 GB of RAM, prefer XFCE, MATE, or IceWM. With 4 GB or more, you can consider other environments while remembering that open applications also use memory.
-
-The recommended graphics memory helps provide a smoother experience, especially with compositors, high-resolution displays, or visual applications.
+<meta http-equiv="refresh" content="0; url=/guides/installation/#system-requirements">
