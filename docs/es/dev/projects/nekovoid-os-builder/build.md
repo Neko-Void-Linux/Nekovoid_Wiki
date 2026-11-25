@@ -7,44 +7,40 @@ description: Comandos y opciones para construir la ISO Live de Neko-Void
 
 ## Requisitos previos
 
-Antes de compilar, completa la [configuración inicial](./) de la página de resumen: clona el repositorio e inicializa los submódulos. La compilación se ejecuta desde el directorio `live-maker`.
-
-## Ediciones estándar
-
-Compila las ISO estándar de Neko-Void:
+Antes de compilar, completa la [clonación y configuración inicial](./): clona el repositorio e inicializa los submódulos.
 
 ```bash
-$ cd live-maker
-
-# Edición X.Org
-$ bash neko-builder.sh xorg
-
-# Edición Xlibre
-$ bash neko-builder.sh xlibre
+git clone https://github.com/Neko-Void-Linux/Neko-Void.git Neko-Void
+cd Neko-Void
+git submodule update --init --recursive
 ```
 
-## Ediciones rolling (último kernel)
+## Instrucciones de compilación
 
-Compila las ediciones con el kernel más reciente:
+Para compilar una ISO de Neko-Void, usa el script `neko-builder.sh` ubicado en el directorio `live-maker`:
 
 ```bash
-$ cd live-maker
-
-# Edición Rolling X.Org
-$ bash neko-builder.sh rolling
-
-# Edición Rolling Xlibre
-$ bash neko-builder.sh rollibre
+cd live-maker
 ```
 
-## Uso avanzado
+### Compilaciones estándar
 
-El script `neko-builder.sh` admite argumentos para compilaciones interactivas o personalizadas:
+* **Compilar ISO Xorg:**
+  ```bash
+  bash neko-builder.sh mate
+  ```
 
-```bash
-$ ./neko-builder.sh                     # Modo interactivo
-$ ./neko-builder.sh <desktop>           # Compilar un escritorio específico
-$ ./neko-builder.sh <desktop> -e "pkg"  # Añadir paquetes extra
-$ ./neko-builder.sh doble               # Compilar xlibre + xorg
-$ ./neko-builder.sh doble-isor          # Compilar rollibre + rolling
-```
+* **Compilar ISO Xlibre:**
+  ```bash
+  bash neko-builder.sh matelibre
+  ```
+
+### Uso avanzado
+
+El script `neko-builder.sh` admite múltiples argumentos:
+
+* `./neko-builder.sh` — Se ejecuta en modo interactivo.
+* `./neko-builder.sh <desktop>` — Compila un entorno de escritorio específico (ej. `mate`, `matelibre`, `kde`).
+* `./neko-builder.sh <desktop> -e "pkg..."` — Compila con paquetes extra especificados.
+* `./neko-builder.sh doble` — Compila tanto la ISO Xlibre como la ISO Xorg.
+* `./neko-builder.sh doble-isor` — Compila tanto la ISO Rollibre como la Rolling.

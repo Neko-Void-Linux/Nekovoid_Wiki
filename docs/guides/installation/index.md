@@ -209,5 +209,5 @@ Congratulations! Your Neko Void system is now installed and ready to use. Explor
 - **Init System & Services**: Learn how services and daemons are supervised using [runit (Init System)](/docs/concepts/runit).
 - **Display Servers**: Check out the guides for [Wayland](/docs/concepts/wayland) compositors and [Xorg (X11)](/docs/concepts/xorg).
 - **System Configuration**: Review [System Configuration](/docs/configuration/) for personalized tweaks and global settings.
-- **Package Management**: Learn about [Kore Package Manager](/dev/projects/kore-package-manager/) and the native Void Linux package manager `xbps`.
+- **Package Management**: Learn about native Void Linux package management with `xbps`, wrappers like [Kyoz](/dev/projects/kyoz/), user repository helpers like [Vouru](/dev/projects/vouru/), and graphical frontends like [Iruka XBPS](/dev/projects/iruka-xbps/).
 - **Troubleshooting**: If you experience any post-installation issues (e.g. Wi-Fi or graphics), refer to the [Common Issues](/guides/troubleshooting/common-issues) guide.

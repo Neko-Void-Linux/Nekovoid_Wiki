@@ -18,7 +18,7 @@ Esta página cubre el flujo. Para el tono, la estructura y el formato, lee la [G
 | Corrección de errata o gramática | Arreglar un comando mal escrito | Baja |
 | Mejora de claridad | Reescribir un párrafo confuso | Baja |
 | Guía nueva | "Cómo instalar los drivers NVIDIA" | Media |
-| Página de referencia | Documentar un subcomando de `kpm` a fondo | Media |
+| Página de referencia | Documentar un subcomando de `vouru` o `kyo` a fondo | Media |
 | Traducción | Traducir una página del inglés al español (o al revés) | Media |
 | Entrada de troubleshooting | Añadir un síntoma → causa → solución a Problemas comunes | Baja |
 
@@ -70,7 +70,7 @@ Usa un prefijo que diga qué hiciste:
 | `i18n/` | Traducciones |
 | `style/` | Cambios de formato, estructura, no de contenido |
 
-Ejemplos: `docs/install-nvidia`, `fix/kore-usage-typo`, `i18n/es-runit`.
+Ejemplos: `docs/install-nvidia`, `fix/vouru-usage-typo`, `i18n/es-runit`.
 
 ### Mensajes de commit
 
@@ -78,7 +78,7 @@ Sigue este formato para que el historial sea legible:
 
 ```
 docs(guides): add NVIDIA driver installation guide
-fix(kore): correct the --use-root flag description
+fix(vouru): correct the --dont-answer-me flag description
 i18n(es): translate runit page to Spanish
 ```
 

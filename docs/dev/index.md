@@ -10,7 +10,10 @@ Our development focuses on:
 
 * **Neko Void OS:** Our base operating system featuring the MATE desktop and Kasha Installer.
 * **ISO Builder:** The bash-based infrastructure used to compile the live distributions.
-* **Kore Package Manager:** A minimalist Rust-based TUI/CLI package manager designed specifically for AppImages and tarballs.
+* **Neko Kernel Manager:** A modern, reliable Linux kernel and DKMS manager for Void Linux built with C++20 and Qt6 QML.
+* **Vouru:** A Void User Repository helper to build and install packages from `void-packages` and custom Git repos.
+* **Kyoz:** A fast, lightweight wrapper for the XBPS package manager written in Zig with an interactive menu.
+* **Iruka XBPS:** A graphical front-end for the XBPS package manager written in C++ using GTK 3.
 
 ## Projects
 
@@ -24,9 +27,21 @@ The ISO builder combines Void Linux's `live-maker` with Neko Void's package sele
 
 Kasha is the C and GTK installer used by Neko Void. Its documentation covers the [architecture](./projects/kasha-installer/architecture) and [build process](./projects/kasha-installer/build).
 
-### Kore Package Manager
+### Neko Kernel Manager
 
-Kore (`kpm`) installs AppImages and tarballs into an isolated user location. See the [usage guide](./projects/kore-package-manager/usage) and [architecture](./projects/kore-package-manager/architecture).
+A native graphical kernel manager crafted specifically for Void Linux with C++20 and Qt6 (QML/Quick). See the [Neko Kernel Manager guide](./projects/neko-kernel-manager/).
+
+### Vouru
+
+Vouru is a Bash script to build and install packages from `void-packages` and custom Git repositories containing `xbps-src` templates. See the [Vouru guide](./projects/vouru/).
+
+### Kyoz
+
+Kyoz is a simple, lightweight wrapper for XBPS written in Zig with a fullscreen interactive menu. See the [Kyoz guide](./projects/kyoz/).
+
+### Iruka XBPS
+
+Iruka XBPS is a graphical front-end for the XBPS package manager written in C++ using GTK 3. See the [Iruka XBPS guide](./projects/iruka-xbps/).
 
 ## Where to start?
 

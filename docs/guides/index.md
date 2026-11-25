@@ -40,8 +40,6 @@ If you are new to Neko Void, we recommend following these steps:
       <a class="wiki-directory-entry" href="/docs/concepts/xorg"><strong>Xorg</strong><span>Understand X11 display server configuration and drivers in Neko Void.</span></a>
       <a class="wiki-directory-entry" href="/docs/concepts/wayland"><strong>Wayland</strong><span>Learn about the Wayland display protocol, compositors, and Xwayland.</span></a>
       <a class="wiki-directory-entry" href="/docs/configuration/japanese-input"><strong>Japanese Input</strong><span>Configure fcitx5 and Mozc for Japanese typing in Neko Void.</span></a>
-      <a class="wiki-directory-entry" href="/docs/configuration/global-settings"><strong>Global Settings</strong><span>Reference for settings that affect the wider system.</span><small class="wiki-directory-status">Draft</small></a>
-      <a class="wiki-directory-entry" href="/docs/configuration/advanced-options"><strong>Advanced Options</strong><span>Less common options for fine-tuning a Neko Void installation.</span><small class="wiki-directory-status">Draft</small></a>
     </div>
   </section>
 
@@ -51,7 +49,10 @@ If you are new to Neko Void, we recommend following these steps:
       <a class="wiki-directory-entry" href="/dev/projects/"><strong>Projects Overview</strong><span>Explore core ecosystem tools and applications.</span></a>
       <a class="wiki-directory-entry" href="/dev/projects/nekovoid-os-builder/"><strong>OS Builder</strong><span>The build engine and scripts behind Neko Void ISO images.</span></a>
       <a class="wiki-directory-entry" href="/dev/projects/kasha-installer/"><strong>Kasha Installer</strong><span>Learn about the installer and its system setup workflow.</span></a>
-      <a class="wiki-directory-entry" href="/dev/projects/kore-package-manager/"><strong>Kore Package Manager</strong><span>Minimalist Rust package manager for AppImages and tarballs.</span></a>
+      <a class="wiki-directory-entry" href="/dev/projects/neko-kernel-manager/"><strong>Kernel Manager</strong><span>Graphical Linux kernel and DKMS manager built with C++20 and Qt6 QML.</span></a>
+      <a class="wiki-directory-entry" href="/dev/projects/vouru/"><strong>Vouru</strong><span>Void User Repository helper to build from source and custom Git repos.</span></a>
+      <a class="wiki-directory-entry" href="/dev/projects/kyoz/"><strong>Kyoz</strong><span>Fast, lightweight Zig wrapper for XBPS with an interactive TUI menu.</span></a>
+      <a class="wiki-directory-entry" href="/dev/projects/iruka-xbps/"><strong>Iruka XBPS</strong><span>Graphical front-end for XBPS package manager in C++ and GTK 3.</span></a>
       <a class="wiki-directory-entry" href="/dev/contributing/"><strong>Contributing</strong><span>Guidelines for improving code, documentation, and translations.</span></a>
     </div>
   </section>

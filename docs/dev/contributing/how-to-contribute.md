@@ -13,7 +13,7 @@ This page covers the workflow. For tone, structure, and formatting, read the [St
 | Typo / grammar fix | Correct a misspelled command | Low |
 | Clarity improvement | Rewrite a confusing paragraph | Low |
 | New guide | "How to install NVIDIA drivers" | Medium |
-| Reference page | Document a `kpm` subcommand fully | Medium |
+| Reference page | Document a `vouru` or `kyo` subcommand fully | Medium |
 | Translation | Translate an English page to Spanish (or vice versa) | Medium |
 | Troubleshooting entry | Add a symptom → cause → fix to Common Issues | Low |
 
@@ -65,7 +65,7 @@ Use a prefix that says what you did:
 | `i18n/` | Translations |
 | `style/` | Formatting, structure, non-content changes |
 
-Examples: `docs/install-nvidia`, `fix/kore-usage-typo`, `i18n/es-runit`.
+Examples: `docs/install-nvidia`, `fix/vouru-usage-typo`, `i18n/es-runit`.
 
 ### Commit messages
 
@@ -73,7 +73,7 @@ Follow this format so the history stays readable:
 
 ```
 docs(guides): add NVIDIA driver installation guide
-fix(kore): correct the --use-root flag description
+fix(vouru): correct the --dont-answer-me flag description
 i18n(es): translate runit page to Spanish
 ```
 
