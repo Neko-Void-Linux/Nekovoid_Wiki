@@ -20,7 +20,10 @@ function searchTagsForPath(id: string) {
   if (path.includes('/projects/')) add('proyectos', 'software', 'herramientas')
   if (path.includes('nekovoid-os-builder')) add('iso', 'builder', 'live', 'bash', 'construccion')
   if (path.includes('kasha-installer')) add('kasha', 'instalador', 'gtk', 'particionado', 'grub', 'luks')
-  if (path.includes('kore-package-manager')) add('kore', 'kpm', 'paquetes', 'rust', 'appimage', 'tarball')
+  if (path.includes('neko-kernel-manager') || path.includes('kernel-manager')) add('kernel', 'dkms', 'boot', 'grub', 'dracut', 'qt6', 'c++', 'matecito', 'anomali')
+  if (path.includes('vouru')) add('vouru', 'vur', 'void-packages', 'xbps-src', 'templates', 'paquetes', 'bash')
+  if (path.includes('kyoz')) add('kyoz', 'kyo', 'xbps', 'zig', 'tui', 'wrapper', 'paquetes')
+  if (path.includes('iruka-xbps')) add('iruka', 'iruka-xbps', 'xbps', 'gui', 'gtk', 'gtk3', 'c++', 'frontend', 'paquetes')
   if (path.includes('/concepts/runit')) add('runit', 'init', 'pid1', 'servicios', 'daemon', 'sv', 'runsv')
   if (path.includes('/concepts/musl')) add('musl', 'libc', 'glibc', 'compatibilidad')
   if (path.includes('/concepts/xorg')) add('xorg', 'x11', 'servidor', 'grafico', 'display', 'xinit', 'libinput', 'server')
@@ -148,9 +151,7 @@ export default defineConfig({
                 collapsed: true,
                 items: [
                   { text: 'Overview', link: '/docs/configuration/' },
-                  { text: 'Japanese Input (fcitx5)', link: '/docs/configuration/japanese-input' },
-                  { text: 'Global Settings', link: '/docs/configuration/global-settings' },
-                  { text: 'Advanced Options', link: '/docs/configuration/advanced-options' }
+                  { text: 'Japanese Input (fcitx5)', link: '/docs/configuration/japanese-input' }
                 ]
               },
               {
@@ -174,7 +175,10 @@ export default defineConfig({
                   { text: 'Project overview', link: '/dev/projects/' },
                   { text: 'Neko Void OS', link: '/dev/projects/nekovoid-os-builder/' },
                   { text: 'Kasha Installer', link: '/dev/projects/kasha-installer/' },
-                  { text: 'Kore Package Manager', link: '/dev/projects/kore-package-manager/' }
+                  { text: 'Neko Kernel Manager', link: '/dev/projects/neko-kernel-manager/' },
+                  { text: 'Vouru', link: '/dev/projects/vouru/' },
+                  { text: 'Kyoz', link: '/dev/projects/kyoz/' },
+                  { text: 'Iruka XBPS', link: '/dev/projects/iruka-xbps/' }
                 ]
               },
               {
@@ -247,9 +251,7 @@ export default defineConfig({
                 collapsed: true,
                 items: [
                   { text: 'Resumen', link: '/es/docs/configuration/' },
-                  { text: 'Entrada en japonés (fcitx5)', link: '/es/docs/configuration/japanese-input' },
-                  { text: 'Configuración global', link: '/es/docs/configuration/global-settings' },
-                  { text: 'Opciones avanzadas', link: '/es/docs/configuration/advanced-options' }
+                  { text: 'Entrada en japonés (fcitx5)', link: '/es/docs/configuration/japanese-input' }
                 ]
               },
               {
@@ -273,7 +275,10 @@ export default defineConfig({
                   { text: 'Resumen de proyectos', link: '/es/dev/projects/' },
                   { text: 'Neko Void OS', link: '/es/dev/projects/nekovoid-os-builder/' },
                   { text: 'Instalador Kasha', link: '/es/dev/projects/kasha-installer/' },
-                  { text: 'Kore Package Manager', link: '/es/dev/projects/kore-package-manager/' }
+                  { text: 'Neko Kernel Manager', link: '/es/dev/projects/neko-kernel-manager/' },
+                  { text: 'Vouru', link: '/es/dev/projects/vouru/' },
+                  { text: 'Kyoz', link: '/es/dev/projects/kyoz/' },
+                  { text: 'Iruka XBPS', link: '/es/dev/projects/iruka-xbps/' }
                 ]
               },
               {

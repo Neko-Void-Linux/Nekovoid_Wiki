@@ -40,8 +40,6 @@ Si eres nuevo en Neko Void, te recomendamos seguir este recorrido inicial:
       <a class="wiki-directory-entry" href="/es/docs/concepts/xorg"><strong>Xorg</strong><span>Configuración y controladores del servidor de pantalla X11 en Neko Void.</span></a>
       <a class="wiki-directory-entry" href="/es/docs/concepts/wayland"><strong>Wayland</strong><span>Protocolo gráfico Wayland, compositores compatibles y compatibilidad con Xwayland.</span></a>
       <a class="wiki-directory-entry" href="/es/docs/configuration/japanese-input"><strong>Entrada en japonés</strong><span>Configura fcitx5 y Mozc para escribir en japonés en Neko Void.</span></a>
-      <a class="wiki-directory-entry" href="/es/docs/configuration/global-settings"><strong>Configuración global</strong><span>Referencia de los ajustes que afectan al sistema completo.</span><small class="wiki-directory-status">Borrador</small></a>
-      <a class="wiki-directory-entry" href="/es/docs/configuration/advanced-options"><strong>Opciones avanzadas</strong><span>Opciones menos comunes para ajustar una instalación.</span><small class="wiki-directory-status">Borrador</small></a>
     </div>
   </section>
 
@@ -51,7 +49,10 @@ Si eres nuevo en Neko Void, te recomendamos seguir este recorrido inicial:
       <a class="wiki-directory-entry" href="/es/dev/projects/"><strong>Resumen de proyectos</strong><span>Explora las herramientas y aplicaciones del ecosistema.</span></a>
       <a class="wiki-directory-entry" href="/es/dev/projects/nekovoid-os-builder/"><strong>OS Builder</strong><span>El motor de construcción y scripts de las imágenes ISO de Neko Void.</span></a>
       <a class="wiki-directory-entry" href="/es/dev/projects/kasha-installer/"><strong>Instalador Kasha</strong><span>Conoce el instalador y su flujo de configuración.</span></a>
-      <a class="wiki-directory-entry" href="/es/dev/projects/kore-package-manager/"><strong>Kore Package Manager</strong><span>Gestor de paquetes minimalista en Rust para AppImages y tarballs.</span></a>
+      <a class="wiki-directory-entry" href="/es/dev/projects/neko-kernel-manager/"><strong>Kernel Manager</strong><span>Gestor gráfico de kernels de Linux y módulos DKMS desarrollado con C++20 y Qt6 QML.</span></a>
+      <a class="wiki-directory-entry" href="/es/dev/projects/vouru/"><strong>Vouru</strong><span>Helper de repositorios de usuario para compilar desde fuentes y repos Git.</span></a>
+      <a class="wiki-directory-entry" href="/es/dev/projects/kyoz/"><strong>Kyoz</strong><span>Wrapper rápido y ligero para XBPS escrito en Zig con menú interactivo TUI.</span></a>
+      <a class="wiki-directory-entry" href="/es/dev/projects/iruka-xbps/"><strong>Iruka XBPS</strong><span>Interfaz gráfica para el gestor de paquetes XBPS en C++ y GTK 3.</span></a>
       <a class="wiki-directory-entry" href="/es/dev/contributing/"><strong>Colaborar</strong><span>Guías para contribuir con código, documentación y traducciones.</span></a>
     </div>
   </section>

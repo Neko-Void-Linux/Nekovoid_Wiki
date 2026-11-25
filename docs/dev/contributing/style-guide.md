@@ -82,7 +82,7 @@ Links to related pages in the wiki.
 - Use `bash` for shell commands, the real language for code (`kotlin`, `sh`, `python`...).
 
 ```bash
-kpm install nvidia
+vouru install firefox
 ```
 
 ```kotlin
@@ -98,7 +98,7 @@ val x = 1
 - For a command run as normal user, prefix with `$`:
 
 ```bash
-$ kpm list
+$ kyo search neovim
 ```
 
 - Output of a command goes in its own block, with no language tag or `text`:
@@ -111,7 +111,7 @@ Driver: nvidia 550.40
 ### Inline code
 
 Use backticks for:
-- Commands and binaries: `kpm`, `xbps-install`, `neko-builder.sh`
+- Commands and binaries: `vouru`, `kyo`, `xbps-install`, `neko-builder.sh`
 - File paths: `/etc/sv/`, `/var/service/`
 - Config keys and flags: `--use-root`, `SVDIR`
 - UI elements when needed: press `Enter`
@@ -140,8 +140,8 @@ Use tables for reference data (command lists, flag tables, comparison). Not for 
 ```markdown
 | Command | Description |
 |---|---|
-| `kpm list` | List installed apps |
-| `kpm install <pkg>` | Install an app |
+| `kyo list` | List installed apps |
+| `kyo install <pkg>` | Install an app |
 ```
 
 ### Admonitions (VitePress)

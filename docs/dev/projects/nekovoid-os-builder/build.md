@@ -7,45 +7,40 @@ description: Commands and options to build the Neko-Void Live ISO
 
 ## Prerequisites
 
-Before building, complete the [setup](./) on the overview page: clone the repository and initialize the submodules. The build runs from the `live-maker` directory.
-
-## Standard editions
-
-Build the standard Neko-Void ISOs:
+Before building, complete the [cloning and setup](./) on the overview page: clone the repository and initialize the submodules.
 
 ```bash
-$ cd live-maker
-
-# X.Org edition
-$ bash neko-builder.sh xorg
-
-# Xlibre edition
-$ bash neko-builder.sh xlibre
+git clone https://github.com/Neko-Void-Linux/Neko-Void.git Neko-Void
+cd Neko-Void
+git submodule update --init --recursive
 ```
 
-## Rolling editions (latest kernel)
+## Build Instructions
 
-Build editions with the latest kernel:
+To build a Neko-Void ISO, use the `neko-builder.sh` script located in the `live-maker` directory:
 
 ```bash
-$ cd live-maker
-
-# Rolling X.Org edition
-$ bash neko-builder.sh rolling
-
-# Rolling Xlibre edition
-$ bash neko-builder.sh rollibre
+cd live-maker
 ```
 
-## Advanced usage
+### Standard Builds
 
-The `neko-builder.sh` script accepts arguments for interactive or customized builds:
+* **Build Xorg ISO:**
+  ```bash
+  bash neko-builder.sh mate
+  ```
 
-```bash
-$ ./neko-builder.sh                     # Interactive mode
-$ ./neko-builder.sh <desktop>           # Build a specific desktop
-$ ./neko-builder.sh <desktop> -e "pkg"  # Add extra packages
-$ ./neko-builder.sh doble               # Build xlibre + xorg
-$ ./neko-builder.sh doble-isor          # Build rollibre + rolling
-```
+* **Build Xlibre ISO:**
+  ```bash
+  bash neko-builder.sh matelibre
+  ```
 
+### Advanced Usage
+
+The `neko-builder.sh` script supports multiple options:
+
+* `./neko-builder.sh` — Runs in interactive mode.
+* `./neko-builder.sh <desktop>` — Builds a specific desktop environment (e.g., `mate`, `matelibre`, `kde`).
+* `./neko-builder.sh <desktop> -e "pkg..."` — Builds with extra specified packages.
+* `./neko-builder.sh doble` — Builds both Xlibre and Xorg ISOs.
+* `./neko-builder.sh doble-isor` — Builds both Rollibre and Rolling ISOs.

@@ -9,7 +9,7 @@ Kasha es el instalador del sistema que usa Neko-Void. Está escrito en C con una
 
 - **Lenguaje:** C
 - **Toolkit de UI:** GTK+ 3.0
-- **Código fuente:** [Codeberg](https://codeberg.org/javiercplus/Kasha-Installer)
+- **Código fuente:** [GitHub](https://github.com/Neko-Void-Linux/kasha-installer)
 
 ## Características
 

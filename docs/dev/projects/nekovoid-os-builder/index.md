@@ -1,73 +1,64 @@
 ---
 title: Neko-Void OS Builder
-description: Overview of the tools and process to build the Neko-Void Live ISO
+description: Build custom Live ISO images for Neko-Void Linux
 ---
 
-# Neko-Void OS Builder
+# Neko-Void ISO Builder
 
-The Neko-Void OS builder is the set of scripts that build the Neko-Void Live ISO. The resulting image ships non-free support out of the box: Steam, gaming tools, and proprietary drivers.
+![image](https://huggingface.co/arepaconcafe/neko-base/resolve/main/1.png)
 
-It builds on top of Void Linux's `live-maker`, extended with Neko-Void's package selection, kernels, and configuration.
+This repository allows you to build custom Live ISO images for Neko-Void Linux. The build process includes support for non-free software, proprietary drivers, Steam, and gaming-related packages.
 
+- **Repository:** [GitHub](https://github.com/Neko-Void-Linux/Neko-Void)
 - **Base:** Void Linux `live-maker`
-- **Source:** [Codeberg](https://codeberg.org/javiercplus/Neko-Void)
-- **Output:** bootable Live ISO (X.Org and Xlibre editions)
+- **Output:** Bootable Live ISO (Xorg and Xlibre editions)
 
-## Setup
+## Cloning the Repository
 
-Clone the repository and initialize the submodules:
-
-```bash
-$ git clone https://codeberg.org/javiercplus/Neko-Void.git
-$ cd Neko-Void
-$ git submodule update --init --recursive
-```
-
-The submodules include the Neko Wizard and the Kasha installer module, which are integrated into the ISO.
-
-## Build ISO
-
-### Prerequisites
-
-Complete the setup above before building. The build runs from the `live-maker` directory.
-
-### Standard editions
-
-Build the standard Neko-Void ISOs:
+First, clone this repository and its submodules. This repository includes the source code for the Neko Wizard and the Kasha installer module.
 
 ```bash
-$ cd live-maker
-
-# X.Org edition
-$ bash neko-builder.sh xorg
-
-# Xlibre edition
-$ bash neko-builder.sh xlibre
+git clone https://github.com/Neko-Void-Linux/Neko-Void.git Neko-Void
+cd Neko-Void
+git submodule update --init --recursive
 ```
 
-### Rolling editions
+## Build Instructions
 
-Build editions with the latest kernel:
+To build a Neko-Void ISO, you need to use the `neko-builder.sh` script located in the `live-maker` directory. First, change to that directory:
 
 ```bash
-$ cd live-maker
-
-# Rolling X.Org edition
-$ bash neko-builder.sh rolling
-
-# Rolling Xlibre edition
-$ bash neko-builder.sh rollibre
+cd live-maker
 ```
 
-### Advanced usage
+Then, execute the builder script with your desired configuration:
 
-The `neko-builder.sh` script accepts arguments for interactive or customized builds:
+### Standard Builds
 
-```bash
-$ ./neko-builder.sh                     # Interactive mode
-$ ./neko-builder.sh <desktop>           # Build a specific desktop
-$ ./neko-builder.sh <desktop> -e "pkg"  # Add extra packages
-$ ./neko-builder.sh doble               # Build xlibre + xorg
-$ ./neko-builder.sh doble-isor          # Build rollibre + rolling
-```
+* **Build Xorg ISO:**
+  ```bash
+  bash neko-builder.sh mate
+  ```
 
+* **Build Xlibre ISO:**
+  ```bash
+  bash neko-builder.sh matelibre
+  ```
+
+## neko-builder.sh Usage Details
+
+The build script supports multiple options. For example:
+
+* `./neko-builder.sh` — Runs in interactive mode.
+* `./neko-builder.sh <desktop>` — Builds a specific desktop environment (e.g., `mate`, `matelibre`, `kde`).
+* `./neko-builder.sh <desktop> -e "pkg..."` — Builds with extra specified packages.
+* `./neko-builder.sh doble` — Builds both Xlibre and Xorg ISOs.
+* `./neko-builder.sh doble-isor` — Builds both Rollibre and Rolling ISOs.
+
+## Related Projects and Resources
+
+You can find more information about the Neko ecosystem at these locations:
+
+* **Repo Builder:** [repo-neko](https://github.com/Neko-Void-Linux/repo-neko)
+* **Custom Kernels (Actions):** [kernel-neko-void](https://github.com/Neko-Void-Linux/kernel-neko-void/actions)
+* **Website Source Code:** [nk-web](https://github.com/Neko-Void-Linux/nk-web)

@@ -58,12 +58,39 @@ const groups: Array<{ match: RegExp; links: RelatedLink[] }> = [
     ]
   },
   {
-    match: /\/dev\/projects\/kore-package-manager\//,
+    match: /\/dev\/projects\/neko-kernel-manager\//,
     links: [
       { path: '/dev/projects/', en: { title: 'Projects', description: 'see the other Neko Void projects.' }, es: { title: 'Proyectos', description: 'ver los demás proyectos de Neko Void.' } },
-      { path: '/dev/projects/kore-package-manager/', en: { title: 'Kore overview', description: 'review the package manager.' }, es: { title: 'Resumen de Kore', description: 'revisar el gestor de paquetes.' } },
-      { path: '/dev/projects/kore-package-manager/architecture', en: { title: 'Architecture', description: 'understand the internal design.' }, es: { title: 'Arquitectura', description: 'conocer el diseño interno.' } },
-      { path: '/dev/projects/kore-package-manager/usage', en: { title: 'Using Kore', description: 'learn the basic package workflows.' }, es: { title: 'Usar Kore', description: 'aprender los flujos básicos de paquetes.' } }
+      { path: '/dev/projects/neko-kernel-manager/', en: { title: 'Kernel Manager', description: 'manage kernels and DKMS modules.' }, es: { title: 'Kernel Manager', description: 'gestionar kernels y módulos DKMS.' } },
+      { path: '/dev/projects/nekovoid-os-builder/', en: { title: 'OS Builder', description: 'custom ISO construction.' }, es: { title: 'OS Builder', description: 'construcción de ISOs personalizadas.' } },
+      { path: '/dev/projects/kasha-installer/', en: { title: 'Kasha Installer', description: 'system installer.' }, es: { title: 'Instalador Kasha', description: 'instalador del sistema.' } }
+    ]
+  },
+  {
+    match: /\/dev\/projects\/vouru\//,
+    links: [
+      { path: '/dev/projects/', en: { title: 'Projects', description: 'see the other Neko Void projects.' }, es: { title: 'Proyectos', description: 'ver los demás proyectos de Neko Void.' } },
+      { path: '/dev/projects/vouru/', en: { title: 'Vouru', description: 'Void User Repository helper.' }, es: { title: 'Vouru', description: 'Helper de repositorios de usuario para Void.' } },
+      { path: '/dev/projects/kyoz/', en: { title: 'Kyoz', description: 'lightweight XBPS wrapper in Zig.' }, es: { title: 'Kyoz', description: 'wrapper ligero para XBPS en Zig.' } },
+      { path: '/dev/projects/iruka-xbps/', en: { title: 'Iruka XBPS', description: 'graphical frontend for XBPS.' }, es: { title: 'Iruka XBPS', description: 'interfaz gráfica para XBPS.' } }
+    ]
+  },
+  {
+    match: /\/dev\/projects\/kyoz\//,
+    links: [
+      { path: '/dev/projects/', en: { title: 'Projects', description: 'see the other Neko Void projects.' }, es: { title: 'Proyectos', description: 'ver los demás proyectos de Neko Void.' } },
+      { path: '/dev/projects/kyoz/', en: { title: 'Kyoz', description: 'lightweight XBPS wrapper in Zig.' }, es: { title: 'Kyoz', description: 'wrapper ligero para XBPS en Zig.' } },
+      { path: '/dev/projects/vouru/', en: { title: 'Vouru', description: 'Void User Repository helper.' }, es: { title: 'Vouru', description: 'Helper de repositorios de usuario para Void.' } },
+      { path: '/dev/projects/iruka-xbps/', en: { title: 'Iruka XBPS', description: 'graphical frontend for XBPS.' }, es: { title: 'Iruka XBPS', description: 'interfaz gráfica para XBPS.' } }
+    ]
+  },
+  {
+    match: /\/dev\/projects\/iruka-xbps\//,
+    links: [
+      { path: '/dev/projects/', en: { title: 'Projects', description: 'see the other Neko Void projects.' }, es: { title: 'Proyectos', description: 'ver los demás proyectos de Neko Void.' } },
+      { path: '/dev/projects/iruka-xbps/', en: { title: 'Iruka XBPS', description: 'graphical frontend for XBPS.' }, es: { title: 'Iruka XBPS', description: 'interfaz gráfica para XBPS.' } },
+      { path: '/dev/projects/vouru/', en: { title: 'Vouru', description: 'Void User Repository helper.' }, es: { title: 'Vouru', description: 'Helper de repositorios de usuario para Void.' } },
+      { path: '/dev/projects/kyoz/', en: { title: 'Kyoz', description: 'lightweight XBPS wrapper in Zig.' }, es: { title: 'Kyoz', description: 'wrapper ligero para XBPS en Zig.' } }
     ]
   },
   {
@@ -104,8 +131,8 @@ const groups: Array<{ match: RegExp; links: RelatedLink[] }> = [
     links: [
       { path: '/docs/', en: { title: 'Documentation overview', description: 'browse the reference documentation.' }, es: { title: 'Resumen de documentación', description: 'consultar la documentación de referencia.' } },
       { path: '/docs/configuration/', en: { title: 'Configuration overview', description: 'review the available settings.' }, es: { title: 'Resumen de configuración', description: 'revisar las opciones disponibles.' } },
-      { path: '/docs/configuration/global-settings', en: { title: 'Global settings', description: 'configure the system-wide defaults.' }, es: { title: 'Configuración global', description: 'configurar los valores predeterminados del sistema.' } },
-      { path: '/docs/configuration/advanced-options', en: { title: 'Advanced options', description: 'fine-tune the configuration.' }, es: { title: 'Opciones avanzadas', description: 'ajustar la configuración en detalle.' } }
+      { path: '/docs/configuration/japanese-input', en: { title: 'Japanese Input (fcitx5)', description: 'setup fcitx5 and Mozc for Japanese typing.' }, es: { title: 'Entrada en japonés (fcitx5)', description: 'configurar fcitx5 y Mozc para escribir en japonés.' } },
+      { path: '/docs/concepts/runit', en: { title: 'runit (Init System)', description: 'service supervision and process management.' }, es: { title: 'runit (Sistema Init)', description: 'supervisión de servicios y gestión de procesos.' } }
     ]
   },
   {

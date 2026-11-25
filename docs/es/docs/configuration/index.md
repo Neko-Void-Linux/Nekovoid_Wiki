@@ -10,8 +10,6 @@ Personaliza y ajusta tu sistema Neko Void Linux para adaptarlo a tu flujo de tra
 ## Guías de configuración
 
 - **[Entrada en japonés (fcitx5 + Mozc)](./japanese-input)**: Configura la escritura en japonés, variables de entorno GTK/Qt en `.xprofile` e inicio automático.
-- **[Configuración global](./global-settings)**: Parámetros del sistema, locales y variables de entorno globales.
-- **[Opciones avanzadas](./advanced-options)**: Parámetros del kernel, ajustes de energía y optimizaciones avanzadas.
 
 ## Conceptos relacionados
 
